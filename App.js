@@ -1,10 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import loplop from 'loplop';
 
 export default class App extends React.Component {
+
   render() {
+    let password = loplop('*amazon', 'password');
+
     return (
       <View style={styles.container}>
+        <Text>Password for amazon and password : {password}</Text>
         <Text>Open test up App.js to start working on your app!</Text>
         <Text>Changes you make will automatically reload.</Text>
         <Text>Shake your phone to open the developer menu.</Text>
