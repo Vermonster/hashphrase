@@ -4,12 +4,13 @@ import { Input } from 'native-base';
 import PropTypes from 'prop-types';
 
 const FormInput = (props) => (
-    <Input {...props.placeholder} autoCapitalize="none" {...props.onChangeText}/>
+    <Input placeholder={props.placeholder} secureTextEntry={props.secureTextEntry} autoCapitalize="none" onChange={(e) => props.onChange(e)}/>
   )
   
   FormInput.propTypes = {
-    onChangeText: PropTypes.func.isRequired,
+    onChange: PropTypes.func.isRequired,
     placeholder: PropTypes.string.isRequired,
+    secureTextEntry: PropTypes.bool,
   }
   
   export default FormInput;
