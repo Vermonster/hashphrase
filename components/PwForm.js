@@ -12,7 +12,6 @@ export default class PwForm extends React.Component {
         length: 16,
         label: '',
         password: '',
-        showCopy: false,
         legacyMode: false
       };
       this.generatePassword = this.generatePassword.bind(this);
@@ -24,7 +23,7 @@ export default class PwForm extends React.Component {
     generatePassword = () => {
       Keyboard.dismiss();
       Clipboard.setString(loplop(this.state.label, this.state.password, this.state.length));
-      this.setState({showCopy: true});
+      this.props.cb();
     }
   
     handleChange = (e) => {

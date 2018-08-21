@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Container, Content, Text, Footer, Header, Title, Card, CardItem, Body } from 'native-base';
+import { Container, Content, Footer, Header, Title, Body } from 'native-base';
 import PwForm from './components/PwForm';
+import Notification from './components/Notification';
 // import FormInput from './components/FormInput';
 
 
@@ -10,26 +11,29 @@ export default class App extends Component {
     this.state = {
       showCopy: false,
     };
+    this.showNotification = this.showNotification.bind(this);
+  }
 
+  showNotification = () => {
+    this.setState({showCopy: true});
   }
 
   render() {
-    // const showCopy = this.state.showCopy;
-    // let copy;
-    // if (showCopy) {
-    //   copy = <Card><CardItem><Body><Text>Generated password was copied to the clipboard</Text></Body></CardItem></Card>
-    // }
+    const copy = 'Generated password was copied to the clipboard';
 
     return (
       <Container>
         <Header>
           <Body>
-            <Title>Oplop</Title>
+            <Title>Loplop</Title>
           </Body>
         </Header>
         <Content padder>
-          <PwForm />
-          {/* {copy} */}
+          <PwForm cb={this.showNotification} />
+          {this.state.showCopy 
+            ? <Notification text={copy} />
+            : null
+          }
         </Content>
         <Footer/>
       </Container>
