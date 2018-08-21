@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { Container, Content, Footer, Header, Title, Body } from 'native-base';
 import PwForm from './components/PwForm';
 import Notification from './components/Notification';
-// import FormInput from './components/FormInput';
-
 
 export default class App extends Component {
   constructor(props) {

@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 
 const FormButton = (props) => (
   <Button full onPress={props.onPress}>
-      <Text>Generate Password</Text>
-   </Button>
+    <Text>Generate Password</Text>
+  </Button>
 );
 
 FormButton.propTypes = {
-   onPress: PropTypes.func.isRequired,
+  onPress: PropTypes.func.isRequired,
 }
 
 export default FormButton;
