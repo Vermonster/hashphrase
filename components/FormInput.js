@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 const FormInput = (props) => (
     <Input 
+      name={props.name}
       placeholder={props.placeholder} 
       secureTextEntry={props.secureTextEntry} 
       autoCapitalize="none" 

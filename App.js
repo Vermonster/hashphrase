@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Content, Footer, Header, Title, Body } from 'native-base';
-import PwForm from './components/PwForm';
-import Notification from './components/Notification';
+import PasswordGenerator from './components/PasswordGenerator';
+import BaseNotification from './components/BaseNotification';
 
 export default class App extends Component {
   constructor(props) {
@@ -27,9 +27,9 @@ export default class App extends Component {
           </Body>
         </Header>
         <Content padder>
-          <PwForm cb={this.showNotification} />
+          <PasswordGenerator onClipboardSave={this.showNotification} />
           {this.state.showCopy 
-            ? <Notification text={copy} />
+            ? <BaseNotification message={copy} />
             : null
           }
         </Content>
