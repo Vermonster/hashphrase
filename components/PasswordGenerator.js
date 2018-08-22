@@ -46,7 +46,7 @@ export default class PasswordGenerator extends React.Component {
           <Item last>
             <FormInput name="password" placeholder="Master Password..." secureTextEntry={true} onChange={this.handleChange}/>
           </Item>
-          <BaseButton onPress={this.generatePassword} test="Generate Password">
+          <BaseButton onPress={this.generatePassword} buttonText="Generate Password">
           </BaseButton>
         </Form>
       );

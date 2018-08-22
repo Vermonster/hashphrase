@@ -1,11 +1,10 @@
 import React from 'react';
-import { Button } from 'native-base';
-import BaseButtonText from './BaseButtonText';
+import { Button, Text } from 'native-base';
 import PropTypes from 'prop-types';
 
-const BaseButton = (props) => (
-  <Button full onPress={props.onPress}>
-    <BaseButtonText label="Generate Password"/>
+const BaseButton = ({onPress, buttonText}) => (
+  <Button full {...onPress}>
+    <Text>{buttonText}</Text>
   </Button>
 );
 
