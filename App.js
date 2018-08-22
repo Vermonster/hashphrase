@@ -1,60 +1,37 @@
 import React, { Component } from 'react';
-import { Container, Content, Text, Footer, Header, Title, Button, Form, Item, Input, Card, CardItem, Body } from 'native-base';
-import { Keyboard, Clipboard } from 'react-native';
-import loplop from 'loplop';
+import { Container, Content, Footer, Header, Title, Body } from 'native-base';
+import PasswordGenerator from './components/PasswordGenerator';
+import BaseNotification from './components/BaseNotification';
 
-export default class App extends React.Component {
-  state = {
-    length: 16,
-    label: '',
-    password: '',
-    showCopy: false,
-    legacyMode: false
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showCopy: false,
+    };
+    this.showNotification = this.showNotification.bind(this);
   }
 
-  generatePassword = (label, password) => {
-    Keyboard.dismiss();
-    Clipboard.setString(loplop(label, password, this.state.length));
+  showNotification = () => {
     this.setState({showCopy: true});
   }
 
-  toggleLegacyMode = (newLegacyMode) => {
-    if (newLegacyMode) {
-      this.setState({legacyMode: true, length: 8});
-    } else {
-      this.setState({legacyMode: false, length: 16});
-    }
-  }
-
   render() {
-    const showCopy = this.state.showCopy;
-    let copy;
-    if (showCopy) {
-      copy = <Card><CardItem><Body><Text>Generated password was copied to the clipboard</Text></Body></CardItem></Card>
-    }
+    const copy = 'Generated password was copied to the clipboard';
 
     return (
       <Container>
         <Header>
           <Body>
-            <Title>Oplop</Title>
+            <Title>Loplop</Title>
           </Body>
         </Header>
         <Content padder>
-          <Form>
-            <Item>
-              <Input placeholder="Label..." autoCapitalize="none" onChangeText={(label) => this.setState({label})}/>
-            </Item>
-            <Item last>
-              <Input placeholder="Master Password..." secureTextEntry={true} autoCapitalize="none" onChangeText={(password) => this.setState({password})}/>
-            </Item>
-          </Form>
-
-          <Button full
-            onPress={() => this.generatePassword(this.state.label, this.state.password)}>
-            <Text>Generate Password</Text>
-          </Button>
-          {copy}
+          <PasswordGenerator onClipboardSave={this.showNotification} />
+          {this.state.showCopy 
+            ? <BaseNotification message={copy} />
+            : null
+          }
         </Content>
         <Footer/>
       </Container>
