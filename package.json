@@ -3,6 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
     "jest-expo": "~27.0.0",
     "react-native-scripts": "1.14.0",
     "react-test-renderer": "16.3.1"
@@ -13,7 +19,8 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint ."
   },
   "jest": {
     "preset": "jest-expo"
@@ -23,7 +30,7 @@
     "loplop": "^1.0.3",
     "native-base": "^2.7.1",
     "prop-types": "^15.6.2",
-    "react": "16.3.1",
+    "react": "^16.4.2",
     "react-native": "~0.55.2"
   }
 }

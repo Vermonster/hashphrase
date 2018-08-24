@@ -1,0 +1,15 @@
+{
+    "extends": [
+          "eslint:recommended",
+          "airbnb"
+      ],
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "jest": true
+    },
+    "rules": {
+      "react/jsx-filename-extension": "off", 
+      "react/prop-types": "off"
+    }
+}

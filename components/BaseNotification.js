@@ -1,12 +1,14 @@
 import React from 'react';
-import { Card, CardItem, Body, Text } from 'native-base';
+import {
+  Card, CardItem, Body, Text,
+} from 'native-base';
 
-const BaseNotification = (props) => (
+const BaseNotification = ({ message }) => (
   <Card>
     <CardItem>
       <Body>
         <Text>
-          {props.message}
+          { message }
         </Text>
       </Body>
     </CardItem>
