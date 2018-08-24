@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Container, Content, Footer, Header, Title, Body } from 'native-base';
+import {
+  Container, Content, Footer, Header, Title, Body,
+} from 'native-base';
 import PasswordGenerator from './components/PasswordGenerator';
 import BaseNotification from './components/BaseNotification';
 
@@ -13,12 +15,12 @@ export default class App extends Component {
   }
 
   showNotification = () => {
-    this.setState({showCopy: true});
+    this.setState({ showCopy: true });
   }
 
   render() {
     const copy = 'Generated password was copied to the clipboard';
-
+    const { showCopy } = this.state;
     return (
       <Container>
         <Header>
@@ -28,12 +30,12 @@ export default class App extends Component {
         </Header>
         <Content padder>
           <PasswordGenerator onClipboardSave={this.showNotification} />
-          {this.state.showCopy 
+          { showCopy
             ? <BaseNotification message={copy} />
             : null
           }
         </Content>
-        <Footer/>
+        <Footer />
       </Container>
     );
   }
