@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<BaseNotification /> should render the same snapshot 1`] = `
+exports[`<BaseNotification /> should match the existing snapshot 1`] = `
 <View
   style={
     Object {

@@ -30,6 +30,7 @@
   },
   "jest": {
     "preset": "jest-expo",
+    "verbose": true,
     "setupTestFrameworkScriptFile": "<rootDir>/setupTestFramework.js",
     "transformIgnorePatterns": [
       "node_modules/(?!react-navigation|react-native|expo|native-base-shoutem-theme)"
