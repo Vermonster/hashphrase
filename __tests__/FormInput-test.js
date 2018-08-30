@@ -1,9 +1,3 @@
-// to test
-// component renders
-// same snapshot
-// onchange fires when text is changed
-// has props (ex. secureTextEntry, name)
-
 import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 import renderer from 'react-test-renderer';
@@ -62,6 +56,6 @@ describe('<FormInput />', () => {
       />,
     );
     wrapper.find(Input).simulate('change', event);
-    expect(mockOnChange).toBeCalledWith('onchange value');
+    expect(mockOnChange).toBeCalledWith(event);
   });
 });

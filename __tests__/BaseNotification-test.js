@@ -17,7 +17,6 @@ describe('<BaseNotification />', () => {
 
   it('should render the text passed in', () => {
     const wrapper = shallow(<BaseNotification message={innerText} />);
-    console.log(wrapper.debug());
     expect(wrapper.find(Text)).toHaveLength(1);
   });
 });

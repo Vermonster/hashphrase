@@ -7,15 +7,6 @@ import BaseButton from '../components/BaseButton';
 
 configure({ adapter: new Adapter() });
 
-// things to test
-// *contains Text component (shallow rendering is not reaching this)
-// *has full=true prop, has onPress function prop
-// *onPress function prop is called when button is pushed
-// require('react-native-mock/mock'); --> if doing e2e tests
-
-// Questions:
-// ? From where is a <View /> component being wrapped around my code?
-
 const mock = jest.fn();
 const innerText = 'Generate Password';
 
@@ -39,7 +30,7 @@ describe('<BaseButton />', () => {
     const onPressEvent = jest.fn();
     onPressEvent.mockReturnValue('onPress invoked');
     const wrapper = shallow(<BaseButton onPress={onPressEvent} buttonText={innerText} />);
-    wrapper.find(Button).first().props().onPress();
+    wrapper.find(Button).simulate('press');
     expect(onPressEvent.mock.calls.length).toBe(1);
   });
 });
