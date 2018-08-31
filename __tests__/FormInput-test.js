@@ -38,9 +38,9 @@ describe('<FormInput />', () => {
     expect(wrapper.props().name).toEqual(name);
     expect(wrapper.props().secureTextEntry).toEqual(secure);
     expect(wrapper.props().placeholder).toEqual(placeholderText);
+    expect(wrapper.props().onChange).toBeTruthy();
   });
 
-  // this doesn't work. issue with mocking function?
   it('should call onChange prop', () => {
     const mockOnChange = jest.fn();
     const event = {
