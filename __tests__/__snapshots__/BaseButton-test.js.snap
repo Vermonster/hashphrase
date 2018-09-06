@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<BaseButton /> should render the same snapshot 1`] = `
+exports[`<BaseButton /> should deep render without crashing 1`] = `
 <View
   accessibilityComponentType={undefined}
   accessibilityLabel={undefined}
@@ -65,7 +65,7 @@ exports[`<BaseButton /> should render the same snapshot 1`] = `
 </View>
 `;
 
-exports[`<BaseButton /> should render without crashing 1`] = `
+exports[`<BaseButton /> should shallow render without crashing 1`] = `
 "<Styled(Button) full={true} onPress={[Function: mockConstructor]} virtual={[undefined]}>
   <Styled(Text) virtual={[undefined]}>
     Generate Password

@@ -1,26 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<FormInput /> should match the existing snapshot 1`] = `
-<TextInput
-  allowFontScaling={true}
+<Styled(Input)
   autoCapitalize="none"
-  editable={true}
   name="testInput"
   onChange={[Function]}
   placeholder="test placeholder"
-  placeholderTextColor="#575757"
   secureTextEntry={true}
-  style={
-    Object {
-      "color": "#000",
-      "flex": 1,
-      "fontSize": 17,
-      "height": 50,
-      "paddingLeft": 5,
-      "paddingRight": 5,
-    }
-  }
-  underlineColorAndroid="rgba(0,0,0,0)"
-  virtual={undefined}
 />
 `;

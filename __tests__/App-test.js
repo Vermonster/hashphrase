@@ -11,20 +11,29 @@ configure({ adapter: new Adapter() });
 
 describe('<App />', () => {
   it('should render the same snapshot', () => {
-    const tree = renderer.create(<App />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const wrapper = shallow(<App />);
+    expect(wrapper).toMatchSnapshot();
   });
+
+  // vicki: use of below versus above?
   it('renders without crashing', () => {
     const rendered = renderer.create(<App />).toJSON();
     expect(rendered).toBeTruthy();
   });
+
   it('contains all of the required components', () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.find(Container)).toHaveLength(1);
-    expect(wrapper.find(Title)).toHaveLength(1);
-    expect(wrapper.find(Header)).toHaveLength(1);
-    expect(wrapper.find(Content)).toHaveLength(1);
-    expect(wrapper.find(Body)).toHaveLength(1);
-    expect(wrapper.find(Footer)).toHaveLength(1);
+    const requiredComponents = [
+      Container,
+      Title,
+      Header,
+      Content,
+      Body,
+      Footer,
+    ];
+
+    requiredComponents.forEach((component) => {
+      expect(wrapper.find(component)).toHaveLength(1);
+    });
   });
 });

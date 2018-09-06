@@ -1,10 +1,27 @@
-1. remove from package.json
-"./node_modules/jest-serializer-enzyme"
+Testing notes
 
-thread here: https://github.com/rogeliog/jest-serializer-enzyme/issues/15#issuecomment-332925891
+** BaseButton
+- Does it render (deep? shallow/snapshot?)
+- Does it run a function when pressed?
+- Does it contain a Button component?
+- Does it contain a Text element?
 
+** BaseNotification
+- Does it render (deep? shallow/snapshot?)
+- Does it contain Card, CardItem, Body, Text components?
+- I guess you could test whether it renders the text passed in?
+    - is that useful and necessary?
 
-Good blog post-- Testing this app.
+** FormInput
+- Does it render (deep? shallow/snapshot?)
+- 
+- 
 
-Ultimately, this was the most helpful:
-https://github.com/airbnb/enzyme/blob/master/docs/guides/jest.md
+** PasswordGenerator
+- 
+- 
+- 
+
+1. Do away with deep snapshots-- doesn't make sense
+2. Include functionality tests
+3. Look at what a dive() function renders versus non-dive. 

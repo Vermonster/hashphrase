@@ -1,6 +1,5 @@
 import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
-import renderer from 'react-test-renderer';
 import { shallow, configure } from 'enzyme';
 import { Input } from 'native-base';
 import FormInput from '../components/FormInput';
@@ -14,18 +13,6 @@ const placeholderText = 'test placeholder';
 
 describe('<FormInput />', () => {
   it('should match the existing snapshot', () => {
-    const tree = renderer.create(
-      <FormInput
-        name={name}
-        secureTextEntry={secure}
-        onChange={changeFn}
-        placeholder={placeholderText}
-      />,
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-  it('should have the props passed in', () => {
     const wrapper = shallow(
       <FormInput
         name={name}
@@ -34,11 +21,7 @@ describe('<FormInput />', () => {
         placeholder={placeholderText}
       />,
     );
-
-    expect(wrapper.props().name).toEqual(name);
-    expect(wrapper.props().secureTextEntry).toEqual(secure);
-    expect(wrapper.props().placeholder).toEqual(placeholderText);
-    expect(wrapper.props().onChange).toBeTruthy();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should call onChange prop', () => {
