@@ -14,6 +14,7 @@
     "eslint-plugin-react": "^7.11.1",
     "jest-expo": "~27.0.0",
     "jest-serializer-enzyme": "^1.0.0",
+    "react-devtools": "^3.3.2",
     "react-dom": "^16.4.2",
     "react-native-mock": "^0.3.1",
     "react-native-scripts": "1.14.0",
@@ -21,12 +22,13 @@
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
-    "start": "react-native-scripts start",
+    "start": "react-native-scripts start react-devtools",
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .", 
+    "devtools": "react-devtools"
   },
   "jest": {
     "preset": "jest-expo",
