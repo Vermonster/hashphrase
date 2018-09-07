@@ -28,7 +28,8 @@
     "ios": "react-native-scripts ios",
     "test": "jest",
     "lint": "eslint .", 
-    "devtools": "react-native-scripts start react-devtools"
+    "devtools-expo": "react-native-scripts start react-devtools", 
+    "devtools": "react-devtools"
   },
   "jest": {
     "preset": "jest-expo",

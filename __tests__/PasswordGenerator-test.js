@@ -31,4 +31,25 @@ describe('<PasswordGenerator />', () => {
     const wrapper = shallow(<PasswordGenerator />);
     expect(wrapper.find(BaseButton)).toHaveLength(1);
   });
+
+  it('generates expected passwords', () => {
+    const mockFn = jest.fn();
+    const component = renderer.create(<PasswordGenerator onClipboardSave={mockFn} />).getInstance();
+    component.setState({ label: 'testLabel', password: 'testPassword' });
+
+  });
+
+  // it('dismisses the keyboard when run generatePassword', () => {
+  //   const mockFn = jest.fn();
+  //   const component = renderer.create(<PasswordGenerator onClipboardSave={mockFn} />).getInstance();
+  //   component.setState({ label: 'testLabel', password: 'testPassword' });
+  //   component.generatePassword();
+  //   // check
+  //   expect("keyboard to be closed");
+  // });
+
+  // it('sets label state/password state in handleChange')
+  // it('generates a password on input (generatePw)')
+  // it('saves password to clipboard (generatePw)')
+  // it('generates expected password (generatePw)')
 });
