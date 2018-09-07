@@ -4,7 +4,6 @@ exports[`<FormInput /> should match the existing snapshot 1`] = `
 <Styled(Input)
   autoCapitalize="none"
   name="testInput"
-  onChange={[Function]}
   placeholder="test placeholder"
   secureTextEntry={true}
 />
