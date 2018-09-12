@@ -1,10 +1,6 @@
 import React from 'react';
-import Adapter from 'enzyme-adapter-react-16';
-import { shallow, configure } from 'enzyme';
-import { Input } from 'native-base';
+import { shallow } from 'enzyme';
 import FormInput from '../components/FormInput';
-
-configure({ adapter: new Adapter() });
 
 const secure = true;
 const name = 'testInput';
@@ -19,26 +15,31 @@ describe('<FormInput />', () => {
         secureTextEntry={secure}
         onChange={changeFn}
         placeholder={placeholderText}
+        autoCapitalize="none"
       />,
     );
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should call onChange prop', () => {
-    const mockOnChange = jest.fn();
-    const event = {
-      preventDefault() {},
-      target: { value: 'onchange value' },
+  it('should call onChanged prop', () => {
+    const mockOnChange = jest.fn(() => 'mock called!');
+    const e = {
+      nativeEvent: {
+        preventDefault: mockOnChange,
+        target: { value: 'test text!' },
+      },
     };
+
     const wrapper = shallow(
       <FormInput
         name={name}
         secureTextEntry={secure}
-        onChange={mockOnChange}
+        onChanged={mockOnChange}
         placeholder={placeholderText}
       />,
     );
-    wrapper.find(Input).simulate('change', event);
-    expect(mockOnChange).toBeCalledWith(event);
+
+    wrapper.simulate('change', e);
+    expect(mockOnChange).toHaveBeenCalled();
   });
 });

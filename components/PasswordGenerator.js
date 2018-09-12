@@ -21,14 +21,21 @@ export default class PasswordGenerator extends React.Component {
       this.setState({ [name]: inputValue });
     };
 
+    addToClipboard = (password) => {
+      const { onClipboardSave } = this.props;
+      Clipboard.setString(password);
+      onClipboardSave();
+    };
+
     generatePassword = (e) => {
       e.preventDefault();
       const { label, password } = this.state;
-      const { onClipboardSave } = this.props;
+      this.setState({ generatedPassword: loplop(label, password) }, () => {
+        const { generatedPassword } = this.state;
+        this.addToClipboard(generatedPassword);
+      });
       Keyboard.dismiss();
-      Clipboard.setString(loplop(label, password));
-      onClipboardSave();
-    }
+    };
 
     render() {
       const { label, password } = this.state;

@@ -15,7 +15,6 @@ const FormInput = ({
 );
 
 FormInput.propTypes = {
-  onChanged: PropTypes.func.isRequired,
   placeholder: PropTypes.string.isRequired,
 };
 

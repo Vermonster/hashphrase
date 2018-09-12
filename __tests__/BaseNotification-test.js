@@ -1,12 +1,9 @@
 import React from 'react';
-import Adapter from 'enzyme-adapter-react-16';
-import { shallow, configure } from 'enzyme';
+import { shallow } from 'enzyme';
 import {
   Text, Card, CardItem, Body,
 } from 'native-base';
 import BaseNotification from '../components/BaseNotification';
-
-configure({ adapter: new Adapter() });
 
 const innerText = 'Testing message';
 
@@ -22,5 +19,12 @@ describe('<BaseNotification />', () => {
     requiredComponents.forEach((component) => {
       expect(wrapper.find(component)).toHaveLength(1);
     });
+  });
+
+  it('should render message prop within nested Text component', () => {
+    const notification = 'This is a test notification';
+    const wrapper = shallow(<BaseNotification message={notification} />);
+    const text = wrapper.find(Text);
+    expect(text.props().children).toEqual(notification);
   });
 });
