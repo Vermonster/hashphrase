@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Form } from 'native-base';
+// import { loplop } from 'loplop';
 import PasswordGenerator from '../components/PasswordGenerator';
 
 describe('<PasswordGenerator />', () => {
@@ -30,17 +31,23 @@ describe('<PasswordGenerator />', () => {
     });
   });
 
+  it('should fire the generatePassword function on press', () => {
+    const mockEvent = jest.fn();
+    const e = { preventDefault: mockEvent };
+    const wrapper = shallow(<PasswordGenerator onClipboardSave={mockEvent} />);
+    const spy = jest.spyOn(wrapper.instance(), 'generatePassword');
+    wrapper.instance().forceUpdate();
+    wrapper.find('BaseButton').simulate('press', e);
+    expect(spy).toBeCalled();
+  });
 
-  it('should create a generated password, save to state', () => {
-    const fakedEvent = jest.fn();
-    const testLabel = 'testLabel';
-    const testPassword = 'testPassword';
-    const e = { preventDefault: fakedEvent };
-    const wrapper = shallow(<PasswordGenerator onClipboardSave={fakedEvent} />);
-
-    wrapper.setState({ label: 'testLabel', password: 'testPassword' });
-    wrapper.instance().generatePassword(e);
-
-    expect(wrapper.state().generatePassword).toEqual(testLabel + testPassword);
+  it('should fire the addToClipboard function on press', () => {
+    const mockEvent = jest.fn();
+    const e = { preventDefault: mockEvent };
+    const wrapper = shallow(<PasswordGenerator onClipboardSave={mockEvent} />);
+    const spy = jest.spyOn(wrapper.instance(), 'addToClipboard');
+    wrapper.instance().forceUpdate();
+    wrapper.find('BaseButton').simulate('press', e);
+    expect(spy).toBeCalled();
   });
 });
