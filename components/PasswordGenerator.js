@@ -1,6 +1,5 @@
 import React from 'react';
-import { Form, Item } from 'native-base';
-import { Keyboard, Clipboard } from 'react-native';
+import { Keyboard, Clipboard, View } from 'react-native';
 import loplop from 'loplop';
 import FormInput from './FormInput';
 import BaseButton from './BaseButton';
@@ -40,15 +39,11 @@ export default class PasswordGenerator extends React.Component {
     render() {
       const { label, password } = this.state;
       return (
-        <Form>
-          <Item>
-            <FormInput name="label" value={label} placeholder="Label..." onChanged={this.handleChange('label')} />
-          </Item>
-          <Item last>
-            <FormInput name="password" value={password} placeholder="Master Password..." secureTextEntry onChanged={this.handleChange('password')} />
-          </Item>
+        <View>
+          <FormInput name="label" value={label} placeholder="Label..." onChanged={this.handleChange('label')} />
+          <FormInput name="password" value={password} placeholder="Master Password..." secureTextEntry onChanged={this.handleChange('password')} />
           <BaseButton onPress={this.generatePassword} buttonText="Generate Password" />
-        </Form>
+        </View>
       );
     }
 }
