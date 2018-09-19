@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<BaseButton /> should render without crashing 1`] = `
-<Styled(Button)
-  full={true}
+<withTheme(Button)
+  mode="contained"
   onPress={[MockFunction]}
 >
-  <Styled(Text)>
+  <withTheme(Text)>
     Generate Password
-  </Styled(Text)>
-</Styled(Button)>
+  </withTheme(Text)>
+</withTheme(Button)>
 `;

@@ -1,7 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Form } from 'native-base';
-// import { loplop } from 'loplop';
 import PasswordGenerator from '../components/PasswordGenerator';
 
 describe('<PasswordGenerator />', () => {
@@ -14,7 +12,6 @@ describe('<PasswordGenerator />', () => {
   it('should render all of the components', () => {
     const wrapper = shallow(<PasswordGenerator />);
     expect(wrapper.find('FormInput')).toHaveLength(2);
-    expect(wrapper.find(Form)).toHaveLength(1);
     expect(wrapper.find('BaseButton')).toHaveLength(1);
   });
 
