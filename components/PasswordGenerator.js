@@ -9,48 +9,43 @@ export default class PasswordGenerator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      length: 16,
       label: '',
       password: '',
-      // legacyMode: false,
     };
     this.generatePassword = this.generatePassword.bind(this);
-    // this.toggleLegacyMode = this.toggleLegacyMode.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
-    generatePassword = () => {
-      const {
-        label, password, length,
-      } = this.state;
+    handleChange = name => (e) => {
+      const inputValue = e.nativeEvent.text;
+      this.setState({ [name]: inputValue });
+    };
+
+    addToClipboard = (password) => {
       const { onClipboardSave } = this.props;
-      Keyboard.dismiss();
-      Clipboard.setString(loplop(label, password, length));
+      Clipboard.setString(password);
       onClipboardSave();
-    }
+    };
 
-    handleChange = (e) => {
-      this.setState({ [e.target.name]: e.target.value });
-    }
-
-    // legacy toggle is not currently active, but might use in the future
-    //-------------------------------------------------------------------
-    // toggleLegacyMode = (newLegacyMode) => {
-    //   if (newLegacyMode) {
-    //     this.setState({ legacyMode: true, length: 8 });
-    //   } else {
-    //     this.setState({ legacyMode: false, length: 16 });
-    //   }
-    // }
+    generatePassword = (e) => {
+      e.preventDefault();
+      const { label, password } = this.state;
+      this.setState({ generatedPassword: loplop(label, password) }, () => {
+        const { generatedPassword } = this.state;
+        this.addToClipboard(generatedPassword);
+      });
+      Keyboard.dismiss();
+    };
 
     render() {
+      const { label, password } = this.state;
       return (
         <Form>
           <Item>
-            <FormInput name="label" placeholder="Label..." onChange={this.handleChange} />
+            <FormInput name="label" value={label} placeholder="Label..." onChanged={this.handleChange('label')} />
           </Item>
           <Item last>
-            <FormInput name="password" placeholder="Master Password..." secureTextEntry onChange={this.handleChange} />
+            <FormInput name="password" value={password} placeholder="Master Password..." secureTextEntry onChanged={this.handleChange('password')} />
           </Item>
           <BaseButton onPress={this.generatePassword} buttonText="Generate Password" />
         </Form>

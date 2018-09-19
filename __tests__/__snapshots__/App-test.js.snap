@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> should render the same snapshot 1`] = `
+<Styled(Container)>
+  <Styled(Header)>
+    <Styled(Body)>
+      <Styled(Title)>
+        Loplop
+      </Styled(Title)>
+    </Styled(Body)>
+  </Styled(Header)>
+  <Styled(Content)
+    padder={true}
+  >
+    <PasswordGenerator
+      onClipboardSave={[Function]}
+    />
+  </Styled(Content)>
+  <Styled(Footer) />
+</Styled(Container)>
+`;

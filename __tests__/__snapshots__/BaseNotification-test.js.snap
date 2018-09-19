@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BaseNotification /> should match the existing snapshot 1`] = `
+<Styled(Card)>
+  <Styled(CardItem)>
+    <Styled(Body)>
+      <Styled(Text)>
+        Testing message
+      </Styled(Text)>
+    </Styled(Body)>
+  </Styled(CardItem)>
+</Styled(Card)>
+`;
