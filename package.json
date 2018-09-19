@@ -23,7 +23,10 @@
     "lint": "eslint ."
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-navigation|react-native|expo|native-base-shoutem-theme)/"
+    ]
   },
   "dependencies": {
     "expo": "^27.0.1",
