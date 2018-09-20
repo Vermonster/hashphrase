@@ -1,17 +1,13 @@
 import React from 'react';
-import {
-  Card, CardItem, Body, Text,
-} from 'native-base';
+import { Card, Text } from 'react-native-paper';
 
 const BaseNotification = ({ message }) => (
   <Card>
-    <CardItem>
-      <Body>
-        <Text>
-          { message }
-        </Text>
-      </Body>
-    </CardItem>
+    <Card.Content>
+      <Text>
+        { message }
+      </Text>
+    </Card.Content>
   </Card>
 );
 

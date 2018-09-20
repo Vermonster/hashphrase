@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import {
-  Container, Body, Title, Header, Content, Footer,
-} from 'native-base';
+import { View } from 'react-native';
+import { Appbar } from 'react-native-paper';
 import App from '../App';
+import PasswordGenerator from '../components/PasswordGenerator';
 
 describe('<App />', () => {
   it('should render the same snapshot', () => {
@@ -14,12 +14,10 @@ describe('<App />', () => {
   it('should contain all of the required components', () => {
     const wrapper = shallow(<App />);
     const requiredComponents = [
-      Container,
-      Title,
-      Header,
-      Content,
-      Body,
-      Footer,
+      Appbar.Header,
+      Appbar.Content,
+      View,
+      PasswordGenerator,
     ];
 
     requiredComponents.forEach((component) => {

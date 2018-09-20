@@ -1,10 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<FormInput /> should match the existing snapshot 1`] = `
-<Styled(Input)
-  autoCapitalize="none"
+<withTheme(TextInput)
   name="testInput"
   placeholder="test placeholder"
-  secureTextEntry={true}
 />
 `;

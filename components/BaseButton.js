@@ -1,9 +1,9 @@
 import React from 'react';
-import { Button, Text } from 'native-base';
+import { Button, Text } from 'react-native-paper';
 import PropTypes from 'prop-types';
 
 const BaseButton = ({ onPress, buttonText }) => (
-  <Button full onPress={onPress}>
+  <Button mode="contained" onPress={onPress}>
     <Text>{ buttonText }</Text>
   </Button>
 );

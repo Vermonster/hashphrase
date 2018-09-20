@@ -1,15 +1,13 @@
 import React from 'react';
-import { Input } from 'native-base';
+import { TextInput } from 'react-native-paper';
 import PropTypes from 'prop-types';
 
 const FormInput = ({
-  name, placeholder, secureTextEntry, onChanged,
+  name, placeholder, onChanged,
 }) => (
-  <Input
+  <TextInput
     name={name}
     placeholder={placeholder}
-    secureTextEntry={secureTextEntry}
-    autoCapitalize="none"
     onChange={onChanged}
   />
 );

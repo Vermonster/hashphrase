@@ -1,8 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import {
-  Text, Card, CardItem, Body,
-} from 'native-base';
+import { Text, Card } from 'react-native-paper';
 import BaseNotification from '../components/BaseNotification';
 
 const innerText = 'Testing message';
@@ -14,7 +12,7 @@ describe('<BaseNotification />', () => {
   });
 
   it('should render the the correct components', () => {
-    const requiredComponents = [Text, Card, CardItem, Body];
+    const requiredComponents = [Text, Card];
     const wrapper = shallow(<BaseNotification message={innerText} />);
     requiredComponents.forEach((component) => {
       expect(wrapper.find(component)).toHaveLength(1);

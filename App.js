@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import {
-  Container, Content, Footer, Header, Title, Body,
-} from 'native-base';
+import { Appbar } from 'react-native-paper';
+import { View } from 'react-native';
 import PasswordGenerator from './components/PasswordGenerator';
 import BaseNotification from './components/BaseNotification';
 
@@ -22,21 +21,16 @@ export default class App extends Component {
     const copy = 'Generated password was copied to the clipboard';
     const { showCopy } = this.state;
     return (
-      <Container>
-        <Header>
-          <Body>
-            <Title>Loplop</Title>
-          </Body>
-        </Header>
-        <Content padder>
-          <PasswordGenerator onClipboardSave={this.showNotification} />
-          { showCopy
-            ? <BaseNotification message={copy} />
-            : null
-          }
-        </Content>
-        <Footer />
-      </Container>
+      <View>
+        <Appbar.Header>
+          <Appbar.Content title="Loplop" />
+        </Appbar.Header>
+        <PasswordGenerator onClipboardSave={this.showNotification} />
+        { showCopy
+          ? <BaseNotification message={copy} />
+          : null
+        }
+      </View>
     );
   }
 }

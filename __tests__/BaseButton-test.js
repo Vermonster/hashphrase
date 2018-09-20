@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Button, Text } from 'native-base';
+import { Button, Text } from 'react-native-paper';
 import BaseButton from '../components/BaseButton';
 
 const mock = jest.fn();

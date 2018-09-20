@@ -39,7 +39,7 @@
       "<rootDir>/__tests__/scripts"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!react-navigation|react-native|expo|native-base-shoutem-theme)"
+      "node_modules/(?!react-navigation|react-native|expo)"
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
@@ -48,9 +48,9 @@
   "dependencies": {
     "expo": "^27.0.1",
     "loplop": "^1.0.3",
-    "native-base": "^2.7.1",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
-    "react-native": "~0.55.2"
+    "react-native": "~0.55.2",
+    "react-native-paper": "^2.0.1"
   }
 }
