@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InfoScreen /> should render the same snapshot 1`] = `
+<View>
+  <withTheme(Card)>
+    <withTheme(Text)>
+      Test card and text
+    </withTheme(Text)>
+  </withTheme(Card)>
+</View>
+`;

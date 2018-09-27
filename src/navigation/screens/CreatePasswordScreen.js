@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Appbar } from 'react-native-paper';
 import { View } from 'react-native';
-import { createStackNavigator } from 'react-navigation';
 import PasswordGenerator from '../../../components/PasswordGenerator';
 import BaseNotification from '../../../components/BaseNotification';
 
@@ -38,8 +37,4 @@ class CreatePasswordScreen extends Component {
   }
 }
 
-export default createStackNavigator({
-  Home: {
-    screen: CreatePasswordScreen,
-  },
-});
+export default CreatePasswordScreen;
