@@ -1,14 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<App /> should render the same snapshot 1`] = `
-<Component>
-  <withTheme(Appbar.Header)>
-    <withTheme(Appbar.Content)
-      title="Loplop"
-    />
-  </withTheme(Appbar.Header)>
-  <PasswordGenerator
-    onClipboardSave={[Function]}
-  />
-</Component>
-`;
+exports[`<App /> should render the same snapshot 1`] = `<NavigationContainer />`;

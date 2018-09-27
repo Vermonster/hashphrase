@@ -12,8 +12,6 @@ const RootStack = createStackNavigator({
   initialRouteName: 'Home',
 });
 
-export default class App extends React.Component {
-  render() {
-    return <RootStack />
-  }
-}
+const App = () => <RootStack />;
+
+export default App;

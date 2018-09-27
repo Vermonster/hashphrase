@@ -1,6 +1,5 @@
 import React from 'react';
 import { View } from 'react-native';
-import { createStackNavigator } from 'react-navigation';
 import { Card, Text } from 'react-native-paper';
 
 const InfoScreen = () => (
@@ -11,6 +10,4 @@ const InfoScreen = () => (
   </View>
 );
 
-export default createStackNavigator({
-  Info: InfoScreen,
-});
+export default InfoScreen;
