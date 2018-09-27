@@ -1,36 +1,19 @@
-import React, { Component } from 'react';
-import { Appbar } from 'react-native-paper';
-import { View } from 'react-native';
-import PasswordGenerator from './components/PasswordGenerator';
-import BaseNotification from './components/BaseNotification';
+// import { Platform } from 'react-native'; // use this to specify platform-specific settings
+import React from 'react';
+import { createStackNavigator } from 'react-navigation';
+import CreatePasswordScreen from './src/navigation/screens/CreatePasswordScreen';
+import InfoScreen from './src/navigation/screens/InfoScreen';
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showCopy: false,
-    };
-    this.showNotification = this.showNotification.bind(this);
-  }
+const RootStack = createStackNavigator({
+  Home: CreatePasswordScreen,
+  Info: InfoScreen,
+},
+{
+  initialRouteName: 'Home',
+});
 
-  showNotification = () => {
-    this.setState({ showCopy: true });
-  }
-
+export default class App extends React.Component {
   render() {
-    const copy = 'Generated password was copied to the clipboard';
-    const { showCopy } = this.state;
-    return (
-      <View>
-        <Appbar.Header>
-          <Appbar.Content title="Loplop" />
-        </Appbar.Header>
-        <PasswordGenerator onClipboardSave={this.showNotification} />
-        { showCopy
-          ? <BaseNotification message={copy} />
-          : null
-        }
-      </View>
-    );
+    return <RootStack />
   }
 }
