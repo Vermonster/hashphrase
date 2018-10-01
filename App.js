@@ -1,4 +1,3 @@
-// import { Platform } from 'react-native'; // use this to specify platform-specific settings
 import React from 'react';
 import { createStackNavigator } from 'react-navigation';
 import CreatePasswordScreen from './src/navigation/screens/CreatePasswordScreen';

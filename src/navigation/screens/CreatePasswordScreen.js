@@ -28,10 +28,7 @@ class CreatePasswordScreen extends Component {
           <Appbar.Content title="Loplop" />
         </Appbar.Header>
         <PasswordGenerator onClipboardSave={this.showNotification} />
-        { showCopy
-          ? <BaseNotification message={copy} />
-          : null
-        }
+        { showCopy && <BaseNotification message={copy} /> }
       </View>
     );
   }

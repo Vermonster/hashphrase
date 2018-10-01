@@ -25,7 +25,7 @@ describe('<CreatePasswordScreen />', () => {
     });
   });
 
-  it('should toggle state when showNotification() called', () => {
+  it('should toggle state when showNotification is called', () => {
     const wrapper = shallow(<CreatePasswordScreen />);
     const instance = wrapper.instance();
     expect(wrapper.state().showCopy).toEqual(false);
