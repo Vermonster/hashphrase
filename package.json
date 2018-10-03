@@ -25,6 +25,7 @@
     "jest-expo": "^31.0.0",
     "jest-serializer-enzyme": "^1.0.0",
     "react-devtools": "^3.3.2",
+    "react-devtools-core": "^3.4.0",
     "react-dom": "^16.4.2",
     "react-native-mock-render": "^0.1.2",
     "react-native-scripts": "1.14.0",
@@ -58,6 +59,8 @@
   },
   "dependencies": {
     "expo": "31.0.0",
+    "i18next": "^11.9.0",
+    "i18next-browser-languagedetector": "^2.2.3",
     "loplop": "^1.0.3",
     "prop-types": "^15.6.2",
     "react": "16.5.0",
