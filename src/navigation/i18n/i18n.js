@@ -26,16 +26,16 @@ i18n
           },
         },
       },
-      // es: {
-      //   translations: {
-      //     createPassword: {
-      //       title: 'Loplop',
-      //       message: 'Contrasena generada ha sido copiado al clipboard',
-      //       label: 'Etiqueta...',
-      //       password: 'Contrasena general',
-      //     },
-      //   },
-      // },
+      es: {
+        translations: {
+          createPassword: {
+            title: 'Loplop',
+            message: 'Contrasena generada ha sido copiado al clipboard',
+            label: 'Etiqueta...',
+            password: 'Contrasena general',
+          },
+        },
+      },
     },
     fallbackLng: 'en',
     ns: ['translations'],

@@ -3,6 +3,7 @@ import { Appbar } from 'react-native-paper';
 import { View } from 'react-native';
 import PasswordGenerator from '../../../components/PasswordGenerator';
 import BaseNotification from '../../../components/BaseNotification';
+import i18n from '../i18n/i18n';
 
 class CreateOldPassword extends Component {
   constructor(props) {
@@ -16,25 +17,16 @@ class CreateOldPassword extends Component {
     this.setState({ showCopy: true });
   }
 
-  translate = () => {
-    const text = {};
-    const { t } = this.props;
-    text.message = t('createPassword.message');
-    text.title = t('createPassword.title');
-    return text;
-  }
-
   render() {
     const { showCopy } = this.state;
-    const text = this.translate();
 
     return (
       <View>
         <Appbar.Header>
-          <Appbar.Content title={text.title} />
+          <Appbar.Content title={i18n.t('createPassword.title')} />
         </Appbar.Header>
         <PasswordGenerator onClipboardSave={this.showNotification} />
-        { showCopy && <BaseNotification message={text.message} /> }
+        { showCopy && <BaseNotification message={i18n.t('createPassword.message')} /> }
       </View>
     );
   }
