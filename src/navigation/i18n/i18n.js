@@ -1,8 +1,8 @@
 import i18n from 'i18next';
 import Expo from 'expo';
 import { reactI18nextModule } from 'react-i18next';
-// import { en } from './en.js';
-// import { es } from './es.js';
+import es from './es';
+import en from './en';
 
 const languageDetector = {
   type: 'languageDetector',
@@ -18,26 +18,8 @@ i18n
   .use(reactI18nextModule)
   .init({
     resources: {
-      en: {
-        translations: {
-          createPassword: {
-            title: 'Loplop',
-            message: 'Generated password was copied to the clipboard.',
-            label: 'Label...',
-            password: 'Master Password...',
-          },
-        },
-      },
-    },
-    es: {
-      translations: {
-        createPassword: {
-          title: 'Loplop',
-          message: 'Contraseña generada ha sido copiado al clipboard.',
-          label: 'Etiqueta...',
-          password: 'Contraseña general...',
-        },
-      },
+      en,
+      es,
     },
     fallbackLng: 'en',
     ns: ['translations'],
