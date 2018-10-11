@@ -1,4 +1,5 @@
 const en = {
+<<<<<<< HEAD
   createPassword: {
     title: 'AgiliKEY',
     newPassword: 'Creating a new account password?',
@@ -24,6 +25,15 @@ const en = {
     masterPassword: 'What is your Master Password?',
     confirmPassword: 'Retype your Master Password',
     submitMessage: 'CREATE ACCOUNT PASSWORD',
+=======
+  translations: {
+    createPassword: {
+      title: 'Loplop',
+      message: 'Generated password was copied to the clipboard.',
+      label: 'Label...',
+      password: 'Master Password...',
+    },
+>>>>>>> funnel translated strings to components
   },
 };
 

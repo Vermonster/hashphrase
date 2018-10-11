@@ -17,16 +17,30 @@ class CreateOldPassword extends Component {
     this.setState({ showCopy: true });
   }
 
+  translateText = () => {
+    const namespace = 'createPassword';
+    const finalObj = {};
+    ['title', 'label', 'password', 'message'].forEach((str) => {
+      finalObj[str] = i18n.t(`${namespace}.${str}`);
+    });
+    return finalObj;
+  }
+
   render() {
     const { showCopy } = this.state;
+    const terms = this.translateText();
 
     return (
       <View>
         <Appbar.Header>
-          <Appbar.Content title={i18n.t('createPassword.title')} />
+          <Appbar.Content title={terms.title} />
         </Appbar.Header>
-        <PasswordGenerator onClipboardSave={this.showNotification} />
-        { showCopy && <BaseNotification message={i18n.t('createPassword.message')} /> }
+        <PasswordGenerator
+          onClipboardSave={this.showNotification}
+          describeLabel={terms.label}
+          describePassword={terms.password}
+        />
+        { showCopy && <BaseNotification message={terms.message} /> }
       </View>
     );
   }

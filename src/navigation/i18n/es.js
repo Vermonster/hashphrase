@@ -1,4 +1,5 @@
 const es = {
+<<<<<<< HEAD
   createPassword: {
     title: 'AgiliKEY',
     newPassword: '¿Vas a crear una nueva contraseña?',
@@ -24,6 +25,15 @@ const es = {
     masterPassword: '¿Qué es la Contraseña Maestra?',
     confirmPassword: 'Vuelva a escribir la Contraseña Maestra',
     submitMessage: 'GENERAR CONTRASEÑA',
+=======
+  translations: {
+    createPassword: {
+      title: 'Loplop',
+      message: 'Contraseña generada ha sido copiado al clipboard.',
+      label: 'Etiqueta...',
+      password: 'Contraseña general...',
+    },
+>>>>>>> funnel translated strings to components
   },
 };
 
