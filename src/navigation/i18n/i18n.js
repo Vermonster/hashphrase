@@ -1,6 +1,8 @@
 import i18n from 'i18next';
 import Expo from 'expo';
 import { reactI18nextModule } from 'react-i18next';
+// import { en } from './en.js';
+// import { es } from './es.js';
 
 const languageDetector = {
   type: 'languageDetector',
@@ -20,20 +22,20 @@ i18n
         translations: {
           createPassword: {
             title: 'Loplop',
-            message: 'Generated password was copied to the clipboard',
-            // label: 'Label...',
-            // password: 'Master Password...',
+            message: 'Generated password was copied to the clipboard.',
+            label: 'Label...',
+            password: 'Master Password...',
           },
         },
       },
-      es: {
-        translations: {
-          createPassword: {
-            title: 'Loplop',
-            message: 'Contrasena generada ha sido copiado al clipboard',
-            label: 'Etiqueta...',
-            password: 'Contrasena general',
-          },
+    },
+    es: {
+      translations: {
+        createPassword: {
+          title: 'Loplop',
+          message: 'Contraseña generada ha sido copiado al clipboard.',
+          label: 'Etiqueta...',
+          password: 'Contraseña general...',
         },
       },
     },
