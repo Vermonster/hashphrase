@@ -703,7 +703,7 @@ accepts@~1.3.3, accepts@~1.3.5:
     mime-types "~2.1.18"
     negotiator "0.6.1"
 
-acorn-globals@^4.1.0:
+acorn-globals@^4.1.0, acorn-globals@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/acorn-globals/-/acorn-globals-4.3.0.tgz#e3b6f8da3c1552a95ae627571f7dd6923bb54103"
   dependencies:
@@ -724,7 +724,7 @@ acorn@^5.0.3, acorn@^5.5.3, acorn@^5.6.0:
   version "5.7.3"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.3.tgz#67aa231bf8812974b85235a96771eb6bd07ea279"
 
-acorn@^6.0.1:
+acorn@^6.0.1, acorn@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.0.2.tgz#6a459041c320ab17592c6317abbfdf4bbaa98ca4"
 
@@ -2492,11 +2492,11 @@ css-what@2.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/css-what/-/css-what-2.1.0.tgz#9467d032c38cfaefb9f2d79501253062f87fa1bd"
 
-cssom@0.3.x, "cssom@>= 0.3.2 < 0.4.0":
+cssom@0.3.x, "cssom@>= 0.3.2 < 0.4.0", cssom@^0.3.4:
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/cssom/-/cssom-0.3.4.tgz#8cd52e8a3acfd68d3aed38ee0a640177d2f9d797"
 
-cssstyle@^1.0.0:
+cssstyle@^1.0.0, cssstyle@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/cssstyle/-/cssstyle-1.1.1.tgz#18b038a9c44d65f7a8e428a653b9f6fe42faf5fb"
   dependencies:
@@ -2526,7 +2526,7 @@ data-uri-to-buffer@1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/data-uri-to-buffer/-/data-uri-to-buffer-1.2.0.tgz#77163ea9c20d8641b4707e8f18abdf9a78f34835"
 
-data-urls@^1.0.0:
+data-urls@^1.0.0, data-urls@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/data-urls/-/data-urls-1.0.1.tgz#d416ac3896918f29ca84d81085bc3705834da579"
   dependencies:
@@ -2953,7 +2953,7 @@ escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
-escodegen@1.x.x, escodegen@^1.9.1:
+escodegen@1.x.x, escodegen@^1.11.0, escodegen@^1.9.1:
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/escodegen/-/escodegen-1.11.0.tgz#b27a9389481d5bfd5bec76f7bb1eb3f8f4556589"
   dependencies:
@@ -4998,6 +4998,36 @@ jsdom@^11.5.1:
     ws "^5.2.0"
     xml-name-validator "^3.0.0"
 
+jsdom@^12.2.0:
+  version "12.2.0"
+  resolved "https://registry.yarnpkg.com/jsdom/-/jsdom-12.2.0.tgz#7cf3f5b5eafd47f8f09ca52315d367ff6e95de23"
+  dependencies:
+    abab "^2.0.0"
+    acorn "^6.0.2"
+    acorn-globals "^4.3.0"
+    array-equal "^1.0.0"
+    cssom "^0.3.4"
+    cssstyle "^1.1.1"
+    data-urls "^1.0.1"
+    domexception "^1.0.1"
+    escodegen "^1.11.0"
+    html-encoding-sniffer "^1.0.2"
+    nwsapi "^2.0.9"
+    parse5 "5.1.0"
+    pn "^1.1.0"
+    request "^2.88.0"
+    request-promise-native "^1.0.5"
+    saxes "^3.1.3"
+    symbol-tree "^3.2.2"
+    tough-cookie "^2.4.3"
+    w3c-hr-time "^1.0.1"
+    webidl-conversions "^4.0.2"
+    whatwg-encoding "^1.0.5"
+    whatwg-mimetype "^2.2.0"
+    whatwg-url "^7.0.0"
+    ws "^6.1.0"
+    xml-name-validator "^3.0.0"
+
 jsesc@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-1.3.0.tgz#46c3fec8c1892b12b0833db9bc7622176dbab34b"
@@ -5964,7 +5994,7 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nwsapi@^2.0.7:
+nwsapi@^2.0.7, nwsapi@^2.0.9:
   version "2.0.9"
   resolved "https://registry.yarnpkg.com/nwsapi/-/nwsapi-2.0.9.tgz#77ac0cdfdcad52b6a1151a84e73254edc33ed016"
 
@@ -6220,6 +6250,10 @@ parse-json@^2.2.0:
 parse5@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
+
+parse5@5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/parse5/-/parse5-5.1.0.tgz#c59341c9723f414c452975564c7c00a68d58acd2"
 
 parse5@^3.0.1:
   version "3.0.3"
@@ -6548,8 +6582,8 @@ qs@6.5.2, qs@^6.4.0, qs@^6.5.0, qs@^6.5.1, qs@~6.5.2:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
 
 query-string@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/query-string/-/query-string-6.1.0.tgz#01e7d69f6a0940dac67a937d6c6325647aa4532a"
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/query-string/-/query-string-6.2.0.tgz#468edeb542b7e0538f9f9b1aeb26f034f19c86e1"
   dependencies:
     decode-uri-component "^0.2.0"
     strict-uri-encode "^2.0.0"
@@ -6628,6 +6662,39 @@ rc@^1.0.1, rc@^1.1.2, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-addons-create-fragment@^15.4.0:
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/react-addons-create-fragment/-/react-addons-create-fragment-15.6.2.tgz#a394de7c2c7becd6b5475ba1b97ac472ce7c74f8"
+  dependencies:
+    fbjs "^0.8.4"
+    loose-envify "^1.3.1"
+    object-assign "^4.1.0"
+
+react-addons-perf@^15.4.0:
+  version "15.4.2"
+  resolved "https://registry.yarnpkg.com/react-addons-perf/-/react-addons-perf-15.4.2.tgz#110bdcf5c459c4f77cb85ed634bcd3397536383b"
+  dependencies:
+    fbjs "^0.8.4"
+    object-assign "^4.1.0"
+
+react-addons-pure-render-mixin@^15.4.0:
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/react-addons-pure-render-mixin/-/react-addons-pure-render-mixin-15.6.2.tgz#6b83f40b6b36ee40735cbd6125eb3f13ce1cddc9"
+  dependencies:
+    fbjs "^0.8.4"
+    object-assign "^4.1.0"
+
+react-addons-test-utils@^15.4.0:
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/react-addons-test-utils/-/react-addons-test-utils-15.6.2.tgz#c12b6efdc2247c10da7b8770d185080a7b047156"
+
+react-addons-update@^15.4.0:
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/react-addons-update/-/react-addons-update-15.6.2.tgz#e53753c5b34887974510c882d7fb075851d5e504"
+  dependencies:
+    fbjs "^0.8.9"
+    object-assign "^4.1.0"
+
 react-clone-referenced-element@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/react-clone-referenced-element/-/react-clone-referenced-element-1.1.0.tgz#9cdda7f2aeb54fea791f3ab8c6ab96c7a77d0158"
@@ -6665,6 +6732,15 @@ react-display-name@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/react-display-name/-/react-display-name-0.2.0.tgz#0e1f7086e45a32d07764df35ed32ff16f1259790"
 
+react-dom@^15.4.0:
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.2.tgz#41cfadf693b757faf2708443a1d1fd5a02bef730"
+  dependencies:
+    fbjs "^0.8.9"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
+    prop-types "^15.5.10"
+
 react-dom@^16.0.0, react-dom@^16.4.2:
   version "16.5.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.5.2.tgz#b69ee47aa20bab5327b2b9d7c1fe2a30f2cfa9d7"
@@ -6691,9 +6767,9 @@ react-google-maps@^7.3.0:
     scriptjs "2.5.8"
     warning "3.0.0"
 
-react-i18next@^8.0.4:
-  version "8.0.4"
-  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-8.0.4.tgz#f45132174c3c5b96fe189049f8187ef30cb4b7f8"
+react-i18next@^8.0.7:
+  version "8.0.7"
+  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-8.0.7.tgz#9e6ffdaa01f4454ba216fa50377a7c2ba6f1e662"
   dependencies:
     "@babel/runtime" "^7.1.2"
     create-react-context "0.2.3"
@@ -6758,6 +6834,23 @@ react-native-mock-render@^0.1.2:
     react-timer-mixin "^0.13.3"
     warning "^2.1.0"
 
+react-native-mock@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/react-native-mock/-/react-native-mock-0.3.1.tgz#13d22433c5351a8a7fb8aedd7862b614d087851c"
+  dependencies:
+    cubic-bezier "^0.1.2"
+    invariant "^2.2.1"
+    keymirror "^0.1.1"
+    raf "^3.2.0"
+    react-addons-create-fragment "^15.4.0"
+    react-addons-perf "^15.4.0"
+    react-addons-pure-render-mixin "^15.4.0"
+    react-addons-test-utils "^15.4.0"
+    react-addons-update "^15.4.0"
+    react-dom "^15.4.0"
+    react-timer-mixin "^0.13.3"
+    warning "^2.1.0"
+
 react-native-paper@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-2.0.1.tgz#0221ead52e35811ca6d2ce41cf069d424fe92bcf"
@@ -6781,8 +6874,8 @@ react-native-safe-module@^1.1.0:
     dedent "^0.6.0"
 
 react-native-screens@^1.0.0-alpha.11:
-  version "1.0.0-alpha.12"
-  resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-1.0.0-alpha.12.tgz#5953c39c9dbfbe324610005e07d85a416081c48c"
+  version "1.0.0-alpha.15"
+  resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-1.0.0-alpha.15.tgz#5b5a0041310b46f12048fda1908d52e7290ec18f"
 
 react-native-scripts@1.14.0:
   version "1.14.0"
@@ -6924,18 +7017,18 @@ react-navigation-stack@0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/react-navigation-stack/-/react-navigation-stack-0.7.0.tgz#0b2f139ee1cba953037ef51353df992ec6c74fa2"
 
-react-navigation-tabs@0.8.2:
-  version "0.8.2"
-  resolved "https://registry.yarnpkg.com/react-navigation-tabs/-/react-navigation-tabs-0.8.2.tgz#65f8a6ce368684227603345b4d312da2ef3366e1"
+react-navigation-tabs@0.8.4:
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/react-navigation-tabs/-/react-navigation-tabs-0.8.4.tgz#aa767f28b899f13c99f2b034b4a665f8cf0a5737"
   dependencies:
     hoist-non-react-statics "^2.5.0"
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
     react-native-tab-view "^1.0.0"
 
-react-navigation@^2.17.0:
-  version "2.17.0"
-  resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-2.17.0.tgz#ebc5a92d7633f529ca340a38146637ff01f969a4"
+react-navigation@^2.18.0:
+  version "2.18.0"
+  resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-2.18.0.tgz#c14e632da308cb60c3f60bbfba4b0c037ea502c3"
   dependencies:
     clamp "^1.0.1"
     create-react-context "0.2.2"
@@ -6948,7 +7041,7 @@ react-navigation@^2.17.0:
     react-navigation-deprecated-tab-navigator "1.3.0"
     react-navigation-drawer "0.5.0"
     react-navigation-stack "0.7.0"
-    react-navigation-tabs "0.8.2"
+    react-navigation-tabs "0.8.4"
 
 react-prop-types-element-of-type@2.2.0:
   version "2.2.0"
@@ -7232,7 +7325,7 @@ request-promise-native@^1.0.5:
     stealthy-require "^1.1.0"
     tough-cookie ">=2.3.3"
 
-request@^2.45.0, request@^2.81.0, request@^2.83.0, request@^2.87.0:
+request@^2.45.0, request@^2.81.0, request@^2.83.0, request@^2.87.0, request@^2.88.0:
   version "2.88.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.88.0.tgz#9c2fca4f7d35b592efe57c7f0a55e81052124fef"
   dependencies:
@@ -7428,6 +7521,12 @@ sax@^1.2.4:
 sax@~1.1.1:
   version "1.1.6"
   resolved "http://registry.npmjs.org/sax/-/sax-1.1.6.tgz#5d616be8a5e607d54e114afae55b7eaf2fcc3240"
+
+saxes@^3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/saxes/-/saxes-3.1.3.tgz#334ab3b802a465ccda96fff9bdefbd505546ffa8"
+  dependencies:
+    xmlchars "^1.3.1"
 
 schedule@^0.5.0:
   version "0.5.0"
@@ -8104,7 +8203,7 @@ topo@2.x.x:
   dependencies:
     hoek "4.x.x"
 
-tough-cookie@>=2.3.3, tough-cookie@^2.3.4, tough-cookie@~2.4.3:
+tough-cookie@>=2.3.3, tough-cookie@^2.3.4, tough-cookie@^2.4.3, tough-cookie@~2.4.3:
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.4.3.tgz#53f36da3f47783b0925afa06ff9f3b165280f781"
   dependencies:
@@ -8377,7 +8476,7 @@ webidl-conversions@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-4.0.2.tgz#a855980b1f0b6b359ba1d5d9fb39ae941faa63ad"
 
-whatwg-encoding@^1.0.1, whatwg-encoding@^1.0.3:
+whatwg-encoding@^1.0.1, whatwg-encoding@^1.0.3, whatwg-encoding@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/whatwg-encoding/-/whatwg-encoding-1.0.5.tgz#5abacf777c32166a51d085d6b4f3e7d27113ddb0"
   dependencies:
@@ -8391,7 +8490,7 @@ whatwg-fetch@^1.0.0:
   version "1.1.1"
   resolved "http://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-1.1.1.tgz#ac3c9d39f320c6dce5339969d054ef43dd333319"
 
-whatwg-mimetype@^2.1.0:
+whatwg-mimetype@^2.1.0, whatwg-mimetype@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/whatwg-mimetype/-/whatwg-mimetype-2.2.0.tgz#a3d58ef10b76009b042d03e25591ece89b88d171"
 
@@ -8512,6 +8611,12 @@ ws@^5.2.0:
   dependencies:
     async-limiter "~1.0.0"
 
+ws@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-6.1.0.tgz#119a9dbf92c54e190ec18d10e871d55c95cf9373"
+  dependencies:
+    async-limiter "~1.0.0"
+
 xcode@^0.9.1:
   version "0.9.3"
   resolved "https://registry.yarnpkg.com/xcode/-/xcode-0.9.3.tgz#910a89c16aee6cc0b42ca805a6d0b4cf87211cf3"
@@ -8613,6 +8718,10 @@ xmlbuilder@4.0.0:
 xmlbuilder@8.2.2:
   version "8.2.2"
   resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-8.2.2.tgz#69248673410b4ba42e1a6136551d2922335aa773"
+
+xmlchars@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/xmlchars/-/xmlchars-1.3.1.tgz#1dda035f833dbb4f86a0c28eaa6ca769214793cf"
 
 xmldoc@^0.4.0:
   version "0.4.0"
