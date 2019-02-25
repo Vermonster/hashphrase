@@ -1,5 +1,14 @@
 {
   "expo": {
-    "sdkVersion": "27.0.0"
+    "name": "loplop-native",
+    "description": "A mobile password generator",
+    "slug": "loplop",
+    "sdkVersion": "31.0.0",
+    "platforms": [
+      "android",
+      "ios"
+    ],
+    "version": "0.0.1",
+    "orientation": "portrait"
   }
 }
