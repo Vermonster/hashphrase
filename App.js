@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStackNavigator } from 'react-navigation';
+import { createAppContainer, createStackNavigator } from 'react-navigation';
 import CreatePasswordScreen from './src/navigation/screens/CreatePasswordScreen';
 import InfoScreen from './src/navigation/screens/InfoScreen';
 
@@ -11,6 +11,6 @@ const RootStack = createStackNavigator({
   initialRouteName: 'Home',
 });
 
-const App = () => <RootStack />;
+const AppContainer = createAppContainer(RootStack);
 
-export default App;
+export default AppContainer;
