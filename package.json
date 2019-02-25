@@ -2,6 +2,10 @@
   "name": "oplop-native",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">= 10.13.0",
+    "yarn": ">= 1.12.3"
+  },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
     "enzyme": "^3.5.0",
