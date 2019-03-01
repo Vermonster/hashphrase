@@ -40,7 +40,8 @@
     "setupTestFrameworkScriptFile": "<rootDir>/__tests__/scripts/setupTests.js",
     "verbose": true,
     "testPathIgnorePatterns": [
-      "<rootDir>/__tests__/scripts"
+      "<rootDir>/__tests__/scripts",
+      "<rootDir>/node_modules/"
     ],
     "transformIgnorePatterns": [
       "node_modules/(?!react-navigation|react-native|expo)"
