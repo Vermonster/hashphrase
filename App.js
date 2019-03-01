@@ -1,4 +1,3 @@
-import React from 'react';
 import { createAppContainer, createStackNavigator } from 'react-navigation';
 import CreatePasswordScreen from './src/navigation/screens/CreatePasswordScreen';
 import InfoScreen from './src/navigation/screens/InfoScreen';
