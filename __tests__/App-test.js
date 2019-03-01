@@ -4,6 +4,7 @@ import App from '../App';
 
 jest.mock('react-navigation', () => ({
   createAppContainer: jest.fn().mockReturnValue(
+    // eslint-disable-next-line
     function NavigationContainer(props) { return null; }
   ),
   createStackNavigator: jest.fn(),
