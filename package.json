@@ -21,7 +21,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
     "jest": "23.6.0",
-    "jest-expo": "^32.0.0",
+    "jest-expo": "^31.0.0",
     "jest-serializer-enzyme": "^1.0.0",
     "react-devtools": "^3.3.2",
     "react-dom": "^16.4.2",
@@ -48,7 +48,7 @@
       "<rootDir>/node_modules/"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!react-navigation|react-native|expo)"
+      "node_modules/(?!(jest-)?react-native|react-navigation|react-native|expo)"
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
