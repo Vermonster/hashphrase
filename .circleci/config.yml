@@ -1,35 +1,43 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2
+publish: &publish
+  working_directory: ~/loplop-native
+  docker:
+    - image: circleci/node:10.13.0
+  steps:
+    - checkout
+
+    - run:
+        name: Installing dependencies
+        command: npm install
+
+    - run:
+        name: Login into Expo
+        command: npx expo login -u $EXPO_USERNAME -p $EXPO_PASSWORD
+
+    - run:
+        name: Publish to Expo
+        command: npx expo publish --non-interactive --max-workers 1 --release-channel $EXPO_RELEASE_CHANNEL
+
 jobs:
-  build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:10.13
+  publish_to_expo_dev:
+    environment:
+      EXPO_RELEASE_CHANNEL: dev
+    <<: *publish
 
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
+  publish_to_expo_prod:
+    environment:
+      EXPO_RELEASE_CHANNEL: default
+    <<: *publish
 
-    working_directory: ~/loplop-native
-    steps:
-      - checkout
-      # Download and cache dependencies
-      - restore_cache:
-      name: Restore Yarn Package Cache
-      keys:
-        - yarn-packages-{{ checksum "yarn.lock" }}
-  - run:
-      name: Install Dependencies
-      command: yarn install --frozen-lockfile
-  - save_cache:
-      name: Save Yarn Package Cache
-      key: yarn-packages-{{ checksum "yarn.lock" }}
-      paths:
-        - ~/.cache/yarn
-
-      # run tests!
-      - run: yarn test
+workflows:
+  version: 2
+  my_app:
+    jobs:
+      - publish_to_expo_dev:
+          filters:
+            branches:
+              only: development
+      - publish_to_expo_prod:
+          filters:
+            branches:
+              only: master
