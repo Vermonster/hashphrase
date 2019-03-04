@@ -4,7 +4,7 @@ import { View } from 'react-native';
 import PasswordGenerator from '../../../components/PasswordGenerator';
 import BaseNotification from '../../../components/BaseNotification';
 
-class CreatePasswordScreen extends Component {
+export default class CreatePasswordScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -34,4 +34,3 @@ class CreatePasswordScreen extends Component {
   }
 }
 
-export default CreatePasswordScreen;
