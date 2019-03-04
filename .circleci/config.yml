@@ -1,6 +1,6 @@
 version: 2
 publish: &publish
-  working_directory: ~/my-app
+  working_directory: ~/loplop-native
   docker:
     - image: circleci/node:10.13.0
   steps:
