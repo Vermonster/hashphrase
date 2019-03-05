@@ -23,14 +23,16 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - dependency-cache-{{ checksum "yarn.lock" }}
+            - yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - yarn-packages-v1-{{ .Branch }}-
+            - yarn-packages-v1-
       - run:
           name: Installing dependencies
           command: yarn install
       - save_cache:
           paths:
-            - node_modules
-          key: dependency-cache-{{ checksum "yarn.lock" }}
+            - ~/.cache/yarn
+          key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run:
           name: Test
           command: yarn test
