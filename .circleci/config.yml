@@ -25,11 +25,11 @@ jobs:
     steps:
       -checkout
 
-      -run:
+      - run:
         name: Installing dependencies
         command: npm install
 
-      -run:
+      - run:
         name: Test
         command: npm test
 
