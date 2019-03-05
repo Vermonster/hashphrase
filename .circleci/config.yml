@@ -1,14 +1,16 @@
 version: 2
 publish: &publish
   working_directory: ~/loplop-native
-  docker:
-    - image: circleci/node:10.13.0
   steps:
     - checkout
 
+    - run: 
+        name: Installing the latest version of yarn
+        command: 'curl -L https://yarnpkg.com/install.sh | bash' 
+        
     - run:
         name: Installing dependencies
-        command: npm install
+        command: yarn install
 
     - run:
         name: Login into Expo
@@ -20,18 +22,20 @@ publish: &publish
 
 jobs:
   build_and_test:
-    docker:
-      - image: circleci/node:10.13.0
     steps:
       - checkout
 
+      - run: 
+          name: Installing the latest version of yarn
+          command: 'curl -L https://yarnpkg.com/install.sh | bash' 
+
       - run:
           name: Installing dependencies
-          command: npm install
+          command: yarn install
 
       - run:
           name: Test
-          command: npm test
+          command: yarn test
 
   publish_to_expo_dev:
     environment:
