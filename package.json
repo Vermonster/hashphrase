@@ -8,8 +8,8 @@
     "yarn": ">= 1.12.3"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.6",
     "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^8.2.6",
     "babel-jest": "23.6.0",
     "babel-preset-expo": "5.0.0",
     "enzyme": "^3.5.0",
@@ -20,6 +20,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
+    "expo-cli": "^2.11.6",
     "jest": "23.6.0",
     "jest-expo": "^31.0.0",
     "jest-serializer-enzyme": "^1.0.0",
