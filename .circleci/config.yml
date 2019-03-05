@@ -5,15 +5,12 @@ publish: &publish
     - image: circleci/node:10.13.0
   steps:
     - checkout
-
     - run:
         name: Installing dependencies
         command: yarn install
-
     - run:
         name: Login into Expo
         command: npx expo login -u $EXPO_USERNAME -p $EXPO_PASSWORD
-
     - run:
         name: Publish to Expo
         command: npx expo publish --non-interactive --max-workers 1 --release-channel $EXPO_RELEASE_CHANNEL
@@ -22,14 +19,18 @@ jobs:
   build_and_test:
     docker:
       - image: circleci/node:10.13.0
-    
     steps:
       - checkout
-
+      - restore_cache:
+          keys:
+            - dependency-cache-{{ checksum "yarn.lock" }}
       - run:
           name: Installing dependencies
           command: yarn install
-
+      - save_cache:
+          paths:
+            - node_modules
+          key: dependency-cache-{{ checksum "yarn.lock" }}
       - run:
           name: Test
           command: yarn test
