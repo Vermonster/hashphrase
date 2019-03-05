@@ -5,7 +5,7 @@
   "private": true,
   "engines": {
     "node": ">= 10.13.0",
-    "yarn": ">= 1.12.3"
+    "yarn": ">= 1.10.0"
   },
   "devDependencies": {
     "babel-core": "7.0.0-bridge.0",
