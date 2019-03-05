@@ -8,7 +8,7 @@ publish: &publish
 
     - run:
         name: Installing dependencies
-        command: npm install
+        command: yarn install
 
     - run:
         name: Login into Expo
