@@ -6,10 +6,6 @@ publish: &publish
   steps:
     - checkout
 
-    - run: 
-        name: Installing the latest version of yarn
-        command: 'curl -L https://yarnpkg.com/install.sh | bash' 
-        
     - run:
         name: Installing dependencies
         command: yarn install
@@ -29,10 +25,6 @@ jobs:
     
     steps:
       - checkout
-
-      - run: 
-          name: Installing the latest version of yarn
-          command: 'curl -L https://yarnpkg.com/install.sh | bash' 
 
       - run:
           name: Installing dependencies
