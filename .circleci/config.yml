@@ -19,6 +19,20 @@ publish: &publish
         command: npx expo publish --non-interactive --max-workers 1 --release-channel $EXPO_RELEASE_CHANNEL
 
 jobs:
+  build_and_test:
+    docker:
+      - image: circleci/node:10.13.0
+    steps:
+      -checkout
+
+      -run:
+        name: Installing dependencies
+        command: npm install
+
+      -run:
+        name: Test
+        command: npm test
+
   publish_to_expo_dev:
     environment:
       EXPO_RELEASE_CHANNEL: dev
@@ -33,6 +47,7 @@ workflows:
   version: 2
   workflow:
     jobs:
+      - build_and_test
       - publish_to_expo_dev:
           filters:
             branches:
