@@ -31,7 +31,7 @@ jobs:
 
 workflows:
   version: 2
-  my_app:
+  workflow:
     jobs:
       - publish_to_expo_dev:
           filters:
