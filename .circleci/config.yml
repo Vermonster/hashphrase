@@ -23,15 +23,15 @@ jobs:
     docker:
       - image: circleci/node:10.13.0
     steps:
-      -checkout
+      - checkout
 
       - run:
-        name: Installing dependencies
-        command: npm install
+          name: Installing dependencies
+          command: npm install
 
       - run:
-        name: Test
-        command: npm test
+          name: Test
+          command: npm test
 
   publish_to_expo_dev:
     environment:
