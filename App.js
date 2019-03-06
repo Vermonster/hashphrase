@@ -1,13 +1,15 @@
 import { createAppContainer, createStackNavigator } from 'react-navigation';
-import CreatePasswordScreen from './src/navigation/screens/CreatePasswordScreen';
+import CreateOldPassword from './src/navigation/screens/CreateOldPassword';
+import FlowScreen from './src/navigation/screens/FlowScreen';
 import InfoScreen from './src/navigation/screens/InfoScreen';
 
 const RootStack = createStackNavigator({
-  Home: CreatePasswordScreen,
-  Info: InfoScreen,
+  OldPassword: { screen: CreateOldPassword },
+  Info: { screen: InfoScreen },
+  FlowScreen: { screen: FlowScreen },
 },
 {
-  initialRouteName: 'Home',
+  initialRouteName: 'FlowScreen',
 });
 
 const AppContainer = createAppContainer(RootStack);
