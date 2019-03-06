@@ -9,10 +9,16 @@ const FlowScreen = (props) => {
   return (
     <View>
       <Card>
-        <Button onPress={() => navigate('OldPassword')}>
+        <Button
+          onPress={() => navigate('OldPassword')}
+          mode="contained"
+        >
           Old password flow
         </Button>
-        <Button onPress={() => navigate('NewPassword')}>
+        <Button
+          onPress={() => navigate('NewPassword')}
+          mode="contained"
+        >
           New password flow
         </Button>
       </Card>
