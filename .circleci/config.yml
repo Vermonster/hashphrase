@@ -22,19 +22,19 @@ jobs:
     steps:
       - checkout
       - restore_cache:
+          name: Restore yarn package cache
           keys:
-            - yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
-            - yarn-packages-v1-{{ .Branch }}-
-            - yarn-packages-v1-
+            - yarn-packages-{{ checksum "yarn.lock" }}
       - run:
-          name: Installing dependencies
-          command: yarn install
+          name: Install dependencies
+          command: yarn install 
       - save_cache:
+          name: Save yarn package cache
           paths:
             - ~/.cache/yarn
-          key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          key: yarn-packages-{{ checksum "yarn.lock" }}
       - run:
-          name: Test
+          name: Run tests
           command: yarn test
 
   publish_to_expo_dev:
