@@ -7,16 +7,15 @@ publish: &publish
     - checkout
     - restore_cache:
         name: Restore yarn package cache
-        keys:
-          - yarn-packages-{{ checksum "yarn.lock" }}
+        key: v1-cache-dependencies-{{ checksum "yarn.lock" }}-{{ checksum "package.json" }}-{{ arch }}
     - run:
         name: Install dependencies
-        command: yarn install
+        command: yarn install --frozen-lockfile
     - save_cache:
         name: Save yarn package cache
         paths:
           - ~/.cache/yarn
-        key: yarn-packages-{{ checksum "yarn.lock" }}
+        key: v1-cache-dependencies-{{ checksum "yarn.lock" }}-{{ checksum "package.json" }}-{{ arch }}
     - run:
         name: Login into Expo
         command: npx expo login -u $EXPO_USERNAME -p $EXPO_PASSWORD
@@ -32,16 +31,15 @@ jobs:
       - checkout
       - restore_cache:
           name: Restore yarn package cache
-          keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
+          key: v1-cache-dependencies-{{ checksum "yarn.lock" }}-{{ checksum "package.json" }}-{{ arch }}
       - run:
           name: Install dependencies
-          command: yarn install 
+          command: yarn install --frozen-lockfile
       - save_cache:
           name: Save yarn package cache
           paths:
             - ~/.cache/yarn
-          key: yarn-packages-{{ checksum "yarn.lock" }}
+          key: v1-cache-dependencies-{{ checksum "yarn.lock" }}-{{ checksum "package.json" }}-{{ arch }}
       - run:
           name: Run tests
           command: yarn test --ci
