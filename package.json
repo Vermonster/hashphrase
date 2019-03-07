@@ -35,8 +35,9 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "jest --coverage",
-    "lint": "eslint .",
+    "test:js": "jest --coverage",
+    "lint:js": "eslint .",
+    "test": "yarn test:js && yarn lint:js",
     "devtools-expo": "react-native-scripts start react-devtools",
     "devtools": "react-devtools"
   },
