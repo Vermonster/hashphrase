@@ -1,5 +1,6 @@
 const en = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   createPassword: {
     title: 'AgiliKEY',
     newPassword: 'Creating a new account password?',
@@ -34,6 +35,13 @@ const en = {
       password: 'Master Password...',
     },
 >>>>>>> funnel translated strings to components
+=======
+  createPassword: {
+    title: 'Loplop',
+    message: 'Generated password was copied to the clipboard.',
+    label: 'Label...',
+    password: 'Master Password...',
+>>>>>>> update i18n to use new libraries and structure
   },
 };
 
