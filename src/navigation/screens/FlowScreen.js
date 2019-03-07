@@ -3,8 +3,7 @@ import { View } from 'react-native';
 import { Card, Button } from 'react-native-paper';
 
 const FlowScreen = (props) => {
-// eslint-disable-next-line
-  const { navigate } = props.navigation;
+  const { navigation: { navigate } } = props;
 
   return (
     <View>
