@@ -42,7 +42,10 @@ jobs:
           key: v1-cache-dependencies-{{ checksum "yarn.lock" }}-{{ checksum "package.json" }}-{{ arch }}
       - run:
           name: Run tests
-          command: yarn test --ci
+          command: yarn test:js --ci
+      - run:
+          name: Run linting
+          command: yarn lint:js
 
   publish_to_expo_dev:
     environment:
