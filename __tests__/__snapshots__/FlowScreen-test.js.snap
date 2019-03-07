@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<FlowScreen /> should render the same snapshot 1`] = `
-<Component>
+<ForwardRef(View)>
   <withTheme(Card)>
     <withTheme(Button)
       mode="contained"
@@ -16,5 +16,5 @@ exports[`<FlowScreen /> should render the same snapshot 1`] = `
       New password flow
     </withTheme(Button)>
   </withTheme(Card)>
-</Component>
+</ForwardRef(View)>
 `;

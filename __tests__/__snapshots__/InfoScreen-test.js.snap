@@ -1,17 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<InfoScreen /> should render the same snapshot 1`] = `
-<<<<<<< HEAD
 <ContextConsumer>
   <Component />
 </ContextConsumer>
-=======
-<View>
-  <withTheme(Card)>
-    <withTheme(Text)>
-      Placeholder card and text
-    </withTheme(Text)>
-  </withTheme(Card)>
-</View>
->>>>>>> update tests
 `;
