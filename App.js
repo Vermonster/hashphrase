@@ -8,8 +8,6 @@ import InfoScreen from './src/navigation/screens/InfoScreen';
 const AppStackNavigator = createStackNavigator({
   PasswordScreen: { screen: CreatePassword },
   InfoScreen: { screen: InfoScreen },
-},
-{
   initialRouteName: 'PasswordScreen',
 });
 
