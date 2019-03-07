@@ -1,6 +1,6 @@
 const en = {
   createPassword: {
-    title: 'Agilikey',
+    title: 'AgiliKEY',
     message: 'Generated password was copied to the clipboard.',
     label: 'Nickname',
     password: 'Master Password',
