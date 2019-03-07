@@ -31,6 +31,7 @@ i18n
   });
 =======
 i18n.fallbacks = true;
+i18n.defaultLocale = 'en';
 i18n.translations = { en, es };
 i18n.locale = Localization.locale;
 
