@@ -36,11 +36,34 @@ export default class PasswordGenerator extends React.Component {
 
     render() {
       const { label, password } = this.state;
+      const { newPassword } = this.props;
+
       return (
         <View>
-          <FormInput name="label" value={label} placeholder="Label..." onChanged={this.handleChange('label')} />
-          <FormInput name="password" value={password} placeholder="Master Password..." secureTextEntry onChanged={this.handleChange('password')} />
-          <BaseButton onPress={this.generatePassword} buttonText="Generate Password" />
+          <FormInput
+            name="label"
+            value={label}
+            placeholder="Label..."
+            onChanged={this.handleChange('label')}
+          />
+          <FormInput
+            name="password"
+            value={password}
+            placeholder="Master Password..."
+            secureTextEntry
+            onChanged={this.handleChange('password')}
+          />
+          { newPassword && (
+            <FormInput
+              name="password"
+              value={password}
+              placeholder="Confirm Master Password"
+              secureTextEntry
+              onChanged={this.handleChange('password')}
+            />
+          )
+          }
+          <BaseButton onPress={this.generatePassword} buttonText="Create Account Password" />
         </View>
       );
     }
