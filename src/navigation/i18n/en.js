@@ -37,11 +37,17 @@ const en = {
 >>>>>>> funnel translated strings to components
 =======
   createPassword: {
-    title: 'Loplop',
+    title: 'Agilikey',
     message: 'Generated password was copied to the clipboard.',
+<<<<<<< HEAD
     label: 'Label...',
     password: 'Master Password...',
 >>>>>>> update i18n to use new libraries and structure
+=======
+    label: 'Nickname',
+    password: 'Master Password',
+    button: 'Create account password',
+>>>>>>> update translations
   },
 };
 
