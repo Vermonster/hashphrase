@@ -66,14 +66,13 @@
   },
   "dependencies": {
     "expo": "31.0.0",
-    "i18next": "^11.9.0",
+    "i18n-js": "^3.2.1",
     "i18next-browser-languagedetector": "^2.2.3",
     "loplop": "^1.0.3",
     "prop-types": "^15.6.2",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.1.tar.gz",
     "react-native-paper": "^2.0.1",
-    "react-navigation": "^3.0.9",
-    "react-i18next": "^8.0.7"
+    "react-navigation": "^3.0.9"
   }
 }
