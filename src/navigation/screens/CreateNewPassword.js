@@ -10,8 +10,6 @@ class CreateNewPassword extends Component {
     this.state = {
       showCopy: false,
     };
-
-    this.showNotification = this.showNotification.bind(this);
   }
 
   showNotification = () => {
