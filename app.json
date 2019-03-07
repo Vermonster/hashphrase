@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "loplop-native",
+    "name": "Agilikey",
     "description": "A mobile password generator",
-    "slug": "loplop",
+    "slug": "Agilikey",
     "sdkVersion": "31.0.0",
     "platforms": [
       "android",

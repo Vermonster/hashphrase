@@ -1,3 +1,3 @@
-const common = { title: 'Loplop' };
+const common = { title: 'Agilikey' };
 
 export default common;
