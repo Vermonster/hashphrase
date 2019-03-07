@@ -37,7 +37,7 @@ const en = {
 >>>>>>> funnel translated strings to components
 =======
   createPassword: {
-    title: 'Agilikey',
+    title: 'AgiliKEY',
     message: 'Generated password was copied to the clipboard.',
 <<<<<<< HEAD
     label: 'Label...',
