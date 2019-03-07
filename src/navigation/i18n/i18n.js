@@ -5,6 +5,7 @@ import es from './es';
 import en from './en';
 
 i18n.fallbacks = true;
+i18n.defaultLocale = 'en';
 i18n.translations = { en, es };
 i18n.locale = Localization.locale;
 
