@@ -1,9 +1,10 @@
 const es = {
   createPassword: {
-    title: 'Loplop',
+    title: 'Agilikey',
     message: 'Contraseña generada ha sido copiado al clipboard.',
-    label: 'Etiqueta...',
-    password: 'Contraseña general...',
+    label: 'Etiqueta',
+    password: 'Contraseña general',
+    button: 'Cree una contraseña',
   },
 };
 

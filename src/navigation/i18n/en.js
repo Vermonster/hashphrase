@@ -1,9 +1,10 @@
 const en = {
   createPassword: {
-    title: 'Loplop',
+    title: 'Agilikey',
     message: 'Generated password was copied to the clipboard.',
-    label: 'Label...',
-    password: 'Master Password...',
+    label: 'Nickname',
+    password: 'Master Password',
+    button: 'Create account password',
   },
 };
 
