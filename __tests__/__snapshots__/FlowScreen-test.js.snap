@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FlowScreen /> should render the same snapshot 1`] = `
+<Component>
+  <withTheme(Card)>
+    <withTheme(Button)
+      mode="contained"
+      onPress={[Function]}
+    >
+      Old password flow
+    </withTheme(Button)>
+    <withTheme(Button)
+      mode="contained"
+      onPress={[Function]}
+    >
+      New password flow
+    </withTheme(Button)>
+  </withTheme(Card)>
+</Component>
+`;

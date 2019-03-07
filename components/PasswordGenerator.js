@@ -11,8 +11,6 @@ export default class PasswordGenerator extends React.Component {
       label: '',
       password: '',
     };
-    this.generatePassword = this.generatePassword.bind(this);
-    this.handleChange = this.handleChange.bind(this);
   }
 
     handleChange = name => (e) => {

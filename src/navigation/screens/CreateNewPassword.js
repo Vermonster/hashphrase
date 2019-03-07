@@ -4,14 +4,12 @@ import { View } from 'react-native';
 import PasswordGenerator from '../../../components/PasswordGenerator';
 import BaseNotification from '../../../components/BaseNotification';
 
-class CreatePasswordScreen extends Component {
+class CreateNewPassword extends Component {
   constructor(props) {
     super(props);
     this.state = {
       showCopy: false,
     };
-
-    this.showNotification = this.showNotification.bind(this);
   }
 
   showNotification = () => {
@@ -25,7 +23,7 @@ class CreatePasswordScreen extends Component {
     return (
       <View>
         <Appbar.Header>
-          <Appbar.Content title="Loplop" />
+          <Appbar.Content title="Placeholder file for a future component" />
         </Appbar.Header>
         <PasswordGenerator onClipboardSave={this.showNotification} />
         { showCopy && <BaseNotification message={copy} /> }
@@ -34,4 +32,4 @@ class CreatePasswordScreen extends Component {
   }
 }
 
-export default CreatePasswordScreen;
+export default CreateNewPassword;
