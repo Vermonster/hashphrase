@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { Appbar, Switch } from 'react-native-paper';
 import { View, Text } from 'react-native';
-import PasswordGenerator from '../../../components/PasswordGenerator';
-import BaseNotification from '../../../components/BaseNotification';
+import PasswordGenerator from '../../components/PasswordGenerator';
+import BaseNotification from '../../components/BaseNotification';
 
 class CreateNewPassword extends Component {
   state = {
-    newPassword: false,
+    isNewPassword: this.props.navigation.getParam('isNewPassword'),
     showCopy: false,
   };
 
-  handleToggleSwitch = () => this.setState(({ newPassword }) => ({
-    newPassword: !newPassword,
+  handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
+    isNewPassword: !isNewPassword,
   }))
 
   showNotification = () => {
@@ -20,7 +20,7 @@ class CreateNewPassword extends Component {
 
   render() {
     const copy = 'Generated password was copied to the clipboard';
-    const { showCopy, newPassword } = this.state;
+    const { showCopy, isNewPassword } = this.state;
 
     return (
       <View>
@@ -28,15 +28,15 @@ class CreateNewPassword extends Component {
           <Appbar.Content title="Agili Key" />
         </Appbar.Header>
         <View>
-          <Text>Creating a new password?</Text>
+          <Text>Creating a new account password?</Text>
           <Switch
-            value={newPassword}
+            value={isNewPassword}
             onValueChange={this.handleToggleSwitch}
           />
         </View>
         <PasswordGenerator
           onClipboardSave={this.showNotification}
-          newPassword={newPassword}
+          isNewPassword={isNewPassword}
         />
         { showCopy && <BaseNotification message={copy} /> }
       </View>
