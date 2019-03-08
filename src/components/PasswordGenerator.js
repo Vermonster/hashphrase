@@ -1,5 +1,7 @@
 import React from 'react';
-import { Keyboard, Clipboard, View, Text } from 'react-native';
+import {
+  Keyboard, Clipboard, View, Text,
+} from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 import loplop from 'loplop';
 
@@ -27,16 +29,12 @@ export default class PasswordGenerator extends React.Component {
 
     handleSubmit = (e) => {
       e.preventDefault();
-      console.log('password', this.state.password)
-      console.log('confirmPassword', this.state.confirmPassword)
-      
       const { label, password, confirmPassword } = this.state;
       const { isNewPassword } = this.props;
       if (isNewPassword && (password !== confirmPassword)) {
-        console.log('not match')
-      } else {
-        this.generatePassword(label, password);
+        return null;
       }
+      return this.generatePassword(label, password);
     };
 
     generatePassword(label, password) {
@@ -53,7 +51,7 @@ export default class PasswordGenerator extends React.Component {
 
       return (
         <View>
-          <Text>What is the account password's Nickname?</Text>
+          <Text>What is the account password&apos;s Nickname?</Text>
           <TextInput
             name="label"
             value={label}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Text, Card } from 'react-native-paper';
-import BaseNotification from '../components/BaseNotification';
+import BaseNotification from '../src/components/BaseNotification';
 
 const innerText = 'Testing message';
 

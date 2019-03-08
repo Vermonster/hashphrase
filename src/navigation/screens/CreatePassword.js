@@ -5,10 +5,14 @@ import PasswordGenerator from '../../components/PasswordGenerator';
 import BaseNotification from '../../components/BaseNotification';
 
 class CreateNewPassword extends Component {
-  state = {
-    isNewPassword: this.props.navigation.getParam('isNewPassword'),
-    showCopy: false,
-  };
+  constructor(props) {
+    super(props);
+    const { navigation: { getParam } } = this.props;
+    this.state = {
+      isNewPassword: getParam('isNewPassword'),
+      showCopy: false,
+    };
+  }
 
   handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
     isNewPassword: !isNewPassword,
