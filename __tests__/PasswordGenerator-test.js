@@ -22,15 +22,15 @@ describe('<PasswordGenerator />', () => {
   });
 
   it('should fire the generatePassword function on press', () => {
-    const e = { preventDefault: mockEvent };
-    const spy = jest.spyOn(wrapper.instance(), 'generatePassword');
+    const e = { preventDefault: mockFn };
+    const spy = jest.spyOn(wrapper.instance(), 'handleSubmit');
     wrapper.instance().forceUpdate();
     wrapper.find('Button').simulate('press', e);
     expect(spy).toBeCalled();
   });
 
   it('should fire the addToClipboard function on press', () => {
-    const e = { preventDefault: mockEvent };
+    const e = { preventDefault: mockFn };
     const spy = jest.spyOn(wrapper.instance(), 'addToClipboard');
     wrapper.instance().forceUpdate();
     wrapper.find('Button').simulate('press', e);

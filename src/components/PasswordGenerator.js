@@ -1,8 +1,8 @@
 import React from 'react';
 import {
-  Keyboard, Clipboard, View, Text,
+  Keyboard, Clipboard, View, Text, Button,
 } from 'react-native';
-import { TextInput, Button } from 'react-native-paper';
+import { TextInput } from 'react-native-paper';
 import loplop from 'loplop';
 
 export default class PasswordGenerator extends React.Component {
@@ -86,7 +86,7 @@ export default class PasswordGenerator extends React.Component {
             </>
           )
           }
-          <Button mode="contained" onPress={this.handleSubmit}>
+          <Button mode="contained" onPress={this.handleSubmit} testId="button">
             CREATE ACCOUNT PASSWORD
           </Button>
         </View>
