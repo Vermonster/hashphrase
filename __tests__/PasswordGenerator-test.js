@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import PasswordGenerator from '../src/components/PasswordGenerator';
+import { Button } from 'react-native-paper';
 
 describe('<PasswordGenerator />', () => {
   const mockFn = jest.fn();
@@ -25,7 +26,7 @@ describe('<PasswordGenerator />', () => {
     const e = { preventDefault: mockFn };
     const spy = jest.spyOn(wrapper.instance(), 'handleSubmit');
     wrapper.instance().forceUpdate();
-    wrapper.find('Button').simulate('press', e);
+    wrapper.find(Button).simulate('press', e);
     expect(spy).toBeCalled();
   });
 
@@ -33,7 +34,7 @@ describe('<PasswordGenerator />', () => {
     const e = { preventDefault: mockFn };
     const spy = jest.spyOn(wrapper.instance(), 'addToClipboard');
     wrapper.instance().forceUpdate();
-    wrapper.find('Button').simulate('press', e);
+    wrapper.find(Button).simulate('press', e);
     expect(spy).toBeCalled();
   });
 });
