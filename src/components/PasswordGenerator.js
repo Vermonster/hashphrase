@@ -31,9 +31,7 @@ export default class PasswordGenerator extends React.Component {
     e.preventDefault();
     const { label, password, confirmPassword } = this.state;
     const { isNewPassword } = this.props;
-    if (isNewPassword && (password !== confirmPassword)) {
-      return null;
-    }
+    if (isNewPassword && (password !== confirmPassword)) return null;
     return this.generatePassword(label, password);
   };
 
@@ -53,19 +51,15 @@ export default class PasswordGenerator extends React.Component {
       <View>
         <Text>What is the account password&apos;s Nickname?</Text>
         <TextInput
-          name="label"
           value={label}
           placeholder="Nickname"
-          label="Nickname"
           textContentType="username"
           onChange={this.handleChange('label')}
         />
         <Text>What is your Master Password?</Text>
         <TextInput
-          name="password"
           value={password}
           placeholder="Master Password"
-          label="Master Password"
           textContentType="password"
           secureTextEntry
           onChange={this.handleChange('password')}
@@ -74,10 +68,8 @@ export default class PasswordGenerator extends React.Component {
           <>
             <Text>Retype your Master Password</Text>
             <TextInput
-              name="confirmPassword"
               value={confirmPassword}
               placeholder="Confirm Master Password"
-              label="Confirm Master Password"
               textContentType="password"
               oneTimeCode
               secureTextEntry
