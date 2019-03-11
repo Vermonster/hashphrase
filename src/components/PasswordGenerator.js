@@ -53,6 +53,7 @@ export default class PasswordGenerator extends React.Component {
         <TextInput
           value={label}
           placeholder="Nickname"
+          label="Nickname"
           textContentType="username"
           onChange={this.handleChange('label')}
         />
@@ -60,6 +61,7 @@ export default class PasswordGenerator extends React.Component {
         <TextInput
           value={password}
           placeholder="Master Password"
+          label="Master Password"
           textContentType="password"
           secureTextEntry
           onChange={this.handleChange('password')}
@@ -70,6 +72,7 @@ export default class PasswordGenerator extends React.Component {
             <TextInput
               value={confirmPassword}
               placeholder="Confirm Master Password"
+              label="Confirm Master Password"
               textContentType="password"
               oneTimeCode
               secureTextEntry
