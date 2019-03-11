@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import PasswordGenerator from '../src/components/PasswordGenerator';
 import { Button } from 'react-native-paper';
+import PasswordGenerator from '../src/components/PasswordGenerator';
 
 describe('<PasswordGenerator />', () => {
   const mockFn = jest.fn();
