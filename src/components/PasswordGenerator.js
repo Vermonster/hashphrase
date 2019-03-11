@@ -13,12 +13,13 @@ export default class PasswordGenerator extends React.Component {
       password: '',
       confirmPassword: '',
       generatedPassword: '',
+      disabled: true,
     };
   }
 
   handleChange = name => (e) => {
     const inputValue = e.nativeEvent.text;
-    this.setState({ [name]: inputValue });
+    this.setState({ [name]: inputValue }, this.handleSubmitButtonState);
   }
 
   addToClipboard = (password) => {
@@ -35,6 +36,18 @@ export default class PasswordGenerator extends React.Component {
     return this.generatePassword(label, password);
   };
 
+  handleSubmitButtonState() {
+    const { label, password, confirmPassword } = this.state;
+    const { isNewPassword } = this.props;
+    if (isNewPassword && label && password && confirmPassword) {
+      return this.setState({ disabled: false });
+    }
+    if (!isNewPassword && label && password) {
+      return this.setState({ disabled: false });
+    }
+    return null;
+  }
+
   generatePassword(label, password) {
     this.setState({ generatedPassword: loplop(label, password) }, () => {
       const { generatedPassword } = this.state;
@@ -44,7 +57,9 @@ export default class PasswordGenerator extends React.Component {
   }
 
   render() {
-    const { label, password, confirmPassword } = this.state;
+    const {
+      label, password, confirmPassword, disabled,
+    } = this.state;
     const { isNewPassword } = this.props;
 
     return (
@@ -81,12 +96,13 @@ export default class PasswordGenerator extends React.Component {
           </>
         )
         }
-        <Button 
-          onPress={this.handleSubmit} 
+        <Button
+          onPress={this.handleSubmit}
           accessibilityLabel="CREATE ACCOUNT PASSWORD BUTTON"
-          mode='contained'
+          disabled={disabled}
+          mode="contained"
           dark
-          color='#D37F26'
+          color="#D37F26"
         >
           CREATE ACCOUNT PASSWORD
         </Button>
