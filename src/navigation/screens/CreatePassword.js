@@ -10,7 +10,7 @@ class CreateNewPassword extends Component {
     const { navigation: { getParam } } = this.props;
     this.state = {
       isNewPassword: getParam('isNewPassword'),
-      showCopy: false,
+      showNotification: false,
     };
   }
 
@@ -18,13 +18,17 @@ class CreateNewPassword extends Component {
     isNewPassword: !isNewPassword,
   }))
 
-  showNotification = () => {
-    this.setState({ showCopy: true });
+  displayNotification = () => {
+    this.setState({ showNotification: true });
+  }
+
+  hideNotification = () => {
+    this.setState({ showNotification: false });
   }
 
   render() {
     const copy = 'Generated password was copied to the clipboard';
-    const { showCopy, isNewPassword } = this.state;
+    const { showNotification, isNewPassword } = this.state;
 
     return (
       <View>
@@ -39,10 +43,11 @@ class CreateNewPassword extends Component {
           />
         </View>
         <PasswordGenerator
-          onClipboardSave={this.showNotification}
+          displayNotification={this.displayNotification}
+          hideNotification={this.hideNotification}
           isNewPassword={isNewPassword}
         />
-        { showCopy && <BaseNotification message={copy} /> }
+        { showNotification && <BaseNotification message={copy} /> }
       </View>
     );
   }

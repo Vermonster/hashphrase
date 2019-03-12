@@ -18,21 +18,24 @@ export default class PasswordGenerator extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    const { isNewPassword } = this.props;
+    const { isNewPassword, hideNotification } = this.props;
     if (isNewPassword !== prevProps.isNewPassword) {
       this.handleSubmitButtonState();
+      hideNotification();
     }
   }
 
   handleChange = name => (e) => {
     const inputValue = e.nativeEvent.text;
     this.setState({ [name]: inputValue }, this.handleSubmitButtonState);
+    const { hideNotification } = this.props;
+    hideNotification();
   }
 
   addToClipboard = (password) => {
-    const { onClipboardSave } = this.props;
+    const { displayNotification } = this.props;
     Clipboard.setString(password);
-    onClipboardSave();
+    displayNotification();
   };
 
   handleSubmit = (e) => {
