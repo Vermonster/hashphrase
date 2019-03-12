@@ -71,7 +71,7 @@ export default class PasswordGenerator extends React.Component {
     const { isNewPassword } = this.props;
 
     return (
-      <View>
+      <View style={modalVisibility ? { backgroundColor: 'rgba(0, 0, 0, 0.5)' } : null}>
         <Text>What is the account password&apos;s Nickname?</Text>
         <TextInput
           value={label}
