@@ -4,7 +4,7 @@ import {
 } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 import loplop from 'loplop';
-import NotificationModal from './NotificationModal';
+import ConfirmationDialog from './ConfirmationDialog';
 
 export default class PasswordGenerator extends React.Component {
   constructor(props) {
@@ -15,6 +15,7 @@ export default class PasswordGenerator extends React.Component {
       confirmPassword: '',
       generatedPassword: '',
       disabled: true,
+      modalVisibility: false,
     };
   }
 
@@ -61,11 +62,12 @@ export default class PasswordGenerator extends React.Component {
       this.addToClipboard(generatedPassword);
     });
     Keyboard.dismiss();
+    this.setState({ modalVisibility: true })
   }
 
   render() {
     const {
-      label, password, confirmPassword, disabled,
+      label, password, confirmPassword, disabled, modalVisibility,
     } = this.state;
     const { isNewPassword } = this.props;
 
@@ -113,7 +115,9 @@ export default class PasswordGenerator extends React.Component {
         >
           CREATE ACCOUNT PASSWORD
         </Button>
-        <NotificationModal />
+        <ConfirmationDialog
+          visible={modalVisibility}
+        />
       </View>
     );
   }

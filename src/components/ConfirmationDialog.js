@@ -2,6 +2,7 @@ import React from 'react';
 import {
   View, Text, Modal, StyleSheet,
 } from 'react-native';
+import { Checkbox } from 'react-native-paper';
 
 const styles = StyleSheet.create({
   contentWrap: {
@@ -10,15 +11,31 @@ const styles = StyleSheet.create({
   }
 })
 
-const ConfirmationDialog = () => (
+const ConfirmationDialog = ({ visible }) => (
   <Modal
     animationType="slide"
     transparent={false}
-    visible
+    visible={visible}
     onRequestClose={() => { }}
   >
     <View style={styles.contentWrap}>
-      <Text>Hello World!</Text>
+      <View>
+        <Text>All done!</Text>
+        <Text>Your account password is now on your clipboard.</Text>
+      </View>
+      <View>
+        <Text>
+          Account Password:
+          <Text>1234567</Text>
+        </Text>
+      </View>
+      <View>
+        <Text>What would you like to do next?</Text>
+        <Checkbox status="checked" onPress={() => {}} />
+        <Text>Clear clipboard</Text>
+        <Checkbox status="checked" onPress={() => {}} />
+        <Text>Make another password</Text>
+      </View>
     </View>
   </Modal>
 );
