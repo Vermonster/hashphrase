@@ -4,6 +4,7 @@ import {
 } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 import loplop from 'loplop';
+import NotificationModal from './NotificationModal';
 
 export default class PasswordGenerator extends React.Component {
   constructor(props) {
@@ -112,6 +113,7 @@ export default class PasswordGenerator extends React.Component {
         >
           CREATE ACCOUNT PASSWORD
         </Button>
+        <NotificationModal />
       </View>
     );
   }
