@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Appbar, Switch } from 'react-native-paper';
 import { View, Text } from 'react-native';
 import PasswordGenerator from '../../components/PasswordGenerator';
-import BaseNotification from '../../components/BaseNotification';
 
 class CreateNewPassword extends Component {
   constructor(props) {
@@ -10,7 +9,6 @@ class CreateNewPassword extends Component {
     const { navigation: { getParam } } = this.props;
     this.state = {
       isNewPassword: getParam('isNewPassword'),
-      showNotification: false,
     };
   }
 
@@ -18,17 +16,8 @@ class CreateNewPassword extends Component {
     isNewPassword: !isNewPassword,
   }))
 
-  displayNotification = () => {
-    this.setState({ showNotification: true });
-  }
-
-  hideNotification = () => {
-    this.setState({ showNotification: false });
-  }
-
   render() {
-    const copy = 'Generated password was copied to the clipboard';
-    const { showNotification, isNewPassword } = this.state;
+    const { isNewPassword } = this.state;
 
     return (
       <View>
@@ -43,11 +32,8 @@ class CreateNewPassword extends Component {
           />
         </View>
         <PasswordGenerator
-          displayNotification={this.displayNotification}
-          hideNotification={this.hideNotification}
           isNewPassword={isNewPassword}
         />
-        { showNotification && <BaseNotification message={copy} /> }
       </View>
     );
   }
