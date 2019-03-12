@@ -17,6 +17,13 @@ export default class PasswordGenerator extends React.Component {
     };
   }
 
+  componentDidUpdate(prevProps) {
+    const { isNewPassword } = this.props;
+    if (isNewPassword !== prevProps.isNewPassword) {
+      this.handleSubmitButtonState();
+    }
+  }
+
   handleChange = name => (e) => {
     const inputValue = e.nativeEvent.text;
     this.setState({ [name]: inputValue }, this.handleSubmitButtonState);
@@ -36,16 +43,12 @@ export default class PasswordGenerator extends React.Component {
     return this.generatePassword(label, password);
   };
 
-  handleSubmitButtonState() {
+  handleSubmitButtonState = () => {
+    this.setState({ disabled: true });
     const { label, password, confirmPassword } = this.state;
     const { isNewPassword } = this.props;
-    if (isNewPassword && label && password && confirmPassword) {
-      return this.setState({ disabled: false });
-    }
-    if (!isNewPassword && label && password) {
-      return this.setState({ disabled: false });
-    }
-    return null;
+    return ((isNewPassword && label && password && confirmPassword)
+    || (!isNewPassword && label && password)) ? this.setState({ disabled: false }) : null;
   }
 
   generatePassword(label, password) {
