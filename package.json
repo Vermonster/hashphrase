@@ -68,7 +68,6 @@
   "dependencies": {
     "expo": "31.0.0",
     "i18next": "^15.0.6",
-    "i18next-browser-languagedetector": "^2.2.3",
     "loplop": "^1.0.3",
     "prop-types": "^15.6.2",
     "react": "16.5.0",

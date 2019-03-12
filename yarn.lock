@@ -5083,10 +5083,6 @@ humanize-ms@^1.2.1:
   dependencies:
     ms "^2.0.0"
 
-i18next-browser-languagedetector@^2.2.3:
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/i18next-browser-languagedetector/-/i18next-browser-languagedetector-2.2.3.tgz#4196a9964b6d51b76254706a267ba746c9ca19de"
-
 i18next@^15.0.6:
   version "15.0.6"
   resolved "https://registry.yarnpkg.com/i18next/-/i18next-15.0.6.tgz#2bad22b180043dce4ebc89763b07b752a5379675"
