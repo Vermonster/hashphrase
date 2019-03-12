@@ -12,8 +12,8 @@ describe('CreatePassword />', () => {
 
   it('should toggle state when showNotification is called', () => {
     const instance = wrapper.instance();
-    expect(wrapper.state().showCopy).toEqual(false);
-    instance.showNotification();
-    expect(wrapper.state().showCopy).toEqual(true);
+    expect(wrapper.state().showNotification).toEqual(false);
+    instance.displayNotification();
+    expect(wrapper.state().showNotification).toEqual(true);
   });
 });
