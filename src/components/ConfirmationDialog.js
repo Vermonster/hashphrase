@@ -6,10 +6,10 @@ import { Checkbox } from 'react-native-paper';
 
 const styles = StyleSheet.create({
   contentWrap: {
-    marginTop: 50,
+    marginTop: 150,
     borderWidth: 1,
-  }
-})
+  },
+});
 
 const ConfirmationDialog = ({ visible }) => (
   <Modal

@@ -9,11 +9,4 @@ describe('CreatePassword />', () => {
   it('should render the same snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
-
-  it('should toggle state when showNotification is called', () => {
-    const instance = wrapper.instance();
-    expect(wrapper.state().showNotification).toEqual(false);
-    instance.displayNotification();
-    expect(wrapper.state().showNotification).toEqual(true);
-  });
 });

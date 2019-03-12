@@ -26,14 +26,9 @@ export default class PasswordGenerator extends React.Component {
     }
   }
 
-  handleChange = name => (e) => {
-    const inputValue = e.nativeEvent.text;
-    this.setState({ [name]: inputValue }, this.handleSubmitButtonState);
+  setModalVisibility() {
+    return this.setState({ modalVisibility: true });
   }
-
-  addToClipboard = (password) => {
-    Clipboard.setString(password);
-  };
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -42,6 +37,15 @@ export default class PasswordGenerator extends React.Component {
     if (isNewPassword && (password !== confirmPassword)) return null;
     return this.generatePassword(label, password);
   };
+
+  addToClipboard = (password) => {
+    Clipboard.setString(password);
+  };
+
+  handleChange = name => (e) => {
+    const inputValue = e.nativeEvent.text;
+    this.setState({ [name]: inputValue }, this.handleSubmitButtonState);
+  }
 
   handleSubmitButtonState = () => {
     this.setState({ disabled: true });
@@ -57,7 +61,7 @@ export default class PasswordGenerator extends React.Component {
       this.addToClipboard(generatedPassword);
     });
     Keyboard.dismiss();
-    this.setState({ modalVisibility: true })
+    this.setModalVisibility();
   }
 
   render() {
