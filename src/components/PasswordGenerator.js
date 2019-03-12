@@ -66,7 +66,7 @@ export default class PasswordGenerator extends React.Component {
 
   render() {
     const {
-      label, password, confirmPassword, disabled, modalVisibility,
+      label, password, confirmPassword, generatedPassword, disabled, modalVisibility,
     } = this.state;
     const { isNewPassword } = this.props;
 
@@ -116,6 +116,7 @@ export default class PasswordGenerator extends React.Component {
         </Button>
         <ConfirmationDialog
           visible={modalVisibility}
+          generatedPassword={generatedPassword}
         />
       </View>
     );

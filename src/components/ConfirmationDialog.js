@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const ConfirmationDialog = ({ visible }) => (
+const ConfirmationDialog = ({ visible, generatedPassword }) => (
   <Modal
     animationType="slide"
     transparent={false}
@@ -26,7 +26,7 @@ const ConfirmationDialog = ({ visible }) => (
       <View>
         <Text>
           Account Password:
-          <Text>1234567</Text>
+          <Text>{generatedPassword}</Text>
         </Text>
       </View>
       <View>
