@@ -28,7 +28,7 @@ export default class PasswordGenerator extends React.Component {
 
   showModal = () => this.setState({ modalVisibility: true });
 
-  closeModal = () => this.setState({ modalVisibility: false }); 
+  closeModal = () => this.setState({ modalVisibility: false });
 
   handleSubmit = (e) => {
     e.preventDefault();
