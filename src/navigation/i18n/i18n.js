@@ -1,17 +1,25 @@
-import i18n from 'i18n-js';
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
 import { Localization } from 'expo';
 
 import es from './es';
 import en from './en';
 
-i18n.fallbacks = true;
-i18n.defaultLocale = 'en';
-i18n.translations = { en, es };
-i18n.locale = Localization.locale;
+const currentLocale = Localization.locale;
 
-i18n.translations = {
-  en,
-  es,
-};
+i18n
+  .use(initReactI18next)
+  .init({
+    resources: {
+      en,
+      es,
+    },
+    lng: currentLocale,
+    fallbackLng: 'en',
+
+    interpolation: {
+      escapeValue: false,
+    },
+  });
 
 export default i18n;
