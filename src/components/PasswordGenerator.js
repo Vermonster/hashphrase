@@ -26,9 +26,9 @@ export default class PasswordGenerator extends React.Component {
     }
   }
 
-  setModalVisibility() {
-    return this.setState({ modalVisibility: true });
-  }
+  showModal = () => this.setState({ modalVisibility: true });
+
+  closeModal = () => this.setState({ modalVisibility: false }); 
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -61,7 +61,7 @@ export default class PasswordGenerator extends React.Component {
       this.addToClipboard(generatedPassword);
     });
     Keyboard.dismiss();
-    this.setModalVisibility();
+    this.showModal();
   }
 
   render() {
@@ -117,6 +117,7 @@ export default class PasswordGenerator extends React.Component {
         <ConfirmationDialog
           visible={modalVisibility}
           generatedPassword={generatedPassword}
+          closeModal={this.closeModal}
         />
       </View>
     );

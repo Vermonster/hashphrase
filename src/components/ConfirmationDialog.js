@@ -24,7 +24,7 @@ export default class ConfirmationDialog extends React.Component {
   state = { checked: false }
 
   render() {
-    const { visible, generatedPassword } = this.props;
+    const { visible, generatedPassword, closeModal } = this.props;
     const { checked } = this.state;
 
     return (
@@ -33,7 +33,7 @@ export default class ConfirmationDialog extends React.Component {
           animationType="fade"
           transparent
           visible={visible}
-          onRequestClose={() => { }}
+          onRequestClose={closeModal}
         >
           <View style={[styles.container, styles.modalBackground]}>
             <View style={styles.innerContainer}>
