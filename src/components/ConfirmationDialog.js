@@ -51,9 +51,9 @@ export default class ConfirmationDialog extends React.Component {
                 <Text>What would you like to do next?</Text>
                 <View>
                   <Text>Clear clipboard</Text>
-                  <Checkbox status='checked' onPress={() => this.setState({ checked: !checked })} />
+                  <Checkbox status="checked" onPress={() => this.setState({ checked: !checked })} />
                   <Text>Make another password</Text>
-                  <Checkbox status='checked' onPress={() => this.setState({ checked: !checked })} />
+                  <Checkbox status="checked" onPress={() => this.setState({ checked: !checked })} />
                 </View>
               </View>
               <Button
