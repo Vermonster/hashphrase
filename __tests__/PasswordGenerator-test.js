@@ -5,12 +5,7 @@ import PasswordGenerator from '../src/components/PasswordGenerator';
 
 describe('<PasswordGenerator />', () => {
   const mockFn = jest.fn();
-  const wrapper = shallow(
-    <PasswordGenerator
-      displayNotification={mockFn}
-      hideNotification={mockFn}
-    />,
-  );
+  const wrapper = shallow(<PasswordGenerator />);
 
   it('should match the existing snapshot', () => {
     expect(wrapper).toMatchSnapshot();
