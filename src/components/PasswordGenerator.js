@@ -4,6 +4,7 @@ import {
 } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 import loplop from 'loplop';
+import ConfirmationDialog from './ConfirmationDialog';
 
 export default class PasswordGenerator extends React.Component {
   constructor(props) {
@@ -14,6 +15,7 @@ export default class PasswordGenerator extends React.Component {
       confirmPassword: '',
       generatedPassword: '',
       disabled: true,
+      modalVisibility: false,
     };
   }
 
@@ -24,16 +26,9 @@ export default class PasswordGenerator extends React.Component {
     }
   }
 
-  handleChange = name => (e) => {
-    const inputValue = e.nativeEvent.text;
-    this.setState({ [name]: inputValue }, this.handleSubmitButtonState);
-  }
+  showModal = () => this.setState({ modalVisibility: true });
 
-  addToClipboard = (password) => {
-    const { onClipboardSave } = this.props;
-    Clipboard.setString(password);
-    onClipboardSave();
-  };
+  closeModal = () => this.setState({ modalVisibility: false });
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -42,6 +37,15 @@ export default class PasswordGenerator extends React.Component {
     if (isNewPassword && (password !== confirmPassword)) return null;
     return this.generatePassword(label, password);
   };
+
+  addToClipboard = (password) => {
+    Clipboard.setString(password);
+  };
+
+  handleChange = name => (e) => {
+    const inputValue = e.nativeEvent.text;
+    this.setState({ [name]: inputValue }, this.handleSubmitButtonState);
+  }
 
   handleSubmitButtonState = () => {
     this.setState({ disabled: true });
@@ -57,11 +61,12 @@ export default class PasswordGenerator extends React.Component {
       this.addToClipboard(generatedPassword);
     });
     Keyboard.dismiss();
+    this.showModal();
   }
 
   render() {
     const {
-      label, password, confirmPassword, disabled,
+      label, password, confirmPassword, generatedPassword, disabled, modalVisibility,
     } = this.state;
     const { isNewPassword } = this.props;
 
@@ -109,6 +114,11 @@ export default class PasswordGenerator extends React.Component {
         >
           CREATE ACCOUNT PASSWORD
         </Button>
+        <ConfirmationDialog
+          visible={modalVisibility}
+          generatedPassword={generatedPassword}
+          closeModal={this.closeModal}
+        />
       </View>
     );
   }

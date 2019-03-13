@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
+<Component
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#ecf0f1",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Component
+    animationType="fade"
+    hardwareAccelerated={false}
+    transparent={true}
+    visible={true}
+  >
+    <Component
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ecf0f1",
+            "flex": 1,
+            "justifyContent": "center",
+          },
+          Object {
+            "backgroundColor": "rgba(0, 0, 0, 0.5)",
+          },
+        ]
+      }
+    >
+      <Component
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "padding": 20,
+          }
+        }
+      >
+        <Component>
+          <Component>
+            All done!
+          </Component>
+          <Component>
+            Your account password is now on your clipboard.
+          </Component>
+        </Component>
+        <Component>
+          <Component>
+            Account Password:
+            <Component />
+          </Component>
+        </Component>
+        <Component>
+          <Component>
+            What would you like to do next?
+          </Component>
+          <Component>
+            <Component>
+              Clear clipboard
+            </Component>
+            <withTheme(Checkbox)
+              onPress={[Function]}
+              status="checked"
+            />
+            <Component>
+              Make another password
+            </Component>
+            <withTheme(Checkbox)
+              onPress={[Function]}
+              status="checked"
+            />
+          </Component>
+        </Component>
+        <withTheme(Button)
+          accessibilityLabel="CHOOSE ACTION BUTTON"
+          color="#D37F26"
+          dark={true}
+          mode="contained"
+          onPress={[Function]}
+        >
+          OKAY
+        </withTheme(Button)>
+      </Component>
+    </Component>
+  </Component>
+</Component>
+`;
