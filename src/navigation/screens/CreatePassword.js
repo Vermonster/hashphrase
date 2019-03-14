@@ -4,7 +4,6 @@ import { View, Text } from 'react-native';
 import { withNamespaces } from 'react-i18next';
 import PasswordGenerator from '../../components/PasswordGenerator';
 import BaseNotification from '../../components/BaseNotification';
-import i18n from '../i18n/i18n';
 
 class CreateNewPassword extends Component {
   constructor(props) {
