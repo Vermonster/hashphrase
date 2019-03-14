@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 25,
-  }, 
+  },
   paragraph: {
     fontSize: 15,
   },
@@ -44,13 +44,13 @@ const styles = StyleSheet.create({
   },
   column: {
     flexDirection: 'column',
-  }
+  },
 });
 
 export default class ConfirmationDialog extends React.Component {
   state = { clearClipboard: false }
 
-  handleClearClipboard = () => Clipboard.setString('');  
+  handleClearClipboard = () => Clipboard.setString('');
 
   handleSubmit = () => {
     const { clearClipboard } = this.state;
@@ -73,7 +73,9 @@ export default class ConfirmationDialog extends React.Component {
             <View style={styles.innerContainer}>
               <View style={styles.messagesContainer}>
                 <Text style={styles.title}>All done!</Text>
-                <Text style={styles.paragraph}>Your account password is now on your clipboard.</Text>
+                <Text style={styles.paragraph}>
+                  Your account password is now on your clipboard.
+                </Text>
               </View>
               <View style={[styles.passwordContainer]}>
                 <Text style={styles.label}>Account Password:</Text>

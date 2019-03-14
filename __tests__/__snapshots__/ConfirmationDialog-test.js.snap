@@ -36,42 +36,98 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
         style={
           Object {
             "backgroundColor": "#fff",
-            "padding": 20,
           }
         }
       >
-        <Component>
-          <Component>
+        <Component
+          style={
+            Object {
+              "backgroundColor": "#E07926",
+              "padding": 10,
+            }
+          }
+        >
+          <Component
+            style={
+              Object {
+                "fontSize": 25,
+              }
+            }
+          >
             All done!
           </Component>
-          <Component>
+          <Component
+            style={
+              Object {
+                "fontSize": 15,
+              }
+            }
+          >
             Your account password is now on your clipboard.
           </Component>
         </Component>
-        <Component>
-          <Component>
+        <Component
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#212A59",
+                "padding": 10,
+              },
+            ]
+          }
+        >
+          <Component
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 12,
+              }
+            }
+          >
             Account Password:
-            <Component />
           </Component>
+          <Component
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 12,
+              }
+            }
+          />
         </Component>
         <Component>
-          <Component>
+          <Component
+            style={
+              Object {
+                "fontSize": 15,
+              }
+            }
+          >
             What would you like to do next?
           </Component>
-          <Component>
-            <Component>
+          <Component
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "paddingHorizontal": 16,
+                "paddingVertical": 8,
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "fontSize": 15,
+                }
+              }
+            >
               Clear clipboard
             </Component>
             <withTheme(Checkbox)
               onPress={[Function]}
-              status="checked"
-            />
-            <Component>
-              Make another password
-            </Component>
-            <withTheme(Checkbox)
-              onPress={[Function]}
-              status="checked"
+              status="unchecked"
             />
           </Component>
         </Component>
