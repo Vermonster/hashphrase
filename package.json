@@ -22,7 +22,7 @@
     "eslint-plugin-react": "^7.11.1",
     "expo-cli": "^2.11.6",
     "jest": "23.6.0",
-    "jest-expo": "^31.0.0",
+    "jest-expo": "^32.0.0",
     "jest-serializer-enzyme": "^1.0.0",
     "jsdom": "^12.2.0",
     "react-devtools": "^3.3.2",
@@ -66,13 +66,13 @@
     ]
   },
   "dependencies": {
-    "expo": "31.0.0",
+    "expo": "^32.0.0",
     "i18next": "^15.0.6",
     "loplop": "^1.0.3",
     "prop-types": "^15.6.2",
     "react": "16.5.0",
     "react-i18next": "^10.4.2",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.1.tar.gz",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-native-paper": "^2.0.1",
     "react-navigation": "^3.0.9"
   }
