@@ -1,5 +1,5 @@
 const en = {
-  createPassword: {
+  translation: {
     title: 'AgiliKEY',
     message: 'Generated password was copied to the clipboard.',
     label: 'Nickname',

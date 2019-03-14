@@ -5,17 +5,24 @@ import { Localization } from 'expo';
 import es from './es';
 import en from './en';
 
-const currentLocale = Localization.locale;
+const languageDetector = {
+  type: 'languageDetector',
+  detect: () => Localization.locale,
+  init: Function.prototype,
+  cacheUserLanguage: Function.prototype,
+};
 
 i18n
   .use(initReactI18next)
+  .use(languageDetector)
   .init({
     resources: {
       en,
       es,
     },
-    lng: currentLocale,
     fallbackLng: 'en',
+    debug: true,
+    appendNamespaceToCIMode: true,
 
     interpolation: {
       escapeValue: false,

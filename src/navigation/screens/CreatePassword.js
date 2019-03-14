@@ -4,7 +4,6 @@ import { View, Text } from 'react-native';
 import { withTranslation } from 'react-i18next';
 import PasswordGenerator from '../../components/PasswordGenerator';
 import BaseNotification from '../../components/BaseNotification';
-import i18n from '../i18n/i18n';
 
 class CreateNewPassword extends Component {
   constructor(props) {
@@ -20,12 +19,13 @@ class CreateNewPassword extends Component {
   }))
 
   render() {
-    const { isNewPassword } = this.state;
+    const { showCopy, isNewPassword } = this.state;
+    const { t } = this.props;
 
     return (
       <View>
         <Appbar.Header>
-          <Appbar.Content title="AgiliKey" />
+          <Appbar.Content title={t('title')} />
         </Appbar.Header>
         <View>
           <Text>Creating a new account password?</Text>
@@ -42,4 +42,4 @@ class CreateNewPassword extends Component {
   }
 }
 
-export default withTranslation('createPassword')(CreateNewPassword);
+export default withTranslation()(CreateNewPassword);
