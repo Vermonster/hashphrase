@@ -82,15 +82,23 @@ class ConfirmationDialog extends React.Component {
                 <Text style={styles.title}>{t('completedStatus')}</Text>
                 <Text style={styles.paragraph}>{t('completedClipboard')}</Text>
               </View>
+<<<<<<< HEAD
               <View style={[styles.passwordContainer]}>
                 <Text style={styles.label}>
                   {t('accountPassword')}
                   <Text style={styles.label}>{generatedPassword}</Text>
+=======
+              <View  style={[styles.passwordContainer]}>
+                <Text style={styles.label}>
+                  {t('accountPassword')}
+                  <Text  style={styles.label}>{generatedPassword}</Text>
+>>>>>>> add confirmationDialog text to i18n
                 </Text>
               </View>
               <Text style={styles.paragraph}>{t('nextSteps')}</Text>
               <View style={styles.row}>
                 <Text style={styles.paragraph}>{t('clearClipboard')}</Text>
+<<<<<<< HEAD
                 <Checkbox
                   testID="clear-clipboard"
                   status="checked"
@@ -99,13 +107,21 @@ class ConfirmationDialog extends React.Component {
                 <Text>{t('anotherPassword')}</Text>
                 <Checkbox
                   testID="new-password"
+=======
+                <Checkbox status="checked" onPress={() => this.setState({ checked: !checked })} />
+                <Text>{t('anotherPassword')}</Text>
+                <Checkbox
+>>>>>>> add confirmationDialog text to i18n
                   status={clearClipboard ? 'checked' : 'unchecked'}
                   onPress={() => this.setState({ clearClipboard: !clearClipboard })}
                 />
               </View>
             </View>
             <Button
+<<<<<<< HEAD
               testID="submit-form"
+=======
+>>>>>>> add confirmationDialog text to i18n
               onPress={this.handleSubmit}
               accessibilityLabel="CHOOSE ACTION BUTTON"
               mode="contained"
@@ -114,7 +130,11 @@ class ConfirmationDialog extends React.Component {
             >
               {t('confirmOk')}
             </Button>
+<<<<<<< HEAD
           </View>
+=======
+            </View>
+>>>>>>> add confirmationDialog text to i18n
         </Modal>
       </View>
     );
@@ -122,11 +142,14 @@ class ConfirmationDialog extends React.Component {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default withNamespaces('confirmationDialog')(ConfirmationDialog);
 export { ConfirmationDialog as TestConfirmationDialog };
 =======
 
 
 
+=======
+>>>>>>> add confirmationDialog text to i18n
 export default withNamespaces()(ConfirmationDialog);
 >>>>>>> export components without i18n providers for testing

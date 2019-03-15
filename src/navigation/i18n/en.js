@@ -1,6 +1,7 @@
 const en = {
   translation: {
     title: 'AgiliKEY',
+<<<<<<< HEAD
     newPassword: 'Creating a new account password?',
   },
   flowScreen: {
@@ -18,6 +19,8 @@ const en = {
     confirmOk: 'OKAY',
   },
   passwordGenerator: {
+=======
+>>>>>>> add confirmationDialog text to i18n
     label: 'Nickname',
     password: 'Master Password',
 <<<<<<< HEAD
@@ -33,7 +36,17 @@ const en = {
 =======
     oldPasswordFlow: 'Old Password Flow',
     newPasswordFlow: 'New Password Flow',
+<<<<<<< HEAD
 >>>>>>> add english and spanish text
+=======
+    completedStatus: 'All done!',
+    completedClipboard: 'Your account password is now on your clipboard.',
+    accountPassword: 'Account Password:',
+    nextSteps: 'What would you like to do next?',
+    clearClipboard: 'Clear clipboard',
+    anotherPassword: 'Make another password',
+    confirmOk: 'OKAY',
+>>>>>>> add confirmationDialog text to i18n
   },
 };
 
