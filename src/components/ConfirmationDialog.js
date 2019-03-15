@@ -83,6 +83,7 @@ class ConfirmationDialog extends React.Component {
                 <Text style={styles.paragraph}>{t('completedClipboard')}</Text>
               </View>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <View style={[styles.passwordContainer]}>
                 <Text style={styles.label}>
                   {t('accountPassword')}
@@ -93,6 +94,12 @@ class ConfirmationDialog extends React.Component {
                   {t('accountPassword')}
                   <Text  style={styles.label}>{generatedPassword}</Text>
 >>>>>>> add confirmationDialog text to i18n
+=======
+              <View style={[styles.passwordContainer]}>
+                <Text style={styles.label}>
+                  {t('accountPassword')}
+                  <Text style={styles.label}>{generatedPassword}</Text>
+>>>>>>> namespace translations by component
                 </Text>
               </View>
               <Text style={styles.paragraph}>{t('nextSteps')}</Text>
@@ -131,16 +138,21 @@ class ConfirmationDialog extends React.Component {
               {t('confirmOk')}
             </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
           </View>
 =======
             </View>
 >>>>>>> add confirmationDialog text to i18n
+=======
+          </View>
+>>>>>>> namespace translations by component
         </Modal>
       </View>
     );
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default withNamespaces('confirmationDialog')(ConfirmationDialog);
@@ -153,3 +165,9 @@ export { ConfirmationDialog as TestConfirmationDialog };
 >>>>>>> add confirmationDialog text to i18n
 export default withNamespaces()(ConfirmationDialog);
 >>>>>>> export components without i18n providers for testing
+=======
+
+export { ConfirmationDialog as TestConfirmationDialog };
+
+export default withNamespaces('confirmationDialog')(ConfirmationDialog);
+>>>>>>> namespace translations by component

@@ -3,8 +3,11 @@ import { shallow } from 'enzyme';
 <<<<<<< HEAD
 =======
 import { Checkbox, Button } from 'react-native-paper';
+<<<<<<< HEAD
 import ConfirmationDialog from '../src/components/ConfirmationDialog';
 >>>>>>> switch imports to unconnected i18n components
+=======
+>>>>>>> namespace translations by component
 import { TestConfirmationDialog as ConfirmationDialog } from '../src/components/ConfirmationDialog';
 
 describe('<ConfirmationDialog />', () => {
