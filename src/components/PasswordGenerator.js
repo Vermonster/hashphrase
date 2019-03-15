@@ -126,6 +126,10 @@ class PasswordGenerator extends React.Component {
   }
 }
 
+<<<<<<< HEAD
 export { PasswordGenerator as TestPasswordGenerator };
 
 export default withNamespaces('passwordGenerator')(PasswordGenerator);
+=======
+export default withNamespaces()(PasswordGenerator);
+>>>>>>> update components with correct translation functions
