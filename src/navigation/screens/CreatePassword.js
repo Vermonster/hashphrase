@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Appbar } from 'react-native-paper';
 import { View, Text } from 'react-native';
-import { withTranslation } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 import PasswordGenerator from '../../components/PasswordGenerator';
 import BaseNotification from '../../components/BaseNotification';
 
@@ -28,7 +28,7 @@ class CreateNewPassword extends Component {
           <Appbar.Content title={t('title')} />
         </Appbar.Header>
         <View>
-          <Text>Creating a new account password?</Text>
+          <Text>{t('newPassword')}</Text>
           <Switch
             value={isNewPassword}
             onValueChange={this.handleToggleSwitch}
@@ -42,4 +42,4 @@ class CreateNewPassword extends Component {
   }
 }
 
-export default withTranslation()(CreateNewPassword);
+export default withNamespaces()(CreateNewPassword);

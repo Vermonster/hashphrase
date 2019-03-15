@@ -2,11 +2,12 @@ import React from 'react';
 import {
   Keyboard, Clipboard, View, Text,
 } from 'react-native';
+import { withNamespaces } from 'react-i18next';
 import { TextInput, Button } from 'react-native-paper';
 import loplop from 'loplop';
 import ConfirmationDialog from './ConfirmationDialog';
 
-export default class PasswordGenerator extends React.Component {
+class PasswordGenerator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -68,11 +69,11 @@ export default class PasswordGenerator extends React.Component {
     const {
       label, password, confirmPassword, generatedPassword, disabled, modalVisibility,
     } = this.state;
-    const { isNewPassword } = this.props;
+    const { isNewPassword, t } = this.props;
 
     return (
       <View>
-        <Text>What is the account password&apos;s Nickname?</Text>
+        <Text>{t('passwordLabel')}</Text>
         <TextInput
           value={label}
           placeholder="Nickname"
@@ -80,7 +81,7 @@ export default class PasswordGenerator extends React.Component {
           textContentType="username"
           onChange={this.handleChange('label')}
         />
-        <Text>What is your Master Password?</Text>
+        <Text>{t('masterPassword')}</Text>
         <TextInput
           value={password}
           placeholder="Master Password"
@@ -91,7 +92,7 @@ export default class PasswordGenerator extends React.Component {
         />
         { isNewPassword && (
           <>
-            <Text>Retype your Master Password</Text>
+            <Text>{t('confirmPassword')}</Text>
             <TextInput
               value={confirmPassword}
               placeholder="Confirm Master Password"
@@ -112,7 +113,7 @@ export default class PasswordGenerator extends React.Component {
           dark
           color="#D37F26"
         >
-          CREATE ACCOUNT PASSWORD
+          {t('submitMessage')}
         </Button>
         <ConfirmationDialog
           visible={modalVisibility}
@@ -123,3 +124,5 @@ export default class PasswordGenerator extends React.Component {
     );
   }
 }
+
+export default withNamespaces()(PasswordGenerator);
