@@ -20,10 +20,20 @@ const en = {
   passwordGenerator: {
     label: 'Nickname',
     password: 'Master Password',
+<<<<<<< HEAD
+=======
+    button: 'Create account password',
+    newPassword: 'Creating a new account password?',
+>>>>>>> add english and spanish text
     passwordLabel: 'What is the account password\'s Nickname?',
     masterPassword: 'What is your Master Password?',
     confirmPassword: 'Retype your Master Password',
     submitMessage: 'CREATE ACCOUNT PASSWORD',
+<<<<<<< HEAD
+=======
+    oldPasswordFlow: 'Old Password Flow',
+    newPasswordFlow: 'New Password Flow',
+>>>>>>> add english and spanish text
   },
 };
 

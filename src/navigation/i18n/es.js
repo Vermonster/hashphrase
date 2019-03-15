@@ -7,6 +7,12 @@ const es = {
     label: 'Etiqueta',
     password: 'Contraseña general',
     button: 'Cree una contraseña',
+    passwordLabel: '¿Qué es la etiqueta de la cuenta?',
+    masterPassword: '¿Qué es la Contraseña Maestra?',
+    confirmPassword: 'Vuelva a escribir la Contraseña Maestra',
+    submitMessage: 'GENERE CONTRASEÑA',
+    oldPasswordFlow: 'Contraseña Vieja',
+    newPasswordFlow: 'Contraseña Nueva',
   },
   flowScreen: {
     oldPasswordFlow: 'Contraseña Vieja',
