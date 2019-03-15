@@ -54,7 +54,10 @@ export default class ConfirmationDialog extends React.Component {
 
   handleSubmit = () => {
     const { clearClipboard } = this.state;
-    return clearClipboard ? this.handleClearClipboard() : null;
+    const { closeModal } = this.props;
+    if (clearClipboard) this.handleClearClipboard();
+    this.setState({ clearClipboard: false });
+    return closeModal();
   }
 
   render() {
