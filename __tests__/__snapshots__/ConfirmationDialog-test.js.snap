@@ -14,6 +14,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
   <Component
     animationType="fade"
     hardwareAccelerated={false}
+    onRequestClose={[MockFunction]}
     transparent={true}
     visible={true}
   >
