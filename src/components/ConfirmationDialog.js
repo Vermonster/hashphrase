@@ -88,7 +88,10 @@ export default class ConfirmationDialog extends React.Component {
                 <Text style={styles.paragraph}>What would you like to do next?</Text>
                 <View style={styles.row}>
                   <Text style={styles.paragraph}>Clear clipboard</Text>
-                  <Checkbox status={clearClipboard ? 'checked' : 'unchecked'} onPress={() => this.setState({ clearClipboard: !clearClipboard })} />
+                  <Checkbox
+                    status={clearClipboard ? 'checked' : 'unchecked'}
+                    onPress={() => this.setState({ clearClipboard: !clearClipboard })}
+                  />
                 </View>
               </View>
               <Button
