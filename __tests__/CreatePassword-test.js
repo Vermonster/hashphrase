@@ -3,8 +3,15 @@ import { shallow } from 'enzyme';
 import { TestCreatePassword as CreatePassword } from '../src/navigation/screens/CreatePassword';
 
 describe('<CreatePassword />', () => {
+<<<<<<< HEAD
   const wrapper = shallow(
     <CreatePassword
+=======
+  const navigation = { getParam: jest.fn() };
+  const wrapper = shallow(
+    <CreatePassword
+      navigation={navigation}
+>>>>>>> switch imports to unconnected i18n components
       isNewPassword={false}
       t={key => key}
     />,

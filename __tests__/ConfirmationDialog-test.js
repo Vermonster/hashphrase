@@ -1,5 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+<<<<<<< HEAD
+=======
+import { Checkbox, Button } from 'react-native-paper';
+import ConfirmationDialog from '../src/components/ConfirmationDialog';
+>>>>>>> switch imports to unconnected i18n components
 import { TestConfirmationDialog as ConfirmationDialog } from '../src/components/ConfirmationDialog';
 
 describe('<ConfirmationDialog />', () => {
