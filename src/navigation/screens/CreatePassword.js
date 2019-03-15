@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Appbar, Switch } from 'react-native-paper';
+import { Switch, Appbar } from 'react-native-paper';
 import { View, Text } from 'react-native';
 import PasswordGenerator from '../../components/PasswordGenerator';
 
