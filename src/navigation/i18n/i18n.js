@@ -13,24 +13,13 @@ const languageDetector = {
 };
 
 i18n
-<<<<<<< HEAD
   .use(reactI18nextModule)
-=======
-  .use(initReactI18next)
->>>>>>> wip i18n
   .use(languageDetector)
   .init({
     resources: {
       en,
       es,
     },
-<<<<<<< HEAD
-=======
-    fallbackLng: 'en',
-    debug: true,
-    appendNamespaceToCIMode: true,
-
->>>>>>> wip i18n
     interpolation: {
       escapeValue: false,
     },
