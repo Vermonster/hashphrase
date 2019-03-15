@@ -1,4 +1,5 @@
 const es = {
+<<<<<<< HEAD
 
   createPassword: {
     title: 'AgiliKEY',
@@ -18,16 +19,27 @@ const es = {
     masterPassword: '¿Qué es la Contraseña Maestra?',
     confirmPassword: 'Vuelva a escribir la Contraseña Maestra',
     submitMessage: 'GENERAR CONTRASEÑA',
+=======
+  createPassword: {
+    title: 'AgiliKEY',
+    newPassword: '¿Vas a crear una nueva contraseña?',
+  },
+  flowScreen: {
+>>>>>>> reorganize translations
     oldPasswordFlow: 'Contraseña Vieja',
     newPasswordFlow: 'Contraseña Nueva',
+  },
+  infoScreen: {},
+  confirmationDialog: {
     completedStatus: '¡Completo!',
     completedClipboard: 'Contraseña generada ha sido copiado al clipboard.',
     accountPassword: 'Contraseña de la Cuenta:',
-    nextSteps: '¿Qué quiere hacer ahora?',
+    nextSteps: '¿Qué le gusta hacer ahora?',
     clearClipboard: 'Borrar el clipboard',
     anotherPassword: 'Hacer otra contraseña',
     confirmOk: 'CONFIRMAR',
   },
+<<<<<<< HEAD
   flowScreen: {
     oldPasswordFlow: 'Contraseña Vieja',
     newPasswordFlow: 'Contraseña Nueva',
@@ -42,6 +54,8 @@ const es = {
     anotherPassword: 'Hacer otra contraseña',
     confirmOk: 'CONFIRMAR',
   },
+=======
+>>>>>>> reorganize translations
   passwordGenerator: {
     label: 'Etiqueta',
     password: 'Contraseña general',

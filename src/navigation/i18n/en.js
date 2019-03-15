@@ -1,6 +1,7 @@
 const en = {
-  translation: {
+  createPassword: {
     title: 'AgiliKEY',
+<<<<<<< HEAD
 <<<<<<< HEAD
     newPassword: 'Creating a new account password?',
   },
@@ -39,6 +40,16 @@ const en = {
 <<<<<<< HEAD
 >>>>>>> add english and spanish text
 =======
+=======
+    newPassword: 'Creating a new account password?',
+  },
+  flowScreen: {
+    oldPasswordFlow: 'Old Password Flow',
+    newPasswordFlow: 'New Password Flow',
+  },
+  infoScreen: {},
+  confirmationDialog: {
+>>>>>>> reorganize translations
     completedStatus: 'All done!',
     completedClipboard: 'Your account password is now on your clipboard.',
     accountPassword: 'Account Password:',
@@ -47,6 +58,14 @@ const en = {
     anotherPassword: 'Make another password',
     confirmOk: 'OKAY',
 >>>>>>> add confirmationDialog text to i18n
+  },
+  passwordGenerator: {
+    label: 'Nickname',
+    password: 'Master Password',
+    passwordLabel: 'What is the account password\'s Nickname?',
+    masterPassword: 'What is your Master Password?',
+    confirmPassword: 'Retype your Master Password',
+    submitMessage: 'CREATE ACCOUNT PASSWORD',
   },
 };
 
