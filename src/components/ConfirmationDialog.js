@@ -121,5 +121,12 @@ class ConfirmationDialog extends React.Component {
   }
 }
 
+<<<<<<< HEAD
 export default withNamespaces('confirmationDialog')(ConfirmationDialog);
 export { ConfirmationDialog as TestConfirmationDialog };
+=======
+
+
+
+export default withNamespaces()(ConfirmationDialog);
+>>>>>>> export components without i18n providers for testing

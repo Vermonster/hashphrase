@@ -3,7 +3,6 @@ import { Switch, Appbar } from 'react-native-paper';
 import { View, Text } from 'react-native';
 import { withNamespaces } from 'react-i18next';
 import PasswordGenerator from '../../components/PasswordGenerator';
-import BaseNotification from '../../components/BaseNotification';
 
 class CreateNewPassword extends Component {
   constructor(props) {
@@ -41,5 +40,9 @@ class CreateNewPassword extends Component {
   }
 }
 
+<<<<<<< HEAD
 export default withNamespaces('createPassword')(CreateNewPassword);
+=======
+export default withNamespaces()(CreateNewPassword);
+>>>>>>> export components without i18n providers for testing
 export { CreateNewPassword as TestCreatePassword };
