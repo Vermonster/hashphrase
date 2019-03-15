@@ -3,7 +3,6 @@ import { Switch, Appbar } from 'react-native-paper';
 import { View, Text } from 'react-native';
 import { withNamespaces } from 'react-i18next';
 import PasswordGenerator from '../../components/PasswordGenerator';
-import BaseNotification from '../../components/BaseNotification';
 
 class CreateNewPassword extends Component {
   constructor(props) {
@@ -19,7 +18,7 @@ class CreateNewPassword extends Component {
   }))
 
   render() {
-    const { showCopy, isNewPassword } = this.state;
+    const { isNewPassword } = this.state;
     const { t } = this.props;
 
     return (
@@ -43,3 +42,4 @@ class CreateNewPassword extends Component {
 }
 
 export default withNamespaces()(CreateNewPassword);
+export { CreateNewPassword as TestCreatePassword };

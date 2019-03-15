@@ -125,4 +125,6 @@ class PasswordGenerator extends React.Component {
   }
 }
 
+export { PasswordGenerator as TestPasswordGenerator };
+
 export default withNamespaces()(PasswordGenerator);

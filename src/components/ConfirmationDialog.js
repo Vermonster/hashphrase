@@ -1,4 +1,5 @@
 import React from 'react';
+import { withNamespaces } from 'react-i18next';
 import {
   View, Text, Modal, StyleSheet, Clipboard,
 } from 'react-native';
@@ -110,3 +111,8 @@ export default class ConfirmationDialog extends React.Component {
     );
   }
 }
+
+
+
+
+export default withNamespaces()(ConfirmationDialog);
