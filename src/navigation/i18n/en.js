@@ -1,7 +1,6 @@
 const en = {
   translation: {
     title: 'AgiliKEY',
-    message: 'Generated password was copied to the clipboard.',
     label: 'Nickname',
     password: 'Master Password',
     button: 'Create account password',
@@ -12,6 +11,13 @@ const en = {
     submitMessage: 'CREATE ACCOUNT PASSWORD',
     oldPasswordFlow: 'Old Password Flow',
     newPasswordFlow: 'New Password Flow',
+    completedStatus: 'All done!',
+    completedClipboard: 'Your account password is now on your clipboard.',
+    accountPassword: 'Account Password:',
+    nextSteps: 'What would you like to do next?',
+    clearClipboard: 'Clear clipboard',
+    anotherPassword: 'Make another password',
+    confirmOk: 'OKAY',
   },
 };
 
