@@ -4,13 +4,16 @@ import { Checkbox, Button } from 'react-native-paper';
 import ConfirmationDialog from '../src/components/ConfirmationDialog';
 
 describe('<ConfirmationDialog />', () => {
-  const mockFn = jest.fn();
-  const wrapper = shallow(
-    <ConfirmationDialog
-      clearClipboard={false}
-      closeModal={mockFn}
-    />,
-  );
+  let wrapper;
+  beforeEach(() => {
+    const mockFn = jest.fn();
+    wrapper = shallow(
+      <ConfirmationDialog
+        clearClipboard={false}
+        closeModal={mockFn}
+      />,
+    );
+  });
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
