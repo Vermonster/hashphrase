@@ -76,7 +76,7 @@ class PasswordGenerator extends React.Component {
         <Text>{t('passwordLabel')}</Text>
         <TextInput
           value={label}
-          placeholder="Nickname"
+          placeholder={t('label')}
           label="Nickname"
           textContentType="username"
           onChange={this.handleChange('label')}
@@ -84,7 +84,7 @@ class PasswordGenerator extends React.Component {
         <Text>{t('masterPassword')}</Text>
         <TextInput
           value={password}
-          placeholder="Master Password"
+          placeholder={t('password')}
           label="Master Password"
           textContentType="password"
           secureTextEntry
@@ -95,7 +95,7 @@ class PasswordGenerator extends React.Component {
             <Text>{t('confirmPassword')}</Text>
             <TextInput
               value={confirmPassword}
-              placeholder="Confirm Master Password"
+              placeholder={t('confirmPassword')}
               label="Confirm Master Password"
               textContentType="password"
               oneTimeCode
@@ -127,4 +127,4 @@ class PasswordGenerator extends React.Component {
 
 export { PasswordGenerator as TestPasswordGenerator };
 
-export default withNamespaces()(PasswordGenerator);
+export default withNamespaces('passwordGenerator')(PasswordGenerator);

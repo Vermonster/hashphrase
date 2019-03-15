@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Checkbox, Button } from 'react-native-paper';
-import ConfirmationDialog from '../src/components/ConfirmationDialog';
 import { TestConfirmationDialog as ConfirmationDialog } from '../src/components/ConfirmationDialog';
 
 describe('<ConfirmationDialog />', () => {

@@ -35,4 +35,4 @@ const FlowScreen = (props) => {
 };
 
 export { FlowScreen as TestFlowScreen };
-export default withNamespaces()(FlowScreen);
+export default withNamespaces('flowScreen')(FlowScreen);

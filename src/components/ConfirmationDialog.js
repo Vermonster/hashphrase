@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default class ConfirmationDialog extends React.Component {
+class ConfirmationDialog extends React.Component {
   state = { clearClipboard: false }
 
   handleClearClipboard = () => Clipboard.setString('');
@@ -62,7 +62,6 @@ export default class ConfirmationDialog extends React.Component {
   }
 
   render() {
-    const { visible, generatedPassword, closeModal } = this.props;
     const { clearClipboard } = this.state;
     const {
       t, visible, generatedPassword, closeModal,
@@ -83,10 +82,10 @@ export default class ConfirmationDialog extends React.Component {
                 <Text style={styles.title}>{t('completedStatus')}</Text>
                 <Text style={styles.paragraph}>{t('completedClipboard')}</Text>
               </View>
-              <View  style={[styles.passwordContainer]}>
+              <View style={[styles.passwordContainer]}>
                 <Text style={styles.label}>
                   {t('accountPassword')}
-                  <Text  style={styles.label}>{generatedPassword}</Text>
+                  <Text style={styles.label}>{generatedPassword}</Text>
                 </Text>
               </View>
               <Text style={styles.paragraph}>{t('nextSteps')}</Text>
@@ -109,11 +108,14 @@ export default class ConfirmationDialog extends React.Component {
             >
               {t('confirmOk')}
             </Button>
-            </View>
+          </View>
         </Modal>
       </View>
     );
   }
 }
 
-export default withNamespaces()(ConfirmationDialog);
+
+export { ConfirmationDialog as TestConfirmationDialog };
+
+export default withNamespaces('confirmationDialog')(ConfirmationDialog);

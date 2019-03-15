@@ -41,5 +41,5 @@ class CreateNewPassword extends Component {
   }
 }
 
-export default withNamespaces()(CreateNewPassword);
+export default withNamespaces('createPassword')(CreateNewPassword);
 export { CreateNewPassword as TestCreatePassword };
