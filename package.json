@@ -71,7 +71,7 @@
     "loplop": "^1.0.3",
     "prop-types": "^15.6.2",
     "react": "16.5.0",
-    "react-i18next": "^10.4.2",
+    "react-i18next": "^9.0.10",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-native-paper": "^2.0.1",
     "react-navigation": "^3.0.9"
