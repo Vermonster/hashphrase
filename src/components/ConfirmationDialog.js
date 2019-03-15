@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  View, Text, Modal, StyleSheet,
+  View, Text, Modal, StyleSheet, Clipboard,
 } from 'react-native';
 import { Button, Checkbox } from 'react-native-paper';
 
@@ -16,16 +16,53 @@ const styles = StyleSheet.create({
   },
   innerContainer: {
     backgroundColor: '#fff',
-    padding: 20,
+  },
+  messagesContainer: {
+    backgroundColor: '#E07926',
+    padding: 10,
+  },
+  passwordContainer: {
+    padding: 10,
+    backgroundColor: '#212A59',
+  },
+  title: {
+    fontSize: 25,
+  },
+  paragraph: {
+    fontSize: 15,
+  },
+  label: {
+    fontSize: 12,
+    color: 'white',
+  },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+  },
+  column: {
+    flexDirection: 'column',
   },
 });
 
 export default class ConfirmationDialog extends React.Component {
-  state = { checked: false }
+  state = { clearClipboard: false }
+
+  handleClearClipboard = () => Clipboard.setString('');
+
+  handleSubmit = () => {
+    const { clearClipboard } = this.state;
+    const { closeModal } = this.props;
+    if (clearClipboard) this.handleClearClipboard();
+    this.setState({ clearClipboard: false });
+    return closeModal();
+  }
 
   render() {
     const { visible, generatedPassword, closeModal } = this.props;
-    const { checked } = this.state;
+    const { clearClipboard } = this.state;
 
     return (
       <View style={styles.container}>
@@ -37,27 +74,28 @@ export default class ConfirmationDialog extends React.Component {
         >
           <View style={[styles.container, styles.modalBackground]}>
             <View style={styles.innerContainer}>
-              <View>
-                <Text>All done!</Text>
-                <Text>Your account password is now on your clipboard.</Text>
-              </View>
-              <View>
-                <Text>
-                  Account Password:
-                  <Text>{generatedPassword}</Text>
+              <View style={styles.messagesContainer}>
+                <Text style={styles.title}>All done!</Text>
+                <Text style={styles.paragraph}>
+                  Your account password is now on your clipboard.
                 </Text>
               </View>
+              <View style={[styles.passwordContainer]}>
+                <Text style={styles.label}>Account Password:</Text>
+                <Text style={styles.label}>{generatedPassword}</Text>
+              </View>
               <View>
-                <Text>What would you like to do next?</Text>
-                <View>
-                  <Text>Clear clipboard</Text>
-                  <Checkbox status="checked" onPress={() => this.setState({ checked: !checked })} />
-                  <Text>Make another password</Text>
-                  <Checkbox status="checked" onPress={() => this.setState({ checked: !checked })} />
+                <Text style={styles.paragraph}>What would you like to do next?</Text>
+                <View style={styles.row}>
+                  <Text style={styles.paragraph}>Clear clipboard</Text>
+                  <Checkbox
+                    status={clearClipboard ? 'checked' : 'unchecked'}
+                    onPress={() => this.setState({ clearClipboard: !clearClipboard })}
+                  />
                 </View>
               </View>
               <Button
-                onPress={() => {}}
+                onPress={this.handleSubmit}
                 accessibilityLabel="CHOOSE ACTION BUTTON"
                 mode="contained"
                 dark
