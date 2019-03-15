@@ -11,6 +11,7 @@ import ConfirmationDialog from '../src/components/ConfirmationDialog';
 import { TestConfirmationDialog as ConfirmationDialog } from '../src/components/ConfirmationDialog';
 
 describe('<ConfirmationDialog />', () => {
+<<<<<<< HEAD
   let wrapper;
   beforeEach(() => {
     const mockFn = jest.fn();
@@ -23,6 +24,9 @@ describe('<ConfirmationDialog />', () => {
       />,
     );
   });
+=======
+  const wrapper = shallow(<ConfirmationDialog t={key => key} />);
+>>>>>>> update snaps
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
