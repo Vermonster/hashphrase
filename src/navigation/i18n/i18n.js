@@ -1,5 +1,5 @@
 import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
+import { reactI18nextModule } from 'react-i18next';
 import { Localization } from 'expo';
 
 import es from './es';
@@ -13,17 +13,13 @@ const languageDetector = {
 };
 
 i18n
-  .use(initReactI18next)
+  .use(reactI18nextModule)
   .use(languageDetector)
   .init({
     resources: {
       en,
       es,
     },
-    fallbackLng: 'en',
-    debug: true,
-    appendNamespaceToCIMode: true,
-
     interpolation: {
       escapeValue: false,
     },
