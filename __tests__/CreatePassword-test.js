@@ -1,10 +1,16 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import CreatePassword from '../src/navigation/screens/CreatePassword';
+import { TestCreatePassword as CreatePassword } from '../src/navigation/screens/CreatePassword';
 
 describe('<CreatePassword />', () => {
   const navigation = { getParam: jest.fn() };
-  const wrapper = shallow(<CreatePassword navigation={navigation} isNewPassword={false} />);
+  const wrapper = shallow(
+    <CreatePassword
+      navigation={navigation}
+      isNewPassword={false}
+      t={key => key}
+    />,
+  );
 
   it('should render the same snapshot', () => {
     expect(wrapper).toMatchSnapshot();

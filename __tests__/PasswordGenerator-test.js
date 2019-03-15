@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Button } from 'react-native-paper';
-import PasswordGenerator from '../src/components/PasswordGenerator';
+import { TestPasswordGenerator as PasswordGenerator } from '../src/components/PasswordGenerator';
 
 describe('<PasswordGenerator />', () => {
   const mockFn = jest.fn();
-  const wrapper = shallow(<PasswordGenerator />);
+  const wrapper = shallow(<PasswordGenerator onClipboardSave={mockFn} t={key => key} />);
 
   it('should match the existing snapshot', () => {
     expect(wrapper).toMatchSnapshot();
