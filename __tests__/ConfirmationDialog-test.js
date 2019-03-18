@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Checkbox, Button } from 'react-native-paper';
 import { TestConfirmationDialog as ConfirmationDialog } from '../src/components/ConfirmationDialog';
 
 describe('<ConfirmationDialog />', () => {
@@ -22,14 +21,14 @@ describe('<ConfirmationDialog />', () => {
   });
 
   it('should update the state when clear checkbox is clicked', () => {
-    wrapper.find('.new-password').simulate('press');
+    wrapper.findWhere(node => node.prop('testID') === 'new-password').simulate('press');
     expect(wrapper.state('clearClipboard')).toBe(true);
   });
 
   it('should clear clipboard when the clear clipboard checkbox is clicked', () => {
     wrapper.setState({ clearClipboard: true });
     const spy = jest.spyOn(wrapper.instance(), 'handleClearClipboard');
-    wrapper.find('.submit-form').simulate('press');
+    wrapper.findWhere(node => node.prop('testID') === 'submit-form').simulate('press');
     expect(spy).toBeCalled();
   });
 });

@@ -106,6 +106,7 @@ class PasswordGenerator extends React.Component {
         )
         }
         <Button
+          testID="submit-create-password"
           onPress={this.handleSubmit}
           accessibilityLabel="CREATE ACCOUNT PASSWORD BUTTON"
           disabled={disabled}

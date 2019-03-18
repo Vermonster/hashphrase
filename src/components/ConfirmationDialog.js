@@ -92,20 +92,20 @@ class ConfirmationDialog extends React.Component {
               <View style={styles.row}>
                 <Text style={styles.paragraph}>{t('clearClipboard')}</Text>
                 <Checkbox
-                  className="clear-clipboard"
+                  testID="clear-clipboard"
                   status="checked"
                   onPress={() => this.setState({ checked: !checked })}
                 />
                 <Text>{t('anotherPassword')}</Text>
                 <Checkbox
-                  className="new-password"
+                  testID="new-password"
                   status={clearClipboard ? 'checked' : 'unchecked'}
                   onPress={() => this.setState({ clearClipboard: !clearClipboard })}
                 />
               </View>
             </View>
             <Button
-              className="submit-form"
+              testID="submit-form"
               onPress={this.handleSubmit}
               accessibilityLabel="CHOOSE ACTION BUTTON"
               mode="contained"

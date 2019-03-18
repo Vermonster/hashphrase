@@ -126,27 +126,27 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
             clearClipboard
           </ForwardRef(Text)>
           <withTheme(Checkbox)
-            className="clear-clipboard"
             onPress={[Function]}
             status="checked"
+            testID="clear-clipboard"
           />
           <ForwardRef(Text)>
             anotherPassword
           </ForwardRef(Text)>
           <withTheme(Checkbox)
-            className="new-password"
             onPress={[Function]}
             status="unchecked"
+            testID="new-password"
           />
         </ForwardRef(View)>
       </ForwardRef(View)>
       <withTheme(Button)
         accessibilityLabel="CHOOSE ACTION BUTTON"
-        className="submit-form"
         color="#D37F26"
         dark={true}
         mode="contained"
         onPress={[Function]}
+        testID="submit-form"
       >
         confirmOk
       </withTheme(Button)>
