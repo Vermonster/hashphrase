@@ -122,14 +122,18 @@ class ConfirmationDialog extends React.Component {
 >>>>>>> add confirmationDialog text to i18n
 =======
                 <Checkbox
-                  className="clear-clipboard"
+                  testID="clear-clipboard"
                   status="checked"
                   onPress={() => this.setState({ checked: !checked })}
                 />
                 <Text>{t('anotherPassword')}</Text>
                 <Checkbox
+<<<<<<< HEAD
                   className="new-password"
 >>>>>>> wip i18n
+=======
+                  testID="new-password"
+>>>>>>> use testIDs instead of classnames and update snapshots
                   status={clearClipboard ? 'checked' : 'unchecked'}
                   onPress={() => this.setState({ clearClipboard: !clearClipboard })}
                 />
@@ -138,12 +142,16 @@ class ConfirmationDialog extends React.Component {
             <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               testID="submit-form"
 =======
 >>>>>>> add confirmationDialog text to i18n
 =======
               className="submit-form"
 >>>>>>> wip i18n
+=======
+              testID="submit-form"
+>>>>>>> use testIDs instead of classnames and update snapshots
               onPress={this.handleSubmit}
               accessibilityLabel="CHOOSE ACTION BUTTON"
               mode="contained"
