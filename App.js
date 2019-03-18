@@ -49,10 +49,6 @@ const App = () => (
 export default App;
 =======
 
-// const WrappedStack = ({ t }) => (<AppContainer screenProps={{ t }} />);
-
-// const ReloadAppOnLanguageChange = withNamespaces()(WrappedStack);
-
 const App = () => (
   <I18nextProvider i18n={i18n}>
     <AppContainer />
