@@ -1,11 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
-<<<<<<< HEAD
-<Component
-=======
 <ForwardRef(View)
->>>>>>> update snaps
   style={
     Object {
       "alignItems": "center",
@@ -18,18 +14,11 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
   <Component
     animationType="fade"
     hardwareAccelerated={false}
-<<<<<<< HEAD
     onRequestClose={[MockFunction]}
     transparent={true}
     visible={true}
   >
-    <Component
-=======
-    transparent={true}
-    visible={true}
-  >
     <ForwardRef(View)
->>>>>>> update snaps
       style={
         Array [
           Object {
@@ -44,15 +33,14 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
         ]
       }
     >
-<<<<<<< HEAD
-      <Component
+      <ForwardRef(View)
         style={
           Object {
             "backgroundColor": "#fff",
           }
         }
       >
-        <Component
+        <ForwardRef(View)
           style={
             Object {
               "backgroundColor": "#E07926",
@@ -60,26 +48,26 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
             }
           }
         >
-          <Component
+          <ForwardRef(Text)
             style={
               Object {
                 "fontSize": 25,
               }
             }
           >
-            All done!
-          </Component>
-          <Component
+            completedStatus
+          </ForwardRef(Text)>
+          <ForwardRef(Text)
             style={
               Object {
                 "fontSize": 15,
               }
             }
           >
-            Your account password is now on your clipboard.
-          </Component>
-        </Component>
-        <Component
+            completedClipboard
+          </ForwardRef(Text)>
+        </ForwardRef(View)>
+        <ForwardRef(View)
           style={
             Array [
               Object {
@@ -89,7 +77,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
             ]
           }
         >
-          <Component
+          <ForwardRef(Text)
             style={
               Object {
                 "color": "white",
@@ -97,118 +85,72 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
               }
             }
           >
-            Account Password:
-          </Component>
-          <Component
-            style={
-              Object {
-                "color": "white",
-                "fontSize": 12,
+            accountPassword
+            <ForwardRef(Text)
+              style={
+                Object {
+                  "color": "white",
+                  "fontSize": 12,
+                }
               }
+            />
+          </ForwardRef(Text)>
+        </ForwardRef(View)>
+        <ForwardRef(Text)
+          style={
+            Object {
+              "fontSize": 15,
             }
-          />
-        </Component>
-        <Component>
-          <Component
+          }
+        >
+          nextSteps
+        </ForwardRef(Text)>
+        <ForwardRef(View)
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingHorizontal": 16,
+              "paddingVertical": 8,
+            }
+          }
+        >
+          <ForwardRef(Text)
             style={
               Object {
                 "fontSize": 15,
               }
             }
           >
-            What would you like to do next?
-          </Component>
-          <Component
-            style={
-              Object {
-                "alignItems": "center",
-                "flexDirection": "row",
-                "justifyContent": "space-between",
-                "paddingHorizontal": 16,
-                "paddingVertical": 8,
-              }
-            }
-          >
-            <Component
-              style={
-                Object {
-                  "fontSize": 15,
-                }
-              }
-            >
-              Clear clipboard
-            </Component>
-            <withTheme(Checkbox)
-              onPress={[Function]}
-              status="unchecked"
-            />
-          </Component>
-        </Component>
-=======
-      <ForwardRef(View)
-        style={
-          Object {
-            "backgroundColor": "#fff",
-            "padding": 20,
-          }
-        }
-      >
-        <ForwardRef(View)>
-          <ForwardRef(Text)>
-            completedStatus
+            clearClipboard
           </ForwardRef(Text)>
+          <withTheme(Checkbox)
+            className="clear-clipboard"
+            onPress={[Function]}
+            status="checked"
+          />
           <ForwardRef(Text)>
-            completedClipboard
+            anotherPassword
           </ForwardRef(Text)>
+          <withTheme(Checkbox)
+            className="new-password"
+            onPress={[Function]}
+            status="unchecked"
+          />
         </ForwardRef(View)>
-        <ForwardRef(View)>
-          <ForwardRef(Text)>
-            accountPassword
-            <ForwardRef(Text) />
-          </ForwardRef(Text)>
-        </ForwardRef(View)>
-        <ForwardRef(View)>
-          <ForwardRef(Text)>
-            nextSteps
-          </ForwardRef(Text)>
-          <ForwardRef(View)>
-            <ForwardRef(Text)>
-              clearClipboard
-            </ForwardRef(Text)>
-            <withTheme(Checkbox)
-              onPress={[Function]}
-              status="checked"
-            />
-            <ForwardRef(Text)>
-              anotherPassword
-            </ForwardRef(Text)>
-            <withTheme(Checkbox)
-              onPress={[Function]}
-              status="checked"
-            />
-          </ForwardRef(View)>
-        </ForwardRef(View)>
->>>>>>> update snaps
-        <withTheme(Button)
-          accessibilityLabel="CHOOSE ACTION BUTTON"
-          color="#D37F26"
-          dark={true}
-          mode="contained"
-          onPress={[Function]}
-        >
-<<<<<<< HEAD
-          OKAY
-        </withTheme(Button)>
-      </Component>
-    </Component>
-  </Component>
-</Component>
-=======
-          confirmOk
-        </withTheme(Button)>
       </ForwardRef(View)>
+      <withTheme(Button)
+        accessibilityLabel="CHOOSE ACTION BUTTON"
+        className="submit-form"
+        color="#D37F26"
+        dark={true}
+        mode="contained"
+        onPress={[Function]}
+      >
+        confirmOk
+      </withTheme(Button)>
     </ForwardRef(View)>
   </Component>
 </ForwardRef(View)>
->>>>>>> update snaps
 `;

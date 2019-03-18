@@ -91,15 +91,21 @@ class ConfirmationDialog extends React.Component {
               <Text style={styles.paragraph}>{t('nextSteps')}</Text>
               <View style={styles.row}>
                 <Text style={styles.paragraph}>{t('clearClipboard')}</Text>
-                <Checkbox status="checked" onPress={() => this.setState({ checked: !checked })} />
+                <Checkbox
+                  className="clear-clipboard"
+                  status="checked"
+                  onPress={() => this.setState({ checked: !checked })}
+                />
                 <Text>{t('anotherPassword')}</Text>
                 <Checkbox
+                  className="new-password"
                   status={clearClipboard ? 'checked' : 'unchecked'}
                   onPress={() => this.setState({ clearClipboard: !clearClipboard })}
                 />
               </View>
             </View>
             <Button
+              className="submit-form"
               onPress={this.handleSubmit}
               accessibilityLabel="CHOOSE ACTION BUTTON"
               mode="contained"
@@ -115,7 +121,5 @@ class ConfirmationDialog extends React.Component {
   }
 }
 
-
-export { ConfirmationDialog as TestConfirmationDialog };
-
 export default withNamespaces('confirmationDialog')(ConfirmationDialog);
+export { ConfirmationDialog as TestConfirmationDialog };
