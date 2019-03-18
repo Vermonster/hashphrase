@@ -9,6 +9,7 @@
       "ios"
     ],
     "version": "0.0.1",
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "privacy": "public"
   }
 }
