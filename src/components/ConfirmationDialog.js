@@ -106,6 +106,7 @@ class ConfirmationDialog extends React.Component {
               <View style={styles.row}>
                 <Text style={styles.paragraph}>{t('clearClipboard')}</Text>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Checkbox
                   testID="clear-clipboard"
                   status="checked"
@@ -119,6 +120,16 @@ class ConfirmationDialog extends React.Component {
                 <Text>{t('anotherPassword')}</Text>
                 <Checkbox
 >>>>>>> add confirmationDialog text to i18n
+=======
+                <Checkbox
+                  className="clear-clipboard"
+                  status="checked"
+                  onPress={() => this.setState({ checked: !checked })}
+                />
+                <Text>{t('anotherPassword')}</Text>
+                <Checkbox
+                  className="new-password"
+>>>>>>> wip i18n
                   status={clearClipboard ? 'checked' : 'unchecked'}
                   onPress={() => this.setState({ clearClipboard: !clearClipboard })}
                 />
@@ -126,9 +137,13 @@ class ConfirmationDialog extends React.Component {
             </View>
             <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
               testID="submit-form"
 =======
 >>>>>>> add confirmationDialog text to i18n
+=======
+              className="submit-form"
+>>>>>>> wip i18n
               onPress={this.handleSubmit}
               accessibilityLabel="CHOOSE ACTION BUTTON"
               mode="contained"
@@ -155,6 +170,7 @@ class ConfirmationDialog extends React.Component {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default withNamespaces('confirmationDialog')(ConfirmationDialog);
 export { ConfirmationDialog as TestConfirmationDialog };
 =======
@@ -171,3 +187,7 @@ export { ConfirmationDialog as TestConfirmationDialog };
 
 export default withNamespaces('confirmationDialog')(ConfirmationDialog);
 >>>>>>> namespace translations by component
+=======
+export default withNamespaces('confirmationDialog')(ConfirmationDialog);
+export { ConfirmationDialog as TestConfirmationDialog };
+>>>>>>> wip i18n

@@ -7,21 +7,13 @@ exports[`<FlowScreen /> should render the same snapshot 1`] = `
       mode="contained"
       onPress={[Function]}
     >
-<<<<<<< HEAD
-      Old password flow
-=======
       oldPasswordFlow
->>>>>>> update snaps
     </withTheme(Button)>
     <withTheme(Button)
       mode="contained"
       onPress={[Function]}
     >
-<<<<<<< HEAD
-      New password flow
-=======
       newPasswordFlow
->>>>>>> update snaps
     </withTheme(Button)>
   </withTheme(Card)>
 </ForwardRef(View)>
