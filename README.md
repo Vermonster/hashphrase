@@ -25,21 +25,23 @@ Like `yarn start`, but also attempts to open your app on a connected Android dev
 
 ## Sharing and Deployment
 
-### Viewing an Expo app from your device
+### Viewing an Expo app from your device (without running a server locally)
 
-Publishing your app to Expo will make it available at a persistent URL,  you can open it on your own device (ios or Android phone).
+Publishing your app to Expo will make it available at a persistent URL, you can open it on your own device (ios or Android phone). Due to the Apple Review Guidelines, you cannot preview projects published by other Expo accounts besides your own. This app is published under Vermonster's expo account.
 
 You wil need to :
 - Install Expo Client on your phone
 - Log in into the Expo client app (with Vermonster's expo account)
-- Open this [URL](https://exp.host/@vermonster/loplop) in Expo Client to view the app on the master branch
-  
-  ** All feature branches will be published to the expo release channel "dev", open this [URL](https://exp.host/@vermonster/loplop?release-channel=dev) to view a development stage app.
 
-Note: 
-Due to the Apple Review Guidelines, you cannot preview projects published by other Expo accounts besides your own. This app is published under Vermonster's expo account.
+View project on the `master` branch:
+- Open https://exp.host/@vermonster/loplop in the Expo Client app.
 
-If you want to view the app in the browser, please go to [Vermonster's expo page](https://expo.io/@vermonster/loplop), and click "Open project in the browser" button on the right side of the page, this will open the app in an Android emulator in your browser without authentication.
+View project on a feature branch:
+- Open https://exp.host/@vermonster/loplop?release-channel=[branch-name] in the Expo Client app.
+
+What if you have iPhone, but you want to view the project on an Android device?
+
+Luckily, Appetize.io has provided a platform for users to view the mobile app in an Android emulator in the browser, go to [Vermonster's expo page](https://expo.io/@vermonster/loplop), and click "Open project in the browser" button on the right side of the page, this will open the app in an Android emulator in your browser without authentication.
 
 ## Troubleshooting
 
