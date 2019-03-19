@@ -3,7 +3,12 @@ import { shallow } from 'enzyme';
 import { TestCreatePassword as CreatePassword } from '../src/navigation/screens/CreatePassword';
 
 describe('<CreatePassword />', () => {
-  const wrapper = shallow(<CreatePassword isNewPassword={false} />);
+  const wrapper = shallow(
+    <CreatePassword
+      isNewPassword={false}
+      t={key => key}
+    />,
+  );
 
   it('should render the same snapshot', () => {
     expect(wrapper).toMatchSnapshot();
