@@ -36,29 +36,19 @@ Like `yarn start`, but also attempts to open your app on a connected Android dev
 
 ## Sharing and Deployment
 
-### Publishing to Expo's React Native Community
-
-Expo provides free hosting for the JS-only apps created by CRNA, allowing you to share your app through the Expo client app. This requires registration for an Expo account.
-
-Install the `exp` command-line tool, and run the publish command:
-
-```
-$ npm i -g exp
-$ exp publish
-```
-
-### Viewing an Expo app from your phone
+### Viewing an Expo app from your device
 
 Publishing your app to Expo will make it available at a persistent URL,  you can open it on your own device (ios or Android phone).
 
 You wil need to :
 - Install Expo Client on your phone
-- Log in into the  Expo client app
-- Open the published app listed under your account
+- Log in into the Expo client app (with Vermonster's expo account)
+- Open this project
 
 Note: 
-Due to the Apple Review Guidelines, you cannot preview projects published by other Expo accounts besides your own. This app has published to Vermonster's expo account.
+Due to the Apple Review Guidelines, you cannot preview projects published by other Expo accounts besides your own. This app is published under Vermonster's expo account.
 
+If you want to view the app in the browser, please go to [Vermonster's expo page](https://expo.io/@vermonster/loplop), and click "Open project in the browser" button on the right side of the page, this will open the app in an Android emulator in your browser without authentication.
 
 ## Troubleshooting
 
