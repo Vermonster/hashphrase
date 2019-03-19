@@ -65,7 +65,7 @@ workflows:
       - publish_to_expo_dev:
           filters:
             branches:
-              only: development
+              ignore: master
       - publish_to_expo_prod:
           filters:
             branches:
