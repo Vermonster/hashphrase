@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Appbar } from 'react-native-paper';
 import { View, Text } from 'react-native';
+import { withNamespaces } from 'react-i18next';
 import PasswordGenerator from '../../components/PasswordGenerator';
 
 class CreateNewPassword extends Component {
@@ -18,14 +19,15 @@ class CreateNewPassword extends Component {
 
   render() {
     const { isNewPassword } = this.state;
+    const { t } = this.props;
 
     return (
       <View>
         <Appbar.Header>
-          <Appbar.Content title="Agili Key" />
+          <Appbar.Content title={t('title')} />
         </Appbar.Header>
         <View>
-          <Text>Creating a new account password?</Text>
+          <Text>{t('newPassword')}</Text>
           <Switch
             value={isNewPassword}
             onValueChange={this.handleToggleSwitch}
@@ -39,4 +41,5 @@ class CreateNewPassword extends Component {
   }
 }
 
-export default CreateNewPassword;
+export default withNamespaces('createPassword')(CreateNewPassword);
+export { CreateNewPassword as TestCreatePassword };

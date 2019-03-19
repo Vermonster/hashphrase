@@ -1,9 +1,10 @@
 import React from 'react';
+import { withNamespaces } from 'react-i18next';
 import { View } from 'react-native';
 import { Card, Button } from 'react-native-paper';
 
 const FlowScreen = (props) => {
-  const { navigation: { navigate } } = props;
+  const { t, navigation: { navigate } } = props;
 
   return (
     <View>
@@ -16,7 +17,7 @@ const FlowScreen = (props) => {
           }}
           mode="contained"
         >
-          Old password flow
+          {t('oldPasswordFlow')}
         </Button>
         <Button
           onPress={() => {
@@ -26,11 +27,12 @@ const FlowScreen = (props) => {
           }}
           mode="contained"
         >
-          New password flow
+          {t('newPasswordFlow')}
         </Button>
       </Card>
     </View>
   );
 };
 
-export default FlowScreen;
+export { FlowScreen as TestFlowScreen };
+export default withNamespaces('flowScreen')(FlowScreen);

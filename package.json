@@ -22,13 +22,17 @@
     "eslint-plugin-react": "^7.11.1",
     "expo-cli": "^2.11.6",
     "jest": "23.6.0",
-    "jest-expo": "^31.0.0",
+    "jest-expo": "^32.0.0",
     "jest-serializer-enzyme": "^1.0.0",
+    "jsdom": "^12.2.0",
     "react-devtools": "^3.3.2",
+    "react-devtools-core": "^3.4.0",
     "react-dom": "^16.4.2",
+    "react-native-mock": "^0.3.1",
     "react-native-mock-render": "^0.1.2",
     "react-native-scripts": "1.14.0",
-    "react-test-renderer": "16.3.1"
+    "react-test-renderer": "16.3.1",
+    "schedule": "0.4.0"
   },
   "scripts": {
     "start": "react-native-scripts start",
@@ -42,6 +46,11 @@
     "devtools": "react-devtools"
   },
   "jest": {
+    "globals": {
+      "window": true
+    },
+    "testEnvironment": "jsdom",
+    "testURL": "http://localhost",
     "preset": "jest-expo",
     "setupTestFrameworkScriptFile": "<rootDir>/__tests__/scripts/setupTests.js",
     "verbose": true,
@@ -57,12 +66,14 @@
     ]
   },
   "dependencies": {
-    "expo": "31.0.0",
+    "expo": "^32.0.0",
+    "i18next": "^15.0.6",
     "loplop": "^1.0.3",
     "prop-types": "^15.6.2",
     "react": "16.5.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.1.tar.gz",
-    "react-native-paper": "^2.0.1",
+    "react-i18next": "^9.0.10",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-native-paper": "^2.14.0",
     "react-navigation": "^3.0.9"
   }
 }

@@ -5,7 +5,7 @@ import { Card, Text } from 'react-native-paper';
 const InfoScreen = () => (
   <View>
     <Card>
-      <Text>Test card and text</Text>
+      <Text>Placeholder card and text</Text>
     </Card>
   </View>
 );
