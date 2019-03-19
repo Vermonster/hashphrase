@@ -43,7 +43,9 @@ Publishing your app to Expo will make it available at a persistent URL,  you can
 You wil need to :
 - Install Expo Client on your phone
 - Log in into the Expo client app (with Vermonster's expo account)
-- Open this project
+- Open this [URL](https://exp.host/@vermonster/loplop) in Expo Client to view the app on the master branch
+  
+  ** All feature branches will be published to the expo release channel "dev", open this [URL](https://exp.host/@vermonster/loplop?release-channel=dev) to view a development stage app.
 
 Note: 
 Due to the Apple Review Guidelines, you cannot preview projects published by other Expo accounts besides your own. This app is published under Vermonster's expo account.
