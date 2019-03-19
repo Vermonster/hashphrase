@@ -1,65 +1,31 @@
 import React from 'react';
 import { createAppContainer, createStackNavigator } from 'react-navigation';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { I18nextProvider } from 'react-i18next';
 import i18n from './src/navigation/i18n/i18n';
-=======
->>>>>>> delete extra files from rebase
-=======
-import { I18nextProvider, withTranslation } from 'react-i18next';
-=======
+
 import { I18nextProvider } from 'react-i18next';
->>>>>>> update components with correct translation functions
-import i18n from './src/navigation/i18n/i18n';
->>>>>>> wip i18n
 import CreatePassword from './src/navigation/screens/CreatePassword';
 import InfoScreen from './src/navigation/screens/InfoScreen';
+import FlowScreen from './src/navigation/screens/FlowScreen';
+import TipsPage from './src/navigation/screens/TipsPage';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const AppStackNavigator = createStackNavigator({
-  PasswordScreen: { screen: CreatePassword },
-  InfoScreen: { screen: InfoScreen },
-  initialRouteName: 'PasswordScreen',
-=======
-const RootStack = createStackNavigator({
-=======
-const AppStackNavigator = createStackNavigator({
->>>>>>> wip i18n
   PasswordScreen: { screen: CreatePassword },
   InfoScreen: { screen: InfoScreen },
   FlowScreen: { screen: FlowScreen },
+  TipsPage: { screen: TipsPage },
 },
 {
-  initialRouteName: 'FlowScreen',
->>>>>>> delete extra files from rebase
+  initialRouteName: 'TipsPage',
 });
 
 const AppContainer = createAppContainer(AppStackNavigator);
-<<<<<<< HEAD
 
 const App = () => (
   <I18nextProvider i18n={i18n}>
     <AppContainer />
   </I18nextProvider>
 );
-
-export default App;
-=======
-
-const App = () => (
-  <I18nextProvider i18n={i18n}>
-    <AppContainer />
-  </I18nextProvider>
-);
-
-<<<<<<< HEAD
 
 // export default withTranslation()(App);
 export default (App);
->>>>>>> wip i18n
-=======
-export default App;
->>>>>>> update components with correct translation functions
