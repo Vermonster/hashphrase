@@ -43,7 +43,7 @@ class CreateNewPassword extends Component {
 
   render() {
     const { isNewPassword } = this.state;
-    const { t } = this.props;
+    const { t, navigation } = this.props;
 
     return (
       <View style={styles.container}>
@@ -51,7 +51,7 @@ class CreateNewPassword extends Component {
           <View style={styles.logo}>
             <Logo />
           </View>
-          <Appbar.Content title="AgiliKEY" />
+          <Appbar.Content title={t('title')} />
           <Appbar.Action icon="info" color={colors.primary} size={28} onPress={() => { }} />
         </Appbar.Header>
         <View style={styles.newPass}>
