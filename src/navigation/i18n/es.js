@@ -26,10 +26,6 @@ const es = {
     confirmOk: 'CONFIRMAR',
 >>>>>>> 932345e... clean up after rebase
   },
-  flowScreen: {
-    oldPasswordFlow: 'Contraseña Vieja',
-    newPasswordFlow: 'Contraseña Nueva',
-  },
   infoScreen: {},
   confirmationDialog: {
     completedStatus: '¡Completo!',
