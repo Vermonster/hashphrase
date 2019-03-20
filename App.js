@@ -21,4 +21,4 @@ const App = () => (
   </I18nextProvider>
 );
 
-export default (App);
+export default App;
