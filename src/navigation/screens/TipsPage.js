@@ -27,3 +27,4 @@ class TipsPage extends React.Component {
 }
 
 export default withNamespaces('tipsPage')(TipsPage);
+export { TipsPage as TestTipsPage };

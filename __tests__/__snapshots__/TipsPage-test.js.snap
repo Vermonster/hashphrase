@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TipsPage /> should match the snapshot 1`] = `
+<ForwardRef(View)>
+  <BaseAccordion
+    key="0"
+  />
+  <BaseAccordion
+    key="1"
+  />
+  <BaseAccordion
+    key="2"
+  />
+  <BaseAccordion
+    key="3"
+  />
+  <BaseAccordion
+    key="4"
+  />
+  <BaseAccordion
+    key="5"
+  />
+  <BaseAccordion
+    key="6"
+  />
+  <BaseAccordion
+    key="7"
+  />
+  <BaseAccordion
+    key="8"
+  />
+</ForwardRef(View)>
+`;
