@@ -34,14 +34,14 @@ You wil need to :
 - Log in into the Expo client app (with Vermonster's expo account)
 
 View project on the `master` branch:
-- Open https://exp.host/@vermonster/loplop in the Expo Client app.
+- Open https://exp.host/@vermonster/Agilikey in the Expo Client app.
 
 View project on a feature branch:
-- Open https://exp.host/@vermonster/loplop?release-channel=[branch-name] in the Expo Client app.
+- Open https://exp.host/@vermonster/Agilikey?release-channel=[branch-name] in the Expo Client app.
 
 What if you have iPhone, but you want to view the project on an Android device?
 
-Luckily, Appetize.io has provided a platform for users to view the mobile app in an Android emulator in the browser, go to [Vermonster's expo page](https://expo.io/@vermonster/loplop), and click "Open project in the browser" button on the right side of the page, this will open the app in an Android emulator in your browser without authentication.
+Luckily, Appetize.io has provided a platform for users to view the mobile app in an Android emulator in the browser, go to [Vermonster's expo page](https://expo.io/@vermonster/Agilikey), and click "Open project in the browser" button on the right side of the page, this will open the app in an Android emulator in your browser without authentication.
 
 ## Troubleshooting
 
