@@ -23,5 +23,4 @@ const App = () => (
   </I18nextProvider>
 );
 
-// export default withTranslation()(App);
 export default (App);
