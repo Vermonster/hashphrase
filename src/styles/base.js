@@ -1,0 +1,22 @@
+export const colors = {
+  primary: '#E17809',
+  secondary: '#212A59',
+  accent: '#C76803',
+  warning: '#DB4437',
+  disabled: '#949494',
+  background: '#F5F5F5',
+  white: '#FFF',
+};
+
+export const fontSize = {
+  sm: 12,
+  md: 14,
+  lg: 16,
+  xl: 20,
+};
+
+export const rowCenter = {
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center',
+};
