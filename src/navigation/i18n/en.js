@@ -1,5 +1,5 @@
 const en = {
-  translation: {
+  createPassword: {
     title: 'AgiliKEY',
     newPassword: 'New password',
   },
