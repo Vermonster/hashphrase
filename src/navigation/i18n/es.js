@@ -20,10 +20,6 @@ const es = {
     anotherPassword: 'Hacer otra contraseña',
     confirmOk: 'CONFIRMAR',
   },
-  flowScreen: {
-    oldPasswordFlow: 'Contraseña Vieja',
-    newPasswordFlow: 'Contraseña Nueva',
-  },
   infoScreen: {},
   confirmationDialog: {
     completedStatus: '¡Completo!',
