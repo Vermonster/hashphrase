@@ -20,7 +20,6 @@ const es = {
     anotherPassword: 'Hacer otra contraseña',
     confirmOk: 'CONFIRMAR',
   },
-  infoScreen: {},
   confirmationDialog: {
     completedStatus: '¡Completo!',
     completedClipboard: 'Contraseña generada ha sido copiado al clipboard.',
