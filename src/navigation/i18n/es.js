@@ -1,36 +1,17 @@
 const es = {
-<<<<<<< HEAD
 
   createPassword: {
     title: 'AgiliKEY',
-<<<<<<< HEAD
-    newPassword: '¿Vas a crear una nueva contraseña?',
-    message: 'Contraseña generada ha sido copiado al clipboard.',
-    label: 'Etiqueta',
-    password: 'Contraseña general',
-    button: 'Cree una contraseña',
-=======
     label: 'Etiqueta',
     password: 'Contraseña general',
     button: 'Crear una contraseña',
     newPassword: '¿Vas a crear una nueva contraseña?',
->>>>>>> add confirmationDialog text to i18n
     passwordLabel: '¿Qué es la etiqueta de la cuenta?',
     masterPassword: '¿Qué es la Contraseña Maestra?',
     confirmPassword: 'Vuelva a escribir la Contraseña Maestra',
     submitMessage: 'GENERAR CONTRASEÑA',
-=======
-  createPassword: {
-    title: 'AgiliKEY',
-    newPassword: '¿Vas a crear una nueva contraseña?',
-  },
-  flowScreen: {
->>>>>>> reorganize translations
     oldPasswordFlow: 'Contraseña Vieja',
     newPasswordFlow: 'Contraseña Nueva',
-  },
-  infoScreen: {},
-  confirmationDialog: {
     completedStatus: '¡Completo!',
     completedClipboard: 'Contraseña generada ha sido copiado al clipboard.',
     accountPassword: 'Contraseña de la Cuenta:',
@@ -39,7 +20,6 @@ const es = {
     anotherPassword: 'Hacer otra contraseña',
     confirmOk: 'CONFIRMAR',
   },
-<<<<<<< HEAD
   flowScreen: {
     oldPasswordFlow: 'Contraseña Vieja',
     newPasswordFlow: 'Contraseña Nueva',
@@ -54,8 +34,6 @@ const es = {
     anotherPassword: 'Hacer otra contraseña',
     confirmOk: 'CONFIRMAR',
   },
-=======
->>>>>>> reorganize translations
   passwordGenerator: {
     label: 'Etiqueta',
     password: 'Contraseña general',

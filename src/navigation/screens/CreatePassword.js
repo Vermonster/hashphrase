@@ -40,13 +40,6 @@ class CreateNewPassword extends Component {
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default withNamespaces('createPassword')(CreateNewPassword);
-=======
-export default withNamespaces()(CreateNewPassword);
->>>>>>> export components without i18n providers for testing
-=======
-export default withNamespaces('createPassword')(CreateNewPassword);
->>>>>>> namespace translations by component
+
 export { CreateNewPassword as TestCreatePassword };
