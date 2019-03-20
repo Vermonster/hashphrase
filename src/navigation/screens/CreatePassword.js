@@ -18,12 +18,13 @@ class CreateNewPassword extends Component {
 
   render() {
     const { isNewPassword } = this.state;
-    const { t } = this.props;
+    const { t, navigation } = this.props;
 
     return (
       <View>
         <Appbar.Header>
           <Appbar.Content title={t('title')} />
+          <Appbar.Action icon="info" onPress={() => navigation.navigate('TipsPage')} />
         </Appbar.Header>
         <View>
           <Text>{t('newPassword')}</Text>
