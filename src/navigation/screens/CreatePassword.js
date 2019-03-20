@@ -7,9 +7,8 @@ import PasswordGenerator from '../../components/PasswordGenerator';
 class CreateNewPassword extends Component {
   constructor(props) {
     super(props);
-    const { navigation: { getParam } } = this.props;
     this.state = {
-      isNewPassword: getParam('isNewPassword'),
+      isNewPassword: false,
     };
   }
 

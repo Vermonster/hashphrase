@@ -3,10 +3,8 @@ import { shallow } from 'enzyme';
 import { TestCreatePassword as CreatePassword } from '../src/navigation/screens/CreatePassword';
 
 describe('<CreatePassword />', () => {
-  const navigation = { getParam: jest.fn() };
   const wrapper = shallow(
     <CreatePassword
-      navigation={navigation}
       isNewPassword={false}
       t={key => key}
     />,
