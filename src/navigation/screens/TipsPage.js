@@ -1,13 +1,13 @@
 import React from 'react';
 import { withNamespaces } from 'react-i18next';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import BaseAccordion from '../../components/BaseAccordion';
 
 class InfoScreen extends React.Component {
-  questionMap = (questions, translateFn) => questions.map(question => (
+  questionMap = (questions, questionObject) => questions.map(question => (
     <BaseAccordion
-      title={translateFn({ question }.title)}
-      contents={translateFn({ question }.content)}
+      title={questionObject[question].title}
+      contents={questionObject[question].content}
       key={question}
     />
   ));
@@ -16,14 +16,11 @@ class InfoScreen extends React.Component {
     const { t } = this.props;
     const questionObj = t('questions', { returnObjects: true });
     const questionArr = Object.keys(questionObj);
-    const test = questionArr.length;
-    const components = this.questionMap(questionArr, t);
+    const components = this.questionMap(questionArr, questionObj);
 
     return (
       <View>
-        {/* <Text>{ test[0] }</Text> */}
-        <Text>{test}</Text>
-        {/* { components } */}
+        { components }
       </View>
     );
   }
