@@ -1,11 +1,7 @@
 const en = {
-  translation: {
+  createPassword: {
     title: 'AgiliKEY',
     newPassword: 'Creating a new account password?',
-  },
-  flowScreen: {
-    oldPasswordFlow: 'Old Password Flow',
-    newPasswordFlow: 'New Password Flow',
   },
   infoScreen: {},
   confirmationDialog: {

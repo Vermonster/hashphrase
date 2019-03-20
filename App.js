@@ -12,7 +12,7 @@ const AppStackNavigator = createStackNavigator({
   TipsPage: { screen: TipsPage },
 },
 {
-  initialRouteName: 'TipsPage',
+  initialRouteName: 'PasswordScreen',
 });
 
 const AppContainer = createAppContainer(AppStackNavigator);
