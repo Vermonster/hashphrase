@@ -3,7 +3,6 @@ const es = {
     title: 'AgiliKEY',
     newPassword: '¿Vas a crear una nueva contraseña?',
   },
-  infoScreen: {},
   confirmationDialog: {
     completedStatus: '¡Completo!',
     completedClipboard: 'Contraseña generada ha sido copiado al clipboard.',

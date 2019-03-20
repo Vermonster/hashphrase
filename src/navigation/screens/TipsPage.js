@@ -3,7 +3,7 @@ import { withNamespaces } from 'react-i18next';
 import { View } from 'react-native';
 import BaseAccordion from '../../components/BaseAccordion';
 
-class InfoScreen extends React.Component {
+class TipsPage extends React.Component {
   questionMap = (questions, questionObject) => questions.map(question => (
     <BaseAccordion
       title={questionObject[question].title}
@@ -26,4 +26,4 @@ class InfoScreen extends React.Component {
   }
 }
 
-export default withNamespaces('tipsPage')(InfoScreen);
+export default withNamespaces('tipsPage')(TipsPage);
