@@ -4,47 +4,52 @@ import {
   View, Text, Modal, StyleSheet, Clipboard,
 } from 'react-native';
 import { Button, Checkbox } from 'react-native-paper';
+import { colors, fontSize, rowCenter } from '../styles/base';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#ecf0f1',
   },
   modalBackground: {
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: colors.modalBackground,
   },
   innerContainer: {
-    backgroundColor: '#fff',
+    backgroundColor: colors.white,
+    marginHorizontal: 10,
+    paddingBottom: 48,
   },
   messagesContainer: {
-    backgroundColor: '#E07926',
-    padding: 10,
+    backgroundColor: colors.primary,
+    paddingVertical: 20,
+    paddingLeft: 13,
+    paddingRight: 100,
   },
   passwordContainer: {
-    padding: 10,
-    backgroundColor: '#212A59',
+    marginTop: 37,
+    marginHorizontal: 10,
+    marginBottom: 25,
+    backgroundColor: colors.secondary,
+    height: 50,
   },
   title: {
-    fontSize: 25,
+    color: colors.secondary,
+    fontSize: fontSize.xxl,
+    paddingBottom: 20,
   },
   paragraph: {
-    fontSize: 15,
+    fontSize: fontSize.lg,
   },
   label: {
-    fontSize: 12,
-    color: 'white',
+    fontSize: fontSize.sm,
+    color: colors.white,
   },
-  row: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingVertical: 8,
-    paddingHorizontal: 16,
+  checkbox: {
+    ...rowCenter,
+    marginBottom: 37,
   },
-  column: {
-    flexDirection: 'column',
+  button: {
+    marginHorizontal: 45,
   },
 });
 
@@ -66,7 +71,6 @@ class ConfirmationDialog extends React.Component {
     const {
       t, visible, generatedPassword, closeModal,
     } = this.props;
-    const { checked } = this.state;
 
     return (
       <View style={styles.container}>
@@ -80,40 +84,34 @@ class ConfirmationDialog extends React.Component {
             <View style={styles.innerContainer}>
               <View style={styles.messagesContainer}>
                 <Text style={styles.title}>{t('completedStatus')}</Text>
-                <Text style={styles.paragraph}>{t('completedClipboard')}</Text>
+                <Text style={[styles.paragraph, { color: colors.white }]}>{t('completedClipboard')}</Text>
               </View>
               <View style={[styles.passwordContainer]}>
                 <Text style={styles.label}>
                   {t('accountPassword')}
-                  <Text style={styles.label}>{generatedPassword}</Text>
                 </Text>
+                <Text style={styles.label}>{generatedPassword}</Text>
               </View>
-              <Text style={styles.paragraph}>{t('nextSteps')}</Text>
-              <View style={styles.row}>
+              <View style={styles.checkbox}>
                 <Text style={styles.paragraph}>{t('clearClipboard')}</Text>
                 <Checkbox
                   testID="clear-clipboard"
-                  status="checked"
-                  onPress={() => this.setState({ checked: !checked })}
-                />
-                <Text>{t('anotherPassword')}</Text>
-                <Checkbox
-                  testID="new-password"
                   status={clearClipboard ? 'checked' : 'unchecked'}
                   onPress={() => this.setState({ clearClipboard: !clearClipboard })}
                 />
               </View>
+              <Button
+                testID="submit-form"
+                onPress={this.handleSubmit}
+                accessibilityLabel="ACTION BUTTON"
+                mode="contained"
+                dark
+                color={colors.primary}
+                style={styles.button}
+              >
+                {t('button')}
+              </Button>
             </View>
-            <Button
-              testID="submit-form"
-              onPress={this.handleSubmit}
-              accessibilityLabel="CHOOSE ACTION BUTTON"
-              mode="contained"
-              dark
-              color="#D37F26"
-            >
-              {t('confirmOk')}
-            </Button>
           </View>
         </Modal>
       </View>
