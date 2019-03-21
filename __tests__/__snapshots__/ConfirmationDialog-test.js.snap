@@ -4,8 +4,6 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
 <ForwardRef(View)
   style={
     Object {
-      "alignItems": "center",
-      "backgroundColor": "#ecf0f1",
       "flex": 1,
       "justifyContent": "center",
     }
@@ -22,8 +20,6 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
       style={
         Array [
           Object {
-            "alignItems": "center",
-            "backgroundColor": "#ecf0f1",
             "flex": 1,
             "justifyContent": "center",
           },
@@ -36,22 +32,28 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
       <ForwardRef(View)
         style={
           Object {
-            "backgroundColor": "#fff",
+            "backgroundColor": "#FFF",
+            "marginHorizontal": 10,
+            "paddingBottom": 48,
           }
         }
       >
         <ForwardRef(View)
           style={
             Object {
-              "backgroundColor": "#E07926",
-              "padding": 10,
+              "backgroundColor": "#E17809",
+              "paddingLeft": 13,
+              "paddingRight": 100,
+              "paddingVertical": 20,
             }
           }
         >
           <ForwardRef(Text)
             style={
               Object {
-                "fontSize": 25,
+                "color": "#212A59",
+                "fontSize": 24,
+                "paddingBottom": 20,
               }
             }
           >
@@ -59,9 +61,14 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
           </ForwardRef(Text)>
           <ForwardRef(Text)
             style={
-              Object {
-                "fontSize": 15,
-              }
+              Array [
+                Object {
+                  "fontSize": 16,
+                },
+                Object {
+                  "color": "#FFF",
+                },
+              ]
             }
           >
             completedClipboard
@@ -72,7 +79,10 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
             Array [
               Object {
                 "backgroundColor": "#212A59",
-                "padding": 10,
+                "height": 50,
+                "marginBottom": 25,
+                "marginHorizontal": 10,
+                "marginTop": 37,
               },
             ]
           }
@@ -80,46 +90,36 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
           <ForwardRef(Text)
             style={
               Object {
-                "color": "white",
+                "color": "#FFF",
                 "fontSize": 12,
               }
             }
           >
             accountPassword
-            <ForwardRef(Text)
-              style={
-                Object {
-                  "color": "white",
-                  "fontSize": 12,
-                }
-              }
-            />
           </ForwardRef(Text)>
-        </ForwardRef(View)>
-        <ForwardRef(Text)
-          style={
-            Object {
-              "fontSize": 15,
+          <ForwardRef(Text)
+            style={
+              Object {
+                "color": "#FFF",
+                "fontSize": 12,
+              }
             }
-          }
-        >
-          nextSteps
-        </ForwardRef(Text)>
+          />
+        </ForwardRef(View)>
         <ForwardRef(View)
           style={
             Object {
               "alignItems": "center",
               "flexDirection": "row",
-              "justifyContent": "space-between",
-              "paddingHorizontal": 16,
-              "paddingVertical": 8,
+              "justifyContent": "center",
+              "marginBottom": 37,
             }
           }
         >
           <ForwardRef(Text)
             style={
               Object {
-                "fontSize": 15,
+                "fontSize": 16,
               }
             }
           >
@@ -127,29 +127,26 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
           </ForwardRef(Text)>
           <withTheme(Checkbox)
             onPress={[Function]}
-            status="checked"
+            status="unchecked"
             testID="clear-clipboard"
           />
-          <ForwardRef(Text)>
-            anotherPassword
-          </ForwardRef(Text)>
-          <withTheme(Checkbox)
-            onPress={[Function]}
-            status="unchecked"
-            testID="new-password"
-          />
         </ForwardRef(View)>
+        <withTheme(Button)
+          accessibilityLabel="ACTION BUTTON"
+          color="#E17809"
+          dark={true}
+          mode="contained"
+          onPress={[Function]}
+          style={
+            Object {
+              "marginHorizontal": 45,
+            }
+          }
+          testID="submit-form"
+        >
+          button
+        </withTheme(Button)>
       </ForwardRef(View)>
-      <withTheme(Button)
-        accessibilityLabel="CHOOSE ACTION BUTTON"
-        color="#D37F26"
-        dark={true}
-        mode="contained"
-        onPress={[Function]}
-        testID="submit-form"
-      >
-        confirmOk
-      </withTheme(Button)>
     </ForwardRef(View)>
   </Component>
 </ForwardRef(View)>

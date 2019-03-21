@@ -1,21 +1,15 @@
 const en = {
   createPassword: {
     title: 'AgiliKEY',
-    newPassword: 'Creating a new account password?',
-  },
-  flowScreen: {
-    oldPasswordFlow: 'Old Password Flow',
-    newPasswordFlow: 'New Password Flow',
+    newPassword: 'New password',
   },
   infoScreen: {},
   confirmationDialog: {
     completedStatus: 'All done!',
-    completedClipboard: 'Your account password is now on your clipboard.',
+    completedClipboard: 'Your account password is now on your clipboard. Just paste it where your password would go.',
     accountPassword: 'Account Password:',
-    nextSteps: 'What would you like to do next?',
     clearClipboard: 'Clear clipboard',
-    anotherPassword: 'Make another password',
-    confirmOk: 'OKAY',
+    button: 'MAKE ANOTHER PASSWORD',
   },
   passwordGenerator: {
     label: 'Nickname',

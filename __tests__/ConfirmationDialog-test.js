@@ -21,7 +21,7 @@ describe('<ConfirmationDialog />', () => {
   });
 
   it('should update the state when clear checkbox is clicked', () => {
-    wrapper.findWhere(node => node.prop('testID') === 'new-password').simulate('press');
+    wrapper.findWhere(node => node.prop('testID') === 'clear-clipboard').simulate('press');
     expect(wrapper.state('clearClipboard')).toBe(true);
   });
 

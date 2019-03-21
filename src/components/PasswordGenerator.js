@@ -1,11 +1,26 @@
 import React from 'react';
 import {
-  Keyboard, Clipboard, View, Text,
+  Keyboard, Clipboard, View, Text, StyleSheet,
 } from 'react-native';
 import { withNamespaces } from 'react-i18next';
 import { TextInput, Button } from 'react-native-paper';
 import loplop from 'loplop';
 import ConfirmationDialog from './ConfirmationDialog';
+import { colors, fontSize } from '../styles/base';
+
+const styles = StyleSheet.create({
+  label: {
+    alignSelf: 'center',
+    fontSize: fontSize.lg,
+  },
+  textInput: {
+    width: 330,
+    backgroundColor: colors.white,
+    marginTop: 10,
+    marginBottom: 30,
+    alignSelf: 'center',
+  },
+});
 
 class PasswordGenerator extends React.Component {
   constructor(props) {
@@ -73,15 +88,16 @@ class PasswordGenerator extends React.Component {
 
     return (
       <View>
-        <Text>{t('passwordLabel')}</Text>
+        <Text style={styles.label}>{t('passwordLabel')}</Text>
         <TextInput
           value={label}
           placeholder={t('label')}
           label="Nickname"
           textContentType="username"
           onChange={this.handleChange('label')}
+          style={styles.textInput}
         />
-        <Text>{t('masterPassword')}</Text>
+        <Text style={styles.label}>{t('masterPassword')}</Text>
         <TextInput
           value={password}
           placeholder={t('password')}
@@ -89,10 +105,11 @@ class PasswordGenerator extends React.Component {
           textContentType="password"
           secureTextEntry
           onChange={this.handleChange('password')}
+          style={styles.textInput}
         />
         { isNewPassword && (
           <>
-            <Text>{t('confirmPassword')}</Text>
+            <Text style={styles.label}>{t('confirmPassword')}</Text>
             <TextInput
               value={confirmPassword}
               placeholder={t('confirmPassword')}
@@ -101,6 +118,7 @@ class PasswordGenerator extends React.Component {
               oneTimeCode
               secureTextEntry
               onChange={this.handleChange('confirmPassword')}
+              style={styles.textInput}
             />
           </>
         )
@@ -112,7 +130,6 @@ class PasswordGenerator extends React.Component {
           disabled={disabled}
           mode="contained"
           dark
-          color="#D37F26"
         >
           {t('submitMessage')}
         </Button>
