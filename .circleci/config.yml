@@ -20,6 +20,14 @@ publish: &publish
         name: Login into Expo
         command: npx expo login -u $EXPO_USERNAME -p $EXPO_PASSWORD
     - run:
+        name: Save current branch name to an env variable
+        command: |
+          if [ "$CIRCLE_BRANCH" == "master"]; then
+            echo 'export EXPO_RELEASE_CHANNEL="default"' >> $BASH_ENV
+          else
+            echo 'export EXPO_RELEASE_CHANNEL=$CIRCLE_BRANCH' >> $BASH_ENV
+          fi
+    - run:
         name: Publish to Expo
         command: npx expo publish --non-interactive --max-workers 1 --release-channel $EXPO_RELEASE_CHANNEL
 
@@ -47,14 +55,7 @@ jobs:
           name: Run linting
           command: yarn lint:js
 
-  publish_to_expo_dev:
-    environment:
-      EXPO_RELEASE_CHANNEL: dev
-    <<: *publish
-
-  publish_to_expo_prod:
-    environment:
-      EXPO_RELEASE_CHANNEL: default
+  publish_to_expo:
     <<: *publish
 
 workflows:
@@ -62,11 +63,4 @@ workflows:
   workflow:
     jobs:
       - build_and_test
-      - publish_to_expo_dev:
-          filters:
-            branches:
-              only: development
-      - publish_to_expo_prod:
-          filters:
-            branches:
-              only: master
+      - publish_to_expo
