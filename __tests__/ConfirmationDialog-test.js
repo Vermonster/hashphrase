@@ -12,6 +12,7 @@ describe('<ConfirmationDialog />', () => {
         visible
         closeModal={mockFn}
         t={key => key}
+        showSnackbar={mockFn}
       />,
     );
   });
