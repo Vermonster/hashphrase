@@ -1,6 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-<<<<<<< HEAD
 exports[`<App /> should render the same snapshot 1`] = `
 <View
   collapsable={false}
@@ -11,6 +10,3 @@ exports[`<App /> should render the same snapshot 1`] = `
   }
 />
 `;
-=======
-exports[`<App /> should render the same snapshot 1`] = `null`;
->>>>>>> 0daf4f1... update tests and snapshots
