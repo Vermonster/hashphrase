@@ -52,7 +52,7 @@ class CreateNewPassword extends Component {
             <Logo />
           </View>
           <Appbar.Content title={t('title')} />
-          <Appbar.Action icon="info" color={colors.primary} size={28} onPress={() => { }} />
+          <Appbar.Action icon="info" color={colors.primary} size={28} onPress={() => navigation.navigate('TipsPage')} />
         </Appbar.Header>
         <View style={styles.newPass}>
           <Text style={styles.newPassLabel}>{t('newPassword')}</Text>
