@@ -6,6 +6,7 @@ import { withNamespaces } from 'react-i18next';
 import { TextInput, Button } from 'react-native-paper';
 import loplop from 'loplop';
 import ConfirmationDialog from './ConfirmationDialog';
+import FormInput from './FormInput';
 import { colors, fontSize } from '../styles/base';
 
 const styles = StyleSheet.create({
@@ -82,45 +83,31 @@ class PasswordGenerator extends React.Component {
 
   render() {
     const {
-      label, password, confirmPassword, generatedPassword, disabled, modalVisibility,
+      generatedPassword, disabled, modalVisibility,
     } = this.state;
     const { isNewPassword, showSnackbar, t } = this.props;
 
     return (
       <View>
-        <Text style={styles.label}>{t('passwordLabel')}</Text>
-        <TextInput
-          value={label}
+        <FormInput
+          name="label"
+          className="label"
           placeholder={t('label')}
-          label="Nickname"
-          textContentType="username"
-          onChange={this.handleChange('label')}
-          style={styles.textInput}
+          handleChange={this.handleChange}
         />
-        <Text style={styles.label}>{t('masterPassword')}</Text>
-        <TextInput
-          value={password}
+        <FormInput
+          name="password"
+          className="password"
           placeholder={t('password')}
-          label="Master Password"
-          textContentType="password"
-          secureTextEntry
-          onChange={this.handleChange('password')}
-          style={styles.textInput}
+          handleChange={this.handleChange}
         />
         { isNewPassword && (
-          <>
-            <Text style={styles.label}>{t('confirmPassword')}</Text>
-            <TextInput
-              value={confirmPassword}
-              placeholder={t('confirmPassword')}
-              label="Confirm Master Password"
-              textContentType="password"
-              oneTimeCode
-              secureTextEntry
-              onChange={this.handleChange('confirmPassword')}
-              style={styles.textInput}
-            />
-          </>
+          <FormInput
+            name="password"
+            className="confirmPassword"
+            placeholder={t('confirmPassword')}
+            handleChange={this.handleChange}
+          />
         )
         }
         <Button
@@ -144,6 +131,6 @@ class PasswordGenerator extends React.Component {
   }
 }
 
-export { PasswordGenerator as TestPasswordGenerator };
-
 export default withNamespaces('passwordGenerator')(PasswordGenerator);
+
+export { PasswordGenerator as TestPasswordGenerator };
