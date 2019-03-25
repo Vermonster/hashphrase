@@ -1,25 +1,19 @@
 import React from 'react';
 import {
-  Keyboard, Clipboard, View, Text, StyleSheet,
+  Keyboard, Clipboard, View, StyleSheet,
 } from 'react-native';
 import { withNamespaces } from 'react-i18next';
-import { TextInput, Button } from 'react-native-paper';
+import { Button } from 'react-native-paper';
 import loplop from 'loplop';
 import ConfirmationDialog from './ConfirmationDialog';
 import FormInput from './FormInput';
-import { colors, fontSize } from '../styles/base';
 
 const styles = StyleSheet.create({
-  label: {
-    alignSelf: 'center',
-    fontSize: fontSize.lg,
-  },
-  textInput: {
-    width: 330,
-    backgroundColor: colors.white,
-    marginTop: 10,
-    marginBottom: 30,
-    alignSelf: 'center',
+  generatorContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: 10,
+    display: 'flex',
   },
 });
 
@@ -88,22 +82,19 @@ class PasswordGenerator extends React.Component {
     const { isNewPassword, showSnackbar, t } = this.props;
 
     return (
-      <View>
+      <View style={styles.generatorContainer}>
         <FormInput
-          name="label"
           className="label"
           placeholder={t('label')}
           handleChange={this.handleChange}
         />
         <FormInput
-          name="password"
           className="password"
           placeholder={t('password')}
           handleChange={this.handleChange}
         />
         { isNewPassword && (
           <FormInput
-            name="password"
             className="confirmPassword"
             placeholder={t('confirmPassword')}
             handleChange={this.handleChange}

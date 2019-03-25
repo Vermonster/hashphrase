@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import { TextInput, Button, Text } from 'react-native-paper';
+import { View, StyleSheet, TextInput } from 'react-native';
+import { IconButton, Text } from 'react-native-paper';
 import PropTypes from 'prop-types';
 import { colors, fontSize } from '../styles/base';
 
@@ -10,10 +10,21 @@ const styles = StyleSheet.create({
     fontSize: fontSize.lg,
   },
   textInput: {
-    width: 330,
+    flex: 1,
     backgroundColor: colors.white,
+    marginTop: 15,
+    marginBottom: 30,
+    paddingLeft: 10,
+    paddingTop: 10,
+    alignSelf: 'center',
+  },
+  formInputContainer: {
+    flexDirection: 'row',
+    backgroundColor: '#fff',
     marginTop: 10,
     marginBottom: 30,
+  },
+  visibilityButton: {
     alignSelf: 'center',
   },
 });
@@ -28,7 +39,7 @@ class FormInput extends React.Component {
   isTextHidden = (inputLabel, visibleStatus) => {
     if (inputLabel === 'label') {
       return false;
-    } if (inputLabel === 'password') {
+    } if (inputLabel === 'password' || inputLabel === 'confirmPassword') {
       if (visibleStatus) {
         return false;
       }
@@ -46,15 +57,17 @@ class FormInput extends React.Component {
     const buttonType = (className === 'password'
       || className === 'confirmPassword')
       ? (
-        <Button
+        <IconButton
           icon={visibilityIcon}
           onPress={this.toggleVisibility}
           className="submitPassword"
+          style={styles.visibilityButton}
+          color="#212A59"
         />
       ) : null;
 
     return (
-      <View>
+      <View style={styles.formInputContainer}>
         <Text style={styles.label}>{formLabel}</Text>
         <TextInput
           className={className}
