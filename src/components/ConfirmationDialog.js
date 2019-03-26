@@ -4,6 +4,7 @@ import {
   View, Text, Modal, StyleSheet, Clipboard,
 } from 'react-native';
 import { Button, Checkbox } from 'react-native-paper';
+import { CompletedCheckmark } from '../styles/icons';
 import { colors, fontSize, rowCenter } from '../styles/base';
 
 const styles = StyleSheet.create({
@@ -21,9 +22,13 @@ const styles = StyleSheet.create({
   },
   messagesContainer: {
     backgroundColor: colors.primary,
-    paddingVertical: 20,
+    paddingVertical: 13,
     paddingLeft: 13,
-    paddingRight: 100,
+    paddingRight: 13,
+  },
+  messagesTopRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   passwordContainer: {
     marginTop: 37,
@@ -86,8 +91,11 @@ class ConfirmationDialog extends React.Component {
           <View style={[styles.container, styles.modalBackground]}>
             <View style={styles.innerContainer}>
               <View style={styles.messagesContainer}>
-                <Text style={styles.title}>{t('completedStatus')}</Text>
-                <Text style={[styles.paragraph, { color: colors.white }]}>{t('completedClipboard')}</Text>
+                <View style={styles.messagesTopRow}>
+                  <Text style={styles.title}>{t('completedStatus')}</Text>
+                  <CompletedCheckmark />
+                </View>
+                <Text style={[styles.paragraph, { color: colors.white, width: '70%' }]}>{t('completedClipboard')}</Text>
               </View>
               <View style={[styles.passwordContainer]}>
                 <Text style={styles.label}>
