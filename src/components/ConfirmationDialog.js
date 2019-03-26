@@ -36,6 +36,8 @@ const styles = StyleSheet.create({
     marginBottom: 25,
     backgroundColor: colors.secondary,
     height: 50,
+    padding: 13,
+    borderRadius: 4,
   },
   title: {
     color: colors.secondary,
@@ -59,9 +61,26 @@ const styles = StyleSheet.create({
 });
 
 class ConfirmationDialog extends React.Component {
-  state = { clearClipboard: false }
+  state = {
+    clearClipboard: false,
+    obscured: true,
+  }
 
   handleClearClipboard = () => Clipboard.setString('');
+
+  toggleObscured = () => {
+    this.setState(prevState => ({ obscured: !prevState.obscured }));
+  };
+
+  obscureText = (times) => {
+    let num = times;
+    let repeatedStr = '';
+    while (num > 0) {
+      repeatedStr += '\u25CF';
+      num -= 1;
+    }
+    return repeatedStr;
+  }
 
   handleSubmit = () => {
     const { clearClipboard } = this.state;
@@ -75,10 +94,11 @@ class ConfirmationDialog extends React.Component {
   }
 
   render() {
-    const { clearClipboard } = this.state;
+    const { clearClipboard, obscured } = this.state;
     const {
       t, visible, generatedPassword, closeModal,
     } = this.props;
+    const obscuredPw = this.obscureText(generatedPassword.length);
 
     return (
       <View style={styles.container}>
@@ -101,7 +121,9 @@ class ConfirmationDialog extends React.Component {
                 <Text style={styles.label}>
                   {t('accountPassword')}
                 </Text>
-                <Text style={styles.label}>{generatedPassword}</Text>
+                <Text style={styles.label}>
+                  {obscured ? obscuredPw : generatedPassword}
+                </Text>
               </View>
               <View style={styles.checkbox}>
                 <Text style={styles.paragraph}>{t('clearClipboard')}</Text>
