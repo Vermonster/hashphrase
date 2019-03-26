@@ -85,20 +85,23 @@ class PasswordGenerator extends React.Component {
       <View style={styles.generatorContainer}>
         <FormInput
           className="label"
-          placeholder={t('label')}
+          placeholderText={t('label')}
+          prompt={t('passwordLabel')}
           label={t('label')}
           handleChange={this.handleChange}
         />
         <FormInput
           className="password"
-          placeholder={t('password')}
+          placeholderText={t('password')}
+          prompt={t('masterPassword')}
           label={t('password')}
           handleChange={this.handleChange}
         />
         { isNewPassword && (
           <FormInput
             className="confirmPassword"
-            placeholder={t('confirmPassword')}
+            placeholderText={t('confirmPassword')}
+            prompt={t('retypePassword')}
             label={t('confirmPassword')}
             handleChange={this.handleChange}
           />
