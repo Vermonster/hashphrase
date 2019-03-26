@@ -86,17 +86,20 @@ class PasswordGenerator extends React.Component {
         <FormInput
           className="label"
           placeholder={t('label')}
+          label={t('label')}
           handleChange={this.handleChange}
         />
         <FormInput
           className="password"
           placeholder={t('password')}
+          label={t('password')}
           handleChange={this.handleChange}
         />
         { isNewPassword && (
           <FormInput
             className="confirmPassword"
             placeholder={t('confirmPassword')}
+            label={t('confirmPassword')}
             handleChange={this.handleChange}
           />
         )
