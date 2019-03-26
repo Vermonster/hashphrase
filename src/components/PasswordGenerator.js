@@ -18,18 +18,15 @@ const styles = StyleSheet.create({
 });
 
 class PasswordGenerator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      label: '',
-      password: '',
-      confirmPassword: '',
-      generatedPassword: '',
-      disabled: true,
-      modalVisibility: false,
-      inputError: false,
-    };
-  }
+  state = {
+    label: '',
+    password: '',
+    confirmPassword: '',
+    generatedPassword: '',
+    disabled: true,
+    modalVisibility: false,
+    inputError: false,
+  };
 
   componentDidUpdate(prevProps) {
     const { isNewPassword } = this.props;
@@ -48,7 +45,8 @@ class PasswordGenerator extends React.Component {
     if ((password && confirmPassword) && (password !== confirmPassword)) {
       this.setState({ inputError: true });
     } else {
-      this.setState({ inputError: false }, () => this.generatePassword(label, password))}
+      this.setState({ inputError: false }, this.generatePassword(label, password));
+    }
   };
 
   addToClipboard = (password) => {
@@ -79,7 +77,7 @@ class PasswordGenerator extends React.Component {
 
   render() {
     const {
-      label, password, confirmPassword, generatedPassword, disabled, modalVisibility, inputError, 
+      label, password, confirmPassword, generatedPassword, disabled, modalVisibility, inputError,
     } = this.state;
     const { isNewPassword, showSnackbar, t } = this.props;
 
