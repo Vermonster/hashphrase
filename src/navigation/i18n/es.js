@@ -17,7 +17,8 @@ const es = {
     password: 'Contraseña general',
     passwordLabel: '¿Qué es la etiqueta de la cuenta?',
     masterPassword: '¿Qué es la Contraseña Maestra?',
-    confirmPassword: 'Vuelva a escribir la Contraseña Maestra',
+    retypePassword: 'Vuelva a escribir la Contraseña Maestra',
+    confirmPassword: 'Confirmar la Contraseña Maestra',
     submitMessage: 'GENERAR CONTRASEÑA',
   },
   tipsPage: {
