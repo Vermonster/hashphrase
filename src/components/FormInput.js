@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, StyleSheet, TextInput } from 'react-native';
-import { IconButton, Text } from 'react-native-paper';
-import PropTypes from 'prop-types';
+import { View, StyleSheet } from 'react-native';
+import { IconButton, Text, TextInput } from 'react-native-paper';
+// import PropTypes from 'prop-types';
 import { colors, fontSize } from '../styles/base';
 
 const styles = StyleSheet.create({
@@ -12,15 +12,14 @@ const styles = StyleSheet.create({
   textInput: {
     flex: 1,
     backgroundColor: colors.white,
-    marginTop: 15,
-    marginBottom: 30,
+    marginTop: 10,
     paddingLeft: 10,
     paddingTop: 10,
     alignSelf: 'center',
   },
   formInputContainer: {
     flexDirection: 'row',
-    backgroundColor: '#fff',
+    backgroundColor: colors.white,
     marginTop: 10,
     marginBottom: 30,
   },
@@ -49,7 +48,7 @@ class FormInput extends React.Component {
 
   render() {
     const {
-      placeholder, formLabel, handleChange, className,
+      placeholderText, formLabel, handleChange, className, label,
     } = this.props;
     const { visible } = this.state;
     const visibilityIcon = visible ? 'visibility' : 'visibility-off';
@@ -71,20 +70,20 @@ class FormInput extends React.Component {
         <Text style={styles.label}>{formLabel}</Text>
         <TextInput
           className={className}
-          placeholder={placeholder}
+          placeholder={placeholderText}
           secureTextEntry={visibleText}
           style={styles.textInput}
           onChange={handleChange(className)}
+          autoCapitalize="none"
+          autoComplete="off"
+          autoCorrect={false}
+          label={label}
+          underlineColor="#fff"
         />
         { buttonType }
       </View>
     );
   }
 }
-
-
-FormInput.propTypes = {
-  placeholder: PropTypes.string.isRequired,
-};
 
 export default FormInput;
