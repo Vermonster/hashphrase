@@ -27,6 +27,7 @@ class PasswordGenerator extends React.Component {
       generatedPassword: '',
       disabled: true,
       modalVisibility: false,
+      inputError: false,
     };
   }
 
@@ -44,9 +45,10 @@ class PasswordGenerator extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const { label, password, confirmPassword } = this.state;
-    const { isNewPassword } = this.props;
-    if (isNewPassword && (password !== confirmPassword)) return null;
-    return this.generatePassword(label, password);
+    if ((password && confirmPassword) && (password !== confirmPassword)) {
+      this.setState({ inputError: true });
+    } else {
+      this.setState({ inputError: false }, () => this.generatePassword(label, password))}
   };
 
   addToClipboard = (password) => {
@@ -55,7 +57,7 @@ class PasswordGenerator extends React.Component {
 
   handleChange = name => (e) => {
     const inputValue = e.nativeEvent.text;
-    this.setState({ [name]: inputValue }, this.handleSubmitButtonState);
+    this.setState({ [name]: inputValue, inputError: false }, this.handleSubmitButtonState);
   }
 
   handleSubmitButtonState = () => {
@@ -77,7 +79,7 @@ class PasswordGenerator extends React.Component {
 
   render() {
     const {
-      generatedPassword, disabled, modalVisibility,
+      label, password, confirmPassword, generatedPassword, disabled, modalVisibility, inputError, 
     } = this.state;
     const { isNewPassword, showSnackbar, t } = this.props;
 
@@ -103,7 +105,9 @@ class PasswordGenerator extends React.Component {
             placeholderText={t('confirmPassword')}
             prompt={t('retypePassword')}
             label={t('confirmPassword')}
+            error={inputError}
             handleChange={this.handleChange}
+            style={styles.textInput}
           />
         )
         }
