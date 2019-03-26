@@ -7,6 +7,7 @@ import { Button } from 'react-native-paper';
 import loplop from 'loplop';
 import ConfirmationDialog from './ConfirmationDialog';
 import FormInput from './FormInput';
+import { colors, fontSize, rowCenter, } from '../styles/base';
 
 const styles = StyleSheet.create({
   generatorContainer: {
@@ -98,17 +99,26 @@ class PasswordGenerator extends React.Component {
           handleChange={this.handleChange}
         />
         { isNewPassword && (
-          <FormInput
-            componentType="confirmPassword"
-            placeholderText={t('confirmPassword')}
-            prompt={t('retypePassword')}
-            label={t('confirmPassword')}
-            error={inputError}
-            handleChange={this.handleChange}
-            style={styles.textInput}
-          />
+          <>
+            <FormInput
+              componentType="confirmPassword"
+              placeholderText={t('confirmPassword')}
+              prompt={t('retypePassword')}
+              label={t('confirmPassword')}
+              error={inputError}
+              handleChange={this.handleChange}
+              style={styles.textInput}
+            />
+              { inputError && (
+                <View style={[rowCenter, { justifyContent: 'space-between' }]}>
+                  <Text>{t('warning')}</Text>
+                  <Button icon="warning" />
+                </View>
+              )
+              }
+          </>
         )
-        }
+      }
         <Button
           testID="submit-create-password"
           onPress={this.handleSubmit}

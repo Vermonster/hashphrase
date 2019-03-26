@@ -21,6 +21,7 @@ const en = {
     retypePassword: 'Retype your Master Password',
     confirmPassword: 'Confirm Master Password',
     submitMessage: 'CREATE ACCOUNT PASSWORD',
+    warning: 'Password does not match',
   },
   tipsPage: {
     questions: {
