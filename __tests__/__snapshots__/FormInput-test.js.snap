@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormInput /> should render the same snapshot 1`] = `
+<ForwardRef(View)>
+  <withTheme(Text)
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "fontSize": 16,
+      }
+    }
+  >
+    Test Prompt
+  </withTheme(Text)>
+  <ForwardRef(View)
+    style={
+      Object {
+        "backgroundColor": "#FFF",
+        "flexDirection": "row",
+        "marginBottom": 30,
+        "marginTop": 10,
+        "width": "80%",
+      }
+    }
+  >
+    <withTheme(TextInput)
+      autoCapitalize="none"
+      autoComplete="off"
+      autoCorrect={false}
+      className="test-class-name"
+      label="password"
+      placeholder="Test Placeholder"
+      secureTextEntry={true}
+      style={
+        Object {
+          "alignSelf": "center",
+          "backgroundColor": "#FFF",
+          "flex": 1,
+          "marginTop": 10,
+          "paddingLeft": 10,
+          "paddingTop": 10,
+        }
+      }
+      underlineColor="#fff"
+    />
+  </ForwardRef(View)>
+</ForwardRef(View)>
+`;
