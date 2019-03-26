@@ -109,13 +109,13 @@ class PasswordGenerator extends React.Component {
               handleChange={this.handleChange}
               style={styles.textInput}
             />
-              { inputError && (
-                <View style={[rowCenter, { justifyContent: 'space-between' }]}>
-                  <Text>{t('warning')}</Text>
-                  <Button icon="warning" />
-                </View>
-              )
-              }
+            { inputError && (
+              <View style={[rowCenter, { justifyContent: 'space-between' }]}>
+                <Text style={{ color: colors.warning }}>{t('warning')}</Text>
+                <IconButton icon="warning" color={colors.warning} />
+              </View>
+            )
+            }
           </>
         )
       }
