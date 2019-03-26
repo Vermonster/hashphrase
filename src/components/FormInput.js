@@ -6,7 +6,7 @@ import { colors, fontSize } from '../styles/base';
 
 const styles = StyleSheet.create({
   label: {
-    alignSelf: 'center',
+    alignSelf: 'flex-start',
     fontSize: fontSize.lg,
   },
   textInput: {
@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
     marginTop: 10,
     marginBottom: 30,
+    width: '80%',
   },
   visibilityButton: {
     alignSelf: 'center',
@@ -48,7 +49,7 @@ class FormInput extends React.Component {
 
   render() {
     const {
-      placeholderText, formLabel, handleChange, className, label,
+      placeholderText, prompt, handleChange, className, label,
     } = this.props;
     const { visible } = this.state;
     const visibilityIcon = visible ? 'visibility' : 'visibility-off';
@@ -61,26 +62,28 @@ class FormInput extends React.Component {
           onPress={this.toggleVisibility}
           className="submitPassword"
           style={styles.visibilityButton}
-          color="#212A59"
+          color={colors.secondary}
         />
       ) : null;
 
     return (
-      <View style={styles.formInputContainer}>
-        <Text style={styles.label}>{formLabel}</Text>
-        <TextInput
-          className={className}
-          placeholder={placeholderText}
-          secureTextEntry={visibleText}
-          style={styles.textInput}
-          onChange={handleChange(className)}
-          autoCapitalize="none"
-          autoComplete="off"
-          autoCorrect={false}
-          label={label}
-          underlineColor="#fff"
-        />
-        { buttonType }
+      <View>
+        <Text style={styles.label}>{prompt}</Text>
+        <View style={styles.formInputContainer}>
+          <TextInput
+            className={className}
+            placeholder={placeholderText}
+            secureTextEntry={visibleText}
+            style={styles.textInput}
+            onChange={handleChange(className)}
+            autoCapitalize="none"
+            autoComplete="off"
+            autoCorrect={false}
+            label={label}
+            underlineColor="#fff"
+          />
+          { buttonType }
+        </View>
       </View>
     );
   }
