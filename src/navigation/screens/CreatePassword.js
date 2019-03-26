@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Switch, Appbar } from 'react-native-paper';
-import { View, Text, StyleSheet } from 'react-native';
+import { Switch, Appbar, Snackbar } from 'react-native-paper';
+import {
+  View, Text, StyleSheet, Clipboard,
+} from 'react-native';
 import { withNamespaces } from 'react-i18next';
 import Logo from '../../styles/icons';
 import PasswordGenerator from '../../components/PasswordGenerator';
@@ -27,6 +29,11 @@ const styles = StyleSheet.create({
   newPassLabel: {
     fontSize: fontSize.lg,
   },
+  snackbar: {
+    flex: 1,
+    justifyContent: 'space-between',
+    backgroundColor: colors.secondary,
+  },
 });
 
 class CreateNewPassword extends Component {
@@ -34,6 +41,7 @@ class CreateNewPassword extends Component {
     super(props);
     this.state = {
       isNewPassword: false,
+      snackbarVisibility: false,
     };
   }
 
@@ -41,9 +49,13 @@ class CreateNewPassword extends Component {
     isNewPassword: !isNewPassword,
   }))
 
+  showSnackbar = () => this.setState({ snackbarVisibility: true });
+
+  hideSnackbar = () => this.setState({ snackbarVisibility: false });
+
   render() {
-    const { isNewPassword } = this.state;
     const { t, navigation } = this.props;
+    const { isNewPassword, snackbarVisibility } = this.state;
 
     return (
       <View style={styles.container}>
@@ -64,7 +76,21 @@ class CreateNewPassword extends Component {
         </View>
         <PasswordGenerator
           isNewPassword={isNewPassword}
+          showSnackbar={this.showSnackbar}
         />
+        <Snackbar
+          visible={snackbarVisibility}
+          action={{
+            label: t('undo'),
+            onPress: () => { Clipboard.setString(''); },
+          }}
+          onDismiss={this.hideSnackbar}
+          duration={4000}
+          style={styles.snackbar}
+          theme={{ colors: { accent: colors.primary } }}
+        >
+          {t('clipboardCleared')}
+        </Snackbar>
       </View>
     );
   }
