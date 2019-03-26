@@ -41,7 +41,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
         <ForwardRef(View)
           style={
             Object {
-              "backgroundColor": "#E17809",
+              "backgroundColor": "#E07926",
               "paddingLeft": 13,
               "paddingRight": 100,
               "paddingVertical": 20,
@@ -133,7 +133,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
         </ForwardRef(View)>
         <withTheme(Button)
           accessibilityLabel="ACTION BUTTON"
-          color="#E17809"
+          color="#E07926"
           dark={true}
           mode="contained"
           onPress={[Function]}
