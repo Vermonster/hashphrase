@@ -42,69 +42,132 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
           style={
             Object {
               "backgroundColor": "#E07926",
+              "display": "flex",
               "paddingLeft": 13,
-              "paddingRight": 100,
-              "paddingVertical": 20,
+              "paddingRight": 13,
+              "paddingVertical": 13,
             }
           }
         >
-          <ForwardRef(Text)
+          <ForwardRef(View)
             style={
               Object {
-                "color": "#212A59",
-                "fontSize": 24,
-                "paddingBottom": 20,
+                "flexDirection": "row",
               }
             }
           >
-            completedStatus
-          </ForwardRef(Text)>
-          <ForwardRef(Text)
-            style={
-              Array [
+            <ForwardRef(View)
+              style={
                 Object {
-                  "fontSize": 16,
-                },
+                  "flex": 5,
+                }
+              }
+            >
+              <ForwardRef(Text)
+                style={
+                  Object {
+                    "color": "#212A59",
+                    "fontSize": 24,
+                    "paddingBottom": 20,
+                  }
+                }
+              >
+                completedStatus
+              </ForwardRef(Text)>
+              <ForwardRef(Text)
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 16,
+                    },
+                    Object {
+                      "color": "#FFF",
+                      "width": "70%",
+                    },
+                  ]
+                }
+              >
+                completedClipboard
+              </ForwardRef(Text)>
+            </ForwardRef(View)>
+            <ForwardRef(View)
+              style={
                 Object {
-                  "color": "#FFF",
-                },
-              ]
-            }
-          >
-            completedClipboard
-          </ForwardRef(Text)>
+                  "alignItems": "flex-end",
+                  "flex": 1,
+                  "justifyContent": "flex-start",
+                }
+              }
+            >
+              <CompletedCheckmark />
+            </ForwardRef(View)>
+          </ForwardRef(View)>
         </ForwardRef(View)>
         <ForwardRef(View)
           style={
             Array [
               Object {
+                "alignItems": "stretch",
                 "backgroundColor": "#212A59",
-                "height": 50,
+                "borderRadius": 4,
+                "justifyContent": "center",
                 "marginBottom": 25,
                 "marginHorizontal": 10,
                 "marginTop": 37,
+                "paddingBottom": 15,
+                "paddingLeft": 15,
+                "paddingTop": 15,
               },
             ]
           }
         >
-          <ForwardRef(Text)
+          <ForwardRef(View)
             style={
               Object {
-                "color": "#FFF",
-                "fontSize": 12,
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
               }
             }
           >
-            accountPassword
-          </ForwardRef(Text)>
-          <ForwardRef(Text)
-            style={
-              Object {
-                "color": "#FFF",
-                "fontSize": 12,
-              }
-            }
-          />
+            <ForwardRef(View)>
+              <ForwardRef(Text)
+                style={
+                  Array [
+                    Object {
+                      "color": "#FFF",
+                      "fontSize": 16,
+                    },
+                    Object {
+                      "marginBottom": 10,
+                    },
+                  ]
+                }
+              >
+                accountPassword
+              </ForwardRef(Text)>
+              <ForwardRef(Text)
+                selectable={true}
+                style={
+                  Array [
+                    Object {
+                      "color": "#FFF",
+                      "fontSize": 12,
+                      "letterSpacing": 2,
+                      "marginTop": 5,
+                    },
+                  ]
+                }
+              >
+                ●●●●●●●●
+              </ForwardRef(Text)>
+            </ForwardRef(View)>
+            <withTheme(IconButton)
+              color="#FFF"
+              icon="visibility-off"
+              onPress={[Function]}
+            />
+          </ForwardRef(View)>
         </ForwardRef(View)>
         <ForwardRef(View)
           style={

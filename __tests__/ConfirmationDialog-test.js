@@ -13,6 +13,7 @@ describe('<ConfirmationDialog />', () => {
         closeModal={mockFn}
         t={key => key}
         showSnackbar={mockFn}
+        generatedPassword="12345678"
       />,
     );
   });
