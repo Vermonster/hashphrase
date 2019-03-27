@@ -11,8 +11,7 @@ describe('<FormInput />', () => {
         placeholderText="Test Placeholder"
         prompt="Test Prompt"
         handleChange={mockFn}
-        className="test-class-name"
-        label="password"
+        componentType="password"
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -24,8 +23,7 @@ describe('<FormInput />', () => {
         placeholderText="Test Placeholder"
         prompt="Test Prompt"
         handleChange={mockFn}
-        className="test-class-name"
-        label="password"
+        componentType="password"
       />,
     );
     expect(wrapper.state('visible')).toBe(false);
@@ -33,16 +31,15 @@ describe('<FormInput />', () => {
     expect(wrapper.state('visible')).toBe(true);
   });
 
-  it('should generate a password input when "password" classname provided', () => {
+  it('should generate a password input when "password" label provided', () => {
     const wrapper = shallow(
       <FormInput
         placeholderText="Test Placeholder"
         prompt="Test Prompt"
         handleChange={mockFn}
-        className="password"
-        label="password"
+        componentType="password"
       />,
     );
-    expect(wrapper.find('.submitPassword')).toHaveLength(1);
+    expect(wrapper.findWhere(node => node.prop('testID') === 'hideShowButton')).toHaveLength(1);
   });
 });

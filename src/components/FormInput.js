@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { IconButton, Text, TextInput } from 'react-native-paper';
-// import PropTypes from 'prop-types';
 import { colors, fontSize } from '../styles/base';
 
 const styles = StyleSheet.create({
@@ -49,20 +48,21 @@ class FormInput extends React.Component {
 
   render() {
     const {
-      placeholderText, prompt, handleChange, className, label,
+      placeholderText, prompt, handleChange, label, componentType,
     } = this.props;
     const { visible } = this.state;
     const visibilityIcon = visible ? 'visibility' : 'visibility-off';
-    const visibleText = this.isTextHidden(className, visible);
-    const buttonType = (className === 'password'
-      || className === 'confirmPassword')
+    const visibleText = this.isTextHidden(componentType, visible);
+    const buttonType = (componentType === 'password'
+      || componentType === 'confirmPassword')
       ? (
         <IconButton
           icon={visibilityIcon}
           onPress={this.toggleVisibility}
-          className="submitPassword"
+          accessibilityLabel="hide or show password"
           style={styles.visibilityButton}
           color={colors.secondary}
+          testID="hideShowButton"
         />
       ) : null;
 
@@ -71,11 +71,10 @@ class FormInput extends React.Component {
         <Text style={styles.label}>{prompt}</Text>
         <View style={styles.formInputContainer}>
           <TextInput
-            className={className}
             placeholder={placeholderText}
             secureTextEntry={visibleText}
             style={styles.textInput}
-            onChange={handleChange(className)}
+            onChange={handleChange(componentType)}
             autoCapitalize="none"
             autoComplete="off"
             autoCorrect={false}
