@@ -80,7 +80,6 @@ class FormInput extends React.Component {
             autoComplete="off"
             autoCorrect={false}
             label={label}
-            underlineColor="#fff"
           />
           { buttonType }
         </View>
