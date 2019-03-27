@@ -3,7 +3,7 @@ import { withNamespaces } from 'react-i18next';
 import {
   View, Text, Modal, StyleSheet, Clipboard,
 } from 'react-native';
-import { Button, Checkbox } from 'react-native-paper';
+import { Button, Checkbox, IconButton } from 'react-native-paper';
 import { CompletedCheckmark } from '../styles/icons';
 import { colors, fontSize, rowCenter } from '../styles/base';
 
@@ -30,13 +30,21 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
+  hideShowRow: {
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
   passwordContainer: {
     marginTop: 37,
     marginHorizontal: 10,
     marginBottom: 25,
     backgroundColor: colors.secondary,
-    height: 50,
-    padding: 13,
+    paddingLeft: 15,
+    paddingTop: 15,
+    paddingBottom: 15,
+    alignItems: 'stretch',
+    justifyContent: 'center',
     borderRadius: 4,
   },
   title: {
@@ -51,12 +59,20 @@ const styles = StyleSheet.create({
     fontSize: fontSize.sm,
     color: colors.white,
   },
+  accountLabel: {
+    marginBottom: 10,
+  },
   checkbox: {
     ...rowCenter,
     marginBottom: 37,
   },
   button: {
     marginHorizontal: 45,
+  },
+  dots: {
+    fontSize: 10,
+    letterSpacing: 4,
+    color: colors.white,
   },
 });
 
@@ -99,6 +115,7 @@ class ConfirmationDialog extends React.Component {
       t, visible, generatedPassword, closeModal,
     } = this.props;
     const obscuredPw = this.obscureText(generatedPassword.length);
+    const visibilityIcon = obscured ? 'visibility-off' : 'visibility';
 
     return (
       <View style={styles.container}>
@@ -118,12 +135,22 @@ class ConfirmationDialog extends React.Component {
                 <Text style={[styles.paragraph, { color: colors.white, width: '70%' }]}>{t('completedClipboard')}</Text>
               </View>
               <View style={[styles.passwordContainer]}>
-                <Text style={styles.label}>
-                  {t('accountPassword')}
-                </Text>
-                <Text style={styles.label}>
-                  {obscured ? obscuredPw : generatedPassword}
-                </Text>
+                <View style={styles.hideShowRow}>
+                  <View style={styles.textColumn}>
+                    <Text style={[styles.label, styles.accountLabel]}>
+                      {t('accountPassword')}
+                    </Text>
+                    <Text style={[obscured ? styles.dots : styles.label]} selectable>
+                      {obscured ? obscuredPw : generatedPassword}
+                    </Text>
+                  </View>
+                  <IconButton
+                    icon={visibilityIcon}
+                    color={colors.white}
+                    onPress={this.toggleObscured}
+                    style={styles.hideShowButton}
+                  />
+                </View>
               </View>
               <View style={styles.checkbox}>
                 <Text style={styles.paragraph}>{t('clearClipboard')}</Text>
