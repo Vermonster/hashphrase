@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     fontSize: fontSize.lg,
   },
   label: {
-    fontSize: fontSize.sm,
+    fontSize: fontSize.lg,
     color: colors.white,
   },
   accountLabel: {
@@ -70,8 +70,8 @@ const styles = StyleSheet.create({
     marginHorizontal: 45,
   },
   dots: {
-    fontSize: 10,
-    letterSpacing: 4,
+    fontSize: fontSize.lg,
+    letterSpacing: 2,
     color: colors.white,
   },
 });
@@ -132,7 +132,9 @@ class ConfirmationDialog extends React.Component {
                   <Text style={styles.title}>{t('completedStatus')}</Text>
                   <CompletedCheckmark />
                 </View>
-                <Text style={[styles.paragraph, { color: colors.white, width: '70%' }]}>{t('completedClipboard')}</Text>
+                <Text style={[styles.paragraph, { color: colors.white, width: '70%' }]}>
+                  {t('completedClipboard')}
+                </Text>
               </View>
               <View style={[styles.passwordContainer]}>
                 <View style={styles.hideShowRow}>
