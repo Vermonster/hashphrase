@@ -25,10 +25,18 @@ const styles = StyleSheet.create({
     paddingVertical: 13,
     paddingLeft: 13,
     paddingRight: 13,
+    display: 'flex',
   },
   messagesTopRow: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+  },
+  textColumn: {
+    flex: 5,
+  },
+  iconColumn: {
+    flex: 1,
+    justifyContent: 'flex-start',
+    alignItems: 'flex-end',
   },
   hideShowRow: {
     justifyContent: 'space-between',
@@ -70,9 +78,10 @@ const styles = StyleSheet.create({
     marginHorizontal: 45,
   },
   dots: {
-    fontSize: fontSize.lg,
+    fontSize: fontSize.sm,
     letterSpacing: 2,
     color: colors.white,
+    marginTop: 5,
   },
 });
 
@@ -129,16 +138,20 @@ class ConfirmationDialog extends React.Component {
             <View style={styles.innerContainer}>
               <View style={styles.messagesContainer}>
                 <View style={styles.messagesTopRow}>
-                  <Text style={styles.title}>{t('completedStatus')}</Text>
-                  <CompletedCheckmark />
+                  <View style={styles.textColumn}>
+                    <Text style={styles.title}>{t('completedStatus')}</Text>
+                    <Text style={[styles.paragraph, { color: colors.white, width: '70%' }]}>
+                      {t('completedClipboard')}
+                    </Text>
+                  </View>
+                  <View style={styles.iconColumn}>
+                    <CompletedCheckmark />
+                  </View>
                 </View>
-                <Text style={[styles.paragraph, { color: colors.white, width: '70%' }]}>
-                  {t('completedClipboard')}
-                </Text>
               </View>
               <View style={[styles.passwordContainer]}>
                 <View style={styles.hideShowRow}>
-                  <View style={styles.textColumn}>
+                  <View>
                     <Text style={[styles.label, styles.accountLabel]}>
                       {t('accountPassword')}
                     </Text>
