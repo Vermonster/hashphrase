@@ -140,7 +140,7 @@ class ConfirmationDialog extends React.Component {
                 <View style={styles.messagesTopRow}>
                   <View style={styles.textColumn}>
                     <Text style={styles.title}>{t('completedStatus')}</Text>
-                    <Text style={[styles.paragraph, { color: colors.white, width: '70%' }]}>
+                    <Text style={[styles.paragraph, { color: colors.white, width: '80%', marginBottom: 15 }]}>
                       {t('completedClipboard')}
                     </Text>
                   </View>
