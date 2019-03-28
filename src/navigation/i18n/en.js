@@ -18,7 +18,8 @@ const en = {
     password: 'Master Password',
     passwordLabel: 'What is the account password\'s Nickname?',
     masterPassword: 'What is your Master Password?',
-    confirmPassword: 'Retype your Master Password',
+    retypePassword: 'Retype your Master Password',
+    confirmPassword: 'Confirm Master Password',
     submitMessage: 'CREATE ACCOUNT PASSWORD',
   },
   tipsPage: {

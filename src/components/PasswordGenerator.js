@@ -1,24 +1,19 @@
 import React from 'react';
 import {
-  Keyboard, Clipboard, View, Text, StyleSheet,
+  Keyboard, Clipboard, View, StyleSheet,
 } from 'react-native';
 import { withNamespaces } from 'react-i18next';
-import { TextInput, Button } from 'react-native-paper';
+import { Button } from 'react-native-paper';
 import loplop from 'loplop';
 import ConfirmationDialog from './ConfirmationDialog';
-import { colors, fontSize } from '../styles/base';
+import FormInput from './FormInput';
 
 const styles = StyleSheet.create({
-  label: {
-    alignSelf: 'center',
-    fontSize: fontSize.lg,
-  },
-  textInput: {
-    width: 330,
-    backgroundColor: colors.white,
-    marginTop: 10,
-    marginBottom: 30,
-    alignSelf: 'center',
+  generatorContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: 10,
+    display: 'flex',
   },
 });
 
@@ -71,8 +66,8 @@ class PasswordGenerator extends React.Component {
     || (!isNewPassword && label && password)) ? this.setState({ disabled: false }) : null;
   }
 
-  generatePassword(label, password) {
-    this.setState({ generatedPassword: loplop(label, password) }, () => {
+  generatePassword(type, password) {
+    this.setState({ generatedPassword: loplop(type, password) }, () => {
       const { generatedPassword } = this.state;
       this.addToClipboard(generatedPassword);
     });
@@ -82,45 +77,34 @@ class PasswordGenerator extends React.Component {
 
   render() {
     const {
-      label, password, confirmPassword, generatedPassword, disabled, modalVisibility,
+      generatedPassword, disabled, modalVisibility,
     } = this.state;
     const { isNewPassword, showSnackbar, t } = this.props;
 
     return (
-      <View>
-        <Text style={styles.label}>{t('passwordLabel')}</Text>
-        <TextInput
-          value={label}
-          placeholder={t('label')}
-          label="Nickname"
-          textContentType="username"
-          onChange={this.handleChange('label')}
-          style={styles.textInput}
+      <View style={styles.generatorContainer}>
+        <FormInput
+          componentType="label"
+          placeholderText={t('label')}
+          prompt={t('passwordLabel')}
+          label={t('label')}
+          handleChange={this.handleChange}
         />
-        <Text style={styles.label}>{t('masterPassword')}</Text>
-        <TextInput
-          value={password}
-          placeholder={t('password')}
-          label="Master Password"
-          textContentType="password"
-          secureTextEntry
-          onChange={this.handleChange('password')}
-          style={styles.textInput}
+        <FormInput
+          componentType="password"
+          placeholderText={t('password')}
+          prompt={t('masterPassword')}
+          label={t('password')}
+          handleChange={this.handleChange}
         />
         { isNewPassword && (
-          <>
-            <Text style={styles.label}>{t('confirmPassword')}</Text>
-            <TextInput
-              value={confirmPassword}
-              placeholder={t('confirmPassword')}
-              label="Confirm Master Password"
-              textContentType="password"
-              oneTimeCode
-              secureTextEntry
-              onChange={this.handleChange('confirmPassword')}
-              style={styles.textInput}
-            />
-          </>
+          <FormInput
+            componentType="confirmPassword"
+            placeholderText={t('confirmPassword')}
+            prompt={t('retypePassword')}
+            label={t('confirmPassword')}
+            handleChange={this.handleChange}
+          />
         )
         }
         <Button
@@ -144,6 +128,6 @@ class PasswordGenerator extends React.Component {
   }
 }
 
-export { PasswordGenerator as TestPasswordGenerator };
-
 export default withNamespaces('passwordGenerator')(PasswordGenerator);
+
+export { PasswordGenerator as TestPasswordGenerator };
