@@ -1,12 +1,13 @@
 import React from 'react';
 import {
-  Keyboard, Clipboard, View, StyleSheet,
+  Keyboard, Clipboard, View, StyleSheet, Text,
 } from 'react-native';
 import { withNamespaces } from 'react-i18next';
-import { Button } from 'react-native-paper';
+import { Button, IconButton } from 'react-native-paper';
 import loplop from 'loplop';
 import ConfirmationDialog from './ConfirmationDialog';
 import FormInput from './FormInput';
+import { colors, rowCenter } from '../styles/base';
 
 const styles = StyleSheet.create({
   generatorContainer: {
@@ -18,17 +19,15 @@ const styles = StyleSheet.create({
 });
 
 class PasswordGenerator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      label: '',
-      password: '',
-      confirmPassword: '',
-      generatedPassword: '',
-      disabled: true,
-      modalVisibility: false,
-    };
-  }
+  state = {
+    label: '',
+    password: '',
+    confirmPassword: '',
+    generatedPassword: '',
+    disabled: true,
+    modalVisibility: false,
+    inputError: false,
+  };
 
   componentDidUpdate(prevProps) {
     const { isNewPassword } = this.props;
@@ -44,9 +43,11 @@ class PasswordGenerator extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const { label, password, confirmPassword } = this.state;
-    const { isNewPassword } = this.props;
-    if (isNewPassword && (password !== confirmPassword)) return null;
-    return this.generatePassword(label, password);
+    if ((password && confirmPassword) && (password !== confirmPassword)) {
+      this.setState({ inputError: true });
+    } else {
+      this.setState({ inputError: false }, this.generatePassword(label, password));
+    }
   };
 
   addToClipboard = (password) => {
@@ -55,7 +56,7 @@ class PasswordGenerator extends React.Component {
 
   handleChange = name => (e) => {
     const inputValue = e.nativeEvent.text;
-    this.setState({ [name]: inputValue }, this.handleSubmitButtonState);
+    this.setState({ [name]: inputValue, inputError: false }, this.handleSubmitButtonState);
   }
 
   handleSubmitButtonState = () => {
@@ -77,7 +78,7 @@ class PasswordGenerator extends React.Component {
 
   render() {
     const {
-      generatedPassword, disabled, modalVisibility,
+      generatedPassword, disabled, modalVisibility, inputError,
     } = this.state;
     const { isNewPassword, showSnackbar, t } = this.props;
 
@@ -98,15 +99,26 @@ class PasswordGenerator extends React.Component {
           handleChange={this.handleChange}
         />
         { isNewPassword && (
-          <FormInput
-            componentType="confirmPassword"
-            placeholderText={t('confirmPassword')}
-            prompt={t('retypePassword')}
-            label={t('confirmPassword')}
-            handleChange={this.handleChange}
-          />
+          <>
+            <FormInput
+              componentType="confirmPassword"
+              placeholderText={t('confirmPassword')}
+              prompt={t('retypePassword')}
+              label={t('confirmPassword')}
+              error={inputError}
+              handleChange={this.handleChange}
+              style={styles.textInput}
+            />
+            { inputError && (
+              <View style={rowCenter}>
+                <Text style={{ color: colors.warning }}>{t('warning')}</Text>
+                <IconButton icon="warning" color={colors.warning} />
+              </View>
+            )
+            }
+          </>
         )
-        }
+      }
         <Button
           testID="submit-create-password"
           onPress={this.handleSubmit}
