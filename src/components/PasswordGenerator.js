@@ -1,13 +1,13 @@
 import React from 'react';
 import {
-  Keyboard, Clipboard, View, StyleSheet,
+  Keyboard, Clipboard, View, StyleSheet, Text,
 } from 'react-native';
 import { withNamespaces } from 'react-i18next';
-import { Button } from 'react-native-paper';
+import { Button, IconButton } from 'react-native-paper';
 import loplop from 'loplop';
 import ConfirmationDialog from './ConfirmationDialog';
 import FormInput from './FormInput';
-import { colors, fontSize, rowCenter, } from '../styles/base';
+import { colors, rowCenter } from '../styles/base';
 
 const styles = StyleSheet.create({
   generatorContainer: {
@@ -78,7 +78,7 @@ class PasswordGenerator extends React.Component {
 
   render() {
     const {
-      label, password, confirmPassword, generatedPassword, disabled, modalVisibility, inputError,
+      generatedPassword, disabled, modalVisibility, inputError,
     } = this.state;
     const { isNewPassword, showSnackbar, t } = this.props;
 
@@ -110,7 +110,7 @@ class PasswordGenerator extends React.Component {
               style={styles.textInput}
             />
             { inputError && (
-              <View style={[rowCenter, { justifyContent: 'space-between' }]}>
+              <View style={rowCenter}>
                 <Text style={{ color: colors.warning }}>{t('warning')}</Text>
                 <IconButton icon="warning" color={colors.warning} />
               </View>
