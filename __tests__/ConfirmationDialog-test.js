@@ -22,11 +22,6 @@ describe('<ConfirmationDialog />', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should update the state when clear checkbox is clicked', () => {
-    wrapper.findWhere(node => node.prop('testID') === 'clear-clipboard').simulate('press');
-    expect(wrapper.state('clearClipboard')).toBe(true);
-  });
-
   it('should clear clipboard when the clear clipboard checkbox is clicked', () => {
     wrapper.setState({ clearClipboard: true });
     const spy = jest.spyOn(wrapper.instance(), 'handleClearClipboard');

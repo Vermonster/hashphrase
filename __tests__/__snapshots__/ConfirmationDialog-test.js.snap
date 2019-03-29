@@ -82,7 +82,8 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
                     },
                     Object {
                       "color": "#FFF",
-                      "width": "70%",
+                      "marginBottom": 15,
+                      "width": "80%",
                     },
                   ]
                 }
@@ -179,6 +180,11 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
             }
           }
         >
+          <CustomCheckbox
+            handlePress={[Function]}
+            status={false}
+            testID="clear-clipboard"
+          />
           <ForwardRef(Text)
             style={
               Object {
@@ -188,11 +194,6 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
           >
             clearClipboard
           </ForwardRef(Text)>
-          <withTheme(Checkbox)
-            onPress={[Function]}
-            status="unchecked"
-            testID="clear-clipboard"
-          />
         </ForwardRef(View)>
         <withTheme(Button)
           accessibilityLabel="ACTION BUTTON"
