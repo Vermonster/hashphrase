@@ -3,8 +3,9 @@ import { withNamespaces } from 'react-i18next';
 import {
   View, Text, Modal, StyleSheet, Clipboard,
 } from 'react-native';
-import { Button, Checkbox, IconButton } from 'react-native-paper';
+import { Button, IconButton } from 'react-native-paper';
 import { CompletedCheckmark } from '../styles/icons';
+import CustomCheckbox from './CustomCheckbox';
 import { colors, fontSize, rowCenter } from '../styles/base';
 
 const styles = StyleSheet.create({
@@ -118,6 +119,10 @@ class ConfirmationDialog extends React.Component {
     return closeModal();
   }
 
+  toggleClearClipboard = () => {
+    this.setState(prevState => ({ clearClipboard: !prevState.clearClipboard }));
+  };
+
   render() {
     const { clearClipboard, obscured } = this.state;
     const {
@@ -168,12 +173,12 @@ class ConfirmationDialog extends React.Component {
                 </View>
               </View>
               <View style={styles.checkbox}>
-                <Text style={styles.paragraph}>{t('clearClipboard')}</Text>
-                <Checkbox
+                <CustomCheckbox
                   testID="clear-clipboard"
-                  status={clearClipboard ? 'checked' : 'unchecked'}
-                  onPress={() => this.setState({ clearClipboard: !clearClipboard })}
+                  status={clearClipboard}
+                  handlePress={this.toggleClearClipboard}
                 />
+                <Text style={styles.paragraph}>{t('clearClipboard')}</Text>
               </View>
               <Button
                 testID="submit-form"
