@@ -24,8 +24,7 @@ const styles = StyleSheet.create({
   messagesContainer: {
     backgroundColor: colors.primary,
     paddingVertical: 13,
-    paddingLeft: 13,
-    paddingRight: 13,
+    paddingHorizontal: 13,
     display: 'flex',
   },
   messagesTopRow: {
