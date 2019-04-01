@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
     marginHorizontal: 10,
     paddingBottom: 48,
+    borderRadius: 4,
   },
   messagesContainer: {
     backgroundColor: colors.primary,
