@@ -33,6 +33,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
         style={
           Object {
             "backgroundColor": "#FFF",
+            "borderRadius": 4,
             "marginHorizontal": 10,
             "paddingBottom": 48,
           }
