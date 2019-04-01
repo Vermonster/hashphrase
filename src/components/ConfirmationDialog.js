@@ -23,6 +23,8 @@ const styles = StyleSheet.create({
   },
   messagesContainer: {
     backgroundColor: colors.primary,
+    borderTopRightRadius: 4,
+    borderTopLeftRadius: 4,
     paddingVertical: 13,
     paddingHorizontal: 13,
     display: 'flex',
@@ -144,7 +146,8 @@ class ConfirmationDialog extends React.Component {
                     <TextInput
                       secureTextEntry={obscured}
                       style={styles.label}
-                      numberOfLines={1}
+                      numberOfLines={2}
+                      ellipsizeMode="clip"
                     >
                       { generatedPassword }
                     </TextInput>
