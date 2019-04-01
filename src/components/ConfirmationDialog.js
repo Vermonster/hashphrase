@@ -113,6 +113,7 @@ class ConfirmationDialog extends React.Component {
       showSnackbar();
     }
     this.setState({ clearClipboard: false });
+    this.setState({ obscured: true });
     return closeModal();
   }
 
