@@ -64,7 +64,6 @@
     ]
   },
   "dependencies": {
-    "@expo/vector-icons": "^10.0.1",
     "expo": "^32.0.0",
     "i18next": "^15.0.6",
     "loplop": "^1.0.3",

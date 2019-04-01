@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
+import { IconButton } from 'react-native-paper';
 import { colors } from '../styles/base';
 
 const styles = StyleSheet.create({
@@ -22,7 +22,7 @@ const CustomCheckbox = (props) => {
   const checkBox = (
     <TouchableOpacity onPress={handlePress}>
       <View style={styles.box}>
-        {status && <Ionicons name="md-checkmark" size={25} color={colors.secondary} />}
+        {status && <IconButton color={colors.secondary} icon="done" />}
       </View>
     </TouchableOpacity>
   );
