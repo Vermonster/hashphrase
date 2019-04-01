@@ -43,8 +43,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
             Object {
               "backgroundColor": "#E07926",
               "display": "flex",
-              "paddingLeft": 13,
-              "paddingRight": 13,
+              "paddingHorizontal": 13,
               "paddingVertical": 13,
             }
           }
@@ -94,9 +93,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
             <ForwardRef(View)
               style={
                 Object {
-                  "alignItems": "flex-end",
                   "flex": 1,
-                  "justifyContent": "flex-start",
                 }
               }
             >
@@ -147,21 +144,20 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
               >
                 accountPassword
               </ForwardRef(Text)>
-              <ForwardRef(Text)
-                selectable={true}
+              <TextInput
+                allowFontScaling={true}
+                numberOfLines={1}
+                secureTextEntry={true}
                 style={
-                  Array [
-                    Object {
-                      "color": "#FFF",
-                      "fontSize": 12,
-                      "letterSpacing": 2,
-                      "marginTop": 5,
-                    },
-                  ]
+                  Object {
+                    "color": "#FFF",
+                    "fontSize": 16,
+                  }
                 }
+                underlineColorAndroid="transparent"
               >
-                ●●●●●●●●
-              </ForwardRef(Text)>
+                12345678
+              </TextInput>
             </ForwardRef(View)>
             <withTheme(IconButton)
               color="#FFF"

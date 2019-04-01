@@ -20,8 +20,8 @@ describe('<CustomCheckbox />', () => {
   });
 
   it('only shows checkmark when status is true', () => {
-    expect(wrapper.find('Icon')).toHaveLength(0);
+    expect(wrapper.find('withTheme(IconButton)')).toHaveLength(0);
     wrapper.setProps({ status: true });
-    expect(wrapper.find('Icon')).toHaveLength(1);
+    expect(wrapper.find('withTheme(IconButton)')).toHaveLength(1);
   });
 });
