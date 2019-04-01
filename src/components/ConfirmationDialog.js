@@ -35,8 +35,6 @@ const styles = StyleSheet.create({
   },
   iconColumn: {
     flex: 1,
-    justifyContent: 'flex-start',
-    alignItems: 'flex-end',
   },
   hideShowRow: {
     justifyContent: 'space-between',
