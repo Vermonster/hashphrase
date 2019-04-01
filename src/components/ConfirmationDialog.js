@@ -1,7 +1,7 @@
 import React from 'react';
 import { withNamespaces } from 'react-i18next';
 import {
-  View, Text, Modal, StyleSheet, Clipboard,
+  View, Text, Modal, StyleSheet, Clipboard, TextInput,
 } from 'react-native';
 import { Button, IconButton } from 'react-native-paper';
 import { CompletedCheckmark } from '../styles/icons';
@@ -75,12 +75,6 @@ const styles = StyleSheet.create({
   button: {
     marginHorizontal: 45,
   },
-  dots: {
-    fontSize: fontSize.sm,
-    letterSpacing: 2,
-    color: colors.white,
-    marginTop: 5,
-  },
 });
 
 class ConfirmationDialog extends React.Component {
@@ -94,16 +88,6 @@ class ConfirmationDialog extends React.Component {
   toggleObscured = () => {
     this.setState(prevState => ({ obscured: !prevState.obscured }));
   };
-
-  obscureText = (times) => {
-    let num = times;
-    let repeatedStr = '';
-    while (num > 0) {
-      repeatedStr += '\u25CF';
-      num -= 1;
-    }
-    return repeatedStr;
-  }
 
   handleSubmit = () => {
     const { clearClipboard } = this.state;
@@ -126,7 +110,6 @@ class ConfirmationDialog extends React.Component {
     const {
       t, visible, generatedPassword, closeModal,
     } = this.props;
-    const obscuredPw = this.obscureText(generatedPassword.length);
     const visibilityIcon = obscured ? 'visibility-off' : 'visibility';
 
     return (
@@ -158,9 +141,13 @@ class ConfirmationDialog extends React.Component {
                     <Text style={[styles.label, styles.accountLabel]}>
                       {t('accountPassword')}
                     </Text>
-                    <Text style={[obscured ? styles.dots : styles.label]} selectable>
-                      {obscured ? obscuredPw : generatedPassword}
-                    </Text>
+                    <TextInput
+                      secureTextEntry={obscured}
+                      style={styles.label}
+                      numberOfLines={1}
+                    >
+                      { generatedPassword }
+                    </TextInput>
                   </View>
                   <IconButton
                     icon={visibilityIcon}
