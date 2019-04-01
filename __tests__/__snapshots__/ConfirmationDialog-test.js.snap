@@ -42,6 +42,8 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
           style={
             Object {
               "backgroundColor": "#E07926",
+              "borderTopLeftRadius": 4,
+              "borderTopRightRadius": 4,
               "display": "flex",
               "paddingHorizontal": 13,
               "paddingVertical": 13,
@@ -146,7 +148,8 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
               </ForwardRef(Text)>
               <TextInput
                 allowFontScaling={true}
-                numberOfLines={1}
+                ellipsizeMode="clip"
+                numberOfLines={2}
                 secureTextEntry={true}
                 style={
                   Object {
