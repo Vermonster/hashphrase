@@ -1,8 +1,9 @@
 import React from 'react';
 import { Svg } from 'expo';
+import { colors } from './base';
 
 const {
-  Rect, Path, Defs, ClipPath, G,
+  Rect, Path, Defs, ClipPath, G, Circle,
 } = Svg;
 
 const Logo = () => (
@@ -21,4 +22,12 @@ const Logo = () => (
   </Svg>
 );
 
+const CompletedCheckmark = () => (
+  <Svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+    <Circle cx="30" cy="30" r="28.5" fill={colors.white} stroke={colors.secondary} strokeWidth="3" />
+    <Path d="M28.6745 40.6117C27.405 42.0525 25.3452 42.0525 24.0763 40.6117L16.9521 32.5261C15.6826 31.086 15.6826 28.7482 16.9521 27.3081C18.221 25.8673 20.2808 25.8673 21.5502 27.3081L25.7949 32.1248C26.1153 32.4878 26.6355 32.4878 26.9565 32.1248L38.4497 19.0806C39.7186 17.6398 41.7784 17.6398 43.0479 19.0806C43.6575 19.7725 44 20.7112 44 21.6896C44 22.668 43.6575 23.6067 43.0479 24.2986L28.6745 40.6117Z" fill={colors.secondary} />
+  </Svg>
+);
+
 export default Logo;
+export { CompletedCheckmark };

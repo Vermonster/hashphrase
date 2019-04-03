@@ -33,6 +33,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
         style={
           Object {
             "backgroundColor": "#FFF",
+            "borderRadius": 4,
             "marginHorizontal": 10,
             "paddingBottom": 48,
           }
@@ -42,69 +43,132 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
           style={
             Object {
               "backgroundColor": "#E07926",
-              "paddingLeft": 13,
-              "paddingRight": 100,
-              "paddingVertical": 20,
+              "borderTopLeftRadius": 4,
+              "borderTopRightRadius": 4,
+              "display": "flex",
+              "paddingHorizontal": 13,
+              "paddingVertical": 13,
             }
           }
         >
-          <ForwardRef(Text)
+          <ForwardRef(View)
             style={
               Object {
-                "color": "#212A59",
-                "fontSize": 24,
-                "paddingBottom": 20,
+                "flexDirection": "row",
               }
             }
           >
-            completedStatus
-          </ForwardRef(Text)>
-          <ForwardRef(Text)
-            style={
-              Array [
+            <ForwardRef(View)
+              style={
                 Object {
-                  "fontSize": 16,
-                },
+                  "flex": 5,
+                }
+              }
+            >
+              <ForwardRef(Text)
+                style={
+                  Object {
+                    "color": "#212A59",
+                    "fontSize": 24,
+                    "paddingBottom": 20,
+                  }
+                }
+              >
+                completedStatus
+              </ForwardRef(Text)>
+              <ForwardRef(Text)
+                style={
+                  Array [
+                    Object {
+                      "fontSize": 16,
+                    },
+                    Object {
+                      "color": "#FFF",
+                      "marginBottom": 15,
+                      "width": "80%",
+                    },
+                  ]
+                }
+              >
+                completedClipboard
+              </ForwardRef(Text)>
+            </ForwardRef(View)>
+            <ForwardRef(View)
+              style={
                 Object {
-                  "color": "#FFF",
-                },
-              ]
-            }
-          >
-            completedClipboard
-          </ForwardRef(Text)>
+                  "flex": 1,
+                }
+              }
+            >
+              <CompletedCheckmark />
+            </ForwardRef(View)>
+          </ForwardRef(View)>
         </ForwardRef(View)>
         <ForwardRef(View)
           style={
             Array [
               Object {
+                "alignItems": "stretch",
                 "backgroundColor": "#212A59",
-                "height": 50,
+                "borderRadius": 4,
+                "justifyContent": "center",
                 "marginBottom": 25,
                 "marginHorizontal": 10,
                 "marginTop": 37,
+                "paddingBottom": 15,
+                "paddingLeft": 15,
+                "paddingTop": 15,
               },
             ]
           }
         >
-          <ForwardRef(Text)
+          <ForwardRef(View)
             style={
               Object {
-                "color": "#FFF",
-                "fontSize": 12,
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
               }
             }
           >
-            accountPassword
-          </ForwardRef(Text)>
-          <ForwardRef(Text)
-            style={
-              Object {
-                "color": "#FFF",
-                "fontSize": 12,
-              }
-            }
-          />
+            <ForwardRef(View)>
+              <ForwardRef(Text)
+                style={
+                  Array [
+                    Object {
+                      "color": "#FFF",
+                      "fontSize": 16,
+                    },
+                    Object {
+                      "marginBottom": 10,
+                    },
+                  ]
+                }
+              >
+                accountPassword
+              </ForwardRef(Text)>
+              <TextInput
+                allowFontScaling={true}
+                ellipsizeMode="clip"
+                numberOfLines={2}
+                secureTextEntry={true}
+                style={
+                  Object {
+                    "color": "#FFF",
+                    "fontSize": 16,
+                  }
+                }
+                underlineColorAndroid="transparent"
+              >
+                12345678
+              </TextInput>
+            </ForwardRef(View)>
+            <withTheme(IconButton)
+              color="#FFF"
+              icon="visibility-off"
+              onPress={[Function]}
+            />
+          </ForwardRef(View)>
         </ForwardRef(View)>
         <ForwardRef(View)
           style={
@@ -116,6 +180,11 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
             }
           }
         >
+          <CustomCheckbox
+            handlePress={[Function]}
+            status={false}
+            testID="clear-clipboard"
+          />
           <ForwardRef(Text)
             style={
               Object {
@@ -125,11 +194,6 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
           >
             clearClipboard
           </ForwardRef(Text)>
-          <withTheme(Checkbox)
-            onPress={[Function]}
-            status="unchecked"
-            testID="clear-clipboard"
-          />
         </ForwardRef(View)>
         <withTheme(Button)
           accessibilityLabel="ACTION BUTTON"

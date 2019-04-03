@@ -8,19 +8,19 @@ const en = {
   infoScreen: {},
   confirmationDialog: {
     completedStatus: 'All done!',
-    completedClipboard: 'Your account password is now on your clipboard. Just paste it where your password would go.',
-    accountPassword: 'Account Password:',
+    completedClipboard: 'Your Hashphrase is now on your clipboard. Just paste it where your password would go.',
+    accountPassword: 'Hashphrase:',
     clearClipboard: 'Clear clipboard',
     button: 'MAKE ANOTHER PASSWORD',
   },
   passwordGenerator: {
     label: 'Nickname',
     password: 'Master Password',
-    passwordLabel: 'What is the account password\'s Nickname?',
+    passwordLabel: 'What is the Hashphrase\'s Nickname?',
     masterPassword: 'What is your Master Password?',
     retypePassword: 'Retype your Master Password',
     confirmPassword: 'Confirm Master Password',
-    submitMessage: 'CREATE ACCOUNT PASSWORD',
+    submitMessage: 'CREATE HASHPHRASE',
     warning: 'Password does not match',
   },
   tipsPage: {
