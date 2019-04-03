@@ -57,7 +57,7 @@
       "<rootDir>/node_modules/"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|react-clone-referenced-element|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|native-base))"
+      "node_modules/(?!(jest-)?react-native|react-navigation|react-native|expo)"
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
