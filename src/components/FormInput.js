@@ -11,10 +11,6 @@ const styles = StyleSheet.create({
   textInput: {
     flex: 1,
     backgroundColor: colors.white,
-    marginTop: 10,
-    paddingLeft: 10,
-    paddingTop: 10,
-    alignSelf: 'center',
   },
   formInputContainer: {
     flexDirection: 'row',
