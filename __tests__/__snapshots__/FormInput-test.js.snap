@@ -31,12 +31,8 @@ exports[`<FormInput /> should render the same snapshot 1`] = `
       secureTextEntry={true}
       style={
         Object {
-          "alignSelf": "center",
           "backgroundColor": "#FFF",
           "flex": 1,
-          "marginTop": 10,
-          "paddingLeft": 10,
-          "paddingTop": 10,
         }
       }
     />
