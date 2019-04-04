@@ -52,9 +52,12 @@ const styles = StyleSheet.create({
     paddingLeft: 15,
     paddingTop: 15,
     paddingBottom: 15,
+    borderRadius: 4,
     alignItems: 'stretch',
     justifyContent: 'center',
-    borderRadius: 4,
+  },
+  password: {
+    flex: 1,
   },
   title: {
     color: colors.secondary,
@@ -99,14 +102,17 @@ class ConfirmationDialog extends React.Component {
       this.handleClearClipboard();
       showSnackbar();
     }
-    this.setState({ clearClipboard: false });
-    this.setState({ obscured: true });
+    this.resetState();
     return closeModal();
   }
 
   toggleClearClipboard = () => {
     this.setState(prevState => ({ clearClipboard: !prevState.clearClipboard }));
   };
+
+  resetState() {
+    this.setState({ clearClipboard: false, obscured: true });
+  }
 
   render() {
     const { clearClipboard, obscured } = this.state;
@@ -140,15 +146,14 @@ class ConfirmationDialog extends React.Component {
               </View>
               <View style={[styles.passwordContainer]}>
                 <View style={styles.hideShowRow}>
-                  <View>
+                  <View style={styles.password}>
                     <Text style={[styles.label, styles.accountLabel]}>
                       {t('accountPassword')}
                     </Text>
                     <TextInput
                       secureTextEntry={obscured}
+                      editable={false}
                       style={styles.label}
-                      numberOfLines={2}
-                      ellipsizeMode="clip"
                     >
                       { generatedPassword }
                     </TextInput>
