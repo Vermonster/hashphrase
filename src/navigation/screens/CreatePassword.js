@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Appbar, Snackbar } from 'react-native-paper';
 import {
-  View, Text, StyleSheet, Clipboard,
+  View, Text, StyleSheet, Clipboard, TouchableWithoutFeedback, Keyboard,
 } from 'react-native';
 import { withNamespaces } from 'react-i18next';
 import Logo from '../../styles/icons';
@@ -66,18 +66,22 @@ class CreateNewPassword extends Component {
           <Appbar.Content title={t('title')} />
           <Appbar.Action icon="info" color={colors.primary} size={28} onPress={() => navigation.navigate('TipsPage')} />
         </Appbar.Header>
-        <View style={styles.newPass}>
-          <Text style={styles.newPassLabel}>{t('newPassword')}</Text>
-          <Switch
-            value={isNewPassword}
-            onValueChange={this.handleToggleSwitch}
-            color={colors.primary}
-          />
-        </View>
-        <PasswordGenerator
-          isNewPassword={isNewPassword}
-          showSnackbar={this.showSnackbar}
-        />
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+          <View>
+            <View style={styles.newPass}>
+              <Text style={styles.newPassLabel}>{t('newPassword')}</Text>
+              <Switch
+                value={isNewPassword}
+                onValueChange={this.handleToggleSwitch}
+                color={colors.primary}
+              />
+            </View>
+            <PasswordGenerator
+              isNewPassword={isNewPassword}
+              showSnackbar={this.showSnackbar}
+            />
+          </View>
+        </TouchableWithoutFeedback>
         <Snackbar
           visible={snackbarVisibility}
           action={{
