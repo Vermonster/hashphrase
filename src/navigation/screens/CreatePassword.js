@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   },
   flexLayout: {
     flex: 1,
-  }
+  },
 });
 
 class CreateNewPassword extends Component {
