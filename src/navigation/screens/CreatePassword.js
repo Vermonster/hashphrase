@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { Switch, Appbar, Snackbar } from 'react-native-paper';
 import {
-  View, Text, StyleSheet, TouchableWithoutFeedback, Keyboard, KeyboardAvoidingView, Platform, SafeAreaView,
+  View,
+  Text,
+  StyleSheet,
+  Keyboard,
+  KeyboardAvoidingView,
+  Platform,
+  SafeAreaView,
 } from 'react-native';
 import { withNamespaces } from 'react-i18next';
 import Logo from '../../styles/icons';
@@ -16,6 +22,10 @@ const styles = StyleSheet.create({
   header: {
     backgroundColor: colors.white,
     zIndex: 100,
+  },
+  innerContainer: {
+    flex: 1,
+    justifyContent: 'flex-end',
   },
   newPass: {
     ...rowCenter,
@@ -35,6 +45,9 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     backgroundColor: colors.secondary,
   },
+  flexLayout: {
+    flex: 1,
+  }
 });
 
 class CreateNewPassword extends Component {
@@ -69,11 +82,11 @@ class CreateNewPassword extends Component {
         </Appbar.Header>
         <KeyboardAvoidingView
           behavior={Platform.OS === 'ios' ? 'padding' : null}
-          style={{ flex: 1, overflow: "hidden" }}
+          style={styles.flexLayout}
         >
-          <View style={{ flex: 1 }}>
+          <View style={styles.flexLayout}>
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-              <View style={{ justifyContent: 'flex-end', flex: 1 }}>
+              <View style={styles.innerContainer}>
                 <View style={styles.newPass}>
                   <Text style={styles.newPassLabel}>{t('newPassword')}</Text>
                   <Switch
@@ -86,7 +99,7 @@ class CreateNewPassword extends Component {
                   isNewPassword={isNewPassword}
                   showSnackbar={this.showSnackbar}
                 />
-                <View style={{ flex: 1 }} />
+                <View style={styles.flexLayout} />
               </View>
             </TouchableWithoutFeedback>
           </View>
