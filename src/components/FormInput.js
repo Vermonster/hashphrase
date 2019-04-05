@@ -44,7 +44,7 @@ class FormInput extends React.Component {
 
   render() {
     const {
-      placeholderText, prompt, handleChange, label, componentType, error,
+      placeholderText, prompt, value, handleChange, label, componentType, error,
     } = this.props;
     const { visible } = this.state;
     const visibilityIcon = visible ? 'visibility' : 'visibility-off';
@@ -67,6 +67,7 @@ class FormInput extends React.Component {
         <Text style={styles.label}>{prompt}</Text>
         <View style={styles.formInputContainer}>
           <TextInput
+            value={value}
             placeholder={placeholderText}
             secureTextEntry={visibleText}
             style={styles.textInput}

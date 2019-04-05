@@ -6,7 +6,6 @@ import {
   StyleSheet,
   Keyboard,
   KeyboardAvoidingView,
-  Platform,
   SafeAreaView,
 } from 'react-native';
 import { withNamespaces } from 'react-i18next';
@@ -81,7 +80,7 @@ class CreateNewPassword extends Component {
           <Appbar.Action icon="info" color={colors.primary} size={28} onPress={() => navigation.navigate('TipsPage')} />
         </Appbar.Header>
         <KeyboardAvoidingView
-          behavior={Platform.OS === 'ios' ? 'padding' : null}
+          behavior="padding"
           style={styles.flexLayout}
         >
           <View style={styles.flexLayout}>
