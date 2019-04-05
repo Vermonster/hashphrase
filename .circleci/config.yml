@@ -22,7 +22,7 @@ publish: &publish
     - run:
         name: Save current branch name to an env variable
         command: |
-          if [ "$CIRCLE_BRANCH" == "master"]; then
+          if [ "${CIRCLE_BRANCH}" == "master" ]; then
             echo 'export EXPO_RELEASE_CHANNEL="default"' >> $BASH_ENV
           else
             echo 'export EXPO_RELEASE_CHANNEL=$CIRCLE_BRANCH' >> $BASH_ENV
