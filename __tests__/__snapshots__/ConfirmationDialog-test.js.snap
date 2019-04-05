@@ -131,7 +131,13 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
               }
             }
           >
-            <ForwardRef(View)>
+            <ForwardRef(View)
+              style={
+                Object {
+                  "flex": 1,
+                }
+              }
+            >
               <ForwardRef(Text)
                 style={
                   Array [
@@ -149,8 +155,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
               </ForwardRef(Text)>
               <TextInput
                 allowFontScaling={true}
-                ellipsizeMode="clip"
-                numberOfLines={2}
+                editable={false}
                 secureTextEntry={true}
                 style={
                   Object {
