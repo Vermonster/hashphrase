@@ -1,7 +1,13 @@
 import React from 'react';
 import { withNamespaces } from 'react-i18next';
-import { View } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 import BaseAccordion from '../../components/BaseAccordion';
+
+const styles = StyleSheet.create({
+  scrollContainer: {
+    height: 200,
+  },
+});
 
 class TipsPage extends React.Component {
   questionMap = (questions, questionObject) => questions.map(question => (
@@ -19,9 +25,9 @@ class TipsPage extends React.Component {
     const components = this.questionMap(questionArr, questionObj);
 
     return (
-      <View>
+      <ScrollView style={styles.scrollContainer}>
         { components }
-      </View>
+      </ScrollView>
     );
   }
 }
