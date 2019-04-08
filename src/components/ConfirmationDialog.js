@@ -5,7 +5,6 @@ import {
 } from 'react-native';
 import { Button, IconButton } from 'react-native-paper';
 import { CompletedCheckmark } from '../styles/icons';
-import CustomCheckbox from './CustomCheckbox';
 import { colors, fontSize, rowCenter } from '../styles/base';
 
 const styles = StyleSheet.create({
@@ -85,7 +84,6 @@ const styles = StyleSheet.create({
 
 class ConfirmationDialog extends React.Component {
   state = {
-    clearClipboard: false,
     obscured: true,
   }
 
@@ -96,26 +94,19 @@ class ConfirmationDialog extends React.Component {
   };
 
   handleSubmit = () => {
-    const { clearClipboard } = this.state;
     const { closeModal, showSnackbar } = this.props;
-    if (clearClipboard) {
-      this.handleClearClipboard();
-      showSnackbar();
-    }
+    this.handleClearClipboard();
+    showSnackbar();
     this.resetState();
     return closeModal();
   }
 
-  toggleClearClipboard = () => {
-    this.setState(prevState => ({ clearClipboard: !prevState.clearClipboard }));
-  };
-
   resetState() {
-    this.setState({ clearClipboard: false, obscured: true });
+    this.setState({ obscured: true });
   }
 
   render() {
-    const { clearClipboard, obscured } = this.state;
+    const { obscured } = this.state;
     const {
       t, visible, generatedPassword, closeModal,
     } = this.props;
