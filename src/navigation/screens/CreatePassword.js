@@ -86,7 +86,7 @@ class CreateNewPassword extends Component {
           keyboardVerticalOffset={100}
           style={styles.flexLayout}
         >
-          <ScrollView style={styles.flexLayout}>
+          <ScrollView style={styles.flexLayout} keyboardShouldPersistTaps="always">
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
               <View style={styles.innerContainer}>
                 <View style={styles.newPass}>
