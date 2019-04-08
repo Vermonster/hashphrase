@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import { Switch, Appbar, Snackbar } from 'react-native-paper';
 import {
-  View, Text, StyleSheet, TouchableWithoutFeedback, Keyboard,
+  View,
+  Text,
+  StyleSheet,
+  TouchableWithoutFeedback,
+  Keyboard,
+  KeyboardAvoidingView,
+  SafeAreaView,
+  ScrollView,
 } from 'react-native';
 import { withNamespaces } from 'react-i18next';
 import Logo from '../../styles/icons';
@@ -15,6 +22,11 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: colors.white,
+    zIndex: 100,
+  },
+  innerContainer: {
+    flex: 1,
+    justifyContent: 'flex-end',
   },
   newPass: {
     ...rowCenter,
@@ -33,6 +45,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-start',
     backgroundColor: colors.secondary,
+  },
+  flexLayout: {
+    flex: 1,
   },
 });
 
@@ -58,7 +73,7 @@ class CreateNewPassword extends Component {
     const { isNewPassword, snackbarVisibility } = this.state;
 
     return (
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <Appbar.Header style={styles.header}>
           <View style={styles.logo}>
             <Logo />
@@ -66,22 +81,31 @@ class CreateNewPassword extends Component {
           <Appbar.Content title={t('title')} />
           <Appbar.Action icon="info" color={colors.primary} size={28} onPress={() => navigation.navigate('TipsPage')} />
         </Appbar.Header>
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-          <View>
-            <View style={styles.newPass}>
-              <Text style={styles.newPassLabel}>{t('newPassword')}</Text>
-              <Switch
-                value={isNewPassword}
-                onValueChange={this.handleToggleSwitch}
-                color={colors.primary}
-              />
-            </View>
-            <PasswordGenerator
-              isNewPassword={isNewPassword}
-              showSnackbar={this.showSnackbar}
-            />
-          </View>
-        </TouchableWithoutFeedback>
+        <KeyboardAvoidingView
+          behavior="padding"
+          keyboardVerticalOffset={100}
+          style={styles.flexLayout}
+        >
+          <ScrollView style={styles.flexLayout} keyboardShouldPersistTaps="always">
+            <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+              <View style={styles.innerContainer}>
+                <View style={styles.newPass}>
+                  <Text style={styles.newPassLabel}>{t('newPassword')}</Text>
+                  <Switch
+                    value={isNewPassword}
+                    onValueChange={this.handleToggleSwitch}
+                    color={colors.primary}
+                  />
+                </View>
+                <PasswordGenerator
+                  isNewPassword={isNewPassword}
+                  showSnackbar={this.showSnackbar}
+                />
+                <View style={styles.flexLayout} />
+              </View>
+            </TouchableWithoutFeedback>
+          </ScrollView>
+        </KeyboardAvoidingView>
         <Snackbar
           visible={snackbarVisibility}
           onDismiss={this.hideSnackbar}
@@ -90,7 +114,7 @@ class CreateNewPassword extends Component {
         >
           {t('clipboardCleared')}
         </Snackbar>
-      </View>
+      </SafeAreaView>
     );
   }
 }

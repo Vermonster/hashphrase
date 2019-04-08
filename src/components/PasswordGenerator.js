@@ -13,8 +13,15 @@ const styles = StyleSheet.create({
   generatorContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    margin: 10,
-    display: 'flex',
+  },
+  warning: {
+    flexDirection: 'row',
+    width: '80%',
+    justifyContent: 'space-between',
+    marginTop: '-10%',
+  },
+  icon: {
+    marginHorizontal: 0,
   },
 });
 
@@ -78,13 +85,14 @@ class PasswordGenerator extends React.Component {
 
   render() {
     const {
-      generatedPassword, disabled, modalVisibility, inputError,
+      generatedPassword, disabled, modalVisibility, inputError, label, password, confirmPassword,
     } = this.state;
     const { isNewPassword, showSnackbar, t } = this.props;
 
     return (
       <View style={styles.generatorContainer}>
         <FormInput
+          value={label}
           componentType="label"
           placeholderText={t('label')}
           prompt={t('passwordLabel')}
@@ -92,6 +100,7 @@ class PasswordGenerator extends React.Component {
           handleChange={this.handleChange}
         />
         <FormInput
+          value={password}
           componentType="password"
           placeholderText={t('password')}
           prompt={t('masterPassword')}
@@ -101,6 +110,7 @@ class PasswordGenerator extends React.Component {
         { isNewPassword && (
           <>
             <FormInput
+              value={confirmPassword}
               componentType="confirmPassword"
               placeholderText={t('confirmPassword')}
               prompt={t('retypePassword')}
@@ -110,9 +120,9 @@ class PasswordGenerator extends React.Component {
               style={styles.textInput}
             />
             { inputError && (
-              <View style={rowCenter}>
+              <View style={[rowCenter, styles.warning]}>
                 <Text style={{ color: colors.warning }}>{t('warning')}</Text>
-                <IconButton icon="warning" color={colors.warning} />
+                <IconButton icon="warning" color={colors.warning} style={styles.icon} />
               </View>
             )
             }
