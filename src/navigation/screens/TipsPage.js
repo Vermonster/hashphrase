@@ -7,9 +7,10 @@ import { colors } from '../../styles/base';
 const styles = StyleSheet.create({
   scrollContainer: {
     height: '90%',
-    width: '90%',
-    marginLeft: '5%',
-    marginTop: '10%',
+    paddingLeft: '5%',
+    paddingRight: '5%',
+    paddingTop: '10%',
+    backgroundColor: colors.borderColor,
   },
   cardContent: {
     color: colors.darkGray,
@@ -22,16 +23,18 @@ class TipsPage extends React.Component {
     <View
       key={question}
       style={{
+        backgroundColor: 'white',
+        borderColor: colors.borderColor,
+        borderRadius: 3,
+        borderWidth: 1,
+        marginTop: 3,
         shadowColor: '#000',
         shadowOffset: {
           width: 0,
-          height: 0.5,
+          height: 0.02,
         },
         shadowOpacity: 0.2,
-        shadowRadius: 2,
-        borderWidth: 1,
-        borderColor: colors.borderColor,
-
+        shadowRadius: 1.5,
         elevation: 3,
       }}
     >
@@ -46,7 +49,7 @@ class TipsPage extends React.Component {
         }
         title={<Text style={{ color: colors.darkGray }}>{questionObject[question].title}</Text>}
       >
-        <Card style={{ borderTopColor: colors.borderColor, borderTopWidth: 2 }}>
+        <Card style={{ borderTopColor: colors.borderColor, borderTopWidth: 2, backgroundColor: 'white' }}>
           <Card.Content>
             <Text style={styles.cardContent}>
               {questionObject[question].content}
