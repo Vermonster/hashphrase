@@ -2,7 +2,6 @@ import React from 'react';
 import { withNamespaces } from 'react-i18next';
 import { ScrollView, StyleSheet } from 'react-native';
 import { List, Text, Card } from 'react-native-paper';
-import BaseAccordion from '../../components/BaseAccordion';
 import { colors } from '../../styles/base';
 
 const styles = StyleSheet.create({
