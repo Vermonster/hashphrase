@@ -5,12 +5,14 @@ import { List, Text, Card } from 'react-native-paper';
 import { colors } from '../../styles/base';
 
 const styles = StyleSheet.create({
+  outerContainer: {
+    backgroundColor: colors.borderColor,
+  },
   scrollContainer: {
     height: '90%',
     paddingLeft: '5%',
     paddingRight: '5%',
     paddingTop: '10%',
-    backgroundColor: colors.borderColor,
   },
   cardContent: {
     color: colors.darkGray,
@@ -27,14 +29,14 @@ class TipsPage extends React.Component {
         borderColor: colors.borderColor,
         borderRadius: 3,
         borderWidth: 1,
-        marginTop: 3,
+        marginTop: 1,
         shadowColor: '#000',
         shadowOffset: {
-          width: 0,
+          width: 0.02,
           height: 0.02,
         },
-        shadowOpacity: 0.2,
-        shadowRadius: 1.5,
+        shadowOpacity: 0.3,
+        shadowRadius: 1.8,
         elevation: 3,
       }}
     >
@@ -49,7 +51,22 @@ class TipsPage extends React.Component {
         }
         title={<Text style={{ color: colors.darkGray }}>{questionObject[question].title}</Text>}
       >
-        <Card style={{ borderTopColor: colors.borderColor, borderTopWidth: 2, backgroundColor: 'white' }}>
+        <Card style={{
+          borderTopColor: colors.borderColor,
+          borderTopWidth: 1,
+          backgroundColor: 'white',
+          marginTop: 3,
+
+          shadowColor: '#000',
+          shadowOffset: {
+            width: 0,
+            height: -3,
+          },
+          shadowOpacity: 0.3,
+          shadowRadius: 1.8,
+          elevation: 3,
+        }}
+        >
           <Card.Content>
             <Text style={styles.cardContent}>
               {questionObject[question].content}
@@ -67,11 +84,13 @@ class TipsPage extends React.Component {
     const components = this.questionMap(questionArr, questionObj);
 
     return (
-      <ScrollView contentContainerStyle={styles.scrollContainer}>
-        <View>
-          { components }
-        </View>
-      </ScrollView>
+      <View style={styles.outerContainer}>
+        <ScrollView contentContainerStyle={styles.scrollContainer}>
+          <View>
+            { components }
+          </View>
+        </ScrollView>
+      </View>
     );
   }
 }
