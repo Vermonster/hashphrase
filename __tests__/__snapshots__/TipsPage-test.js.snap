@@ -5,6 +5,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
   style={
     Object {
       "backgroundColor": "#EFEFEF",
+      "flex": 1,
     }
   }
 >
