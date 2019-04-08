@@ -10,9 +10,14 @@ const styles = StyleSheet.create({
   },
   scrollContainer: {
     height: '90%',
-    paddingLeft: '5%',
-    paddingRight: '5%',
-    paddingTop: '10%',
+    marginLeft: '5%',
+    marginRight: '5%',
+    marginTop: '10%',
+  },
+  title: {
+    fontSize: 16,
+    textAlign: 'center',
+    marginBottom: '5%',
   },
   cardContent: {
     color: colors.darkGray,
@@ -21,6 +26,13 @@ const styles = StyleSheet.create({
 });
 
 class TipsPage extends React.Component {
+  static navigationOptions = {
+    headerStyle: {
+      backgroundColor: colors.primary,
+    },
+    headerTintColor: colors.secondary,
+  };
+
   questionMap = (questions, questionObject) => questions.map(question => (
     <View
       key={question}
@@ -30,13 +42,14 @@ class TipsPage extends React.Component {
         borderRadius: 3,
         borderWidth: 1,
         marginTop: 1,
+        marginBottom: 2,
         shadowColor: '#000',
         shadowOffset: {
           width: 0.02,
-          height: 0.02,
+          height: 0.5,
         },
         shadowOpacity: 0.3,
-        shadowRadius: 1.8,
+        shadowRadius: 3,
         elevation: 3,
       }}
     >
@@ -86,6 +99,7 @@ class TipsPage extends React.Component {
     return (
       <View style={styles.outerContainer}>
         <ScrollView contentContainerStyle={styles.scrollContainer}>
+          <Text style={styles.title}>{t('title')}</Text>
           <View>
             { components }
           </View>
