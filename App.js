@@ -5,6 +5,8 @@ import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import i18n from './src/navigation/i18n/i18n';
 import CreatePassword from './src/navigation/screens/CreatePassword';
 import TipsPage from './src/navigation/screens/TipsPage';
+import { colors } from './src/styles/base';
+import Logo from './src/styles/icons';
 
 const theme = {
   ...DefaultTheme,
@@ -26,6 +28,9 @@ const AppStackNavigator = createStackNavigator({
 },
 {
   initialRouteName: 'PasswordScreen',
+  defaultNavigationOptions: {
+    tabBarLabel: 'Home',
+  },
 });
 
 const AppContainer = createAppContainer(AppStackNavigator);

@@ -11,7 +11,7 @@ import {
   ScrollView,
 } from 'react-native';
 import { withNamespaces } from 'react-i18next';
-import Logo from '../../styles/icons';
+import LogoTitle from '../../components/LogoTitle';
 import PasswordGenerator from '../../components/PasswordGenerator';
 import { colors, rowCenter, fontSize } from '../../styles/base';
 
@@ -52,17 +52,18 @@ const styles = StyleSheet.create({
 });
 
 class CreateNewPassword extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isNewPassword: false,
-      snackbarVisibility: false,
-    };
-  }
+ static navigationOptions = ({ navigation }) => ({
+   headerTitle: ( <LogoTitle /> ),
+ });
 
-  handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
-    isNewPassword: !isNewPassword,
-  }))
+state = {
+  isNewPassword: false,
+  snackbarVisibility: false,
+};
+
+handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
+  isNewPassword: !isNewPassword,
+}))
 
   showSnackbar = () => this.setState({ snackbarVisibility: true });
 
@@ -74,14 +75,7 @@ class CreateNewPassword extends Component {
 
     return (
       <SafeAreaView style={styles.container}>
-        <Appbar.Header style={styles.header}>
-          <View style={styles.logo}>
-            <Logo />
-          </View>
-          <Appbar.Content title={t('title')} />
-          <Appbar.Action icon="info" color={colors.primary} size={28} onPress={() => navigation.navigate('TipsPage')} />
-        </Appbar.Header>
-        <KeyboardAvoidingView
+       <KeyboardAvoidingView
           behavior="padding"
           keyboardVerticalOffset={100}
           style={styles.flexLayout}
