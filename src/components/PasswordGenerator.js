@@ -13,8 +13,15 @@ const styles = StyleSheet.create({
   generatorContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    margin: 10,
-    display: 'flex',
+  },
+  warning: {
+    flexDirection: 'row',
+    width: '80%',
+    justifyContent: 'space-between',
+    marginTop: '-10%',
+  },
+  icon: {
+    marginHorizontal: 0,
   },
 });
 
@@ -113,9 +120,9 @@ class PasswordGenerator extends React.Component {
               style={styles.textInput}
             />
             { inputError && (
-              <View style={rowCenter}>
+              <View style={[rowCenter, styles.warning]}>
                 <Text style={{ color: colors.warning }}>{t('warning')}</Text>
-                <IconButton icon="warning" color={colors.warning} />
+                <IconButton icon="warning" color={colors.warning} style={styles.icon} />
               </View>
             )
             }
