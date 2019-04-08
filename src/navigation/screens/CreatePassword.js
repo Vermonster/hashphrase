@@ -84,10 +84,6 @@ class CreateNewPassword extends Component {
         </TouchableWithoutFeedback>
         <Snackbar
           visible={snackbarVisibility}
-          action={{
-            label: t('undo'),
-            onPress: () => { Clipboard.setString(''); },
-          }}
           onDismiss={this.hideSnackbar}
           duration={4000}
           style={styles.snackbar}
