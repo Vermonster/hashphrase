@@ -4,6 +4,7 @@ import {
   View,
   Text,
   StyleSheet,
+  TouchableWithoutFeedback,
   Keyboard,
   KeyboardAvoidingView,
   SafeAreaView,
