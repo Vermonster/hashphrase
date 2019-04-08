@@ -5,6 +5,7 @@ export const colors = {
   disabled: '#949494',
   background: '#F5F5F5',
   darkGray: '#444545',
+  borderColor: '#EFEFEF',
   white: '#FFF',
   modalBackground: 'rgba(0, 0, 0, 0.5)',
 };
