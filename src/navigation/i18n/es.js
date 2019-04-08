@@ -22,6 +22,7 @@ const es = {
     submitMessage: 'GENERAR CONTRASEÑA',
   },
   tipsPage: {
+    title: 'Ayuda',
     questions: {
       question_1: {
         title: '¿Qué es Loplop?',
