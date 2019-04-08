@@ -81,6 +81,7 @@ class CreateNewPassword extends Component {
         </Appbar.Header>
         <KeyboardAvoidingView
           behavior="padding"
+          keyboardVerticalOffset={50}
           style={styles.flexLayout}
         >
           <View style={styles.flexLayout}>
