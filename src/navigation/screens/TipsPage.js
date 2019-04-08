@@ -98,14 +98,14 @@ class TipsPage extends React.Component {
     const components = this.questionMap(questionArr, questionObj);
 
     return (
-      <View style={styles.outerContainer}>
+      // <View style={styles.outerContainer}>
         <ScrollView contentContainerStyle={styles.scrollContainer}>
           <Text style={styles.title}>{t('title')}</Text>
           <View>
             { components }
           </View>
         </ScrollView>
-      </View>
+      // </View>
     );
   }
 }
