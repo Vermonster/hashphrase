@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Appbar, Snackbar } from 'react-native-paper';
 import {
-  View, Text, StyleSheet, Clipboard, TouchableWithoutFeedback, Keyboard,
+  View, Text, StyleSheet, TouchableWithoutFeedback, Keyboard,
 } from 'react-native';
 import { withNamespaces } from 'react-i18next';
 import Logo from '../../styles/icons';
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   },
   snackbar: {
     flex: 1,
-    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
     backgroundColor: colors.secondary,
   },
 });
@@ -84,14 +84,9 @@ class CreateNewPassword extends Component {
         </TouchableWithoutFeedback>
         <Snackbar
           visible={snackbarVisibility}
-          action={{
-            label: t('undo'),
-            onPress: () => { Clipboard.setString(''); },
-          }}
           onDismiss={this.hideSnackbar}
           duration={4000}
           style={styles.snackbar}
-          theme={{ colors: { accent: colors.primary } }}
         >
           {t('clipboardCleared')}
         </Snackbar>

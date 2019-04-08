@@ -3,7 +3,6 @@ const en = {
     title: 'AgiliKEY',
     newPassword: 'New password',
     clipboardCleared: 'Your password has been cleared from clipboard.',
-    undo: 'UNDO',
   },
   infoScreen: {},
   confirmationDialog: {
