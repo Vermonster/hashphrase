@@ -7,6 +7,7 @@ import {
   Keyboard,
   KeyboardAvoidingView,
   SafeAreaView,
+  ScrollView,
 } from 'react-native';
 import { withNamespaces } from 'react-i18next';
 import Logo from '../../styles/icons';
@@ -81,10 +82,10 @@ class CreateNewPassword extends Component {
         </Appbar.Header>
         <KeyboardAvoidingView
           behavior="padding"
-          keyboardVerticalOffset={50}
+          keyboardVerticalOffset={100}
           style={styles.flexLayout}
         >
-          <View style={styles.flexLayout}>
+          <ScrollView style={styles.flexLayout}>
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
               <View style={styles.innerContainer}>
                 <View style={styles.newPass}>
@@ -102,7 +103,7 @@ class CreateNewPassword extends Component {
                 <View style={styles.flexLayout} />
               </View>
             </TouchableWithoutFeedback>
-          </View>
+          </ScrollView>
         </KeyboardAvoidingView>
         <Snackbar
           visible={snackbarVisibility}
