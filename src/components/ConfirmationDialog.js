@@ -166,14 +166,6 @@ class ConfirmationDialog extends React.Component {
                   />
                 </View>
               </View>
-              <View style={styles.checkbox}>
-                <CustomCheckbox
-                  testID="clear-clipboard"
-                  status={clearClipboard}
-                  handlePress={this.toggleClearClipboard}
-                />
-                <Text style={styles.paragraph}>{t('clearClipboard')}</Text>
-              </View>
               <Button
                 testID="submit-form"
                 onPress={this.handleSubmit}

@@ -10,7 +10,7 @@ const en = {
     completedClipboard: 'Your Hashphrase is now on your clipboard. Just paste it where your password would go.',
     accountPassword: 'Hashphrase:',
     clearClipboard: 'Clear clipboard',
-    button: 'MAKE ANOTHER PASSWORD',
+    button: 'I\'M DONE, CLEAR CLIPBOARD',
   },
   passwordGenerator: {
     label: 'Nickname',
