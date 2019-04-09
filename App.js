@@ -22,9 +22,7 @@ const theme = {
 
 const AppStackNavigator = createStackNavigator(
   {
-    PasswordScreen: {
-      screen: CreatePassword,
-    },
+    PasswordScreen: { screen: CreatePassword },
     TipsPage: { screen: TipsPage },
   },
   {
