@@ -8,7 +8,6 @@ describe('<ConfirmationDialog />', () => {
     const mockFn = jest.fn();
     wrapper = shallow(
       <ConfirmationDialog
-        clearClipboard={false}
         visible
         closeModal={mockFn}
         t={key => key}
@@ -22,8 +21,7 @@ describe('<ConfirmationDialog />', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should clear clipboard when the clear clipboard checkbox is clicked', () => {
-    wrapper.setState({ clearClipboard: true });
+  it('should clear clipboard when the clear clipboard action button is clicked', () => {
     const spy = jest.spyOn(wrapper.instance(), 'handleClearClipboard');
     wrapper.findWhere(node => node.prop('testID') === 'submit-form').simulate('press');
     expect(spy).toBeCalled();

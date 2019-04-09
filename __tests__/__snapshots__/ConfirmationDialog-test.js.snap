@@ -175,31 +175,6 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
             />
           </ForwardRef(View)>
         </ForwardRef(View)>
-        <ForwardRef(View)
-          style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "justifyContent": "center",
-              "marginBottom": 37,
-            }
-          }
-        >
-          <CustomCheckbox
-            handlePress={[Function]}
-            status={false}
-            testID="clear-clipboard"
-          />
-          <ForwardRef(Text)
-            style={
-              Object {
-                "fontSize": 16,
-              }
-            }
-          >
-            clearClipboard
-          </ForwardRef(Text)>
-        </ForwardRef(View)>
         <withTheme(Button)
           accessibilityLabel="ACTION BUTTON"
           color="#E07926"
