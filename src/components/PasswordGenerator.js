@@ -98,6 +98,7 @@ class PasswordGenerator extends React.Component {
           prompt={t('passwordLabel')}
           label={t('label')}
           handleChange={this.handleChange}
+          onBlur={this.confirmEntry}
         />
         <FormInput
           value={password}
