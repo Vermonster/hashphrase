@@ -5,12 +5,8 @@ import { List, Text, Card } from 'react-native-paper';
 import { colors } from '../../styles/base';
 
 const styles = StyleSheet.create({
-  outerContainer: {
-    backgroundColor: colors.borderColor,
-    flex: 1,
-  },
   scrollContainer: {
-    height: '90%',
+    flexGrow: 1,
     marginLeft: '5%',
     marginRight: '5%',
     marginTop: '10%',
@@ -70,7 +66,6 @@ class TipsPage extends React.Component {
           borderTopWidth: 1,
           backgroundColor: 'white',
           marginTop: 3,
-
           shadowColor: '#000',
           shadowOffset: {
             width: 0,
@@ -98,14 +93,12 @@ class TipsPage extends React.Component {
     const components = this.questionMap(questionArr, questionObj);
 
     return (
-      // <View style={styles.outerContainer}>
-        <ScrollView contentContainerStyle={styles.scrollContainer}>
-          <Text style={styles.title}>{t('title')}</Text>
-          <View>
-            { components }
-          </View>
-        </ScrollView>
-      // </View>
+      <ScrollView contentContainerStyle={styles.scrollContainer}>
+        <Text style={styles.title}>{t('title')}</Text>
+        <View>
+          { components }
+        </View>
+      </ScrollView>
     );
   }
 }
