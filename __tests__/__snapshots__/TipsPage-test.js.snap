@@ -1,85 +1,64 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TipsPage /> should match the snapshot 1`] = `
-<ScrollViewMock
-  contentContainerStyle={
+<ForwardRef(View)
+  style={
     Object {
-      "flexGrow": 1,
-      "marginHorizontal": "5%",
+      "backgroundColor": "#F5F5F5",
+      "height": "100%",
     }
   }
 >
-  <withTheme(Text)
-    style={
+  <ScrollViewMock
+    contentContainerStyle={
       Object {
-        "fontSize": 16,
-        "marginVertical": "10%",
-        "textAlign": "center",
+        "flexGrow": 1,
+        "marginHorizontal": "5%",
       }
     }
   >
-    title
-  </withTheme(Text)>
-  <ForwardRef(View)>
-    <ForwardRef(View)
-      key="0"
+    <withTheme(Text)
       style={
         Object {
-          "backgroundColor": "white",
-          "borderColor": "#EFEFEF",
-          "borderRadius": 3,
-          "borderWidth": 1,
-          "elevation": 3,
-          "marginBottom": 2,
-          "marginTop": 1,
-          "shadowColor": "#000",
-          "shadowOffset": Object {
-            "height": 0.5,
-            "width": 0.02,
-          },
-          "shadowOpacity": 0.3,
-          "shadowRadius": 3,
+          "fontSize": 16,
+          "marginBottom": "10%",
+          "marginTop": "7%",
+          "textAlign": "center",
         }
       }
     >
-      <withTheme(List.Accordion)
-        theme={
+      title
+    </withTheme(Text)>
+    <ForwardRef(View)>
+      <ForwardRef(View)
+        key="0"
+        style={
           Object {
-            "colors": Object {
-              "text": "#E07926",
+            "backgroundColor": "white",
+            "borderColor": "#EFEFEF",
+            "borderRadius": 3,
+            "borderWidth": 1,
+            "elevation": 3,
+            "marginTop": 1,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 0.5,
+              "width": 0.02,
             },
+            "shadowOpacity": 0.3,
+            "shadowRadius": 3,
           }
-        }
-        title={
-          <withTheme(Text)
-            style={
-              Object {
-                "color": "#444545",
-                "fontSize": 16,
-              }
-            }
-          />
         }
       >
-        <withTheme(Card)
-          style={
+        <withTheme(List.Accordion)
+          theme={
             Object {
-              "backgroundColor": "white",
-              "borderTopColor": "#EFEFEF",
-              "borderTopWidth": 1,
-              "elevation": 3,
-              "marginTop": 3,
-              "shadowColor": "#000",
-              "shadowOffset": Object {
-                "height": -3,
-                "width": 0,
+              "colors": Object {
+                "text": "#E07926",
               },
-              "shadowOpacity": 0.3,
-              "shadowRadius": 1.8,
             }
           }
-        >
-          <Card.Content>
+          title={
             <withTheme(Text)
               style={
                 Object {
@@ -88,69 +67,68 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                 }
               }
             />
-          </Card.Content>
-        </withTheme(Card)>
-      </withTheme(List.Accordion)>
-    </ForwardRef(View)>
-    <ForwardRef(View)
-      key="1"
-      style={
-        Object {
-          "backgroundColor": "white",
-          "borderColor": "#EFEFEF",
-          "borderRadius": 3,
-          "borderWidth": 1,
-          "elevation": 3,
-          "marginBottom": 2,
-          "marginTop": 1,
-          "shadowColor": "#000",
-          "shadowOffset": Object {
-            "height": 0.5,
-            "width": 0.02,
-          },
-          "shadowOpacity": 0.3,
-          "shadowRadius": 3,
-        }
-      }
-    >
-      <withTheme(List.Accordion)
-        theme={
-          Object {
-            "colors": Object {
-              "text": "#E07926",
-            },
-          }
-        }
-        title={
-          <withTheme(Text)
-            style={
-              Object {
-                "color": "#444545",
-                "fontSize": 16,
-              }
-            }
-          />
-        }
-      >
-        <withTheme(Card)
-          style={
-            Object {
-              "backgroundColor": "white",
-              "borderTopColor": "#EFEFEF",
-              "borderTopWidth": 1,
-              "elevation": 3,
-              "marginTop": 3,
-              "shadowColor": "#000",
-              "shadowOffset": Object {
-                "height": -3,
-                "width": 0,
-              },
-              "shadowOpacity": 0.3,
-              "shadowRadius": 1.8,
-            }
           }
         >
-          <Card.Content>
+          <withTheme(Card)
+            style={
+              Object {
+                "backgroundColor": "white",
+                "borderTopColor": "#EFEFEF",
+                "borderTopWidth": 1,
+                "elevation": 3,
+                "marginTop": 3,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": -3,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 1.8,
+              }
+            }
+          >
+            <Card.Content>
+              <withTheme(Text)
+                style={
+                  Object {
+                    "color": "#444545",
+                    "fontSize": 16,
+                  }
+                }
+              />
+            </Card.Content>
+          </withTheme(Card)>
+        </withTheme(List.Accordion)>
+      </ForwardRef(View)>
+      <ForwardRef(View)
+        key="1"
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#EFEFEF",
+            "borderRadius": 3,
+            "borderWidth": 1,
+            "elevation": 3,
+            "marginTop": 1,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 0.5,
+              "width": 0.02,
+            },
+            "shadowOpacity": 0.3,
+            "shadowRadius": 3,
+          }
+        }
+      >
+        <withTheme(List.Accordion)
+          theme={
+            Object {
+              "colors": Object {
+                "text": "#E07926",
+              },
+            }
+          }
+          title={
             <withTheme(Text)
               style={
                 Object {
@@ -159,69 +137,68 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                 }
               }
             />
-          </Card.Content>
-        </withTheme(Card)>
-      </withTheme(List.Accordion)>
-    </ForwardRef(View)>
-    <ForwardRef(View)
-      key="2"
-      style={
-        Object {
-          "backgroundColor": "white",
-          "borderColor": "#EFEFEF",
-          "borderRadius": 3,
-          "borderWidth": 1,
-          "elevation": 3,
-          "marginBottom": 2,
-          "marginTop": 1,
-          "shadowColor": "#000",
-          "shadowOffset": Object {
-            "height": 0.5,
-            "width": 0.02,
-          },
-          "shadowOpacity": 0.3,
-          "shadowRadius": 3,
-        }
-      }
-    >
-      <withTheme(List.Accordion)
-        theme={
-          Object {
-            "colors": Object {
-              "text": "#E07926",
-            },
-          }
-        }
-        title={
-          <withTheme(Text)
-            style={
-              Object {
-                "color": "#444545",
-                "fontSize": 16,
-              }
-            }
-          />
-        }
-      >
-        <withTheme(Card)
-          style={
-            Object {
-              "backgroundColor": "white",
-              "borderTopColor": "#EFEFEF",
-              "borderTopWidth": 1,
-              "elevation": 3,
-              "marginTop": 3,
-              "shadowColor": "#000",
-              "shadowOffset": Object {
-                "height": -3,
-                "width": 0,
-              },
-              "shadowOpacity": 0.3,
-              "shadowRadius": 1.8,
-            }
           }
         >
-          <Card.Content>
+          <withTheme(Card)
+            style={
+              Object {
+                "backgroundColor": "white",
+                "borderTopColor": "#EFEFEF",
+                "borderTopWidth": 1,
+                "elevation": 3,
+                "marginTop": 3,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": -3,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 1.8,
+              }
+            }
+          >
+            <Card.Content>
+              <withTheme(Text)
+                style={
+                  Object {
+                    "color": "#444545",
+                    "fontSize": 16,
+                  }
+                }
+              />
+            </Card.Content>
+          </withTheme(Card)>
+        </withTheme(List.Accordion)>
+      </ForwardRef(View)>
+      <ForwardRef(View)
+        key="2"
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#EFEFEF",
+            "borderRadius": 3,
+            "borderWidth": 1,
+            "elevation": 3,
+            "marginTop": 1,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 0.5,
+              "width": 0.02,
+            },
+            "shadowOpacity": 0.3,
+            "shadowRadius": 3,
+          }
+        }
+      >
+        <withTheme(List.Accordion)
+          theme={
+            Object {
+              "colors": Object {
+                "text": "#E07926",
+              },
+            }
+          }
+          title={
             <withTheme(Text)
               style={
                 Object {
@@ -230,69 +207,68 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                 }
               }
             />
-          </Card.Content>
-        </withTheme(Card)>
-      </withTheme(List.Accordion)>
-    </ForwardRef(View)>
-    <ForwardRef(View)
-      key="3"
-      style={
-        Object {
-          "backgroundColor": "white",
-          "borderColor": "#EFEFEF",
-          "borderRadius": 3,
-          "borderWidth": 1,
-          "elevation": 3,
-          "marginBottom": 2,
-          "marginTop": 1,
-          "shadowColor": "#000",
-          "shadowOffset": Object {
-            "height": 0.5,
-            "width": 0.02,
-          },
-          "shadowOpacity": 0.3,
-          "shadowRadius": 3,
-        }
-      }
-    >
-      <withTheme(List.Accordion)
-        theme={
-          Object {
-            "colors": Object {
-              "text": "#E07926",
-            },
-          }
-        }
-        title={
-          <withTheme(Text)
-            style={
-              Object {
-                "color": "#444545",
-                "fontSize": 16,
-              }
-            }
-          />
-        }
-      >
-        <withTheme(Card)
-          style={
-            Object {
-              "backgroundColor": "white",
-              "borderTopColor": "#EFEFEF",
-              "borderTopWidth": 1,
-              "elevation": 3,
-              "marginTop": 3,
-              "shadowColor": "#000",
-              "shadowOffset": Object {
-                "height": -3,
-                "width": 0,
-              },
-              "shadowOpacity": 0.3,
-              "shadowRadius": 1.8,
-            }
           }
         >
-          <Card.Content>
+          <withTheme(Card)
+            style={
+              Object {
+                "backgroundColor": "white",
+                "borderTopColor": "#EFEFEF",
+                "borderTopWidth": 1,
+                "elevation": 3,
+                "marginTop": 3,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": -3,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 1.8,
+              }
+            }
+          >
+            <Card.Content>
+              <withTheme(Text)
+                style={
+                  Object {
+                    "color": "#444545",
+                    "fontSize": 16,
+                  }
+                }
+              />
+            </Card.Content>
+          </withTheme(Card)>
+        </withTheme(List.Accordion)>
+      </ForwardRef(View)>
+      <ForwardRef(View)
+        key="3"
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#EFEFEF",
+            "borderRadius": 3,
+            "borderWidth": 1,
+            "elevation": 3,
+            "marginTop": 1,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 0.5,
+              "width": 0.02,
+            },
+            "shadowOpacity": 0.3,
+            "shadowRadius": 3,
+          }
+        }
+      >
+        <withTheme(List.Accordion)
+          theme={
+            Object {
+              "colors": Object {
+                "text": "#E07926",
+              },
+            }
+          }
+          title={
             <withTheme(Text)
               style={
                 Object {
@@ -301,69 +277,68 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                 }
               }
             />
-          </Card.Content>
-        </withTheme(Card)>
-      </withTheme(List.Accordion)>
-    </ForwardRef(View)>
-    <ForwardRef(View)
-      key="4"
-      style={
-        Object {
-          "backgroundColor": "white",
-          "borderColor": "#EFEFEF",
-          "borderRadius": 3,
-          "borderWidth": 1,
-          "elevation": 3,
-          "marginBottom": 2,
-          "marginTop": 1,
-          "shadowColor": "#000",
-          "shadowOffset": Object {
-            "height": 0.5,
-            "width": 0.02,
-          },
-          "shadowOpacity": 0.3,
-          "shadowRadius": 3,
-        }
-      }
-    >
-      <withTheme(List.Accordion)
-        theme={
-          Object {
-            "colors": Object {
-              "text": "#E07926",
-            },
-          }
-        }
-        title={
-          <withTheme(Text)
-            style={
-              Object {
-                "color": "#444545",
-                "fontSize": 16,
-              }
-            }
-          />
-        }
-      >
-        <withTheme(Card)
-          style={
-            Object {
-              "backgroundColor": "white",
-              "borderTopColor": "#EFEFEF",
-              "borderTopWidth": 1,
-              "elevation": 3,
-              "marginTop": 3,
-              "shadowColor": "#000",
-              "shadowOffset": Object {
-                "height": -3,
-                "width": 0,
-              },
-              "shadowOpacity": 0.3,
-              "shadowRadius": 1.8,
-            }
           }
         >
-          <Card.Content>
+          <withTheme(Card)
+            style={
+              Object {
+                "backgroundColor": "white",
+                "borderTopColor": "#EFEFEF",
+                "borderTopWidth": 1,
+                "elevation": 3,
+                "marginTop": 3,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": -3,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 1.8,
+              }
+            }
+          >
+            <Card.Content>
+              <withTheme(Text)
+                style={
+                  Object {
+                    "color": "#444545",
+                    "fontSize": 16,
+                  }
+                }
+              />
+            </Card.Content>
+          </withTheme(Card)>
+        </withTheme(List.Accordion)>
+      </ForwardRef(View)>
+      <ForwardRef(View)
+        key="4"
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#EFEFEF",
+            "borderRadius": 3,
+            "borderWidth": 1,
+            "elevation": 3,
+            "marginTop": 1,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 0.5,
+              "width": 0.02,
+            },
+            "shadowOpacity": 0.3,
+            "shadowRadius": 3,
+          }
+        }
+      >
+        <withTheme(List.Accordion)
+          theme={
+            Object {
+              "colors": Object {
+                "text": "#E07926",
+              },
+            }
+          }
+          title={
             <withTheme(Text)
               style={
                 Object {
@@ -372,69 +347,68 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                 }
               }
             />
-          </Card.Content>
-        </withTheme(Card)>
-      </withTheme(List.Accordion)>
-    </ForwardRef(View)>
-    <ForwardRef(View)
-      key="5"
-      style={
-        Object {
-          "backgroundColor": "white",
-          "borderColor": "#EFEFEF",
-          "borderRadius": 3,
-          "borderWidth": 1,
-          "elevation": 3,
-          "marginBottom": 2,
-          "marginTop": 1,
-          "shadowColor": "#000",
-          "shadowOffset": Object {
-            "height": 0.5,
-            "width": 0.02,
-          },
-          "shadowOpacity": 0.3,
-          "shadowRadius": 3,
-        }
-      }
-    >
-      <withTheme(List.Accordion)
-        theme={
-          Object {
-            "colors": Object {
-              "text": "#E07926",
-            },
-          }
-        }
-        title={
-          <withTheme(Text)
-            style={
-              Object {
-                "color": "#444545",
-                "fontSize": 16,
-              }
-            }
-          />
-        }
-      >
-        <withTheme(Card)
-          style={
-            Object {
-              "backgroundColor": "white",
-              "borderTopColor": "#EFEFEF",
-              "borderTopWidth": 1,
-              "elevation": 3,
-              "marginTop": 3,
-              "shadowColor": "#000",
-              "shadowOffset": Object {
-                "height": -3,
-                "width": 0,
-              },
-              "shadowOpacity": 0.3,
-              "shadowRadius": 1.8,
-            }
           }
         >
-          <Card.Content>
+          <withTheme(Card)
+            style={
+              Object {
+                "backgroundColor": "white",
+                "borderTopColor": "#EFEFEF",
+                "borderTopWidth": 1,
+                "elevation": 3,
+                "marginTop": 3,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": -3,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 1.8,
+              }
+            }
+          >
+            <Card.Content>
+              <withTheme(Text)
+                style={
+                  Object {
+                    "color": "#444545",
+                    "fontSize": 16,
+                  }
+                }
+              />
+            </Card.Content>
+          </withTheme(Card)>
+        </withTheme(List.Accordion)>
+      </ForwardRef(View)>
+      <ForwardRef(View)
+        key="5"
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#EFEFEF",
+            "borderRadius": 3,
+            "borderWidth": 1,
+            "elevation": 3,
+            "marginTop": 1,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 0.5,
+              "width": 0.02,
+            },
+            "shadowOpacity": 0.3,
+            "shadowRadius": 3,
+          }
+        }
+      >
+        <withTheme(List.Accordion)
+          theme={
+            Object {
+              "colors": Object {
+                "text": "#E07926",
+              },
+            }
+          }
+          title={
             <withTheme(Text)
               style={
                 Object {
@@ -443,69 +417,68 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                 }
               }
             />
-          </Card.Content>
-        </withTheme(Card)>
-      </withTheme(List.Accordion)>
-    </ForwardRef(View)>
-    <ForwardRef(View)
-      key="6"
-      style={
-        Object {
-          "backgroundColor": "white",
-          "borderColor": "#EFEFEF",
-          "borderRadius": 3,
-          "borderWidth": 1,
-          "elevation": 3,
-          "marginBottom": 2,
-          "marginTop": 1,
-          "shadowColor": "#000",
-          "shadowOffset": Object {
-            "height": 0.5,
-            "width": 0.02,
-          },
-          "shadowOpacity": 0.3,
-          "shadowRadius": 3,
-        }
-      }
-    >
-      <withTheme(List.Accordion)
-        theme={
-          Object {
-            "colors": Object {
-              "text": "#E07926",
-            },
-          }
-        }
-        title={
-          <withTheme(Text)
-            style={
-              Object {
-                "color": "#444545",
-                "fontSize": 16,
-              }
-            }
-          />
-        }
-      >
-        <withTheme(Card)
-          style={
-            Object {
-              "backgroundColor": "white",
-              "borderTopColor": "#EFEFEF",
-              "borderTopWidth": 1,
-              "elevation": 3,
-              "marginTop": 3,
-              "shadowColor": "#000",
-              "shadowOffset": Object {
-                "height": -3,
-                "width": 0,
-              },
-              "shadowOpacity": 0.3,
-              "shadowRadius": 1.8,
-            }
           }
         >
-          <Card.Content>
+          <withTheme(Card)
+            style={
+              Object {
+                "backgroundColor": "white",
+                "borderTopColor": "#EFEFEF",
+                "borderTopWidth": 1,
+                "elevation": 3,
+                "marginTop": 3,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": -3,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 1.8,
+              }
+            }
+          >
+            <Card.Content>
+              <withTheme(Text)
+                style={
+                  Object {
+                    "color": "#444545",
+                    "fontSize": 16,
+                  }
+                }
+              />
+            </Card.Content>
+          </withTheme(Card)>
+        </withTheme(List.Accordion)>
+      </ForwardRef(View)>
+      <ForwardRef(View)
+        key="6"
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#EFEFEF",
+            "borderRadius": 3,
+            "borderWidth": 1,
+            "elevation": 3,
+            "marginTop": 1,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 0.5,
+              "width": 0.02,
+            },
+            "shadowOpacity": 0.3,
+            "shadowRadius": 3,
+          }
+        }
+      >
+        <withTheme(List.Accordion)
+          theme={
+            Object {
+              "colors": Object {
+                "text": "#E07926",
+              },
+            }
+          }
+          title={
             <withTheme(Text)
               style={
                 Object {
@@ -514,69 +487,68 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                 }
               }
             />
-          </Card.Content>
-        </withTheme(Card)>
-      </withTheme(List.Accordion)>
-    </ForwardRef(View)>
-    <ForwardRef(View)
-      key="7"
-      style={
-        Object {
-          "backgroundColor": "white",
-          "borderColor": "#EFEFEF",
-          "borderRadius": 3,
-          "borderWidth": 1,
-          "elevation": 3,
-          "marginBottom": 2,
-          "marginTop": 1,
-          "shadowColor": "#000",
-          "shadowOffset": Object {
-            "height": 0.5,
-            "width": 0.02,
-          },
-          "shadowOpacity": 0.3,
-          "shadowRadius": 3,
-        }
-      }
-    >
-      <withTheme(List.Accordion)
-        theme={
-          Object {
-            "colors": Object {
-              "text": "#E07926",
-            },
-          }
-        }
-        title={
-          <withTheme(Text)
-            style={
-              Object {
-                "color": "#444545",
-                "fontSize": 16,
-              }
-            }
-          />
-        }
-      >
-        <withTheme(Card)
-          style={
-            Object {
-              "backgroundColor": "white",
-              "borderTopColor": "#EFEFEF",
-              "borderTopWidth": 1,
-              "elevation": 3,
-              "marginTop": 3,
-              "shadowColor": "#000",
-              "shadowOffset": Object {
-                "height": -3,
-                "width": 0,
-              },
-              "shadowOpacity": 0.3,
-              "shadowRadius": 1.8,
-            }
           }
         >
-          <Card.Content>
+          <withTheme(Card)
+            style={
+              Object {
+                "backgroundColor": "white",
+                "borderTopColor": "#EFEFEF",
+                "borderTopWidth": 1,
+                "elevation": 3,
+                "marginTop": 3,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": -3,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 1.8,
+              }
+            }
+          >
+            <Card.Content>
+              <withTheme(Text)
+                style={
+                  Object {
+                    "color": "#444545",
+                    "fontSize": 16,
+                  }
+                }
+              />
+            </Card.Content>
+          </withTheme(Card)>
+        </withTheme(List.Accordion)>
+      </ForwardRef(View)>
+      <ForwardRef(View)
+        key="7"
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#EFEFEF",
+            "borderRadius": 3,
+            "borderWidth": 1,
+            "elevation": 3,
+            "marginTop": 1,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 0.5,
+              "width": 0.02,
+            },
+            "shadowOpacity": 0.3,
+            "shadowRadius": 3,
+          }
+        }
+      >
+        <withTheme(List.Accordion)
+          theme={
+            Object {
+              "colors": Object {
+                "text": "#E07926",
+              },
+            }
+          }
+          title={
             <withTheme(Text)
               style={
                 Object {
@@ -585,69 +557,68 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                 }
               }
             />
-          </Card.Content>
-        </withTheme(Card)>
-      </withTheme(List.Accordion)>
-    </ForwardRef(View)>
-    <ForwardRef(View)
-      key="8"
-      style={
-        Object {
-          "backgroundColor": "white",
-          "borderColor": "#EFEFEF",
-          "borderRadius": 3,
-          "borderWidth": 1,
-          "elevation": 3,
-          "marginBottom": 2,
-          "marginTop": 1,
-          "shadowColor": "#000",
-          "shadowOffset": Object {
-            "height": 0.5,
-            "width": 0.02,
-          },
-          "shadowOpacity": 0.3,
-          "shadowRadius": 3,
-        }
-      }
-    >
-      <withTheme(List.Accordion)
-        theme={
-          Object {
-            "colors": Object {
-              "text": "#E07926",
-            },
-          }
-        }
-        title={
-          <withTheme(Text)
-            style={
-              Object {
-                "color": "#444545",
-                "fontSize": 16,
-              }
-            }
-          />
-        }
-      >
-        <withTheme(Card)
-          style={
-            Object {
-              "backgroundColor": "white",
-              "borderTopColor": "#EFEFEF",
-              "borderTopWidth": 1,
-              "elevation": 3,
-              "marginTop": 3,
-              "shadowColor": "#000",
-              "shadowOffset": Object {
-                "height": -3,
-                "width": 0,
-              },
-              "shadowOpacity": 0.3,
-              "shadowRadius": 1.8,
-            }
           }
         >
-          <Card.Content>
+          <withTheme(Card)
+            style={
+              Object {
+                "backgroundColor": "white",
+                "borderTopColor": "#EFEFEF",
+                "borderTopWidth": 1,
+                "elevation": 3,
+                "marginTop": 3,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": -3,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 1.8,
+              }
+            }
+          >
+            <Card.Content>
+              <withTheme(Text)
+                style={
+                  Object {
+                    "color": "#444545",
+                    "fontSize": 16,
+                  }
+                }
+              />
+            </Card.Content>
+          </withTheme(Card)>
+        </withTheme(List.Accordion)>
+      </ForwardRef(View)>
+      <ForwardRef(View)
+        key="8"
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "#EFEFEF",
+            "borderRadius": 3,
+            "borderWidth": 1,
+            "elevation": 3,
+            "marginTop": 1,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 0.5,
+              "width": 0.02,
+            },
+            "shadowOpacity": 0.3,
+            "shadowRadius": 3,
+          }
+        }
+      >
+        <withTheme(List.Accordion)
+          theme={
+            Object {
+              "colors": Object {
+                "text": "#E07926",
+              },
+            }
+          }
+          title={
             <withTheme(Text)
               style={
                 Object {
@@ -656,10 +627,40 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                 }
               }
             />
-          </Card.Content>
-        </withTheme(Card)>
-      </withTheme(List.Accordion)>
+          }
+        >
+          <withTheme(Card)
+            style={
+              Object {
+                "backgroundColor": "white",
+                "borderTopColor": "#EFEFEF",
+                "borderTopWidth": 1,
+                "elevation": 3,
+                "marginTop": 3,
+                "shadowColor": "#000",
+                "shadowOffset": Object {
+                  "height": -3,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.2,
+                "shadowRadius": 1.8,
+              }
+            }
+          >
+            <Card.Content>
+              <withTheme(Text)
+                style={
+                  Object {
+                    "color": "#444545",
+                    "fontSize": 16,
+                  }
+                }
+              />
+            </Card.Content>
+          </withTheme(Card)>
+        </withTheme(List.Accordion)>
+      </ForwardRef(View)>
     </ForwardRef(View)>
-  </ForwardRef(View)>
-</ScrollViewMock>
+  </ScrollViewMock>
+</ForwardRef(View)>
 `;
