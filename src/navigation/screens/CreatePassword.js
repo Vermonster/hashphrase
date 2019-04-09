@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Appbar, Snackbar } from 'react-native-paper';
+import { Switch, Snackbar, IconButton } from 'react-native-paper';
 import {
   View,
   Text,
@@ -19,10 +19,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.background,
-  },
-  header: {
-    backgroundColor: colors.white,
-    zIndex: 100,
   },
   innerContainer: {
     flex: 1,
@@ -53,7 +49,14 @@ const styles = StyleSheet.create({
 
 class CreateNewPassword extends Component {
  static navigationOptions = ({ navigation }) => ({
-   headerTitle: ( <LogoTitle /> ),
+   headerTitle: <LogoTitle />,
+   headerRight: (
+     <IconButton
+       icon="info"
+       color={colors.primary}
+       onPress={() => navigation.navigate('TipsPage')}
+     />
+   ),
  });
 
 state = {
@@ -70,12 +73,12 @@ handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
   hideSnackbar = () => this.setState({ snackbarVisibility: false });
 
   render() {
-    const { t, navigation } = this.props;
+    const { t } = this.props;
     const { isNewPassword, snackbarVisibility } = this.state;
 
     return (
       <SafeAreaView style={styles.container}>
-       <KeyboardAvoidingView
+        <KeyboardAvoidingView
           behavior="padding"
           keyboardVerticalOffset={100}
           style={styles.flexLayout}

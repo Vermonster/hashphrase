@@ -6,20 +6,22 @@ import Logo from '../styles/icons';
 
 const styles = StyleSheet.create({
   container: {
-    width: '100%',
+    height: 50,
+    alignItems: 'center',
+    width: '50%',
+    flex: 1,
+    flexDirection: 'row',
   },
-  logo: {
-    alignSelf: 'flex-start',
-  }
-})
+  title: {
+    marginLeft: 10,
+  },
+});
 
-export default class LogoTitle extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Logo style={styles.logo} />
-        <Text>Hashphrase</Text>
-      </View>
-    );
-  }
-}
+const LogoTitle = () => (
+  <View style={styles.container}>
+    <Logo style={styles.logo} />
+    <Text style={styles.title}>Hashphrase</Text>
+  </View>
+);
+
+export default LogoTitle;
