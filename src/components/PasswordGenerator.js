@@ -83,6 +83,22 @@ class PasswordGenerator extends React.Component {
     this.showModal();
   }
 
+  confirmEntry(inputType) {
+    const { label, password, confirmPassword } = this.state;
+    let status = null;
+    if (inputType === 'label') {
+      status = (label.length > 0);
+    } else if (inputType === 'password') {
+      status = (password.length > 0);
+    } else if (inputType === 'confirmPassword') {
+      status = (password === confirmPassword);
+    }
+    this.setState((prevProps) => {
+      
+    });
+    return status;
+  }
+
   render() {
     const {
       generatedPassword, disabled, modalVisibility, inputError, label, password, confirmPassword,

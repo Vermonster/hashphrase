@@ -44,7 +44,7 @@ class FormInput extends React.Component {
 
   render() {
     const {
-      placeholderText, prompt, value, handleChange, label, componentType, error,
+      placeholderText, prompt, value, handleChange, label, componentType, error, onBlur,
     } = this.props;
     const { visible } = this.state;
     const visibilityIcon = visible ? 'visibility' : 'visibility-off';
@@ -80,6 +80,7 @@ class FormInput extends React.Component {
           />
           { buttonType }
         </View>
+        {onBlur && <Text>Testing</Text>}
       </View>
     );
   }
