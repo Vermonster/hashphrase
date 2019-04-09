@@ -16,7 +16,8 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 16,
     textAlign: 'center',
-    marginVertical: '10%',
+    marginTop: '7%',
+    marginBottom: '10%',
   },
   outerCard: {
     borderTopColor: colors.borderColor,
@@ -28,7 +29,7 @@ const styles = StyleSheet.create({
       width: 0,
       height: -3,
     },
-    shadowOpacity: 0.3,
+    shadowOpacity: 0.2,
     shadowRadius: 1.8,
     elevation: 3,
   },
@@ -38,7 +39,6 @@ const styles = StyleSheet.create({
     borderRadius: 3,
     borderWidth: 1,
     marginTop: 1,
-    marginBottom: 2,
     shadowColor: '#000',
     shadowOffset: {
       width: 0.02,
