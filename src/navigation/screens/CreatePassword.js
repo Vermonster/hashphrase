@@ -56,7 +56,7 @@ class CreateNewPassword extends Component {
        color={colors.primary}
        onPress={() => navigation.navigate('TipsPage')}
      />
-   )
+   ),
  });
 
 state = {
