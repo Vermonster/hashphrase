@@ -7,14 +7,12 @@ import { colors } from '../../styles/base';
 const styles = StyleSheet.create({
   scrollContainer: {
     flexGrow: 1,
-    marginLeft: '5%',
-    marginRight: '5%',
-    marginTop: '10%',
+    marginHorizontal: '5%',
   },
   title: {
     fontSize: 16,
     textAlign: 'center',
-    marginBottom: '5%',
+    marginVertical: '10%',
   },
   cardContent: {
     color: colors.darkGray,
