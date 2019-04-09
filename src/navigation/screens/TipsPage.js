@@ -14,6 +14,36 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginVertical: '10%',
   },
+  outerCard: {
+    borderTopColor: colors.borderColor,
+    borderTopWidth: 1,
+    backgroundColor: 'white',
+    marginTop: 3,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: -3,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 1.8,
+    elevation: 3,
+  },
+  accordionWrapper: {
+    backgroundColor: 'white',
+    borderColor: colors.borderColor,
+    borderRadius: 3,
+    borderWidth: 1,
+    marginTop: 1,
+    marginBottom: 2,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0.02,
+      height: 0.5,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 3,
+    elevation: 3,
+  },
   cardContent: {
     color: colors.darkGray,
     fontSize: 16,
@@ -31,49 +61,13 @@ class TipsPage extends React.Component {
   questionMap = (questions, questionObject) => questions.map(question => (
     <View
       key={question}
-      style={{
-        backgroundColor: 'white',
-        borderColor: colors.borderColor,
-        borderRadius: 3,
-        borderWidth: 1,
-        marginTop: 1,
-        marginBottom: 2,
-        shadowColor: '#000',
-        shadowOffset: {
-          width: 0.02,
-          height: 0.5,
-        },
-        shadowOpacity: 0.3,
-        shadowRadius: 3,
-        elevation: 3,
-      }}
+      style={styles.accordionWrapper}
     >
       <List.Accordion
-        theme={
-          {
-            colors:
-            {
-              text: colors.primary,
-            },
-          }
-        }
-        title={<Text style={{ color: colors.darkGray }}>{questionObject[question].title}</Text>}
+        theme={{ colors: { text: colors.primary } }}
+        title={<Text style={styles.cardContent}>{questionObject[question].title}</Text>}
       >
-        <Card style={{
-          borderTopColor: colors.borderColor,
-          borderTopWidth: 1,
-          backgroundColor: 'white',
-          marginTop: 3,
-          shadowColor: '#000',
-          shadowOffset: {
-            width: 0,
-            height: -3,
-          },
-          shadowOpacity: 0.3,
-          shadowRadius: 1.8,
-          elevation: 3,
-        }}
-        >
+        <Card style={styles.outerCard}>
           <Card.Content>
             <Text style={styles.cardContent}>
               {questionObject[question].content}
