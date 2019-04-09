@@ -28,6 +28,7 @@ const AppStackNavigator = createStackNavigator(
   {
     initialRouteName: 'PasswordScreen',
     headerLayoutPreset: 'left',
+    headerBackTitleVisible: true,
   },
 );
 
