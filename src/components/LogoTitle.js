@@ -6,7 +6,7 @@ import Logo from '../styles/icons';
 
 const styles = StyleSheet.create({
   container: {
-    height: 50,
+    height: '100%',
     alignItems: 'center',
     width: '50%',
     flex: 1,
