@@ -1,7 +1,8 @@
 import React from 'react';
 import { withNamespaces } from 'react-i18next';
-import { ScrollView, StyleSheet, View, Platform } from 'react-native';
-import { LinearGradient } from 'expo';
+import {
+  ScrollView, StyleSheet, View,
+} from 'react-native';
 import { List, Text, Card } from 'react-native-paper';
 import { colors } from '../../styles/base';
 
