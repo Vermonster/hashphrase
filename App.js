@@ -20,13 +20,17 @@ const theme = {
   },
 };
 
-const AppStackNavigator = createStackNavigator({
-  PasswordScreen: { screen: CreatePassword },
-  TipsPage: { screen: TipsPage },
-},
-{
-  initialRouteName: 'PasswordScreen',
-});
+const AppStackNavigator = createStackNavigator(
+  {
+    PasswordScreen: { screen: CreatePassword },
+    TipsPage: { screen: TipsPage },
+  },
+  {
+    initialRouteName: 'PasswordScreen',
+    headerLayoutPreset: 'left',
+    headerBackTitleVisible: true,
+  },
+);
 
 const AppContainer = createAppContainer(AppStackNavigator);
 
