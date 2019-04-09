@@ -1,6 +1,7 @@
 import React from 'react';
 import { withNamespaces } from 'react-i18next';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, View, Platform } from 'react-native';
+import { LinearGradient } from 'expo';
 import { List, Text, Card } from 'react-native-paper';
 import { colors } from '../../styles/base';
 
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
     marginTop: 3,
     shadowColor: '#000',
     shadowOffset: {
-      width: 0,
+      width: 1,
       height: -3,
     },
     shadowOpacity: 0.2,
@@ -37,16 +38,15 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderColor: colors.borderColor,
     borderRadius: 3,
-    borderWidth: 1,
-    marginTop: 1,
+    marginTop: 0.5,
     shadowColor: '#000',
     shadowOffset: {
-      width: 0.02,
+      width: 1,
       height: 0.5,
     },
     shadowOpacity: 0.3,
     shadowRadius: 3,
-    elevation: 3,
+    elevation: 5,
   },
   cardContent: {
     color: colors.darkGray,
