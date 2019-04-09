@@ -5,9 +5,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
   contentContainerStyle={
     Object {
       "flexGrow": 1,
-      "marginLeft": "5%",
-      "marginRight": "5%",
-      "marginTop": "10%",
+      "marginHorizontal": "5%",
     }
   }
 >
@@ -15,7 +13,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
     style={
       Object {
         "fontSize": 16,
-        "marginBottom": "5%",
+        "marginVertical": "10%",
         "textAlign": "center",
       }
     }
@@ -57,6 +55,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             style={
               Object {
                 "color": "#444545",
+                "fontSize": 16,
               }
             }
           />
@@ -127,6 +126,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             style={
               Object {
                 "color": "#444545",
+                "fontSize": 16,
               }
             }
           />
@@ -197,6 +197,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             style={
               Object {
                 "color": "#444545",
+                "fontSize": 16,
               }
             }
           />
@@ -267,6 +268,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             style={
               Object {
                 "color": "#444545",
+                "fontSize": 16,
               }
             }
           />
@@ -337,6 +339,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             style={
               Object {
                 "color": "#444545",
+                "fontSize": 16,
               }
             }
           />
@@ -407,6 +410,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             style={
               Object {
                 "color": "#444545",
+                "fontSize": 16,
               }
             }
           />
@@ -477,6 +481,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             style={
               Object {
                 "color": "#444545",
+                "fontSize": 16,
               }
             }
           />
@@ -547,6 +552,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             style={
               Object {
                 "color": "#444545",
+                "fontSize": 16,
               }
             }
           />
@@ -617,6 +623,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             style={
               Object {
                 "color": "#444545",
+                "fontSize": 16,
               }
             }
           />
