@@ -7,6 +7,7 @@ import { colors } from '../../styles/base';
 const styles = StyleSheet.create({
   backgroundContainer: {
     backgroundColor: colors.background,
+    height: '100%',
   },
   scrollContainer: {
     flexGrow: 1,
