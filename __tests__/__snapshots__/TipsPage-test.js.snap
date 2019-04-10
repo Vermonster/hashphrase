@@ -12,15 +12,18 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
   <ScrollViewMock
     contentContainerStyle={
       Object {
+        "borderBottomWidth": 1,
+        "borderColor": "#A0A2B1",
+        "borderTopWidth": 1,
         "flexGrow": 1,
-        "marginHorizontal": "5%",
       }
     }
   >
     <withTheme(Text)
       style={
         Object {
-          "fontSize": 16,
+          "color": "#212A59",
+          "fontSize": 24,
           "marginBottom": "10%",
           "marginTop": "7%",
           "textAlign": "center",
@@ -35,17 +38,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
         style={
           Object {
             "backgroundColor": "white",
-            "borderColor": "#EFEFEF",
-            "borderRadius": 3,
-            "elevation": 5,
-            "marginTop": 0.5,
-            "shadowColor": "#000",
-            "shadowOffset": Object {
-              "height": 0.5,
-              "width": 1,
-            },
-            "shadowOpacity": 0.3,
-            "shadowRadius": 3,
+            "borderColor": "#A0A2B1",
+            "borderWidth": 0.5,
+            "paddingHorizontal": 10,
           }
         }
       >
@@ -53,7 +48,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
           theme={
             Object {
               "colors": Object {
-                "text": "#E07926",
+                "text": "#212A59",
               },
             }
           }
@@ -61,8 +56,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             <withTheme(Text)
               style={
                 Object {
-                  "color": "#444545",
+                  "color": "#212A59",
                   "fontSize": 16,
+                  "lineHeight": 21,
                 }
               }
             />
@@ -72,17 +68,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             style={
               Object {
                 "backgroundColor": "white",
-                "borderTopColor": "#EFEFEF",
-                "borderTopWidth": 1,
-                "elevation": 3,
-                "marginTop": 3,
-                "shadowColor": "#000",
-                "shadowOffset": Object {
-                  "height": -3,
-                  "width": 1,
-                },
-                "shadowOpacity": 0.2,
-                "shadowRadius": 1.8,
+                "elevation": 0,
+                "marginTop": -8,
+                "shadowOpacity": 0,
               }
             }
           >
@@ -90,8 +78,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               <withTheme(Text)
                 style={
                   Object {
-                    "color": "#444545",
+                    "color": "#212A59",
                     "fontSize": 16,
+                    "lineHeight": 21,
                   }
                 }
               />
@@ -104,17 +93,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
         style={
           Object {
             "backgroundColor": "white",
-            "borderColor": "#EFEFEF",
-            "borderRadius": 3,
-            "elevation": 5,
-            "marginTop": 0.5,
-            "shadowColor": "#000",
-            "shadowOffset": Object {
-              "height": 0.5,
-              "width": 1,
-            },
-            "shadowOpacity": 0.3,
-            "shadowRadius": 3,
+            "borderColor": "#A0A2B1",
+            "borderWidth": 0.5,
+            "paddingHorizontal": 10,
           }
         }
       >
@@ -122,7 +103,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
           theme={
             Object {
               "colors": Object {
-                "text": "#E07926",
+                "text": "#212A59",
               },
             }
           }
@@ -130,8 +111,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             <withTheme(Text)
               style={
                 Object {
-                  "color": "#444545",
+                  "color": "#212A59",
                   "fontSize": 16,
+                  "lineHeight": 21,
                 }
               }
             />
@@ -141,17 +123,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             style={
               Object {
                 "backgroundColor": "white",
-                "borderTopColor": "#EFEFEF",
-                "borderTopWidth": 1,
-                "elevation": 3,
-                "marginTop": 3,
-                "shadowColor": "#000",
-                "shadowOffset": Object {
-                  "height": -3,
-                  "width": 1,
-                },
-                "shadowOpacity": 0.2,
-                "shadowRadius": 1.8,
+                "elevation": 0,
+                "marginTop": -8,
+                "shadowOpacity": 0,
               }
             }
           >
@@ -159,8 +133,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               <withTheme(Text)
                 style={
                   Object {
-                    "color": "#444545",
+                    "color": "#212A59",
                     "fontSize": 16,
+                    "lineHeight": 21,
                   }
                 }
               />
@@ -173,17 +148,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
         style={
           Object {
             "backgroundColor": "white",
-            "borderColor": "#EFEFEF",
-            "borderRadius": 3,
-            "elevation": 5,
-            "marginTop": 0.5,
-            "shadowColor": "#000",
-            "shadowOffset": Object {
-              "height": 0.5,
-              "width": 1,
-            },
-            "shadowOpacity": 0.3,
-            "shadowRadius": 3,
+            "borderColor": "#A0A2B1",
+            "borderWidth": 0.5,
+            "paddingHorizontal": 10,
           }
         }
       >
@@ -191,7 +158,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
           theme={
             Object {
               "colors": Object {
-                "text": "#E07926",
+                "text": "#212A59",
               },
             }
           }
@@ -199,8 +166,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             <withTheme(Text)
               style={
                 Object {
-                  "color": "#444545",
+                  "color": "#212A59",
                   "fontSize": 16,
+                  "lineHeight": 21,
                 }
               }
             />
@@ -210,17 +178,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             style={
               Object {
                 "backgroundColor": "white",
-                "borderTopColor": "#EFEFEF",
-                "borderTopWidth": 1,
-                "elevation": 3,
-                "marginTop": 3,
-                "shadowColor": "#000",
-                "shadowOffset": Object {
-                  "height": -3,
-                  "width": 1,
-                },
-                "shadowOpacity": 0.2,
-                "shadowRadius": 1.8,
+                "elevation": 0,
+                "marginTop": -8,
+                "shadowOpacity": 0,
               }
             }
           >
@@ -228,8 +188,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               <withTheme(Text)
                 style={
                   Object {
-                    "color": "#444545",
+                    "color": "#212A59",
                     "fontSize": 16,
+                    "lineHeight": 21,
                   }
                 }
               />
@@ -242,17 +203,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
         style={
           Object {
             "backgroundColor": "white",
-            "borderColor": "#EFEFEF",
-            "borderRadius": 3,
-            "elevation": 5,
-            "marginTop": 0.5,
-            "shadowColor": "#000",
-            "shadowOffset": Object {
-              "height": 0.5,
-              "width": 1,
-            },
-            "shadowOpacity": 0.3,
-            "shadowRadius": 3,
+            "borderColor": "#A0A2B1",
+            "borderWidth": 0.5,
+            "paddingHorizontal": 10,
           }
         }
       >
@@ -260,7 +213,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
           theme={
             Object {
               "colors": Object {
-                "text": "#E07926",
+                "text": "#212A59",
               },
             }
           }
@@ -268,8 +221,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             <withTheme(Text)
               style={
                 Object {
-                  "color": "#444545",
+                  "color": "#212A59",
                   "fontSize": 16,
+                  "lineHeight": 21,
                 }
               }
             />
@@ -279,17 +233,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             style={
               Object {
                 "backgroundColor": "white",
-                "borderTopColor": "#EFEFEF",
-                "borderTopWidth": 1,
-                "elevation": 3,
-                "marginTop": 3,
-                "shadowColor": "#000",
-                "shadowOffset": Object {
-                  "height": -3,
-                  "width": 1,
-                },
-                "shadowOpacity": 0.2,
-                "shadowRadius": 1.8,
+                "elevation": 0,
+                "marginTop": -8,
+                "shadowOpacity": 0,
               }
             }
           >
@@ -297,8 +243,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               <withTheme(Text)
                 style={
                   Object {
-                    "color": "#444545",
+                    "color": "#212A59",
                     "fontSize": 16,
+                    "lineHeight": 21,
                   }
                 }
               />
@@ -311,17 +258,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
         style={
           Object {
             "backgroundColor": "white",
-            "borderColor": "#EFEFEF",
-            "borderRadius": 3,
-            "elevation": 5,
-            "marginTop": 0.5,
-            "shadowColor": "#000",
-            "shadowOffset": Object {
-              "height": 0.5,
-              "width": 1,
-            },
-            "shadowOpacity": 0.3,
-            "shadowRadius": 3,
+            "borderColor": "#A0A2B1",
+            "borderWidth": 0.5,
+            "paddingHorizontal": 10,
           }
         }
       >
@@ -329,7 +268,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
           theme={
             Object {
               "colors": Object {
-                "text": "#E07926",
+                "text": "#212A59",
               },
             }
           }
@@ -337,8 +276,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             <withTheme(Text)
               style={
                 Object {
-                  "color": "#444545",
+                  "color": "#212A59",
                   "fontSize": 16,
+                  "lineHeight": 21,
                 }
               }
             />
@@ -348,17 +288,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             style={
               Object {
                 "backgroundColor": "white",
-                "borderTopColor": "#EFEFEF",
-                "borderTopWidth": 1,
-                "elevation": 3,
-                "marginTop": 3,
-                "shadowColor": "#000",
-                "shadowOffset": Object {
-                  "height": -3,
-                  "width": 1,
-                },
-                "shadowOpacity": 0.2,
-                "shadowRadius": 1.8,
+                "elevation": 0,
+                "marginTop": -8,
+                "shadowOpacity": 0,
               }
             }
           >
@@ -366,8 +298,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               <withTheme(Text)
                 style={
                   Object {
-                    "color": "#444545",
+                    "color": "#212A59",
                     "fontSize": 16,
+                    "lineHeight": 21,
                   }
                 }
               />
@@ -380,17 +313,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
         style={
           Object {
             "backgroundColor": "white",
-            "borderColor": "#EFEFEF",
-            "borderRadius": 3,
-            "elevation": 5,
-            "marginTop": 0.5,
-            "shadowColor": "#000",
-            "shadowOffset": Object {
-              "height": 0.5,
-              "width": 1,
-            },
-            "shadowOpacity": 0.3,
-            "shadowRadius": 3,
+            "borderColor": "#A0A2B1",
+            "borderWidth": 0.5,
+            "paddingHorizontal": 10,
           }
         }
       >
@@ -398,7 +323,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
           theme={
             Object {
               "colors": Object {
-                "text": "#E07926",
+                "text": "#212A59",
               },
             }
           }
@@ -406,8 +331,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             <withTheme(Text)
               style={
                 Object {
-                  "color": "#444545",
+                  "color": "#212A59",
                   "fontSize": 16,
+                  "lineHeight": 21,
                 }
               }
             />
@@ -417,17 +343,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             style={
               Object {
                 "backgroundColor": "white",
-                "borderTopColor": "#EFEFEF",
-                "borderTopWidth": 1,
-                "elevation": 3,
-                "marginTop": 3,
-                "shadowColor": "#000",
-                "shadowOffset": Object {
-                  "height": -3,
-                  "width": 1,
-                },
-                "shadowOpacity": 0.2,
-                "shadowRadius": 1.8,
+                "elevation": 0,
+                "marginTop": -8,
+                "shadowOpacity": 0,
               }
             }
           >
@@ -435,8 +353,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               <withTheme(Text)
                 style={
                   Object {
-                    "color": "#444545",
+                    "color": "#212A59",
                     "fontSize": 16,
+                    "lineHeight": 21,
                   }
                 }
               />
@@ -449,17 +368,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
         style={
           Object {
             "backgroundColor": "white",
-            "borderColor": "#EFEFEF",
-            "borderRadius": 3,
-            "elevation": 5,
-            "marginTop": 0.5,
-            "shadowColor": "#000",
-            "shadowOffset": Object {
-              "height": 0.5,
-              "width": 1,
-            },
-            "shadowOpacity": 0.3,
-            "shadowRadius": 3,
+            "borderColor": "#A0A2B1",
+            "borderWidth": 0.5,
+            "paddingHorizontal": 10,
           }
         }
       >
@@ -467,7 +378,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
           theme={
             Object {
               "colors": Object {
-                "text": "#E07926",
+                "text": "#212A59",
               },
             }
           }
@@ -475,8 +386,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             <withTheme(Text)
               style={
                 Object {
-                  "color": "#444545",
+                  "color": "#212A59",
                   "fontSize": 16,
+                  "lineHeight": 21,
                 }
               }
             />
@@ -486,17 +398,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             style={
               Object {
                 "backgroundColor": "white",
-                "borderTopColor": "#EFEFEF",
-                "borderTopWidth": 1,
-                "elevation": 3,
-                "marginTop": 3,
-                "shadowColor": "#000",
-                "shadowOffset": Object {
-                  "height": -3,
-                  "width": 1,
-                },
-                "shadowOpacity": 0.2,
-                "shadowRadius": 1.8,
+                "elevation": 0,
+                "marginTop": -8,
+                "shadowOpacity": 0,
               }
             }
           >
@@ -504,8 +408,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               <withTheme(Text)
                 style={
                   Object {
-                    "color": "#444545",
+                    "color": "#212A59",
                     "fontSize": 16,
+                    "lineHeight": 21,
                   }
                 }
               />
@@ -518,17 +423,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
         style={
           Object {
             "backgroundColor": "white",
-            "borderColor": "#EFEFEF",
-            "borderRadius": 3,
-            "elevation": 5,
-            "marginTop": 0.5,
-            "shadowColor": "#000",
-            "shadowOffset": Object {
-              "height": 0.5,
-              "width": 1,
-            },
-            "shadowOpacity": 0.3,
-            "shadowRadius": 3,
+            "borderColor": "#A0A2B1",
+            "borderWidth": 0.5,
+            "paddingHorizontal": 10,
           }
         }
       >
@@ -536,7 +433,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
           theme={
             Object {
               "colors": Object {
-                "text": "#E07926",
+                "text": "#212A59",
               },
             }
           }
@@ -544,8 +441,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             <withTheme(Text)
               style={
                 Object {
-                  "color": "#444545",
+                  "color": "#212A59",
                   "fontSize": 16,
+                  "lineHeight": 21,
                 }
               }
             />
@@ -555,17 +453,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             style={
               Object {
                 "backgroundColor": "white",
-                "borderTopColor": "#EFEFEF",
-                "borderTopWidth": 1,
-                "elevation": 3,
-                "marginTop": 3,
-                "shadowColor": "#000",
-                "shadowOffset": Object {
-                  "height": -3,
-                  "width": 1,
-                },
-                "shadowOpacity": 0.2,
-                "shadowRadius": 1.8,
+                "elevation": 0,
+                "marginTop": -8,
+                "shadowOpacity": 0,
               }
             }
           >
@@ -573,8 +463,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               <withTheme(Text)
                 style={
                   Object {
-                    "color": "#444545",
+                    "color": "#212A59",
                     "fontSize": 16,
+                    "lineHeight": 21,
                   }
                 }
               />
@@ -587,17 +478,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
         style={
           Object {
             "backgroundColor": "white",
-            "borderColor": "#EFEFEF",
-            "borderRadius": 3,
-            "elevation": 5,
-            "marginTop": 0.5,
-            "shadowColor": "#000",
-            "shadowOffset": Object {
-              "height": 0.5,
-              "width": 1,
-            },
-            "shadowOpacity": 0.3,
-            "shadowRadius": 3,
+            "borderColor": "#A0A2B1",
+            "borderWidth": 0.5,
+            "paddingHorizontal": 10,
           }
         }
       >
@@ -605,7 +488,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
           theme={
             Object {
               "colors": Object {
-                "text": "#E07926",
+                "text": "#212A59",
               },
             }
           }
@@ -613,8 +496,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             <withTheme(Text)
               style={
                 Object {
-                  "color": "#444545",
+                  "color": "#212A59",
                   "fontSize": 16,
+                  "lineHeight": 21,
                 }
               }
             />
@@ -624,17 +508,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             style={
               Object {
                 "backgroundColor": "white",
-                "borderTopColor": "#EFEFEF",
-                "borderTopWidth": 1,
-                "elevation": 3,
-                "marginTop": 3,
-                "shadowColor": "#000",
-                "shadowOffset": Object {
-                  "height": -3,
-                  "width": 1,
-                },
-                "shadowOpacity": 0.2,
-                "shadowRadius": 1.8,
+                "elevation": 0,
+                "marginTop": -8,
+                "shadowOpacity": 0,
               }
             }
           >
@@ -642,8 +518,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               <withTheme(Text)
                 style={
                   Object {
-                    "color": "#444545",
+                    "color": "#212A59",
                     "fontSize": 16,
+                    "lineHeight": 21,
                   }
                 }
               />
