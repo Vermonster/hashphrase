@@ -8,6 +8,7 @@ export const colors = {
   borderColor: '#EFEFEF',
   white: '#FFF',
   modalBackground: 'rgba(0, 0, 0, 0.5)',
+  tipsPageBorder: '#A0A2B1',
 };
 
 export const fontSize = {
