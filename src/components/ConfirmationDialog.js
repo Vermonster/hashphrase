@@ -130,6 +130,7 @@ class ConfirmationDialog extends React.Component {
               <View style={styles.messagesContainer}>
                 <IconButton
                   icon="close"
+                  size={35}
                   style={styles.closeButton}
                   onPress={closeModal}
                 />
