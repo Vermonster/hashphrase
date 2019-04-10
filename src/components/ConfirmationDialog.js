@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   closeButton: {
     alignSelf: 'flex-end',
     margin: 0,
-  }
+  },
 });
 
 class ConfirmationDialog extends React.Component {
