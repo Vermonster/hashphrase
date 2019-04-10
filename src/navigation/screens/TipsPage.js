@@ -11,30 +11,35 @@ const styles = StyleSheet.create({
     backgroundColor: colors.background,
     height: '100%',
   },
-  scrollContainer: {
-    flexGrow: 1,
-  },
   title: {
-    fontSize: 16,
+    fontSize: 24,
+    color: colors.secondary,
     textAlign: 'center',
     marginTop: '7%',
     marginBottom: '10%',
   },
   outerCard: {
-    borderTopColor: colors.borderColor,
-    borderTopWidth: 1,
     backgroundColor: 'white',
-    marginTop: 3,
+    shadowOpacity: 0,
+    elevation: 0,
+    marginTop: -8,
   },
   accordionWrapper: {
     backgroundColor: 'white',
-    borderColor: colors.borderColor,
-    borderRadius: 3,
-    marginTop: 0.5,
+    borderColor: colors.tipsPageBorder,
+    borderWidth: 0.5,
+    paddingHorizontal: 10,
   },
   cardContent: {
     color: colors.secondary,
     fontSize: 16,
+    lineHeight: 21,
+  },
+  scrollContainer: {
+    flexGrow: 1,
+    borderColor: colors.tipsPageBorder,
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
   },
 });
 
