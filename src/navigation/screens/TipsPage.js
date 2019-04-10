@@ -13,7 +13,6 @@ const styles = StyleSheet.create({
   },
   scrollContainer: {
     flexGrow: 1,
-    marginHorizontal: '5%',
   },
   title: {
     fontSize: 16,
