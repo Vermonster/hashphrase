@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     width: '80%',
     borderColor: colors.secondary,
     borderWidth: 2,
-  }
+  },
 });
 
 class ConfirmationDialog extends React.Component {
@@ -162,7 +162,7 @@ class ConfirmationDialog extends React.Component {
                   />
                 </View>
               </View>
-              <View style={styles.buttonRow}> 
+              <View style={styles.buttonRow}>
                 <Button
                   testID="submit-form"
                   onPress={this.handleSubmit}
