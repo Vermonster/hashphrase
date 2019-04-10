@@ -8,6 +8,7 @@ import loplop from 'loplop';
 import ConfirmationDialog from './ConfirmationDialog';
 import FormInput from './FormInput';
 import { colors, rowCenter } from '../styles/base';
+// import console = require('console');
 
 const styles = StyleSheet.create({
   generatorContainer: {
@@ -34,6 +35,9 @@ class PasswordGenerator extends React.Component {
     disabled: true,
     modalVisibility: false,
     inputError: false,
+    confirmedLabel: false,
+    confirmedPassword: false,
+    confirmedPasswordCombo: false,
   };
 
   componentDidUpdate(prevProps) {
@@ -83,27 +87,35 @@ class PasswordGenerator extends React.Component {
     this.showModal();
   }
 
-  confirmEntry(inputType) {
-    const { label, password, confirmPassword } = this.state;
-    let status = null;
-    if (inputType === 'label') {
-      status = (label.length > 0);
-    } else if (inputType === 'password') {
-      status = (password.length > 0);
-    } else if (inputType === 'confirmPassword') {
-      status = (password === confirmPassword);
+  isInputConfirmed(e, inputType) {
+    e.preventDefault();
+    const { label, password, confirmPassword } = this.state || {};
+    if (inputType === 'label' && label) {
+      this.setState({ confirmedLabel: label.length > 0 });
     }
-    this.setState((prevProps) => {
-      
-    });
-    return status;
+    if (inputType === 'password' && password) {
+      this.setState({ confirmedPassword: password.length > 0 });
+    }
+    if (inputType === 'confirmPassword' && confirmPassword) {
+      this.setState({ confirmedPasswordCombo: confirmPassword.length > 0 && confirmPassword === password });
+    }
   }
 
   render() {
     const {
-      generatedPassword, disabled, modalVisibility, inputError, label, password, confirmPassword,
+      generatedPassword,
+      disabled,
+      modalVisibility,
+      inputError,
+      label,
+      password,
+      confirmPassword,
+      confirmedLabel,
+      confirmedPassword,
+      confirmedPasswordCombo,
     } = this.state;
     const { isNewPassword, showSnackbar, t } = this.props;
+    console.log(this.state.confirmedLabel)
 
     return (
       <View style={styles.generatorContainer}>
@@ -114,7 +126,8 @@ class PasswordGenerator extends React.Component {
           prompt={t('passwordLabel')}
           label={t('label')}
           handleChange={this.handleChange}
-          onBlur={this.confirmEntry}
+          handleBlur={this.isInputConfirmed}
+          confirmed={confirmedLabel}
         />
         <FormInput
           value={password}
@@ -123,6 +136,8 @@ class PasswordGenerator extends React.Component {
           prompt={t('masterPassword')}
           label={t('password')}
           handleChange={this.handleChange}
+          handleBlur={this.isInputConfirmed}
+          confirmed={confirmedPassword}
         />
         { isNewPassword && (
           <>
@@ -135,6 +150,8 @@ class PasswordGenerator extends React.Component {
               error={inputError}
               handleChange={this.handleChange}
               style={styles.textInput}
+              handleBlur={this.isInputConfirmed}
+              confirmed={confirmedPasswordCombo}
             />
             { inputError && (
               <View style={[rowCenter, styles.warning]}>

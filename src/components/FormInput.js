@@ -42,9 +42,11 @@ class FormInput extends React.Component {
     return true;
   }
 
+  
+
   render() {
     const {
-      placeholderText, prompt, value, handleChange, label, componentType, error, onBlur,
+      placeholderText, prompt, value, handleChange, label, componentType, error, handleBlur, confirmed,
     } = this.props;
     const { visible } = this.state;
     const visibilityIcon = visible ? 'visibility' : 'visibility-off';
@@ -77,10 +79,11 @@ class FormInput extends React.Component {
             autoCorrect={false}
             label={label}
             error={error}
+            onBlur={e => handleBlur(e, componentType)}
           />
           { buttonType }
         </View>
-        {onBlur && <Text>Testing</Text>}
+        {confirmed && <Text>{confirmed}</Text>}
       </View>
     );
   }
