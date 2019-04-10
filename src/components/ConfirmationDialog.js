@@ -4,7 +4,6 @@ import {
   View, Text, Modal, StyleSheet, Clipboard, TextInput,
 } from 'react-native';
 import { Button, IconButton } from 'react-native-paper';
-import { CompletedCheckmark } from '../styles/icons';
 import { colors, fontSize, rowCenter } from '../styles/base';
 
 const styles = StyleSheet.create({
