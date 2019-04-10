@@ -4,6 +4,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
 <ForwardRef(View)
   style={
     Object {
+      "alignItems": "center",
       "flex": 1,
       "justifyContent": "center",
     }
@@ -20,6 +21,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
       style={
         Array [
           Object {
+            "alignItems": "center",
             "flex": 1,
             "justifyContent": "center",
           },
@@ -34,8 +36,8 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
           Object {
             "backgroundColor": "#FFF",
             "borderRadius": 4,
-            "marginHorizontal": 10,
-            "paddingBottom": 48,
+            "paddingBottom": "10%",
+            "width": "95%",
           }
         }
       >
@@ -46,15 +48,24 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
               "borderTopLeftRadius": 4,
               "borderTopRightRadius": 4,
               "display": "flex",
-              "paddingHorizontal": 13,
-              "paddingVertical": 13,
             }
           }
         >
+          <withTheme(IconButton)
+            icon="close"
+            onPress={[MockFunction]}
+            style={
+              Object {
+                "alignSelf": "flex-end",
+                "margin": 0,
+              }
+            }
+          />
           <ForwardRef(View)
             style={
               Object {
                 "flexDirection": "row",
+                "marginLeft": "5%",
               }
             }
           >
@@ -70,7 +81,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
                   Object {
                     "color": "#212A59",
                     "fontSize": 24,
-                    "paddingBottom": 20,
+                    "paddingBottom": "5%",
                   }
                 }
               >
@@ -93,31 +104,22 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
                 completedClipboard
               </ForwardRef(Text)>
             </ForwardRef(View)>
-            <ForwardRef(View)
-              style={
-                Object {
-                  "flex": 1,
-                }
-              }
-            >
-              <CompletedCheckmark />
-            </ForwardRef(View)>
           </ForwardRef(View)>
         </ForwardRef(View)>
         <ForwardRef(View)
           style={
             Array [
               Object {
-                "alignItems": "stretch",
+                "alignSelf": "center",
                 "backgroundColor": "#212A59",
                 "borderRadius": 4,
                 "justifyContent": "center",
-                "marginBottom": 25,
-                "marginHorizontal": 10,
-                "marginTop": 37,
-                "paddingBottom": 15,
-                "paddingLeft": 15,
-                "paddingTop": 15,
+                "marginBottom": "10%",
+                "marginTop": "8%",
+                "paddingBottom": "5%",
+                "paddingHorizontal": "3%",
+                "paddingTop": "3%",
+                "width": "95%",
               },
             ]
           }
