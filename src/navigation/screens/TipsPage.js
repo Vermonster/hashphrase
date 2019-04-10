@@ -26,28 +26,12 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     backgroundColor: 'white',
     marginTop: 3,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 1,
-      height: -3,
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: 1.8,
-    elevation: 3,
   },
   accordionWrapper: {
     backgroundColor: 'white',
     borderColor: colors.borderColor,
     borderRadius: 3,
     marginTop: 0.5,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 1,
-      height: 0.5,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 3,
-    elevation: 5,
   },
   cardContent: {
     color: colors.darkGray,
