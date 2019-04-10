@@ -77,9 +77,14 @@ const styles = StyleSheet.create({
     ...rowCenter,
     marginBottom: 37,
   },
-  button: {
-    marginHorizontal: 45,
+  buttonRow: {
+    alignSelf: 'center',
   },
+  button: {
+    width: '80%',
+    borderColor: colors.secondary,
+    borderWidth: 2,
+  }
 });
 
 class ConfirmationDialog extends React.Component {
@@ -157,17 +162,18 @@ class ConfirmationDialog extends React.Component {
                   />
                 </View>
               </View>
-              <Button
-                testID="submit-form"
-                onPress={this.handleSubmit}
-                accessibilityLabel="ACTION BUTTON"
-                mode="contained"
-                dark
-                color={colors.primary}
-                style={styles.button}
-              >
-                {t('button')}
-              </Button>
+              <View style={styles.buttonRow}> 
+                <Button
+                  testID="submit-form"
+                  onPress={this.handleSubmit}
+                  accessibilityLabel="ACTION BUTTON"
+                  style={styles.button}
+                  mode="outlined"
+                  color={colors.secondary}
+                >
+                  {t('button')}
+                </Button>
+              </View>
             </View>
           </View>
         </Modal>
