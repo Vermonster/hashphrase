@@ -106,7 +106,7 @@ handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
         <Snackbar
           visible={snackbarVisibility}
           onDismiss={this.hideSnackbar}
-          duration={4000}
+          duration={2000}
           style={styles.snackbar}
         >
           {t('clipboardCleared')}
