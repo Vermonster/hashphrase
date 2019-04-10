@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     marginTop: 0.5,
   },
   cardContent: {
-    color: colors.darkGray,
+    color: colors.secondary,
     fontSize: 16,
   },
 });
@@ -52,7 +52,7 @@ class TipsPage extends React.Component {
       style={styles.accordionWrapper}
     >
       <List.Accordion
-        theme={{ colors: { text: colors.primary } }}
+        theme={{ colors: { text: colors.secondary } }}
         title={<Text style={styles.cardContent}>{questionObject[question].title}</Text>}
       >
         <Card style={styles.outerCard}>
