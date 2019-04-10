@@ -23,7 +23,7 @@ const en = {
     warning: 'Password does not match',
   },
   tipsPage: {
-    title: 'About',
+    title: 'FAQs',
     questions: {
       question_1: {
         title: 'What is Loplop?',
