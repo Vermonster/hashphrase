@@ -11,32 +11,29 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
+    alignItems: 'center',
   },
   modalBackground: {
     backgroundColor: colors.modalBackground,
   },
   innerContainer: {
     backgroundColor: colors.white,
-    marginHorizontal: 10,
-    paddingBottom: 48,
+    width: '95%',
+    paddingBottom: '10%',
     borderRadius: 4,
   },
   messagesContainer: {
     backgroundColor: colors.primary,
     borderTopRightRadius: 4,
     borderTopLeftRadius: 4,
-    paddingVertical: 13,
-    paddingHorizontal: 13,
     display: 'flex',
   },
   messagesTopRow: {
     flexDirection: 'row',
+    marginLeft: '5%',
   },
   textColumn: {
     flex: 5,
-  },
-  iconColumn: {
-    flex: 1,
   },
   hideShowRow: {
     justifyContent: 'space-between',
@@ -44,15 +41,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   passwordContainer: {
-    marginTop: 37,
-    marginHorizontal: 10,
-    marginBottom: 25,
+    marginTop: '8%',
+    marginBottom: '10%',
+    alignSelf: 'center',
+    width: '95%',
     backgroundColor: colors.secondary,
-    paddingLeft: 15,
-    paddingTop: 15,
-    paddingBottom: 15,
+    paddingHorizontal: '3%',
+    paddingTop: '3%',
+    paddingBottom: '5%',
     borderRadius: 4,
-    alignItems: 'stretch',
     justifyContent: 'center',
   },
   password: {
@@ -61,7 +58,7 @@ const styles = StyleSheet.create({
   title: {
     color: colors.secondary,
     fontSize: fontSize.xxl,
-    paddingBottom: 20,
+    paddingBottom: '5%',
   },
   paragraph: {
     fontSize: fontSize.lg,
@@ -85,6 +82,10 @@ const styles = StyleSheet.create({
     borderColor: colors.secondary,
     borderWidth: 2,
   },
+  closeButton: {
+    alignSelf: 'flex-end',
+    margin: 0,
+  }
 });
 
 class ConfirmationDialog extends React.Component {
@@ -128,15 +129,16 @@ class ConfirmationDialog extends React.Component {
           <View style={[styles.container, styles.modalBackground]}>
             <View style={styles.innerContainer}>
               <View style={styles.messagesContainer}>
+                <IconButton
+                  icon="close"
+                  style={styles.closeButton}
+                />
                 <View style={styles.messagesTopRow}>
                   <View style={styles.textColumn}>
                     <Text style={styles.title}>{t('completedStatus')}</Text>
                     <Text style={[styles.paragraph, { color: colors.white, width: '80%', marginBottom: 15 }]}>
                       {t('completedClipboard')}
                     </Text>
-                  </View>
-                  <View style={styles.iconColumn}>
-                    <CompletedCheckmark />
                   </View>
                 </View>
               </View>
