@@ -175,21 +175,30 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
             />
           </ForwardRef(View)>
         </ForwardRef(View)>
-        <withTheme(Button)
-          accessibilityLabel="ACTION BUTTON"
-          color="#E07926"
-          dark={true}
-          mode="contained"
-          onPress={[Function]}
+        <ForwardRef(View)
           style={
             Object {
-              "marginHorizontal": 45,
+              "alignSelf": "center",
             }
           }
-          testID="submit-form"
         >
-          button
-        </withTheme(Button)>
+          <withTheme(Button)
+            accessibilityLabel="ACTION BUTTON"
+            color="#212A59"
+            mode="outlined"
+            onPress={[Function]}
+            style={
+              Object {
+                "borderColor": "#212A59",
+                "borderWidth": 2,
+                "width": "80%",
+              }
+            }
+            testID="submit-form"
+          >
+            button
+          </withTheme(Button)>
+        </ForwardRef(View)>
       </ForwardRef(View)>
     </ForwardRef(View)>
   </Component>
