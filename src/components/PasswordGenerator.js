@@ -8,7 +8,7 @@ import loplop from 'loplop';
 import ConfirmationDialog from './ConfirmationDialog';
 import FormInput from './FormInput';
 import { colors, rowCenter } from '../styles/base';
-// import console = require('console');
+
 
 const styles = StyleSheet.create({
   generatorContainer: {
@@ -35,9 +35,9 @@ class PasswordGenerator extends React.Component {
     disabled: true,
     modalVisibility: false,
     inputError: false,
-    confirmedLabel: false,
-    confirmedPassword: false,
-    confirmedPasswordCombo: false,
+    labelChecked: false,
+    passwordChecked: false,
+    confirmPasswordChecked: false,
   };
 
   componentDidUpdate(prevProps) {
@@ -78,6 +78,36 @@ class PasswordGenerator extends React.Component {
     || (!isNewPassword && label && password)) ? this.setState({ disabled: false }) : null;
   }
 
+  isInputConfirmed = (e, inputType, value) => {
+    if (value.length < 1) {
+      this.setState(() => ({ [`${inputType}Checked`]: value.length > 0 }));
+      return;
+    }
+    const { password, confirmPassword } = this.state;
+
+    if (inputType === 'label') {
+      this.setState(() => ({ labelChecked: value.length > 0 }));
+      return;
+    }
+    if (inputType === 'password') {
+      if (confirmPassword) {
+        this.setState(() => ({ passwordChecked: (value.length > 0) && (value === confirmPassword) }));
+        this.setState(() => ({ confirmedPasswordChecked: (value.length > 0) && (value === password) }));
+        return;
+      }
+      this.setState(() => ({ passwordChecked: value.length > 0 }));
+      return;
+    }
+    if (inputType === 'confirmPassword') {
+      if (password) {
+        this.setState(() => ({ confirmPasswordChecked: (value.length > 0) && (value === password) }));
+        this.setState(() => ({ passwordChecked: (value.length > 0) && (value === confirmPassword) }));
+        return;
+      }
+      this.setState(() => ({ confirmPasswordChecked: false }));
+    }
+  }
+
   generatePassword(type, password) {
     this.setState({ generatedPassword: loplop(type, password) }, () => {
       const { generatedPassword } = this.state;
@@ -85,20 +115,6 @@ class PasswordGenerator extends React.Component {
     });
     Keyboard.dismiss();
     this.showModal();
-  }
-
-  isInputConfirmed(e, inputType) {
-    e.preventDefault();
-    const { label, password, confirmPassword } = this.state || {};
-    if (inputType === 'label' && label) {
-      this.setState({ confirmedLabel: label.length > 0 });
-    }
-    if (inputType === 'password' && password) {
-      this.setState({ confirmedPassword: password.length > 0 });
-    }
-    if (inputType === 'confirmPassword' && confirmPassword) {
-      this.setState({ confirmedPasswordCombo: confirmPassword.length > 0 && confirmPassword === password });
-    }
   }
 
   render() {
@@ -110,12 +126,11 @@ class PasswordGenerator extends React.Component {
       label,
       password,
       confirmPassword,
-      confirmedLabel,
-      confirmedPassword,
-      confirmedPasswordCombo,
+      labelChecked,
+      passwordChecked,
+      confirmPasswordChecked,
     } = this.state;
     const { isNewPassword, showSnackbar, t } = this.props;
-    console.log(this.state.confirmedLabel)
 
     return (
       <View style={styles.generatorContainer}>
@@ -126,8 +141,8 @@ class PasswordGenerator extends React.Component {
           prompt={t('passwordLabel')}
           label={t('label')}
           handleChange={this.handleChange}
+          confirmed={labelChecked}
           handleBlur={this.isInputConfirmed}
-          confirmed={confirmedLabel}
         />
         <FormInput
           value={password}
@@ -136,8 +151,8 @@ class PasswordGenerator extends React.Component {
           prompt={t('masterPassword')}
           label={t('password')}
           handleChange={this.handleChange}
+          confirmed={passwordChecked}
           handleBlur={this.isInputConfirmed}
-          confirmed={confirmedPassword}
         />
         { isNewPassword && (
           <>
@@ -150,8 +165,8 @@ class PasswordGenerator extends React.Component {
               error={inputError}
               handleChange={this.handleChange}
               style={styles.textInput}
+              confirmed={confirmPasswordChecked}
               handleBlur={this.isInputConfirmed}
-              confirmed={confirmedPasswordCombo}
             />
             { inputError && (
               <View style={[rowCenter, styles.warning]}>
