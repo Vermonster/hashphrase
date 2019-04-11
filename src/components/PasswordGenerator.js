@@ -91,8 +91,10 @@ class PasswordGenerator extends React.Component {
     }
     if (inputType === 'password') {
       if (confirmPassword) {
-        this.setState(() => ({ passwordChecked: (value.length > 0) && (value === confirmPassword) }));
-        this.setState(() => ({ confirmedPasswordChecked: (value.length > 0) && (value === password) }));
+        this.setState(() => (
+          { passwordChecked: (value.length > 0) && (value === confirmPassword) }));
+        this.setState(() => (
+          { confirmedPasswordChecked: (value.length > 0) && (value === password) }));
         return;
       }
       this.setState(() => ({ passwordChecked: value.length > 0 }));
@@ -100,8 +102,10 @@ class PasswordGenerator extends React.Component {
     }
     if (inputType === 'confirmPassword') {
       if (password) {
-        this.setState(() => ({ confirmPasswordChecked: (value.length > 0) && (value === password) }));
-        this.setState(() => ({ passwordChecked: (value.length > 0) && (value === confirmPassword) }));
+        this.setState(() => (
+          { confirmPasswordChecked: (value.length > 0) && (value === password) }));
+        this.setState(() => (
+          { passwordChecked: (value.length > 0) && (value === confirmPassword) }));
         return;
       }
       this.setState(() => ({ confirmPasswordChecked: false }));
