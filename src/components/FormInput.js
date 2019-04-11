@@ -52,7 +52,6 @@ class FormInput extends React.Component {
       componentType,
       error,
       confirmed,
-      handleBlur,
     } = this.props;
 
     const { visible } = this.state;
@@ -78,6 +77,7 @@ class FormInput extends React.Component {
         <Text style={styles.label}>{prompt}</Text>
         <View style={styles.formInputContainer}>
           <TextInput
+            clearTextOnFocus={false}
             value={value}
             placeholder={placeholderText}
             secureTextEntry={visibleText}
@@ -88,7 +88,6 @@ class FormInput extends React.Component {
             autoCorrect={false}
             label={label}
             error={error}
-            onBlur={e => handleBlur(e, componentType, value)}
           />
           { buttonType }
           { confirmedInput }

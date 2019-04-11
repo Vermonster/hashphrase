@@ -68,6 +68,7 @@ class PasswordGenerator extends React.Component {
   handleChange = name => (e) => {
     const inputValue = e.nativeEvent.text;
     this.setState({ [name]: inputValue, inputError: false }, this.handleSubmitButtonState);
+    this.isInputConfirmed(e, name, inputValue);
   }
 
   handleSubmitButtonState = () => {
@@ -83,6 +84,7 @@ class PasswordGenerator extends React.Component {
       this.setState(() => ({ [`${inputType}Checked`]: value.length > 0 }));
       return;
     }
+
     const { password, confirmPassword } = this.state;
 
     if (inputType === 'label') {
@@ -90,11 +92,9 @@ class PasswordGenerator extends React.Component {
       return;
     }
     if (inputType === 'password') {
-      if (confirmPassword) {
-        this.setState(() => (
-          { passwordChecked: (value.length > 0) && (value === confirmPassword) }));
-        this.setState(() => (
-          { confirmedPasswordChecked: (value.length > 0) && (value === password) }));
+      if (confirmPassword && value === confirmPassword) {
+        this.setState(() => ({ passwordChecked: true }));
+        this.setState(() => ({ confirmPassword: true }));
         return;
       }
       this.setState(() => ({ passwordChecked: value.length > 0 }));
@@ -103,9 +103,7 @@ class PasswordGenerator extends React.Component {
     if (inputType === 'confirmPassword') {
       if (password) {
         this.setState(() => (
-          { confirmPasswordChecked: (value.length > 0) && (value === password) }));
-        this.setState(() => (
-          { passwordChecked: (value.length > 0) && (value === confirmPassword) }));
+          { confirmPasswordChecked: (value === password) }));
         return;
       }
       this.setState(() => ({ confirmPasswordChecked: false }));
@@ -146,7 +144,6 @@ class PasswordGenerator extends React.Component {
           label={t('label')}
           handleChange={this.handleChange}
           confirmed={labelChecked}
-          handleBlur={this.isInputConfirmed}
         />
         <FormInput
           value={password}
@@ -156,7 +153,6 @@ class PasswordGenerator extends React.Component {
           label={t('password')}
           handleChange={this.handleChange}
           confirmed={passwordChecked}
-          handleBlur={this.isInputConfirmed}
         />
         { isNewPassword && (
           <>
@@ -170,7 +166,6 @@ class PasswordGenerator extends React.Component {
               handleChange={this.handleChange}
               style={styles.textInput}
               confirmed={confirmPasswordChecked}
-              handleBlur={this.isInputConfirmed}
             />
             { inputError && (
               <View style={[rowCenter, styles.warning]}>
