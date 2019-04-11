@@ -94,8 +94,10 @@ class PasswordGenerator extends React.Component {
     if (inputType === 'password') {
       if (confirmPassword && value === confirmPassword) {
         this.setState(() => ({ passwordChecked: true }));
-        this.setState(() => ({ confirmPassword: true }));
+        this.setState(() => ({ confirmPasswordChecked: true }));
         return;
+      } if (confirmPassword) {
+        this.setState(() => ({ confirmPasswordChecked: false }));
       }
       this.setState(() => ({ passwordChecked: value.length > 0 }));
       return;
