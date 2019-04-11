@@ -4,7 +4,7 @@ import {
   View, Text, Modal, StyleSheet, Clipboard, TextInput,
 } from 'react-native';
 import { Button, IconButton } from 'react-native-paper';
-import { colors, fontSize, rowCenter } from '../styles/base';
+import { colors, fontSize } from '../styles/base';
 
 const styles = StyleSheet.create({
   container: {
@@ -26,13 +26,9 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     borderTopRightRadius: 4,
     borderTopLeftRadius: 4,
-  },
-  messagesTopRow: {
-    flexDirection: 'row',
-    marginLeft: '5%',
-  },
-  textColumn: {
-    flex: 5,
+    paddingLeft: '4%',
+    paddingRight: '2%',
+    paddingTop: '2%',
   },
   passwordContainer: {
     flexDirection: 'row',
@@ -40,10 +36,8 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     width: '95%',
     backgroundColor: colors.secondary,
-    paddingHorizontal: '3%',
-    paddingTop: '3%',
-    paddingBottom: '5%',
     borderRadius: 4,
+    padding: '3%',
   },
   password: {
     flex: 1,
@@ -64,10 +58,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   buttonRow: {
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  buttonRow: {
+    justifyContent: 'flex-start',
     alignSelf: 'center',
   },
   button: {
@@ -128,49 +119,34 @@ class ConfirmationDialog extends React.Component {
                   style={styles.closeButton}
                   onPress={closeModal}
                 />
-                <View style={styles.messagesTopRow}>
-                  <View style={styles.textColumn}>
-                    <Text style={styles.title}>{t('completedStatus')}</Text>
-                    <Text style={[styles.paragraph, { color: colors.white, width: '80%', marginBottom: 15 }]}>
-                      {t('completedClipboard')}
-                    </Text>
-                  </View>
-                </View>
-              </View>
-              <View style={{ justifyContent: 'space-around', flex: 1 }}>
-              <View style={styles.passwordContainer}>
-                <View style={styles.password}>
-                  <Text style={[styles.label, styles.accountLabel]}>
-                    {t('accountPassword')}
+                <View>
+                  <Text style={styles.title}>{t('completedStatus')}</Text>
+                  <Text style={[styles.paragraph, { color: colors.white, width: '80%' }]}>
+                    {t('completedClipboard')}
                   </Text>
-                  <TextInput
-                    secureTextEntry={obscured}
-                    editable={false}
-                    style={styles.label}
-                  >
-                    { generatedPassword }
-                  </TextInput>
                 </View>
-                <IconButton
-                  icon={visibilityIcon}
-                  color={colors.white}
-                  onPress={this.toggleObscured}
-                  style={styles.hideShowButton}
-                />
               </View>
-              <View style={styles.buttonRow}>
-                <Button
-                  testID="submit-form"
-                  onPress={this.handleSubmit}
-                  accessibilityLabel="ACTION BUTTON"
-                  mode="contained"
-                  dark
-                  color={colors.primary}
-                  style={styles.button}
-                >
-                  {t('button')}
-                </Button>
-              </View>
+              <View style={{ justifyContent: 'center', flex: 1 / 2 }}>
+                <View style={styles.passwordContainer}>
+                  <View style={styles.password}>
+                    <Text style={[styles.label, styles.accountLabel]}>
+                      {t('accountPassword')}
+                    </Text>
+                    <TextInput
+                      secureTextEntry={obscured}
+                      editable={false}
+                      style={styles.label}
+                    >
+                      { generatedPassword }
+                    </TextInput>
+                  </View>
+                  <IconButton
+                    icon={visibilityIcon}
+                    color={colors.white}
+                    onPress={this.toggleObscured}
+                    style={styles.hideShowButton}
+                  />
+                </View>
               </View>
               <View style={styles.buttonRow}>
                 <Button
@@ -184,6 +160,7 @@ class ConfirmationDialog extends React.Component {
                   {t('button')}
                 </Button>
               </View>
+              <View style={{ flex: 1 / 8 }} />
             </View>
           </View>
         </Modal>
