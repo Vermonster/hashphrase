@@ -44,8 +44,17 @@ class FormInput extends React.Component {
 
   render() {
     const {
-      placeholderText, prompt, value, handleChange, label, componentType, error, confirmed, handleBlur,
+      placeholderText,
+      prompt,
+      value,
+      handleChange,
+      label,
+      componentType,
+      error,
+      confirmed,
+      handleBlur,
     } = this.props;
+
     const { visible } = this.state;
     const visibilityIcon = visible ? 'visibility' : 'visibility-off';
     const visibleText = this.isTextHidden(componentType, visible);
