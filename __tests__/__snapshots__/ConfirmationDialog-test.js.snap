@@ -54,6 +54,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
           <withTheme(IconButton)
             icon="close"
             onPress={[MockFunction]}
+            size={35}
             style={
               Object {
                 "alignSelf": "flex-end",
