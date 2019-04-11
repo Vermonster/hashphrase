@@ -18,14 +18,14 @@ const styles = StyleSheet.create({
   innerContainer: {
     backgroundColor: colors.white,
     width: '95%',
-    paddingBottom: '10%',
+    flex: 1 / 2,
     borderRadius: 4,
   },
   messagesContainer: {
+    flex: 1 / 2,
     backgroundColor: colors.primary,
     borderTopRightRadius: 4,
     borderTopLeftRadius: 4,
-    display: 'flex',
   },
   messagesTopRow: {
     flexDirection: 'row',
@@ -34,14 +34,9 @@ const styles = StyleSheet.create({
   textColumn: {
     flex: 5,
   },
-  hideShowRow: {
-    justifyContent: 'space-between',
+  passwordContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-  },
-  passwordContainer: {
-    marginTop: '8%',
-    marginBottom: '10%',
     alignSelf: 'center',
     width: '95%',
     backgroundColor: colors.secondary,
@@ -49,7 +44,6 @@ const styles = StyleSheet.create({
     paddingTop: '3%',
     paddingBottom: '5%',
     borderRadius: 4,
-    justifyContent: 'center',
   },
   password: {
     flex: 1,
@@ -69,9 +63,9 @@ const styles = StyleSheet.create({
   accountLabel: {
     marginBottom: 10,
   },
-  checkbox: {
-    ...rowCenter,
-    marginBottom: 37,
+  buttonRow: {
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   buttonRow: {
     alignSelf: 'center',
@@ -143,27 +137,40 @@ class ConfirmationDialog extends React.Component {
                   </View>
                 </View>
               </View>
-              <View style={[styles.passwordContainer]}>
-                <View style={styles.hideShowRow}>
-                  <View style={styles.password}>
-                    <Text style={[styles.label, styles.accountLabel]}>
-                      {t('accountPassword')}
-                    </Text>
-                    <TextInput
-                      secureTextEntry={obscured}
-                      editable={false}
-                      style={styles.label}
-                    >
-                      { generatedPassword }
-                    </TextInput>
-                  </View>
-                  <IconButton
-                    icon={visibilityIcon}
-                    color={colors.white}
-                    onPress={this.toggleObscured}
-                    style={styles.hideShowButton}
-                  />
+              <View style={{ justifyContent: 'space-around', flex: 1 }}>
+              <View style={styles.passwordContainer}>
+                <View style={styles.password}>
+                  <Text style={[styles.label, styles.accountLabel]}>
+                    {t('accountPassword')}
+                  </Text>
+                  <TextInput
+                    secureTextEntry={obscured}
+                    editable={false}
+                    style={styles.label}
+                  >
+                    { generatedPassword }
+                  </TextInput>
                 </View>
+                <IconButton
+                  icon={visibilityIcon}
+                  color={colors.white}
+                  onPress={this.toggleObscured}
+                  style={styles.hideShowButton}
+                />
+              </View>
+              <View style={styles.buttonRow}>
+                <Button
+                  testID="submit-form"
+                  onPress={this.handleSubmit}
+                  accessibilityLabel="ACTION BUTTON"
+                  mode="contained"
+                  dark
+                  color={colors.primary}
+                  style={styles.button}
+                >
+                  {t('button')}
+                </Button>
+              </View>
               </View>
               <View style={styles.buttonRow}>
                 <Button
