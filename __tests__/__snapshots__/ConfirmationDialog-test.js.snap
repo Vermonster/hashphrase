@@ -36,7 +36,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
           Object {
             "backgroundColor": "#FFF",
             "borderRadius": 4,
-            "paddingBottom": "10%",
+            "flex": 0.5,
             "width": "95%",
           }
         }
@@ -47,7 +47,10 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
               "backgroundColor": "#E07926",
               "borderTopLeftRadius": 4,
               "borderTopRightRadius": 4,
-              "display": "flex",
+              "flex": 0.5,
+              "paddingLeft": "4%",
+              "paddingRight": "2%",
+              "paddingTop": "2%",
             }
           }
         >
@@ -62,75 +65,53 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
               }
             }
           />
-          <ForwardRef(View)
-            style={
-              Object {
-                "flexDirection": "row",
-                "marginLeft": "5%",
-              }
-            }
-          >
-            <ForwardRef(View)
+          <ForwardRef(View)>
+            <ForwardRef(Text)
               style={
                 Object {
-                  "flex": 5,
+                  "color": "#212A59",
+                  "fontSize": 24,
+                  "paddingBottom": "5%",
                 }
               }
             >
-              <ForwardRef(Text)
-                style={
+              completedStatus
+            </ForwardRef(Text)>
+            <ForwardRef(Text)
+              style={
+                Array [
                   Object {
-                    "color": "#212A59",
-                    "fontSize": 24,
-                    "paddingBottom": "5%",
-                  }
-                }
-              >
-                completedStatus
-              </ForwardRef(Text)>
-              <ForwardRef(Text)
-                style={
-                  Array [
-                    Object {
-                      "fontSize": 16,
-                    },
-                    Object {
-                      "color": "#FFF",
-                      "marginBottom": 15,
-                      "width": "80%",
-                    },
-                  ]
-                }
-              >
-                completedClipboard
-              </ForwardRef(Text)>
-            </ForwardRef(View)>
+                    "fontSize": 16,
+                  },
+                  Object {
+                    "color": "#FFF",
+                    "width": "80%",
+                  },
+                ]
+              }
+            >
+              completedClipboard
+            </ForwardRef(Text)>
           </ForwardRef(View)>
         </ForwardRef(View)>
         <ForwardRef(View)
           style={
-            Array [
-              Object {
-                "alignSelf": "center",
-                "backgroundColor": "#212A59",
-                "borderRadius": 4,
-                "justifyContent": "center",
-                "marginBottom": "10%",
-                "marginTop": "8%",
-                "paddingBottom": "5%",
-                "paddingHorizontal": "3%",
-                "paddingTop": "3%",
-                "width": "95%",
-              },
-            ]
+            Object {
+              "flex": 0.5,
+              "justifyContent": "center",
+            }
           }
         >
           <ForwardRef(View)
             style={
               Object {
                 "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": "#212A59",
+                "borderRadius": 4,
                 "flexDirection": "row",
-                "justifyContent": "space-between",
+                "padding": "3%",
+                "width": "95%",
               }
             }
           >
@@ -182,6 +163,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
           style={
             Object {
               "alignSelf": "center",
+              "justifyContent": "flex-start",
             }
           }
         >
@@ -202,6 +184,13 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
             button
           </withTheme(Button)>
         </ForwardRef(View)>
+        <ForwardRef(View)
+          style={
+            Object {
+              "flex": 0.125,
+            }
+          }
+        />
       </ForwardRef(View)>
     </ForwardRef(View)>
   </Component>
