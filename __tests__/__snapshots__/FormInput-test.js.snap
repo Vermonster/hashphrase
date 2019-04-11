@@ -27,6 +27,7 @@ exports[`<FormInput /> should render the same snapshot 1`] = `
       autoCapitalize="none"
       autoComplete="off"
       autoCorrect={false}
+      onBlur={[Function]}
       placeholder="Test Placeholder"
       secureTextEntry={true}
       style={
