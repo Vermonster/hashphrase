@@ -10,6 +10,11 @@
     ],
     "version": "0.0.1",
     "orientation": "portrait",
-    "privacy": "public"
+    "privacy": "public",
+    "splash": {
+      "image": "./assets/splash.png",
+      "backgroundColor": "#212A59",
+      "resizeMode": "cover"
+    }
   }
 }
