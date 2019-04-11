@@ -31,7 +31,7 @@ After the expo dev server boots up with `yarn start`, you can start the local de
 
 ### Testing on simulators/emulators 
 
-Expo Client app can also be used on IOS simulators and Android emulators. To view your app, run `yarn run ios` or `yarn run android`, you app will be opened automatically within the Expo Client app on the simulator.
+Expo Client app can also be used on IOS simulators and Android emulators. To view your app, run `yarn run ios` or `yarn run android`, you app will be opened automatically within the Expo Client app on the simulator. For Android emulator, make sure you launch your emulator before running the command.
 
 ## Sharing and Deployment
 
