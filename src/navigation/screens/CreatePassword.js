@@ -26,7 +26,8 @@ const styles = StyleSheet.create({
   },
   newPass: {
     ...rowCenter,
-    marginVertical: 32,
+    marginTop: '20%',
+    marginBottom: '10%',
   },
   newPassLabel: {
     fontSize: fontSize.lg,

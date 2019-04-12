@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     backgroundColor: colors.white,
     marginTop: 10,
-    marginBottom: 30,
     width: '80%',
   },
   visibilityButton: {
@@ -64,10 +63,12 @@ class FormInput extends React.Component {
         />
       ) : null;
 
+    const inputMargin = componentType === 'confirmPassword' ? 0 : 30;
+
     return (
       <View>
         <Text style={styles.label}>{prompt}</Text>
-        <View style={styles.formInputContainer}>
+        <View style={[styles.formInputContainer, { marginBottom: inputMargin }]}>
           <TextInput
             value={value}
             placeholder={placeholderText}
