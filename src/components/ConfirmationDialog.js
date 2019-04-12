@@ -6,6 +6,8 @@ import {
 import { Button, IconButton } from 'react-native-paper';
 import { colors, fontSize } from '../styles/base';
 
+const accountLabelMargin = Platform.OS === 'ios' ? '2%' : 0; 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -31,6 +33,7 @@ const styles = StyleSheet.create({
   passwordContainer: {
     flex: 1 / 2,
     flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
     alignSelf: 'center',
     width: '95%',
@@ -55,8 +58,7 @@ const styles = StyleSheet.create({
     color: colors.white,
   },
   accountLabel: {
-    marginBottom: '2%',
-
+    marginBottom: accountLabelMargin,
   },
   buttonRow: {
     justifyContent: 'flex-start',
