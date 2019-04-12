@@ -1,7 +1,7 @@
 import React from 'react';
 import { withNamespaces } from 'react-i18next';
 import {
-  View, Text, Modal, StyleSheet, Clipboard, TextInput, Platform,
+  View, Text, Modal, StyleSheet, Clipboard, TextInput, Platform, PixelRatio,
 } from 'react-native';
 import { Button, IconButton } from 'react-native-paper';
 import { colors, fontSize } from '../styles/base';
@@ -163,7 +163,7 @@ class ConfirmationDialog extends React.Component {
                   mode="outlined"
                   color={colors.secondary}
                 >
-                  {t('button')}
+                  <Text>{t('button')}</Text>
                 </Button>
               </View>
             </View>
