@@ -47,17 +47,13 @@ class TipsPage extends React.Component {
   static navigationOptions = {
     headerStyle: {
       backgroundColor: colors.primary,
-      elevation: 1,
-      borderBottomWidth: 0,
-      borderBottomColor: colors.primary,
+      elevation: 10,
       shadowOpacity: 0.8,
       shadowColor: colors.tipsPageBorder,
       shadowRadius: 1,
       shadowOffset: { width: 0, height: 3 },
     },
     headerTintColor: colors.secondary,
-    cardStyle: { elevation: 10 },
-    elevation: 1,
   };
 
   questionMap = (questions, questionObject) => questions.map(question => (
