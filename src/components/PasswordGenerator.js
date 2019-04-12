@@ -50,10 +50,15 @@ class PasswordGenerator extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const { label, password, confirmPassword } = this.state;
-    if ((password && confirmPassword) && (password !== confirmPassword)) {
-      this.setState({ inputError: true });
+    const { isNewPassword } = this.props;
+    if (isNewPassword) {
+      if (password !== confirmPassword) {
+        this.setState({ inputError: true });
+      } else {
+        this.setState({ inputError: false }, this.generatePassword(label, password));
+      }
     } else {
-      this.setState({ inputError: false }, this.generatePassword(label, password));
+      this.generatePassword(label, password);
     }
   };
 
