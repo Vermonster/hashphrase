@@ -13,13 +13,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   title: {
-    marginLeft: 10,
+    marginLeft: '2%',
   },
 });
 
 const LogoTitle = () => (
   <View style={styles.container}>
-    <Logo style={styles.logo} />
+    <Logo />
     <Text style={styles.title}>Hashphrase</Text>
   </View>
 );

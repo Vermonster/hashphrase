@@ -14,12 +14,14 @@ const styles = StyleSheet.create({
   },
   formInputContainer: {
     flexDirection: 'row',
+    justifyContent: 'flex-end',
     backgroundColor: colors.white,
     marginTop: 10,
     marginBottom: 30,
     width: '80%',
   },
   visibilityButton: {
+    position: 'absolute',
     alignSelf: 'center',
   },
 });
