@@ -134,7 +134,7 @@ class PasswordGenerator extends React.Component {
           disabled={disabled}
           mode="contained"
           dark
-          style={{marginTop: '5%'}}
+          style={{ marginTop: '5%' }}
         >
           {t('submitMessage')}
         </Button>
