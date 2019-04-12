@@ -1,12 +1,12 @@
 import React from 'react';
 import { withNamespaces } from 'react-i18next';
 import {
-  View, Text, Modal, StyleSheet, Clipboard, TextInput, Platform, PixelRatio,
+  View, Text, Modal, StyleSheet, Clipboard, TextInput, Platform,
 } from 'react-native';
 import { Button, IconButton } from 'react-native-paper';
 import { colors, fontSize } from '../styles/base';
 
-const accountLabelMargin = Platform.OS === 'ios' ? '2%' : 0; 
+const accountLabelMargin = Platform.OS === 'ios' ? '2%' : 0;
 
 const styles = StyleSheet.create({
   container: {
