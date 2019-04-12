@@ -1,7 +1,7 @@
 import React from 'react';
 import { withNamespaces } from 'react-i18next';
 import {
-  View, Text, Modal, StyleSheet, Clipboard, TextInput,
+  View, Text, Modal, StyleSheet, Clipboard, TextInput, Platform,
 } from 'react-native';
 import { Button, IconButton } from 'react-native-paper';
 import { colors, fontSize } from '../styles/base';
@@ -26,26 +26,26 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     borderTopRightRadius: 4,
     borderTopLeftRadius: 4,
-    paddingLeft: '4%',
-    paddingRight: '2%',
-    paddingTop: '2%',
+    justifyContent: 'center',
   },
   passwordContainer: {
+    flex: 1 / 2,
     flexDirection: 'row',
     alignItems: 'center',
     alignSelf: 'center',
     width: '95%',
     backgroundColor: colors.secondary,
     borderRadius: 4,
-    padding: '3%',
   },
   password: {
     flex: 1,
+    justifyContent: 'space-around',
+    marginLeft: '5%',
   },
   title: {
     color: colors.secondary,
     fontSize: fontSize.xxl,
-    paddingBottom: '5%',
+    marginBottom: '3%',
   },
   paragraph: {
     fontSize: fontSize.lg,
@@ -55,11 +55,13 @@ const styles = StyleSheet.create({
     color: colors.white,
   },
   accountLabel: {
-    marginBottom: 10,
+    marginBottom: '2%',
+
   },
   buttonRow: {
     justifyContent: 'flex-start',
     alignSelf: 'center',
+    flex: 1 / 3,
   },
   button: {
     width: '80%',
@@ -68,7 +70,9 @@ const styles = StyleSheet.create({
   },
   closeButton: {
     alignSelf: 'flex-end',
-    margin: 0,
+    top: '1%',
+    right: '0.5%',
+    position: 'absolute',
   },
 });
 
@@ -119,14 +123,14 @@ class ConfirmationDialog extends React.Component {
                   style={styles.closeButton}
                   onPress={closeModal}
                 />
-                <View>
+                <View style={{ marginLeft: '4%' }}>
                   <Text style={styles.title}>{t('completedStatus')}</Text>
                   <Text style={[styles.paragraph, { color: colors.white, width: '80%' }]}>
                     {t('completedClipboard')}
                   </Text>
                 </View>
               </View>
-              <View style={{ justifyContent: 'center', flex: 1 / 2 }}>
+              <View style={{ flex: 1 / 2, justifyContent: 'center' }}>
                 <View style={styles.passwordContainer}>
                   <View style={styles.password}>
                     <Text style={[styles.label, styles.accountLabel]}>
@@ -160,7 +164,6 @@ class ConfirmationDialog extends React.Component {
                   {t('button')}
                 </Button>
               </View>
-              <View style={{ flex: 1 / 8 }} />
             </View>
           </View>
         </Modal>
