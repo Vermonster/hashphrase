@@ -48,9 +48,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
               "borderTopLeftRadius": 4,
               "borderTopRightRadius": 4,
               "flex": 0.5,
-              "paddingLeft": "4%",
-              "paddingRight": "2%",
-              "paddingTop": "2%",
+              "justifyContent": "center",
             }
           }
         >
@@ -61,17 +59,25 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
             style={
               Object {
                 "alignSelf": "flex-end",
-                "margin": 0,
+                "position": "absolute",
+                "right": "0.5%",
+                "top": "1%",
               }
             }
           />
-          <ForwardRef(View)>
+          <ForwardRef(View)
+            style={
+              Object {
+                "marginLeft": "4%",
+              }
+            }
+          >
             <ForwardRef(Text)
               style={
                 Object {
                   "color": "#212A59",
                   "fontSize": 24,
-                  "paddingBottom": "5%",
+                  "marginBottom": "3%",
                 }
               }
             >
@@ -109,8 +115,9 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
                 "alignSelf": "center",
                 "backgroundColor": "#212A59",
                 "borderRadius": 4,
+                "flex": 0.5,
                 "flexDirection": "row",
-                "padding": "3%",
+                "justifyContent": "space-between",
                 "width": "95%",
               }
             }
@@ -119,6 +126,8 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
               style={
                 Object {
                   "flex": 1,
+                  "justifyContent": "space-around",
+                  "marginLeft": "5%",
                 }
               }
             >
@@ -130,7 +139,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
                       "fontSize": 16,
                     },
                     Object {
-                      "marginBottom": 10,
+                      "marginBottom": "2%",
                     },
                   ]
                 }
@@ -163,6 +172,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
           style={
             Object {
               "alignSelf": "center",
+              "flex": 0.3333333333333333,
               "justifyContent": "flex-start",
             }
           }
@@ -181,16 +191,11 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
             }
             testID="submit-form"
           >
-            button
+            <ForwardRef(Text)>
+              button
+            </ForwardRef(Text)>
           </withTheme(Button)>
         </ForwardRef(View)>
-        <ForwardRef(View)
-          style={
-            Object {
-              "flex": 0.125,
-            }
-          }
-        />
       </ForwardRef(View)>
     </ForwardRef(View)>
   </Component>
