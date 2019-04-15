@@ -23,11 +23,21 @@ Like `yarn start`, but also attempts to open your app in the iOS Simulator if yo
 
 Like `yarn start`, but also attempts to open your app on a connected Android device or emulator. Requires an installation of Android build tools (see [React Native docs](https://facebook.github.io/react-native/docs/getting-started.html) for detailed setup). We also recommend installing Genymotion as your Android emulator. Once you've finished setting up the native build environment, there are two options for making the right copy of `adb` available to Create React Native App:
 
+## Start Local Development
+
+### Testing on real devices
+
+After the expo dev server boots up with `yarn start`, you can start the local development. Download the Expo Client app from the Apple Store or Google Play Store, it can be used to view your project while developing. You can view your project within the Expo Client app in two ways: scanning the QR code or typing the URL to the Expo app's search bar. With IOS, you would need to open your camera app, then scan the QR code until a notification badge pops up.
+
+### Testing on simulators/emulators 
+
+Expo Client app can also be used on IOS simulators and Android emulators. To view your app, run `yarn run ios` or `yarn run android`, you app will be opened automatically within the Expo Client app on the simulator. For Android emulator, make sure you launch your emulator before running the command.
+
 ## Sharing and Deployment
 
 ### Viewing an Expo app from your device (without running a server locally)
 
-Publishing your app to Expo will make it available at a persistent URL, you can open it on your own device (ios or Android phone). Due to the Apple Review Guidelines, you cannot preview projects published by other Expo accounts besides your own. This app is published under Vermonster's expo account.
+Publishing your app to Expo will make it available at a persistent URL, you can open it on your own device (ios or Android phone). Note that due to the Apple Review Guidelines, you cannot preview projects published by other Expo accounts besides your own. This app is published under Vermonster's Expo account. On Android devices though, you can view other's Expo projects.
 
 You wil need to :
 - Install Expo Client on your phone
@@ -41,7 +51,9 @@ View project on a feature branch:
 
 What if you have iPhone, but you want to view the project on an Android device?
 
-Luckily, Appetize.io has provided a platform for users to view the mobile app in an Android emulator in the browser, go to [Vermonster's expo page](https://expo.io/@vermonster/Agilikey), and click "Open project in the browser" button on the right side of the page, this will open the app in an Android emulator in your browser without authentication.
+You would need to use an Android emulator on your computer. Follow the installation steps on the [Expo website](https://docs.expo.io/versions/latest/workflow/android-studio-emulator/), then type the parameterized URL in the Expo app's search bar to view a feature branch.
+
+Luckily, Appetize.io has also provided a platform for users to view the mobile app in an Android emulator in the browser, go to [Vermonster's expo page](https://expo.io/@vermonster/Agilikey), and click "Open project in the browser" button on the right side of the page, this will open the app in an Android emulator in your browser without authentication.
 
 ## Troubleshooting
 
