@@ -18,7 +18,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '80%',
     justifyContent: 'space-between',
-    marginTop: '-10%',
   },
   icon: {
     marginHorizontal: 0,
@@ -117,7 +116,6 @@ class PasswordGenerator extends React.Component {
               label={t('confirmPassword')}
               error={inputError}
               handleChange={this.handleChange}
-              style={styles.textInput}
             />
             { inputError && (
               <View style={[rowCenter, styles.warning]}>
@@ -136,6 +134,7 @@ class PasswordGenerator extends React.Component {
           disabled={disabled}
           mode="contained"
           dark
+          style={{ marginTop: '5%' }}
         >
           {t('submitMessage')}
         </Button>

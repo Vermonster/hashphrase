@@ -26,16 +26,12 @@ const styles = StyleSheet.create({
   },
   newPass: {
     ...rowCenter,
-    marginVertical: 32,
-
-  },
-  logo: {
-    ...StyleSheet.absoluteFill,
-    alignItems: 'flex-start',
-    justifyContent: 'center',
+    marginTop: '20%',
+    marginBottom: '10%',
   },
   newPassLabel: {
     fontSize: fontSize.lg,
+    marginRight: '2%',
   },
   snackbar: {
     flex: 1,
