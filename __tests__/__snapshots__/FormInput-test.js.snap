@@ -14,13 +14,18 @@ exports[`<FormInput /> should render the same snapshot 1`] = `
   </withTheme(Text)>
   <ForwardRef(View)
     style={
-      Object {
-        "backgroundColor": "#FFF",
-        "flexDirection": "row",
-        "marginBottom": 30,
-        "marginTop": 10,
-        "width": "80%",
-      }
+      Array [
+        Object {
+          "backgroundColor": "#FFF",
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+          "marginTop": 10,
+          "width": "80%",
+        },
+        Object {
+          "marginBottom": 30,
+        },
+      ]
     }
   >
     <withTheme(TextInput)
@@ -44,6 +49,7 @@ exports[`<FormInput /> should render the same snapshot 1`] = `
       style={
         Object {
           "alignSelf": "center",
+          "position": "absolute",
         }
       }
       testID="hideShowButton"

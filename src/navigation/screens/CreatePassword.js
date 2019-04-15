@@ -26,16 +26,12 @@ const styles = StyleSheet.create({
   },
   newPass: {
     ...rowCenter,
-    marginVertical: 32,
-
-  },
-  logo: {
-    ...StyleSheet.absoluteFill,
-    alignItems: 'flex-start',
-    justifyContent: 'center',
+    marginTop: '20%',
+    marginBottom: '10%',
   },
   newPassLabel: {
     fontSize: fontSize.lg,
+    marginRight: '2%',
   },
   snackbar: {
     flex: 1,
@@ -106,7 +102,7 @@ handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
         <Snackbar
           visible={snackbarVisibility}
           onDismiss={this.hideSnackbar}
-          duration={4000}
+          duration={2000}
           style={styles.snackbar}
         >
           {t('clipboardCleared')}
