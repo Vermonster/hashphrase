@@ -9,7 +9,6 @@
       "ios"
     ],
     "version": "0.0.1",
-    "orientation": "portrait",
     "privacy": "public",
     "splash": {
       "image": "./assets/splashScreen.png",
