@@ -47,8 +47,9 @@ class TipsPage extends React.Component {
   static navigationOptions = {
     headerStyle: {
       backgroundColor: colors.primary,
-      elevation: 10,
       shadowOpacity: 0.8,
+      elevation: 10,
+      borderBottomWidth: 0,
       shadowColor: colors.tipsPageBorder,
       shadowRadius: 1,
       shadowOffset: { width: 0, height: 3 },
