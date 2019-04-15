@@ -1,67 +1,54 @@
 import React from 'react';
 import { withNamespaces } from 'react-i18next';
 import {
-  View, Text, Modal, StyleSheet, Clipboard, TextInput,
+  View, Text, Modal, StyleSheet, Clipboard, TextInput, Platform,
 } from 'react-native';
 import { Button, IconButton } from 'react-native-paper';
-import { CompletedCheckmark } from '../styles/icons';
-import { colors, fontSize, rowCenter } from '../styles/base';
+import { colors, fontSize } from '../styles/base';
+
+const accountLabelMargin = Platform.OS === 'ios' ? '2%' : 0;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
+    alignItems: 'center',
   },
   modalBackground: {
     backgroundColor: colors.modalBackground,
   },
   innerContainer: {
     backgroundColor: colors.white,
-    marginHorizontal: 10,
-    paddingBottom: 48,
+    width: '95%',
+    flex: 1 / 2,
     borderRadius: 4,
   },
   messagesContainer: {
+    flex: 1 / 2,
     backgroundColor: colors.primary,
     borderTopRightRadius: 4,
     borderTopLeftRadius: 4,
-    paddingVertical: 13,
-    paddingHorizontal: 13,
-    display: 'flex',
-  },
-  messagesTopRow: {
-    flexDirection: 'row',
-  },
-  textColumn: {
-    flex: 5,
-  },
-  iconColumn: {
-    flex: 1,
-  },
-  hideShowRow: {
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    alignItems: 'center',
+    justifyContent: 'center',
   },
   passwordContainer: {
-    marginTop: 37,
-    marginHorizontal: 10,
-    marginBottom: 25,
+    flex: 1 / 2,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    alignSelf: 'center',
+    width: '95%',
     backgroundColor: colors.secondary,
-    paddingLeft: 15,
-    paddingTop: 15,
-    paddingBottom: 15,
     borderRadius: 4,
-    alignItems: 'stretch',
-    justifyContent: 'center',
   },
   password: {
     flex: 1,
+    justifyContent: 'space-around',
+    marginLeft: '5%',
   },
   title: {
     color: colors.secondary,
     fontSize: fontSize.xxl,
-    paddingBottom: 20,
+    marginBottom: '3%',
   },
   paragraph: {
     fontSize: fontSize.lg,
@@ -71,19 +58,23 @@ const styles = StyleSheet.create({
     color: colors.white,
   },
   accountLabel: {
-    marginBottom: 10,
-  },
-  checkbox: {
-    ...rowCenter,
-    marginBottom: 37,
+    marginBottom: accountLabelMargin,
   },
   buttonRow: {
+    justifyContent: 'flex-start',
     alignSelf: 'center',
+    flex: 1 / 3,
   },
   button: {
     width: '80%',
     borderColor: colors.secondary,
     borderWidth: 2,
+  },
+  closeButton: {
+    alignSelf: 'flex-end',
+    top: '1%',
+    right: '0.5%',
+    position: 'absolute',
   },
 });
 
@@ -128,20 +119,21 @@ class ConfirmationDialog extends React.Component {
           <View style={[styles.container, styles.modalBackground]}>
             <View style={styles.innerContainer}>
               <View style={styles.messagesContainer}>
-                <View style={styles.messagesTopRow}>
-                  <View style={styles.textColumn}>
-                    <Text style={styles.title}>{t('completedStatus')}</Text>
-                    <Text style={[styles.paragraph, { color: colors.white, width: '80%', marginBottom: 15 }]}>
-                      {t('completedClipboard')}
-                    </Text>
-                  </View>
-                  <View style={styles.iconColumn}>
-                    <CompletedCheckmark />
-                  </View>
+                <IconButton
+                  icon="close"
+                  size={35}
+                  style={styles.closeButton}
+                  onPress={closeModal}
+                />
+                <View style={{ marginLeft: '4%' }}>
+                  <Text style={styles.title}>{t('completedStatus')}</Text>
+                  <Text style={[styles.paragraph, { color: colors.white, width: '80%' }]}>
+                    {t('completedClipboard')}
+                  </Text>
                 </View>
               </View>
-              <View style={[styles.passwordContainer]}>
-                <View style={styles.hideShowRow}>
+              <View style={{ flex: 1 / 2, justifyContent: 'center' }}>
+                <View style={styles.passwordContainer}>
                   <View style={styles.password}>
                     <Text style={[styles.label, styles.accountLabel]}>
                       {t('accountPassword')}
@@ -171,7 +163,7 @@ class ConfirmationDialog extends React.Component {
                   mode="outlined"
                   color={colors.secondary}
                 >
-                  {t('button')}
+                  <Text>{t('button')}</Text>
                 </Button>
               </View>
             </View>
