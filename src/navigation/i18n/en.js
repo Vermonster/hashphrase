@@ -7,7 +7,7 @@ const en = {
   infoScreen: {},
   confirmationDialog: {
     completedStatus: 'All done!',
-    completedClipboard: 'Your Hashphrase is now on your clipboard. Just paste it where your password would go.',
+    completedClipboard: 'Your Hashphrase is now on your clipboard.',
     accountPassword: 'Hashphrase:',
     clearClipboard: 'Clear clipboard',
     button: 'I\'M DONE, CLEAR CLIPBOARD',
