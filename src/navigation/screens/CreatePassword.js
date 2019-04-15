@@ -44,16 +44,16 @@ const styles = StyleSheet.create({
 });
 
 class CreateNewPassword extends Component {
- static navigationOptions = ({ navigation }) => ({
-   headerTitle: <LogoTitle />,
-   headerRight: (
-     <IconButton
-       icon="info"
-       color={colors.primary}
-       onPress={() => navigation.navigate('TipsPage')}
-     />
-   ),
- });
+  static navigationOptions = ({ navigation }) => ({
+    headerTitle: <LogoTitle />,
+    headerRight: (
+      <IconButton
+        icon="info"
+        color={colors.primary}
+        onPress={() => navigation.navigate('TipsPage')}
+      />
+    ),
+  });
 
 state = {
   isNewPassword: false,

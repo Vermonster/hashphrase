@@ -5,6 +5,7 @@ import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import i18n from './src/navigation/i18n/i18n';
 import CreatePassword from './src/navigation/screens/CreatePassword';
 import TipsPage from './src/navigation/screens/TipsPage';
+import { colors } from './src/styles/base';
 
 const theme = {
   ...DefaultTheme,
@@ -29,6 +30,17 @@ const AppStackNavigator = createStackNavigator(
     initialRouteName: 'PasswordScreen',
     headerLayoutPreset: 'left',
     headerBackTitleVisible: true,
+    cardShadowEnabled: false,
+    defaultNavigationOptions: {
+      headerStyle: {
+        elevation: 10,
+        shadowOpacity: 0.8,
+        borderBottomWidth: 0,
+        shadowColor: colors.tipsPageBorder,
+        shadowRadius: 2,
+        shadowOffset: { width: 0, height: 3 },
+      },
+    },
   },
 );
 

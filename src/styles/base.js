@@ -4,8 +4,11 @@ export const colors = {
   warning: '#DB4437',
   disabled: '#949494',
   background: '#F5F5F5',
+  darkGray: '#444545',
+  borderColor: '#EFEFEF',
   white: '#FFF',
   modalBackground: 'rgba(0, 0, 0, 0.5)',
+  tipsPageBorder: '#A0A2B1',
 };
 
 export const fontSize = {
