@@ -14,6 +14,12 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
     animationType="fade"
     hardwareAccelerated={false}
     onRequestClose={[MockFunction]}
+    supportedOrientations={
+      Array [
+        "portrait",
+        "landscape",
+      ]
+    }
     transparent={true}
     visible={true}
   >
