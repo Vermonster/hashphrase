@@ -61,7 +61,6 @@ const styles = StyleSheet.create({
     flex: 1 / 3,
   },
   button: {
-    width: '80%',
     borderColor: colors.secondary,
     borderWidth: 2,
   },
