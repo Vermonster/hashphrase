@@ -9,6 +9,7 @@ import {
   KeyboardAvoidingView,
   SafeAreaView,
   ScrollView,
+  StatusBar,
 } from 'react-native';
 import { withNamespaces } from 'react-i18next';
 import LogoTitle from '../../components/LogoTitle';
@@ -78,6 +79,7 @@ handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
 
     return (
       <SafeAreaView style={styles.container}>
+      <StatusBar barStyle="light-content" />
         <KeyboardAvoidingView
           behavior="padding"
           keyboardVerticalOffset={100}
