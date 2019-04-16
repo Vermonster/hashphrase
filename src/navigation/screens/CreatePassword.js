@@ -52,6 +52,7 @@ class CreateNewPassword extends Component {
     headerRight: (
       <IconButton
         icon="help"
+        size={30}
         color={colors.primary}
         onPress={() => navigation.navigate('TipsPage')}
       />
