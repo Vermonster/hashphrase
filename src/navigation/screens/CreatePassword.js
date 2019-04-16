@@ -79,7 +79,7 @@ handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
 
     return (
       <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="light-content" />
+        <StatusBar barStyle="light-content" />
         <KeyboardAvoidingView
           behavior="padding"
           keyboardVerticalOffset={100}
