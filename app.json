@@ -12,7 +12,7 @@
     "orientation": "portrait",
     "privacy": "public",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splashScreen.png",
       "backgroundColor": "#212A59",
       "resizeMode": "cover"
     }
