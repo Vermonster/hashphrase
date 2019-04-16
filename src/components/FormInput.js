@@ -91,6 +91,7 @@ class FormInput extends React.Component {
             returnKeyType="next"
             onSubmitEditing={handleInputFocus}
             ref={inputRef}
+            disableFullscreenUI
           />
           { buttonType }
         </View>
