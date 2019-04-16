@@ -18,7 +18,10 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
     supportedOrientations={
       Array [
         "portrait",
+        "portrait-upside-down",
         "landscape",
+        "landscape-left",
+        "landscape-right",
       ]
     }
     transparent={true}
