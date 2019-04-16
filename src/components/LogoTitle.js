@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  View, Text, StyleSheet,
+  View, StyleSheet,
 } from 'react-native';
 import Logo from '../styles/icons';
 
@@ -12,15 +12,11 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
   },
-  title: {
-    marginLeft: '2%',
-  },
 });
 
 const LogoTitle = () => (
   <View style={styles.container}>
-    <Logo />
-    <Text style={styles.title}>Hashphrase</Text>
+    <Logo style={styles.logo} />
   </View>
 );
 

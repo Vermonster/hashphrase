@@ -46,6 +46,9 @@ const styles = StyleSheet.create({
 class CreateNewPassword extends Component {
   static navigationOptions = ({ navigation }) => ({
     headerTitle: <LogoTitle />,
+    headerStyle: {
+      backgroundColor: colors.secondary,
+    },
     headerRight: (
       <IconButton
         icon="help"
