@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
 
 const LogoTitle = () => (
   <View style={styles.container}>
-    <Logo style={styles.logo} />
+    <Logo />
   </View>
 );
 
