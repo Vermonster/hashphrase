@@ -109,7 +109,7 @@ class ConfirmationDialog extends React.Component {
     } = this.props;
     const visibilityIcon = obscured ? 'visibility-off' : 'visibility';
     const accountLabelMargin = Platform.OS === 'ios' ? (0.02 * height) : 0;
-    
+
     return (
       <View
         style={styles.container}
