@@ -7,15 +7,18 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
   KeyboardAvoidingView,
-  SafeAreaView,
   ScrollView,
   StatusBar,
   Dimensions,
 } from 'react-native';
+import { SafeAreaView } from 'react-navigation';
 import { withNamespaces } from 'react-i18next';
 import LogoTitle from '../../components/LogoTitle';
 import PasswordGenerator from '../../components/PasswordGenerator';
 import { colors, rowCenter, fontSize } from '../../styles/base';
+
+SafeAreaView.setStatusBarHeight(0);
+
 
 const styles = StyleSheet.create({
   container: {
@@ -94,7 +97,7 @@ handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
         style={styles.container}
         onLayout={this.onLayout}
       >
-        <StatusBar barStyle="light-content" />
+        <StatusBar hidden barStyle="light-content" />
         <KeyboardAvoidingView
           behavior="padding"
           keyboardVerticalOffset={100}
