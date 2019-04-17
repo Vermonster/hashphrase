@@ -4,6 +4,7 @@ import { Localization } from 'expo';
 
 import es from './es';
 import en from './en';
+import zh from './zh';
 
 const languageDetector = {
   type: 'languageDetector',
@@ -19,6 +20,7 @@ i18n
     resources: {
       en,
       es,
+      zh,
     },
     interpolation: {
       escapeValue: false,
