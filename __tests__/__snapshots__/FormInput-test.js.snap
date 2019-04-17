@@ -33,6 +33,7 @@ exports[`<FormInput /> should render the same snapshot 1`] = `
       autoComplete="off"
       autoCorrect={false}
       placeholder="Test Placeholder"
+      returnKeyType="next"
       secureTextEntry={true}
       style={
         Object {

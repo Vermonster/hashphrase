@@ -8378,10 +8378,10 @@ react-native-mock@^0.3.1:
     react-timer-mixin "^0.13.3"
     warning "^2.1.0"
 
-react-native-paper@^2.14.0:
-  version "2.14.0"
-  resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-2.14.0.tgz#9364f54a0fa866fa56430f2c1d39b9115b893b34"
-  integrity sha512-s2cmr57w2GO4Ja+ZCKBdA6uRXW4T3VYVnOKodiy+fISrXKN1CJOWkAXCfVDSLYVR78u90yVxRT0HdWFcaaLMyQ==
+react-native-paper@^2.15.0:
+  version "2.15.2"
+  resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-2.15.2.tgz#c1a529cd5a11cfdb20746e0eec87343c0fbc4e66"
+  integrity sha512-8Qibvbsz7BJR8BxUe9ICxIzsBJYBhnQK5w7kK8/5eXYLFjTArjs017ErE4gIuiALF4eusQO38cN6JBOkW0RLRg==
   dependencies:
     "@callstack/react-theme-provider" "^1.0.7"
     color "^2.0.1"
