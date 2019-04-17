@@ -1,8 +1,9 @@
 import React from 'react';
 import { withNamespaces } from 'react-i18next';
 import {
-  ScrollView, StyleSheet, View, SafeAreaView, Dimensions,
+  ScrollView, StyleSheet, View, Dimensions,
 } from 'react-native';
+import { SafeAreaView } from 'react-navigation';
 import { List, Text, Card } from 'react-native-paper';
 import { colors } from '../../styles/base';
 
