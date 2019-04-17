@@ -124,7 +124,7 @@ class ConfirmationDialog extends React.Component {
                   icon="close"
                   size={35}
                   style={styles.closeButton}
-                  onPress={() => {closeModal(); clearInputs()}}
+                  onPress={() => { closeModal(); clearInputs(); }}
                 />
                 <View style={{ marginLeft: '4%' }}>
                   <Text style={styles.title}>{t('completedStatus')}</Text>
