@@ -1,8 +1,9 @@
 import React from 'react';
 import { withNamespaces } from 'react-i18next';
 import {
-  ScrollView, StyleSheet, View,
+  ScrollView, StyleSheet, View, Dimensions,
 } from 'react-native';
+import { SafeAreaView } from 'react-navigation';
 import { List, Text, Card } from 'react-native-paper';
 import { colors } from '../../styles/base';
 
@@ -15,8 +16,6 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: colors.secondary,
     textAlign: 'center',
-    marginTop: '7%',
-    marginBottom: '10%',
   },
   outerCard: {
     backgroundColor: 'white',
@@ -57,6 +56,15 @@ class TipsPage extends React.Component {
     headerTintColor: colors.secondary,
   };
 
+  state = {
+    height: Dimensions.get('window').height,
+  }
+
+  onLayout = () => {
+    const { height } = Dimensions.get('screen');
+    this.setState({ height });
+  }
+
   questionMap = (questions, questionObject) => questions.map(question => (
     <View
       key={question}
@@ -79,18 +87,24 @@ class TipsPage extends React.Component {
 
   render() {
     const { t } = this.props;
+    const { height } = this.state;
     const questionObj = t('questions', { returnObjects: true });
     const questionArr = Object.keys(questionObj);
     const components = this.questionMap(questionArr, questionObj);
+    const titleVerticalMargins = 0.07 * (height);
 
     return (
       <View style={styles.backgroundContainer}>
-        <ScrollView contentContainerStyle={styles.scrollContainer}>
-          <Text style={styles.title}>{t('title')}</Text>
-          <View>
-            { components }
-          </View>
-        </ScrollView>
+        <SafeAreaView
+          onLayout={this.onLayout}
+        >
+          <ScrollView contentContainerStyle={styles.scrollContainer}>
+            <Text style={[styles.title, { marginVertical: titleVerticalMargins }]}>{t('title')}</Text>
+            <View>
+              { components }
+            </View>
+          </ScrollView>
+        </SafeAreaView>
       </View>
     );
   }

@@ -9,8 +9,8 @@
       "ios"
     ],
     "version": "0.0.1",
-    "orientation": "portrait",
     "privacy": "public",
+    "orientation": "default",
     "splash": {
       "image": "./assets/splashScreen.png",
       "backgroundColor": "#212A59",

@@ -2,6 +2,7 @@
 
 exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
 <ForwardRef(View)
+  onLayout={[Function]}
   style={
     Object {
       "alignItems": "center",
@@ -14,6 +15,15 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
     animationType="fade"
     hardwareAccelerated={false}
     onRequestClose={[MockFunction]}
+    supportedOrientations={
+      Array [
+        "portrait",
+        "portrait-upside-down",
+        "landscape",
+        "landscape-left",
+        "landscape-right",
+      ]
+    }
     transparent={true}
     visible={true}
   >
@@ -36,7 +46,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
           Object {
             "backgroundColor": "#FFF",
             "borderRadius": 4,
-            "flex": 0.5,
+            "flex": 0.6666666666666666,
             "width": "95%",
           }
         }
@@ -139,7 +149,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
                       "fontSize": 16,
                     },
                     Object {
-                      "marginBottom": "2%",
+                      "marginBottom": 26.68,
                     },
                   ]
                 }
@@ -186,7 +196,6 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
               Object {
                 "borderColor": "#212A59",
                 "borderWidth": 2,
-                "width": "80%",
               }
             }
             testID="submit-form"

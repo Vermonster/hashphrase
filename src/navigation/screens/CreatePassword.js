@@ -7,10 +7,11 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
   KeyboardAvoidingView,
-  SafeAreaView,
   ScrollView,
   StatusBar,
+  Dimensions,
 } from 'react-native';
+import { SafeAreaView } from 'react-navigation';
 import { withNamespaces } from 'react-i18next';
 import LogoTitle from '../../components/LogoTitle';
 import PasswordGenerator from '../../components/PasswordGenerator';
@@ -27,8 +28,6 @@ const styles = StyleSheet.create({
   },
   newPass: {
     ...rowCenter,
-    marginTop: '20%',
-    marginBottom: '10%',
   },
   newPassLabel: {
     fontSize: fontSize.lg,
@@ -63,7 +62,13 @@ class CreateNewPassword extends Component {
 state = {
   isNewPassword: false,
   snackbarVisibility: false,
+  height: Dimensions.get('window').height,
 };
+
+onLayout = () => {
+  const { height } = Dimensions.get('screen');
+  this.setState({ height });
+}
 
 handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
   isNewPassword: !isNewPassword,
@@ -75,10 +80,20 @@ handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
 
   render() {
     const { t } = this.props;
-    const { isNewPassword, snackbarVisibility } = this.state;
+    const {
+      isNewPassword,
+      snackbarVisibility,
+      height,
+    } = this.state;
+
+    const marginTopValue = Math.floor(height * (0.15));
+    const marginBottomValue = Math.floor(height * (0.1));
 
     return (
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView
+        style={styles.container}
+        onLayout={this.onLayout}
+      >
         <StatusBar barStyle="light-content" />
         <KeyboardAvoidingView
           behavior="padding"
@@ -88,7 +103,10 @@ handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
           <ScrollView style={styles.flexLayout} keyboardShouldPersistTaps="always">
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
               <View style={styles.innerContainer}>
-                <View style={styles.newPass}>
+                <View
+                  style={[styles.newPass,
+                    { marginTop: marginTopValue, marginBottom: marginBottomValue }]
+               }>
                   <Text style={styles.newPassLabel}>{t('newPassword')}</Text>
                   <Switch
                     value={isNewPassword}

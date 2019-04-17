@@ -1,12 +1,10 @@
 import React from 'react';
 import { withNamespaces } from 'react-i18next';
 import {
-  View, Text, Modal, StyleSheet, Clipboard, TextInput, Platform,
+  View, Text, Modal, StyleSheet, Clipboard, TextInput, Platform, Dimensions,
 } from 'react-native';
 import { Button, IconButton } from 'react-native-paper';
 import { colors, fontSize } from '../styles/base';
-
-const accountLabelMargin = Platform.OS === 'ios' ? '2%' : 0;
 
 const styles = StyleSheet.create({
   container: {
@@ -20,7 +18,7 @@ const styles = StyleSheet.create({
   innerContainer: {
     backgroundColor: colors.white,
     width: '95%',
-    flex: 1 / 2,
+    flex: 2 / 3,
     borderRadius: 4,
   },
   messagesContainer: {
@@ -57,16 +55,12 @@ const styles = StyleSheet.create({
     fontSize: fontSize.lg,
     color: colors.white,
   },
-  accountLabel: {
-    marginBottom: accountLabelMargin,
-  },
   buttonRow: {
     justifyContent: 'flex-start',
     alignSelf: 'center',
     flex: 1 / 3,
   },
   button: {
-    width: '80%',
     borderColor: colors.secondary,
     borderWidth: 2,
   },
@@ -81,6 +75,12 @@ const styles = StyleSheet.create({
 class ConfirmationDialog extends React.Component {
   state = {
     obscured: true,
+    height: Dimensions.get('window').height,
+  }
+
+  onLayout = () => {
+    const { height } = Dimensions.get('screen');
+    this.setState({ height });
   }
 
   handleClearClipboard = () => Clipboard.setString('');
@@ -103,19 +103,24 @@ class ConfirmationDialog extends React.Component {
   }
 
   render() {
-    const { obscured } = this.state;
+    const { obscured, height } = this.state;
     const {
       t, visible, generatedPassword, closeModal, clearInputs,
     } = this.props;
     const visibilityIcon = obscured ? 'visibility-off' : 'visibility';
+    const accountLabelMargin = Platform.OS === 'ios' ? (0.02 * height) : 0;
 
     return (
-      <View style={styles.container}>
+      <View
+        style={styles.container}
+        onLayout={this.onLayout}
+      >
         <Modal
           animationType="fade"
           transparent
           visible={visible}
           onRequestClose={closeModal}
+          supportedOrientations={['portrait', 'portrait-upside-down', 'landscape', 'landscape-left', 'landscape-right']}
         >
           <View style={[styles.container, styles.modalBackground]}>
             <View style={styles.innerContainer}>
@@ -136,7 +141,7 @@ class ConfirmationDialog extends React.Component {
               <View style={{ flex: 1 / 2, justifyContent: 'center' }}>
                 <View style={styles.passwordContainer}>
                   <View style={styles.password}>
-                    <Text style={[styles.label, styles.accountLabel]}>
+                    <Text style={[styles.label, { marginBottom: accountLabelMargin }]}>
                       {t('accountPassword')}
                     </Text>
                     <TextInput
