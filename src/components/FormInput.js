@@ -45,7 +45,15 @@ class FormInput extends React.Component {
 
   render() {
     const {
-      placeholderText, prompt, value, handleChange, label, componentType, error,
+      placeholderText,
+      prompt,
+      value,
+      handleChange,
+      label,
+      componentType,
+      error,
+      handleInputFocus,
+      inputRef,
     } = this.props;
     const { visible } = this.state;
     const visibilityIcon = visible ? 'visibility' : 'visibility-off';
@@ -80,6 +88,9 @@ class FormInput extends React.Component {
             autoCorrect={false}
             label={label}
             error={error}
+            returnKeyType="next"
+            onSubmitEditing={handleInputFocus}
+            ref={inputRef}
           />
           { buttonType }
         </View>

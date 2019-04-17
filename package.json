@@ -71,7 +71,7 @@
     "react": "16.5.0",
     "react-i18next": "^9.0.10",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
-    "react-native-paper": "^2.14.0",
+    "react-native-paper": "^2.15.0",
     "react-navigation": "^3.0.9"
   }
 }
