@@ -46,6 +46,8 @@ class PasswordGenerator extends React.Component {
 
   closeModal = () => this.setState({ modalVisibility: false });
 
+  clearInputs = () => this.setState({ label: '', password: '', confirmPassword: '' })
+
   handleSubmit = (e) => {
     e.preventDefault();
     const { label, password, confirmPassword } = this.state;
@@ -144,6 +146,7 @@ class PasswordGenerator extends React.Component {
           generatedPassword={generatedPassword}
           closeModal={this.closeModal}
           showSnackbar={showSnackbar}
+          clearInputs={this.clearInputs}
         />
       </View>
     );
