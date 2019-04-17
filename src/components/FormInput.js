@@ -80,6 +80,7 @@ class FormInput extends React.Component {
             autoCorrect={false}
             label={label}
             error={error}
+            returnKeyType="next"
             onSubmitEditing={handleInputFocus}
             ref={inputRef}
           />
