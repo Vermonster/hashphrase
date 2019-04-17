@@ -9,7 +9,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
     }
   }
 >
-  <SafeAreaView
+  <withOrientation
     onLayout={[Function]}
   >
     <ScrollViewMock
@@ -536,6 +536,6 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
         </ForwardRef(View)>
       </ForwardRef(View)>
     </ScrollViewMock>
-  </SafeAreaView>
+  </withOrientation>
 </ForwardRef(View)>
 `;
