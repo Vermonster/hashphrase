@@ -1,16 +1,14 @@
 const es = {
   createPassword: {
-    title: 'AgiliKEY',
-    newPassword: '¿Vas a crear una nueva contraseña?',
+    newPassword: 'Contraseña nueva',
+    clipboardCleared: 'Contraseña ha sido borrada del clipboard',
   },
   confirmationDialog: {
     completedStatus: '¡Completo!',
     completedClipboard: 'Contraseña generada ha sido copiado al clipboard.',
-    accountPassword: 'Contraseña de la Cuenta:',
-    nextSteps: '¿Qué le gusta hacer ahora?',
+    accountPassword: 'Hashphrase:',
     clearClipboard: 'Borrar el clipboard',
-    anotherPassword: 'Hacer otra contraseña',
-    confirmOk: 'CONFIRMAR',
+    confirmOk: 'HE TERMINADO, BORRAR CLIPBOARD',
   },
   passwordGenerator: {
     label: 'Etiqueta',
@@ -22,7 +20,7 @@ const es = {
     submitMessage: 'GENERAR CONTRASEÑA',
   },
   tipsPage: {
-    title: 'Ayuda',
+    title: 'Preguntas Frecuentes',
     questions: {
       question_1: {
         title: '¿Qué es Loplop?',
