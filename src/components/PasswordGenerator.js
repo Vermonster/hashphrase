@@ -25,8 +25,8 @@ const styles = StyleSheet.create({
 });
 
 class PasswordGenerator extends React.Component {
-  passwordRef = React.createRef();
-  
+  inputs = {};
+
   state = {
     label: '',
     password: '',
@@ -68,8 +68,14 @@ class PasswordGenerator extends React.Component {
     this.setState({ [name]: inputValue, inputError: false }, this.handleSubmitButtonState);
   }
 
-  handleInputFocus = () => {
+  handlePasswordFocus = () => {
     this.passwordRef.focus();
+  }
+
+  handleConfirmPasswordFocus = () => {
+    if (this.confirmPasswordRef) {
+      this.confirmPasswordRef.focus();
+    }
   }
 
   handleSubmitButtonState = () => {
@@ -104,7 +110,7 @@ class PasswordGenerator extends React.Component {
           prompt={t('passwordLabel')}
           label={t('label')}
           handleChange={this.handleChange}
-          handleInputFocus={this.handleInputFocus}
+          handleInputFocus={this.handlePasswordFocus}
         />
         <FormInput
           value={password}
@@ -113,7 +119,8 @@ class PasswordGenerator extends React.Component {
           prompt={t('masterPassword')}
           label={t('password')}
           handleChange={this.handleChange}
-          inputRef={(input) => { this.passwordRef = input;}}
+          handleInputFocus={this.handleConfirmPasswordFocus}
+          inputRef={(input) => { this.passwordRef = input; }}
         />
         { isNewPassword && (
           <>
@@ -125,6 +132,7 @@ class PasswordGenerator extends React.Component {
               label={t('confirmPassword')}
               error={inputError}
               handleChange={this.handleChange}
+              inputRef={(input) => { this.confirmPasswordRef = input; }}
             />
             { inputError && (
               <View style={[rowCenter, styles.warning]}>
