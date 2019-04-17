@@ -17,9 +17,6 @@ import LogoTitle from '../../components/LogoTitle';
 import PasswordGenerator from '../../components/PasswordGenerator';
 import { colors, rowCenter, fontSize } from '../../styles/base';
 
-SafeAreaView.setStatusBarHeight(0);
-
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
