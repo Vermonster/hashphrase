@@ -54,7 +54,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
         >
           <withTheme(IconButton)
             icon="close"
-            onPress={[MockFunction]}
+            onPress={[Function]}
             size={35}
             style={
               Object {
