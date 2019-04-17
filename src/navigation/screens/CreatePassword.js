@@ -94,7 +94,7 @@ handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
         style={styles.container}
         onLayout={this.onLayout}
       >
-        <StatusBar hidden barStyle="light-content" />
+        <StatusBar barStyle="light-content" />
         <KeyboardAvoidingView
           behavior="padding"
           keyboardVerticalOffset={100}
