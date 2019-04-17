@@ -1,4 +1,4 @@
-const cn = {
+const zh = {
   createPassword: {
     newPassword: '创建新密码',
     clipboardCleared: '你的密码已从剪贴板中移除',
@@ -46,4 +46,4 @@ const cn = {
   },
 };
 
-export default cn;
+export default zh;
