@@ -90,10 +90,11 @@ class ConfirmationDialog extends React.Component {
   };
 
   handleSubmit = () => {
-    const { closeModal, showSnackbar } = this.props;
+    const { closeModal, showSnackbar, clearInputs } = this.props;
     this.handleClearClipboard();
     showSnackbar();
     this.resetState();
+    clearInputs();
     return closeModal();
   }
 
@@ -104,7 +105,7 @@ class ConfirmationDialog extends React.Component {
   render() {
     const { obscured } = this.state;
     const {
-      t, visible, generatedPassword, closeModal,
+      t, visible, generatedPassword, closeModal, clearInputs,
     } = this.props;
     const visibilityIcon = obscured ? 'visibility-off' : 'visibility';
 
@@ -123,7 +124,7 @@ class ConfirmationDialog extends React.Component {
                   icon="close"
                   size={35}
                   style={styles.closeButton}
-                  onPress={closeModal}
+                  onPress={() => { closeModal(); clearInputs(); }}
                 />
                 <View style={{ marginLeft: '4%' }}>
                   <Text style={styles.title}>{t('completedStatus')}</Text>
