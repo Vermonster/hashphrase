@@ -25,8 +25,6 @@ const styles = StyleSheet.create({
 });
 
 class PasswordGenerator extends React.Component {
-  inputs = {};
-
   state = {
     label: '',
     password: '',
@@ -108,16 +106,16 @@ class PasswordGenerator extends React.Component {
         <FormInput
           value={label}
           componentType="label"
-          placeholderText={t('label')}
-          prompt={t('passwordLabel')}
-          label={t('label')}
+          placeholderText={isNewPassword ? t('firstNickname') : null}
+          prompt={t('nicknameLabel')}
+          label={t('nickname')}
           handleChange={this.handleChange}
           handleInputFocus={this.handlePasswordFocus}
         />
         <FormInput
           value={password}
           componentType="password"
-          placeholderText={t('password')}
+          placeholderText={isNewPassword ? t('firstPassword') : null}
           prompt={t('masterPassword')}
           label={t('password')}
           handleChange={this.handleChange}
@@ -129,7 +127,7 @@ class PasswordGenerator extends React.Component {
             <FormInput
               value={confirmPassword}
               componentType="confirmPassword"
-              placeholderText={t('confirmPassword')}
+              placeholderText={isNewPassword ? t('firstConfirmPassword') : null}
               prompt={t('retypePassword')}
               label={t('confirmPassword')}
               error={inputError}
