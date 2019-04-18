@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     borderRadius: 4,
   },
   messagesContainer: {
-    flex: 1 / 3,
+    // flex: 1 / 3,
     backgroundColor: colors.primary,
     borderTopRightRadius: 4,
     borderTopLeftRadius: 4,
@@ -109,7 +109,7 @@ class ConfirmationDialog extends React.Component {
 
   modalStyling = (orientation, height, width) => {
     const styling = {};
-    // if (orientation === 'landscape') {
+
     if (width < 600) {
       styling.innerContainerWidth = '95%';
       styling.passwordContainerWidth = '95%';
@@ -117,16 +117,18 @@ class ConfirmationDialog extends React.Component {
       styling.innerContainerWidth = '70%';
       styling.passwordContainerWidth = '80%';
     }
+
     if (height > 800) {
       styling.innerContainerFlex = 1 / 2;
-    } else if (height < 350) {
+      styling.messagesContainerFlex = 2 / 3;
+    } else if (height < 376) {
       styling.innerContainerFlex = 4 / 5;
+      styling.messagesContainerFlex = 2 / 3;
     } else {
       styling.innerContainerFlex = 2 / 3;
+      styling.messagesContainerFlex = 2 / 3;
     }
-    // } else if (orientation === 'portrait') {
-    //   styling.inputHt = 1 / 3;
-    // }
+
     return styling;
   }
 
@@ -140,7 +142,7 @@ class ConfirmationDialog extends React.Component {
     const visibilityIcon = obscured ? 'visibility-off' : 'visibility';
     const accountLabelMargin = Platform.OS === 'ios' ? 6 : 0;
     const dynamicStyles = this.modalStyling(orientation, height, width);
-    const { innerContainerWidth, innerContainerFlex, passwordContainerWidth } = dynamicStyles;
+    const { innerContainerWidth, innerContainerFlex, passwordContainerWidth, messagesContainerFlex } = dynamicStyles;
     console.log(height, width);
 
     return (
@@ -156,7 +158,7 @@ class ConfirmationDialog extends React.Component {
         >
           <View style={[styles.container, styles.modalBackground]}>
             <View style={[styles.innerContainer, { width: innerContainerWidth, flex: innerContainerFlex }]}>
-              <View style={styles.messagesContainer}>
+              <View style={[styles.messagesContainer, { flex: messagesContainerFlex }]}>
                 <IconButton
                   icon="close"
                   size={35}
