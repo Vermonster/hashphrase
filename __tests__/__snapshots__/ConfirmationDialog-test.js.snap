@@ -2,7 +2,6 @@
 
 exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
 <ForwardRef(View)
-  onLayout={[Function]}
   style={
     Object {
       "alignItems": "center",
@@ -43,12 +42,16 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
     >
       <ForwardRef(View)
         style={
-          Object {
-            "backgroundColor": "#FFF",
-            "borderRadius": 4,
-            "flex": 0.6666666666666666,
-            "width": "95%",
-          }
+          Array [
+            Object {
+              "backgroundColor": "#FFF",
+              "borderRadius": 4,
+            },
+            Object {
+              "flex": 0.5,
+              "width": "70%",
+            },
+          ]
         }
       >
         <ForwardRef(View)
@@ -57,7 +60,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
               "backgroundColor": "#E07926",
               "borderTopLeftRadius": 4,
               "borderTopRightRadius": 4,
-              "flex": 0.5,
+              "flex": 0.6666666666666666,
               "justifyContent": "center",
             }
           }
@@ -120,16 +123,20 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
         >
           <ForwardRef(View)
             style={
-              Object {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": "#212A59",
-                "borderRadius": 4,
-                "flex": 0.5,
-                "flexDirection": "row",
-                "justifyContent": "space-between",
-                "width": "95%",
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "#212A59",
+                  "borderRadius": 4,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "padding": 6,
+                },
+                Object {
+                  "width": "80%",
+                },
+              ]
             }
           >
             <ForwardRef(View)
@@ -149,7 +156,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
                       "fontSize": 16,
                     },
                     Object {
-                      "marginBottom": 26.68,
+                      "marginBottom": 6,
                     },
                   ]
                 }
@@ -190,6 +197,11 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
           <withTheme(Button)
             accessibilityLabel="ACTION BUTTON"
             color="#212A59"
+            contentStyle={
+              Object {
+                "width": "auto",
+              }
+            }
             mode="outlined"
             onPress={[Function]}
             style={
