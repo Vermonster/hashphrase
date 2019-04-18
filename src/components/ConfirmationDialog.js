@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   },
   innerContainer: {
     backgroundColor: colors.white,
-    width: '95%',
+    // width: '95%',
     flex: 2 / 3,
     borderRadius: 4,
   },
@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   passwordContainer: {
-    flex: 1 / 2,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -37,6 +36,7 @@ const styles = StyleSheet.create({
     width: '95%',
     backgroundColor: colors.secondary,
     borderRadius: 4,
+    padding: 6,
   },
   password: {
     flex: 1,
@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignSelf: 'center',
     flex: 1 / 3,
+    // width: 'auto', SET WIDTH % BASED ON OVERALL WIDTH
   },
   button: {
     borderColor: colors.secondary,
@@ -75,13 +76,18 @@ const styles = StyleSheet.create({
 class ConfirmationDialog extends React.Component {
   state = {
     obscured: true,
-    height: Dimensions.get('window').height,
+    window: Dimensions.get('window'),
   }
 
-  onLayout = () => {
-    const { height } = Dimensions.get('screen');
-    this.setState({ height });
+  componentWillMount = () => {
+    Dimensions.addEventListener('change', this.handler);
   }
+
+  componentWillUnmount() {
+    Dimensions.removeEventListener('change', this.handler);
+  }
+
+  handler = dims => this.setState(dims);
 
   handleClearClipboard = () => Clipboard.setString('');
 
@@ -98,22 +104,40 @@ class ConfirmationDialog extends React.Component {
     return closeModal();
   }
 
-  resetState() {
+  resetState = () => {
     this.setState({ obscured: true });
   }
 
+  modalStyling = (orientation, height, width) => {
+    const styling = {};
+    // if (orientation === 'landscape') {
+    if (width < 600) {
+      styling.innerContainerWidth = '95%';
+    } else {
+      styling.innerContainerWidth = '75%';
+    }
+    // } else if (orientation === 'portrait') {
+    //   styling.inputHt = 1 / 3;
+    // }
+    return styling;
+  }
+
   render() {
-    const { obscured, height } = this.state;
+    const { obscured, window } = this.state;
+    const { width, height } = window;
+    const orientation = height > width ? 'portrait' : 'landscape';
     const {
       t, visible, generatedPassword, closeModal, clearForm,
     } = this.props;
     const visibilityIcon = obscured ? 'visibility-off' : 'visibility';
     const accountLabelMargin = Platform.OS === 'ios' ? (0.02 * height) : 0;
+    const dynamicStyles = this.modalStyling(orientation, height, width);
+    const { innerContainerWidth } = dynamicStyles;
+    console.log(height, width);
 
     return (
       <View
         style={styles.container}
-        onLayout={this.onLayout}
       >
         <Modal
           animationType="fade"
@@ -123,7 +147,7 @@ class ConfirmationDialog extends React.Component {
           supportedOrientations={['portrait', 'portrait-upside-down', 'landscape', 'landscape-left', 'landscape-right']}
         >
           <View style={[styles.container, styles.modalBackground]}>
-            <View style={styles.innerContainer}>
+            <View style={[styles.innerContainer, { width: innerContainerWidth }]}>
               <View style={styles.messagesContainer}>
                 <IconButton
                   icon="close"
@@ -139,7 +163,7 @@ class ConfirmationDialog extends React.Component {
                 </View>
               </View>
               <View style={{ flex: 1 / 2, justifyContent: 'center' }}>
-                <View style={styles.passwordContainer}>
+                <View style={[styles.passwordContainer]}>
                   <View style={styles.password}>
                     <Text style={[styles.label, { marginBottom: accountLabelMargin }]}>
                       {t('accountPassword')}
