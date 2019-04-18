@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
   },
   innerContainer: {
     backgroundColor: colors.white,
-    // flex: 1 / 2,
     borderRadius: 4,
   },
   messagesContainer: {
@@ -32,7 +31,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     alignSelf: 'center',
-    // width: '95%',
     backgroundColor: colors.secondary,
     borderRadius: 4,
     padding: 6,
@@ -58,7 +56,6 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignSelf: 'center',
     flex: 1 / 3,
-    // width: 'auto', SET WIDTH % BASED ON OVERALL WIDTH
   },
   button: {
     borderColor: colors.secondary,
@@ -140,7 +137,6 @@ class ConfirmationDialog extends React.Component {
     const accountLabelMargin = Platform.OS === 'ios' ? 6 : 0;
     const dynamicStyles = this.modalStyling(orientation, height, width);
     const { innerContainerWidth, innerContainerFlex, passwordContainerWidth } = dynamicStyles;
-    console.log(height, width);
 
     return (
       <View
@@ -199,6 +195,7 @@ class ConfirmationDialog extends React.Component {
                   style={styles.button}
                   mode="outlined"
                   color={colors.secondary}
+                  contentStyle={{ width: 'auto' }}
                 >
                   <Text>{t('button')}</Text>
                 </Button>
