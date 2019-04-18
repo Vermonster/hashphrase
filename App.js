@@ -42,7 +42,7 @@ const AppStackNavigator = createStackNavigator(
         shadowOpacity: 0.8,
         borderBottomWidth: 0,
         shadowColor: colors.tipsPageBorder,
-        shadowRadius: 7,
+        shadowRadius: 5,
         shadowOffset: { width: 0, height: 3 },
       },
     },
