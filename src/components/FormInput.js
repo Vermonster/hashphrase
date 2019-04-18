@@ -26,10 +26,17 @@ const styles = StyleSheet.create({
 });
 
 class FormInput extends React.Component {
-  state = { visible: false };
+  state = {
+    visible: false,
+    focused: false,
+  };
 
   toggleVisibility = () => {
     this.setState(prevState => ({ visible: !prevState.visible }));
+  }
+
+  toggleFocus = () => {
+    this.setState(prevState => ({ focused: !prevState.focused }));
   }
 
   isTextHidden = (inputLabel, visibleStatus) => {
@@ -55,7 +62,7 @@ class FormInput extends React.Component {
       handleInputFocus,
       inputRef,
     } = this.props;
-    const { visible } = this.state;
+    const { visible, focused } = this.state;
     const visibilityIcon = visible ? 'visibility' : 'visibility-off';
     const visibleText = this.isTextHidden(componentType, visible);
     const buttonType = (componentType === 'password'
@@ -72,6 +79,7 @@ class FormInput extends React.Component {
       ) : null;
 
     const inputMargin = componentType === 'confirmPassword' ? 0 : 30;
+    const placeholderOptions = focused ? '' : placeholderText;
 
     return (
       <View>
@@ -79,10 +87,12 @@ class FormInput extends React.Component {
         <View style={[styles.formInputContainer, { marginBottom: inputMargin }]}>
           <TextInput
             value={value}
-            placeholder={placeholderText}
+            placeholder={placeholderOptions}
             secureTextEntry={visibleText}
             style={styles.textInput}
             onChange={handleChange(componentType)}
+            onFocus={this.toggleFocus}
+            onBlur={this.toggleFocus}
             autoCapitalize="none"
             autoComplete="off"
             autoCorrect={false}
