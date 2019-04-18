@@ -17,12 +17,11 @@ const styles = StyleSheet.create({
   },
   innerContainer: {
     backgroundColor: colors.white,
-    // width: '95%',
-    flex: 2 / 3,
+    // flex: 1 / 2,
     borderRadius: 4,
   },
   messagesContainer: {
-    flex: 1 / 2,
+    flex: 1 / 3,
     backgroundColor: colors.primary,
     borderTopRightRadius: 4,
     borderTopLeftRadius: 4,
@@ -116,6 +115,13 @@ class ConfirmationDialog extends React.Component {
     } else {
       styling.innerContainerWidth = '70%';
     }
+    if (height > 800) {
+      styling.innerContainerFlex = 1 / 2;
+    } else if (height < 350) {
+      styling.innerContainerFlex = 4 / 5;
+    } else {
+      styling.innerContainerFlex = 2 / 3;
+    }
     // } else if (orientation === 'portrait') {
     //   styling.inputHt = 1 / 3;
     // }
@@ -132,7 +138,7 @@ class ConfirmationDialog extends React.Component {
     const visibilityIcon = obscured ? 'visibility-off' : 'visibility';
     const accountLabelMargin = Platform.OS === 'ios' ? (0.02 * height) : 0;
     const dynamicStyles = this.modalStyling(orientation, height, width);
-    const { innerContainerWidth } = dynamicStyles;
+    const { innerContainerWidth, innerContainerFlex } = dynamicStyles;
     console.log(height, width);
 
     return (
@@ -147,7 +153,7 @@ class ConfirmationDialog extends React.Component {
           supportedOrientations={['portrait', 'portrait-upside-down', 'landscape', 'landscape-left', 'landscape-right']}
         >
           <View style={[styles.container, styles.modalBackground]}>
-            <View style={[styles.innerContainer, { width: innerContainerWidth }]}>
+            <View style={[styles.innerContainer, { width: innerContainerWidth, flex: innerContainerFlex }]}>
               <View style={styles.messagesContainer}>
                 <IconButton
                   icon="close"
