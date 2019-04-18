@@ -8,10 +8,6 @@ import CreatePassword from './src/navigation/screens/CreatePassword';
 import TipsPage from './src/navigation/screens/TipsPage';
 import { colors } from './src/styles/base';
 
-if (process.env.NODE_ENV !== 'test' && Platform.OS === 'ios') {
-  SafeAreaView.setStatusBarHeight(20);
-}
-
 const theme = {
   ...DefaultTheme,
   roundness: 2,
