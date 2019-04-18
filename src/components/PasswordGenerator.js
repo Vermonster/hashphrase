@@ -127,7 +127,6 @@ class PasswordGenerator extends React.Component {
             <FormInput
               value={confirmPassword}
               componentType="confirmPassword"
-              placeholderText={isNewPassword ? t('firstConfirmPassword') : null}
               prompt={t('retypePassword')}
               label={t('confirmPassword')}
               error={inputError}
