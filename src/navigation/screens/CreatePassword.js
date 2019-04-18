@@ -59,20 +59,20 @@ class CreateNewPassword extends Component {
     ),
   });
 
-state = {
-  isNewPassword: false,
-  snackbarVisibility: false,
-  height: Dimensions.get('window').height,
-};
+  state = {
+    isNewPassword: false,
+    snackbarVisibility: false,
+    height: Dimensions.get('window').height,
+  };
 
-onLayout = () => {
-  const { height } = Dimensions.get('screen');
-  this.setState({ height });
-}
+  onLayout = () => {
+    const { height } = Dimensions.get('screen');
+    this.setState({ height });
+  }
 
-handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
-  isNewPassword: !isNewPassword,
-}))
+  handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
+    isNewPassword: !isNewPassword,
+  }))
 
   showSnackbar = () => this.setState({ snackbarVisibility: true });
 
@@ -106,7 +106,8 @@ handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
                 <View
                   style={[styles.newPass,
                     { marginTop: marginTopValue, marginBottom: marginBottomValue }]
-               }>
+                  }
+                >
                   <Text style={styles.newPassLabel}>{t('newPassword')}</Text>
                   <Switch
                     value={isNewPassword}
