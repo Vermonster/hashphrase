@@ -1,6 +1,5 @@
 import React from 'react';
-import { Platform } from 'react-native';
-import { createAppContainer, createStackNavigator, SafeAreaView } from 'react-navigation';
+import { createAppContainer, createStackNavigator } from 'react-navigation';
 import { I18nextProvider } from 'react-i18next';
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import i18n from './src/navigation/i18n/i18n';
