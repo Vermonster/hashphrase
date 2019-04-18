@@ -114,7 +114,7 @@ class ConfirmationDialog extends React.Component {
     if (width < 600) {
       styling.innerContainerWidth = '95%';
     } else {
-      styling.innerContainerWidth = '75%';
+      styling.innerContainerWidth = '70%';
     }
     // } else if (orientation === 'portrait') {
     //   styling.inputHt = 1 / 3;
