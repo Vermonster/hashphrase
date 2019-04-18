@@ -76,14 +76,14 @@ class ConfirmationDialog extends React.Component {
   }
 
   componentWillMount = () => {
-    Dimensions.addEventListener('change', this.handler);
+    Dimensions.addEventListener('change', this.setDimensions);
   }
 
   componentWillUnmount() {
-    Dimensions.removeEventListener('change', this.handler);
+    Dimensions.removeEventListener('change', this.setDimensions);
   }
 
-  handler = dims => this.setState(dims);
+  setDimensions = windowDimensions => this.setState(windowDimensions);
 
   handleClearClipboard = () => Clipboard.setString('');
 
@@ -104,7 +104,7 @@ class ConfirmationDialog extends React.Component {
     this.setState({ obscured: true });
   }
 
-  modalStyling = (orientation, height, width) => {
+  modalStyling = (height, width) => {
     const styling = {};
 
     if (width < 600) {
@@ -129,13 +129,12 @@ class ConfirmationDialog extends React.Component {
   render() {
     const { obscured, window } = this.state;
     const { width, height } = window;
-    const orientation = height > width ? 'portrait' : 'landscape';
     const {
       t, visible, generatedPassword, closeModal, clearForm,
     } = this.props;
     const visibilityIcon = obscured ? 'visibility-off' : 'visibility';
     const accountLabelMargin = Platform.OS === 'ios' ? 6 : 0;
-    const dynamicStyles = this.modalStyling(orientation, height, width);
+    const dynamicStyles = this.modalStyling(height, width);
     const { innerContainerWidth, innerContainerFlex, passwordContainerWidth } = dynamicStyles;
 
     return (
