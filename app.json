@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Agilikey",
+    "name": "Hashphrase",
     "description": "A mobile password generator",
-    "slug": "Agilikey",
+    "slug": "Hashphrase",
     "sdkVersion": "32.0.0",
     "platforms": [
       "android",
