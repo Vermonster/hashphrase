@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     alignSelf: 'center',
-    width: '95%',
+    // width: '95%',
     backgroundColor: colors.secondary,
     borderRadius: 4,
     padding: 6,
@@ -112,8 +112,10 @@ class ConfirmationDialog extends React.Component {
     // if (orientation === 'landscape') {
     if (width < 600) {
       styling.innerContainerWidth = '95%';
+      styling.passwordContainerWidth = '95%';
     } else {
       styling.innerContainerWidth = '70%';
+      styling.passwordContainerWidth = '80%';
     }
     if (height > 800) {
       styling.innerContainerFlex = 1 / 2;
@@ -138,7 +140,7 @@ class ConfirmationDialog extends React.Component {
     const visibilityIcon = obscured ? 'visibility-off' : 'visibility';
     const accountLabelMargin = Platform.OS === 'ios' ? 6 : 0;
     const dynamicStyles = this.modalStyling(orientation, height, width);
-    const { innerContainerWidth, innerContainerFlex } = dynamicStyles;
+    const { innerContainerWidth, innerContainerFlex, passwordContainerWidth } = dynamicStyles;
     console.log(height, width);
 
     return (
@@ -169,7 +171,7 @@ class ConfirmationDialog extends React.Component {
                 </View>
               </View>
               <View style={{ flex: 1 / 2, justifyContent: 'center' }}>
-                <View style={[styles.passwordContainer]}>
+                <View style={[styles.passwordContainer, { width: passwordContainerWidth }]}>
                   <View style={styles.password}>
                     <Text style={[styles.label, { marginBottom: accountLabelMargin }]}>
                       {t('accountPassword')}
