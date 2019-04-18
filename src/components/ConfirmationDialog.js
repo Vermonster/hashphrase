@@ -150,7 +150,11 @@ class ConfirmationDialog extends React.Component {
           supportedOrientations={['portrait', 'portrait-upside-down', 'landscape', 'landscape-left', 'landscape-right']}
         >
           <View style={[styles.container, styles.modalBackground]}>
-            <View style={[styles.innerContainer, { width: innerContainerWidth, flex: innerContainerFlex }]}>
+            <View style={
+              [
+                styles.innerContainer, { width: innerContainerWidth, flex: innerContainerFlex },
+              ]
+           }>
               <View style={styles.messagesContainer}>
                 <IconButton
                   icon="close"
