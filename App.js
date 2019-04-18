@@ -1,16 +1,11 @@
 import React from 'react';
-import { Platform } from 'react-native';
-import { createAppContainer, createStackNavigator, SafeAreaView } from 'react-navigation';
+import { createAppContainer, createStackNavigator } from 'react-navigation';
 import { I18nextProvider } from 'react-i18next';
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import i18n from './src/navigation/i18n/i18n';
 import CreatePassword from './src/navigation/screens/CreatePassword';
 import TipsPage from './src/navigation/screens/TipsPage';
 import { colors } from './src/styles/base';
-
-if (process.env.NODE_ENV !== 'test' && Platform.OS === 'ios') {
-  SafeAreaView.setStatusBarHeight(20);
-}
 
 const theme = {
   ...DefaultTheme,
