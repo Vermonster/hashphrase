@@ -15,6 +15,12 @@
       "image": "./assets/splashScreen.png",
       "backgroundColor": "#212A59",
       "resizeMode": "cover"
+    },
+    "ios": {
+      "bundleIdentifier": "com.vermonster.hashphrase"
+    },
+    "android": {
+      "package": "com.vermonster.hashphrase"
     }
   }
 }
