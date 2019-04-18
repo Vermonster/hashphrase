@@ -105,7 +105,7 @@ class ConfirmationDialog extends React.Component {
   render() {
     const { obscured, height } = this.state;
     const {
-      t, visible, generatedPassword, closeModal, clearInputs,
+      t, visible, generatedPassword, closeModal, clearForm,
     } = this.props;
     const visibilityIcon = obscured ? 'visibility-off' : 'visibility';
     const accountLabelMargin = Platform.OS === 'ios' ? (0.02 * height) : 0;
@@ -129,7 +129,7 @@ class ConfirmationDialog extends React.Component {
                   icon="close"
                   size={35}
                   style={styles.closeButton}
-                  onPress={() => { closeModal(); clearInputs(); }}
+                  onPress={() => { closeModal(); clearForm(); }}
                 />
                 <View style={{ marginLeft: '4%' }}>
                   <Text style={styles.title}>{t('completedStatus')}</Text>
