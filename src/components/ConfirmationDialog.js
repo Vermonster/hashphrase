@@ -136,7 +136,7 @@ class ConfirmationDialog extends React.Component {
       t, visible, generatedPassword, closeModal, clearForm,
     } = this.props;
     const visibilityIcon = obscured ? 'visibility-off' : 'visibility';
-    const accountLabelMargin = Platform.OS === 'ios' ? (0.02 * height) : 0;
+    const accountLabelMargin = Platform.OS === 'ios' ? 6 : 0;
     const dynamicStyles = this.modalStyling(orientation, height, width);
     const { innerContainerWidth, innerContainerFlex } = dynamicStyles;
     console.log(height, width);
