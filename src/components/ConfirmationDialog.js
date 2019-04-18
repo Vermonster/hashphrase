@@ -90,11 +90,11 @@ class ConfirmationDialog extends React.Component {
   };
 
   handleSubmit = () => {
-    const { closeModal, showSnackbar, clearInputs } = this.props;
+    const { closeModal, showSnackbar, clearForm } = this.props;
     this.handleClearClipboard();
     showSnackbar();
     this.resetState();
-    clearInputs();
+    clearForm();
     return closeModal();
   }
 

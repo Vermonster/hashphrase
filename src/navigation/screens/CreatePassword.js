@@ -74,66 +74,67 @@ handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
   isNewPassword: !isNewPassword,
 }))
 
-  showSnackbar = () => this.setState({ snackbarVisibility: true });
+showSnackbar = () => this.setState({ snackbarVisibility: true });
 
-  hideSnackbar = () => this.setState({ snackbarVisibility: false });
+hideSnackbar = () => this.setState({ snackbarVisibility: false });
 
-  render() {
-    const { t } = this.props;
-    const {
-      isNewPassword,
-      snackbarVisibility,
-      height,
-    } = this.state;
+render() {
+  const { t } = this.props;
+  const {
+    isNewPassword,
+    snackbarVisibility,
+    height,
+  } = this.state;
 
-    const marginTopValue = Math.floor(height * (0.15));
-    const marginBottomValue = Math.floor(height * (0.1));
+  const marginTopValue = Math.floor(height * (0.15));
+  const marginBottomValue = Math.floor(height * (0.1));
 
-    return (
-      <SafeAreaView
-        style={styles.container}
-        onLayout={this.onLayout}
+  return (
+    <SafeAreaView
+      style={styles.container}
+      onLayout={this.onLayout}
+    >
+      <StatusBar barStyle="light-content" />
+      <KeyboardAvoidingView
+        behavior="padding"
+        keyboardVerticalOffset={100}
+        style={styles.flexLayout}
       >
-        <StatusBar barStyle="light-content" />
-        <KeyboardAvoidingView
-          behavior="padding"
-          keyboardVerticalOffset={100}
-          style={styles.flexLayout}
-        >
-          <ScrollView style={styles.flexLayout} keyboardShouldPersistTaps="always">
-            <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-              <View style={styles.innerContainer}>
-                <View
-                  style={[styles.newPass,
-                    { marginTop: marginTopValue, marginBottom: marginBottomValue }]
-               }>
-                  <Text style={styles.newPassLabel}>{t('newPassword')}</Text>
-                  <Switch
-                    value={isNewPassword}
-                    onValueChange={this.handleToggleSwitch}
-                    color={colors.primary}
-                  />
-                </View>
-                <PasswordGenerator
-                  isNewPassword={isNewPassword}
-                  showSnackbar={this.showSnackbar}
+        <ScrollView style={styles.flexLayout} keyboardShouldPersistTaps="always">
+          <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+            <View style={styles.innerContainer}>
+              <View
+                style={[styles.newPass,
+                  { marginTop: marginTopValue, marginBottom: marginBottomValue }]
+              }
+              >
+                <Text style={styles.newPassLabel}>{t('newPassword')}</Text>
+                <Switch
+                  value={isNewPassword}
+                  onValueChange={this.handleToggleSwitch}
+                  color={colors.primary}
                 />
-                <View style={styles.flexLayout} />
               </View>
-            </TouchableWithoutFeedback>
-          </ScrollView>
-        </KeyboardAvoidingView>
-        <Snackbar
-          visible={snackbarVisibility}
-          onDismiss={this.hideSnackbar}
-          duration={2000}
-          style={styles.snackbar}
-        >
-          {t('clipboardCleared')}
-        </Snackbar>
-      </SafeAreaView>
-    );
-  }
+              <PasswordGenerator
+                isNewPassword={isNewPassword}
+                showSnackbar={this.showSnackbar}
+              />
+              <View style={styles.flexLayout} />
+            </View>
+          </TouchableWithoutFeedback>
+        </ScrollView>
+      </KeyboardAvoidingView>
+      <Snackbar
+        visible={snackbarVisibility}
+        onDismiss={this.hideSnackbar}
+        duration={2000}
+        style={styles.snackbar}
+      >
+        {t('clipboardCleared')}
+      </Snackbar>
+    </SafeAreaView>
+  );
+}
 }
 
 export default withNamespaces('createPassword')(CreateNewPassword);
