@@ -45,12 +45,12 @@ const styles = StyleSheet.create({
 class TipsPage extends React.Component {
   static navigationOptions = {
     headerStyle: {
+      elevation: 0,
       backgroundColor: colors.primary,
       shadowOpacity: 0.8,
-      elevation: 10,
       borderBottomWidth: 0,
       shadowColor: colors.tipsPageBorder,
-      shadowRadius: 1,
+      shadowRadius: 5,
       shadowOffset: { width: 0, height: 3 },
     },
     headerTintColor: colors.secondary,

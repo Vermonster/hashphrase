@@ -33,11 +33,11 @@ const AppStackNavigator = createStackNavigator(
     cardShadowEnabled: false,
     defaultNavigationOptions: {
       headerStyle: {
-        elevation: 10,
+        elevation: 0,
         shadowOpacity: 0.8,
         borderBottomWidth: 0,
         shadowColor: colors.tipsPageBorder,
-        shadowRadius: 2,
+        shadowRadius: 5,
         shadowOffset: { width: 0, height: 3 },
       },
     },
