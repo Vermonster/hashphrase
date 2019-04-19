@@ -16,7 +16,7 @@ const en = {
     confirmPassword: 'Confirm Master Password',
     firstNickname: 'E.g. MyAmazon, Work Email',
     firstPassword: 'Make it memorable',
-    nicknameLabel: 'What is the Hashphrase\'s Nickname?',
+    nicknameLabel: 'What is the account\'s Nickname?',
     masterPassword: 'What is your Master Password?',
     retypePassword: 'Retype your Master Password',
     submitMessage: 'CREATE HASHPHRASE',
