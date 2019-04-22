@@ -1,10 +1,10 @@
 import React from 'react';
 import { withNamespaces } from 'react-i18next';
 import {
-  ScrollView, StyleSheet, View, Dimensions,
+  ScrollView, StyleSheet, View, Dimensions, TouchableOpacity,
 } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
-import { List, Text, Card } from 'react-native-paper';
+import { List, Text, Card, Divider } from 'react-native-paper';
 import { colors } from '../../styles/base';
 
 const styles = StyleSheet.create({
@@ -37,8 +37,6 @@ const styles = StyleSheet.create({
   scrollContainer: {
     flexGrow: 1,
     borderColor: colors.tipsPageBorder,
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
   },
 });
 
@@ -94,18 +92,25 @@ class TipsPage extends React.Component {
     const titleVerticalMargins = 0.07 * (height);
 
     return (
-      <View style={styles.backgroundContainer}>
-        <SafeAreaView
-          onLayout={this.onLayout}
+      <SafeAreaView style={styles.backgroundContainer} onLayout={this.onLayout}>
+        <ScrollView contentContainerStyle={styles.scrollContainer}>
+          <Text style={[styles.title, { marginVertical: titleVerticalMargins }]}>{t('title')}</Text>
+          <View>
+            { components }
+          </View>
+        </ScrollView>
+        <View style={{
+          flexDirection: 'row', alignItems: 'center', justifyContent: 'center', height: '8%',
+        }}
         >
-          <ScrollView contentContainerStyle={styles.scrollContainer}>
-            <Text style={[styles.title, { marginVertical: titleVerticalMargins }]}>{t('title')}</Text>
-            <View>
-              { components }
-            </View>
-          </ScrollView>
-        </SafeAreaView>
-      </View>
+          <View style={{ borderRightWidth: 1, marginRight: '2%' }}>
+            <Text style={{ marginRight: '2%' }}>Version 1.0.0</Text>
+          </View>
+          <TouchableOpacity>
+            <Text style={{ textDecorationLine: 'underline' }}>Privacy Policy</Text>
+          </TouchableOpacity>
+        </View>
+      </SafeAreaView>
     );
   }
 }
