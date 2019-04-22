@@ -4,7 +4,7 @@ import {
   ScrollView, StyleSheet, View, Dimensions, TouchableOpacity,
 } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
-import { List, Text, Card, Divider } from 'react-native-paper';
+import { List, Text, Card } from 'react-native-paper';
 import { colors } from '../../styles/base';
 
 const styles = StyleSheet.create({
@@ -84,7 +84,7 @@ class TipsPage extends React.Component {
   ));
 
   render() {
-    const { t } = this.props;
+    const { t, navigation } = this.props;
     const { height } = this.state;
     const questionObj = t('questions', { returnObjects: true });
     const questionArr = Object.keys(questionObj);
@@ -106,7 +106,7 @@ class TipsPage extends React.Component {
           <View style={{ borderRightWidth: 1, marginRight: '2%' }}>
             <Text style={{ marginRight: '2%' }}>Version 1.0.0</Text>
           </View>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('PolicyPage')}>
             <Text style={{ textDecorationLine: 'underline' }}>Privacy Policy</Text>
           </TouchableOpacity>
         </View>
