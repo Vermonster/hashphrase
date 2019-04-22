@@ -3,7 +3,6 @@ const en = {
     newPassword: 'New password',
     clipboardCleared: 'Your password has been cleared from clipboard.',
   },
-  infoScreen: {},
   confirmationDialog: {
     completedStatus: 'All done!',
     completedClipboard: 'Your Hashphrase is now on your clipboard.',
@@ -51,20 +50,43 @@ const en = {
     title: 'Privacy Policy',
     update: 'Last Updated: April 19, 2019',
     creator: 'Vermonster Inc. (“we”, “us”, “our”, “company”) is the creator and maintainer of the HashPhrase application (“app”). Any reference to “you”, “your”, or “user” refers to the user who installs and uses the App.',
-    subheading_1: 'Privacy Policy Acceptance',
-    subheading_2: 'Amendments to this Privacy Policy',
-    subheading_3: 'Information Collection and Processing',
-    subheading_4: 'Enquiry Information Collection',
-    subheading_5: 'Purpose of Processing',
-    subheading_6: 'Legal Basis for Processing',
-    subheading_7: 'Sharing Your Information',
-    paragraph_1: 'Please read this Privacy Policy before using the app. By installing and making use of the app’s services, You give consent to the policies and practices outlined here.',
-    paragraph_2: 'We reserve the right to modify and update this Privacy Policy at any time. We will indicate that the policy has been edited by changing the “Last Updated” date at the top of this document. You are advised to review this document periodically. Any changes will be effective when posted on this page.',
-    paragraph_3: 'We do not collect or store any information that users enter into this application. Generated passwords are stored on the user’s own device clipboard and are never sent to us. User entries into input fields for Nicknames and Master Passwords are not stored at all. We do not intentionally collect any personally identifiable information (such as name, email address, phone number, etc.) and users are not required to provide us with any such information in order to use this app. Users may choose to provide the company with personally identifiable information if they contact us with questions or support requests.',
-    paragraph_4: 'In response to support requests or other communications initiated by users, we will collect your name, the content of your message, as well as the email address or other contact information to which we will direct our response. Support requests may be submitted via email to info@vermonster.com. Since this project is open source on Github, users may also submit issues or pull requests there.',
-    paragraph_5: 'We only process users’ personal information from enquiries in order to respond to your request and maintain a record of your past communication with the company. We may use this information to follow up, particularly in the case of support requests.',
-    paragraph_6: 'We are unable to respond effectively to user requests if we do not process the basic personally identifiable information from enquiries. We maintain the bare minimum of such information in order to fulfil our obligations towards you.',
-    paragraph_7: 'We do not share or sell your personal information to any third-party. We may disclose your personal information upon reasonable requests from law enforcement authorities, or if we are legally required to do so. We may disclose your personal identification to our employees so that they may respond to enquiries from you.',
+    privacy_policy: [
+      {
+        id: 1,
+        subheading: 'Privacy Policy Acceptance',
+        content: 'Please read this Privacy Policy before using the app. By installing and making use of the app’s services, You give consent to the policies and practices outlined here.',
+      },
+      {
+        id: 2,
+        subheading: 'Amendments to this Privacy Policy',
+        content: 'We reserve the right to modify and update this Privacy Policy at any time. We will indicate that the policy has been edited by changing the “Last Updated” date at the top of this document. You are advised to review this document periodically. Any changes will be effective when posted on this page.',
+      },
+      {
+        id: 3,
+        subheading: 'Information Collection and Processing',
+        content: 'We do not collect or store any information that users enter into this application. Generated passwords are stored on the user’s own device clipboard and are never sent to us. User entries into input fields for Nicknames and Master Passwords are not stored at all. We do not intentionally collect any personally identifiable information (such as name, email address, phone number, etc.) and users are not required to provide us with any such information in order to use this app. Users may choose to provide the company with personally identifiable information if they contact us with questions or support requests.',
+      },
+      {
+        id: 4,
+        subheading: 'Enquiry Information Collection',
+        content: 'In response to support requests or other communications initiated by users, we will collect your name, the content of your message, as well as the email address or other contact information to which we will direct our response. Support requests may be submitted via email to info@vermonster.com. Since this project is open source on Github, users may also submit issues or pull requests there.',
+      },
+      {
+        id: 5,
+        subheading: 'Purpose of Processing',
+        content: 'We only process users’ personal information from enquiries in order to respond to your request and maintain a record of your past communication with the company. We may use this information to follow up, particularly in the case of support requests.',
+      },
+      {
+        id: 6,
+        subheading: 'Legal Basis for Processing',
+        content: 'We are unable to respond effectively to user requests if we do not process the basic personally identifiable information from enquiries. We maintain the bare minimum of such information in order to fulfil our obligations towards you.',
+      },
+      {
+        id: 7,
+        subheading: 'Sharing Your Information',
+        content: 'We do not share or sell your personal information to any third-party. We may disclose your personal information upon reasonable requests from law enforcement authorities, or if we are legally required to do so. We may disclose your personal identification to our employees so that they may respond to enquiries from you.',
+      },
+    ],
   },
 };
 
