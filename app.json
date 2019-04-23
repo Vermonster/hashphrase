@@ -8,12 +8,12 @@
       "android",
       "ios"
     ],
-    "version": "0.0.1",
+    "version": "1.0.0",
     "privacy": "public",
     "orientation": "default",
-    "icon": "./assets/appIcon.png",
+    "icon": "./assets/app-icon.png",
     "splash": {
-      "image": "./assets/splashScreen.png",
+      "image": "./assets/splash.png",
       "backgroundColor": "#212A59",
       "resizeMode": "cover"
     },
@@ -24,8 +24,7 @@
     },
     "android": {
       "package": "com.vermonster.hashphrase",
-      "versionCode": 1,
-      "versionName": "1.0.0"
+      "versionCode": 1
     }
   }
 }
