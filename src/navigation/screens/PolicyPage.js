@@ -12,9 +12,18 @@ const PolicyPage = ({ t }) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView>
-        <Title>{t('title')}</Title>
-        <Text>{t('update')}</Text>
-        <Paragraph>{t('creator')}</Paragraph>
+        <Title>
+          {t('title')}
+          {'\n'}
+        </Title>
+        <Text>
+          {t('update')}
+          {'\n'}
+        </Text>
+        <Paragraph>
+          {t('creator')}
+          {'\n'}
+        </Paragraph>
         { privacyPolicy.map(item => (
           <View key={item.id}>
             <Subheading>{item.subheading}</Subheading>
