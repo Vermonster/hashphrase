@@ -11,7 +11,7 @@ const PolicyPage = ({ t }) => {
   const privacyPolicy = t('privacy_policy', { returnObjects: true });
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <ScrollView>
+      <ScrollView contentContainerStyle={{ padding: '5%' }}>
         <Title>
           {t('title')}
           {'\n'}
