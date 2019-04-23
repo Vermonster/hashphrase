@@ -1,10 +1,11 @@
 import React from 'react';
 import { withNamespaces } from 'react-i18next';
 import {
-  ScrollView, StyleSheet, View, Dimensions, TouchableOpacity,
+  ScrollView, StyleSheet, View, Dimensions,
 } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
 import { List, Text, Card } from 'react-native-paper';
+import Footer from '../../components/Footer';
 import { colors } from '../../styles/base';
 
 const styles = StyleSheet.create({
@@ -99,17 +100,9 @@ class TipsPage extends React.Component {
             { components }
           </View>
         </ScrollView>
-        <View style={{
-          flexDirection: 'row', alignItems: 'center', justifyContent: 'center', height: '8%',
-        }}
-        >
-          <View style={{ borderRightWidth: 1, marginRight: '2%' }}>
-            <Text style={{ marginRight: '2%' }}>Version 1.0.0</Text>
-          </View>
-          <TouchableOpacity onPress={() => navigation.navigate('PolicyPage')}>
-            <Text style={{ textDecorationLine: 'underline' }}>Privacy Policy</Text>
-          </TouchableOpacity>
-        </View>
+        <Footer
+          navigation={navigation}
+        />
       </SafeAreaView>
     );
   }

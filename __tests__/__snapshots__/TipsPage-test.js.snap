@@ -532,48 +532,6 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
       </ForwardRef(View)>
     </ForwardRef(View)>
   </ScrollViewMock>
-  <ForwardRef(View)
-    style={
-      Object {
-        "alignItems": "center",
-        "flexDirection": "row",
-        "height": "8%",
-        "justifyContent": "center",
-      }
-    }
-  >
-    <ForwardRef(View)
-      style={
-        Object {
-          "borderRightWidth": 1,
-          "marginRight": "2%",
-        }
-      }
-    >
-      <withTheme(Text)
-        style={
-          Object {
-            "marginRight": "2%",
-          }
-        }
-      >
-        Version 1.0.0
-      </withTheme(Text)>
-    </ForwardRef(View)>
-    <TouchableOpacity
-      activeOpacity={0.2}
-      onPress={[Function]}
-    >
-      <withTheme(Text)
-        style={
-          Object {
-            "textDecorationLine": "underline",
-          }
-        }
-      >
-        Privacy Policy
-      </withTheme(Text)>
-    </TouchableOpacity>
-  </ForwardRef(View)>
+  <Footer />
 </withOrientation>
 `;
