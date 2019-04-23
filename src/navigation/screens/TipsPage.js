@@ -5,6 +5,7 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
 import { List, Text, Card } from 'react-native-paper';
+import Footer from '../../components/Footer';
 import { colors } from '../../styles/base';
 
 const styles = StyleSheet.create({
@@ -37,8 +38,6 @@ const styles = StyleSheet.create({
   scrollContainer: {
     flexGrow: 1,
     borderColor: colors.tipsPageBorder,
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
   },
 });
 
@@ -86,7 +85,7 @@ class TipsPage extends React.Component {
   ));
 
   render() {
-    const { t } = this.props;
+    const { t, navigation } = this.props;
     const { height } = this.state;
     const questionObj = t('questions', { returnObjects: true });
     const questionArr = Object.keys(questionObj);
@@ -94,18 +93,17 @@ class TipsPage extends React.Component {
     const titleVerticalMargins = 0.07 * (height);
 
     return (
-      <View style={styles.backgroundContainer}>
-        <SafeAreaView
-          onLayout={this.onLayout}
-        >
-          <ScrollView contentContainerStyle={styles.scrollContainer}>
-            <Text style={[styles.title, { marginVertical: titleVerticalMargins }]}>{t('title')}</Text>
-            <View>
-              { components }
-            </View>
-          </ScrollView>
-        </SafeAreaView>
-      </View>
+      <SafeAreaView style={styles.backgroundContainer} onLayout={this.onLayout}>
+        <ScrollView contentContainerStyle={styles.scrollContainer}>
+          <Text style={[styles.title, { marginVertical: titleVerticalMargins }]}>{t('title')}</Text>
+          <View>
+            { components }
+          </View>
+        </ScrollView>
+        <Footer
+          navigation={navigation}
+        />
+      </SafeAreaView>
     );
   }
 }
