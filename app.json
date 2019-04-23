@@ -11,16 +11,21 @@
     "version": "0.0.1",
     "privacy": "public",
     "orientation": "default",
+    "icon": "./assets/appIcon.png",
     "splash": {
       "image": "./assets/splashScreen.png",
       "backgroundColor": "#212A59",
       "resizeMode": "cover"
     },
     "ios": {
-      "bundleIdentifier": "com.vermonster.hashphrase"
+      "bundleIdentifier": "com.vermonster.hashphrase",
+      "buildNumber": "1.0.0",
+      "supportsTablet": true
     },
     "android": {
-      "package": "com.vermonster.hashphrase"
+      "package": "com.vermonster.hashphrase",
+      "versionCode": 1,
+      "versionName": "1.0.0"
     }
   }
 }
