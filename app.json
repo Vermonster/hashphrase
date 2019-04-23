@@ -1,20 +1,30 @@
 {
   "expo": {
-    "name": "Agilikey",
+    "name": "Hashphrase",
     "description": "A mobile password generator",
-    "slug": "Agilikey",
+    "slug": "Hashphrase",
     "sdkVersion": "32.0.0",
     "platforms": [
       "android",
       "ios"
     ],
-    "version": "0.0.1",
+    "version": "1.0.0",
     "privacy": "public",
     "orientation": "default",
+    "icon": "./assets/app-icon.png",
     "splash": {
-      "image": "./assets/splashScreen.png",
+      "image": "./assets/splash.png",
       "backgroundColor": "#212A59",
       "resizeMode": "cover"
+    },
+    "ios": {
+      "bundleIdentifier": "com.vermonster.hashphrase",
+      "buildNumber": "1.0.0",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.vermonster.hashphrase",
+      "versionCode": 1
     }
   }
 }
