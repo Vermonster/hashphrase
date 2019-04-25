@@ -87,7 +87,7 @@ class PasswordGenerator extends React.Component {
   }
 
   generatePassword(type, password) {
-    this.setState({ generatedPassword: loplop(type, password, 8), }, () => {
+    this.setState({ generatedPassword: loplop(type, password, 8) }, () => {
       const { generatedPassword } = this.state;
       this.addToClipboard(generatedPassword);
     });
