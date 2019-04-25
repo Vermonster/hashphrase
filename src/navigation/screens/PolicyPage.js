@@ -27,7 +27,10 @@ const PolicyPage = ({ t }) => {
         { privacyPolicy.map(item => (
           <View key={item.id}>
             <Subheading>{item.subheading}</Subheading>
-            <Paragraph>{item.content}</Paragraph>
+            <Paragraph>
+              {item.content}
+              {'\n'}
+            </Paragraph>
           </View>
         ))}
       </ScrollView>
