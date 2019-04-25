@@ -13,7 +13,7 @@ const en = {
     nickname: 'Nickname',
     password: 'Master Password',
     confirmPassword: 'Confirm Master Password',
-    firstNickname: 'E.g. MyAmazon, Work Email',
+    firstNickname: 'Case sensitive, E.g. MyAmazon',
     firstPassword: 'Make it memorable',
     nicknameLabel: 'What is the account\'s Nickname?',
     masterPassword: 'What is your Master Password?',
