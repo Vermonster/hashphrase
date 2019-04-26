@@ -99,7 +99,7 @@ class PasswordGenerator extends React.Component {
     const {
       generatedPassword, disabled, modalVisibility, inputError, label, password, confirmPassword,
     } = this.state;
-    const { isNewPassword, showSnackbar, t } = this.props;
+    const { isNewPassword, t, toggleClearClipboard } = this.props;
 
     return (
       <View style={styles.generatorContainer}>
@@ -158,8 +158,8 @@ class PasswordGenerator extends React.Component {
           visible={modalVisibility}
           generatedPassword={generatedPassword}
           closeModal={this.closeModal}
-          showSnackbar={showSnackbar}
           clearForm={this.clearForm}
+          toggleClearClipboard={toggleClearClipboard}
         />
       </View>
     );
