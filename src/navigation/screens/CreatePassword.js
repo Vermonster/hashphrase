@@ -10,6 +10,8 @@ import {
   ScrollView,
   StatusBar,
   Dimensions,
+  TouchableOpacity,
+  Clipboard,
 } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
 import { withNamespaces } from 'react-i18next';
@@ -68,8 +70,13 @@ class CreateNewPassword extends Component {
   state = {
     isNewPassword: false,
     snackbarVisibility: false,
+    clearClipboardVisibility: false,
     height: Dimensions.get('window').height,
   };
+
+  showSnackbar = () => this.setState({ snackbarVisibility: true });
+
+  hideSnackbar = () => this.setState({ snackbarVisibility: false });
 
   onLayout = () => {
     const { height } = Dimensions.get('screen');
@@ -80,16 +87,23 @@ class CreateNewPassword extends Component {
     isNewPassword: !isNewPassword,
   }))
 
-  showSnackbar = () => this.setState({ snackbarVisibility: true });
+  toggleClearClipboard = () => this.setState(({ clearClipboardVisibility }) => ({
+    clearClipboardVisibility: !clearClipboardVisibility,
+  }))
 
-  hideSnackbar = () => this.setState({ snackbarVisibility: false });
+  clearClipboard = () => {
+    Clipboard.setString('');
+    this.showSnackbar();
+    this.toggleClearClipboard();
+  }
 
   render() {
     const { t } = this.props;
     const {
       isNewPassword,
-      snackbarVisibility,
       height,
+      snackbarVisibility,
+      clearClipboardVisibility,
     } = this.state;
 
     const marginTopValue = Math.floor(height * (0.15));
@@ -123,9 +137,13 @@ class CreateNewPassword extends Component {
                 </View>
                 <PasswordGenerator
                   isNewPassword={isNewPassword}
-                  showSnackbar={this.showSnackbar}
+                  toggleClearClipboard={this.toggleClearClipboard}
                 />
-                <View style={styles.flexLayout} />
+                { clearClipboardVisibility && (
+                  <TouchableOpacity onPress={this.clearClipboard}>
+                    <Text>Clear Clipboard</Text>
+                  </TouchableOpacity>
+                ) }
               </View>
             </TouchableWithoutFeedback>
           </ScrollView>
