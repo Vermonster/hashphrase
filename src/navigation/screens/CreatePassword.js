@@ -10,6 +10,8 @@ import {
   ScrollView,
   StatusBar,
   Dimensions,
+  TouchableOpacity,
+  Clipboard,
 } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
 import { withNamespaces } from 'react-i18next';
@@ -89,6 +91,12 @@ class CreateNewPassword extends Component {
     clearClipboardVisibility: !clearClipboardVisibility,
   }))
 
+  clearClipboard = () => {
+    Clipboard.setString('');
+    this.showSnackbar();
+    this.toggleClearClipboard(); 
+  }
+
   render() {
     const { t } = this.props;
     const {
@@ -131,13 +139,17 @@ class CreateNewPassword extends Component {
                   isNewPassword={isNewPassword}
                   toggleClearClipboard={this.toggleClearClipboard}
                 />
-                { clearClipboardVisibility && <Text>Clear Clipboard</Text> }
+                { clearClipboardVisibility && (
+                  <TouchableOpacity onPress={this.clearClipboard}>
+                    <Text>Clear Clipboard</Text>
+                  </TouchableOpacity>
+                ) }
               </View>
             </TouchableWithoutFeedback>
           </ScrollView>
         </KeyboardAvoidingView>
         <Snackbar
-          visible
+          visible={snackbarVisibility}
           onDismiss={this.hideSnackbar}
           duration={2000}
           style={styles.snackbar}
