@@ -1,7 +1,7 @@
 import React from 'react';
 import { withNamespaces } from 'react-i18next';
 import {
-  View, Text, Modal, StyleSheet, Clipboard, TextInput, Platform, Dimensions,
+  View, Text, Modal, StyleSheet, TextInput, Platform, Dimensions,
 } from 'react-native';
 import { Button, IconButton } from 'react-native-paper';
 import { colors, fontSize } from '../styles/base';
@@ -85,16 +85,12 @@ class ConfirmationDialog extends React.Component {
 
   setDimensions = windowDimensions => this.setState(windowDimensions);
 
-  handleClearClipboard = () => Clipboard.setString('');
-
   toggleObscured = () => {
     this.setState(prevState => ({ obscured: !prevState.obscured }));
   };
 
   handleSubmit = () => {
-    const { closeModal, showSnackbar, clearForm } = this.props;
-    this.handleClearClipboard();
-    showSnackbar();
+    const { closeModal, clearForm } = this.props;
     this.resetState();
     clearForm();
     return closeModal();

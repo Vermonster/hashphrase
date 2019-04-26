@@ -7,7 +7,7 @@ const en = {
     completedStatus: 'All done!',
     completedClipboard: 'Your Hashphrase is now on your clipboard.',
     accountPassword: 'Hashphrase:',
-    button: 'I\'M DONE, CLEAR CLIPBOARD',
+    button: 'START OVER',
   },
   passwordGenerator: {
     nickname: 'Nickname',

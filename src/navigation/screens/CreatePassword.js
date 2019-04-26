@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Snackbar, IconButton } from 'react-native-paper';
+import { Switch, IconButton } from 'react-native-paper';
 import {
   View,
   Text,
@@ -33,11 +33,6 @@ const styles = StyleSheet.create({
     fontSize: fontSize.lg,
     marginRight: '2%',
   },
-  snackbar: {
-    flex: 1,
-    justifyContent: 'flex-start',
-    backgroundColor: colors.secondary,
-  },
   flexLayout: {
     flex: 1,
   },
@@ -67,7 +62,6 @@ class CreateNewPassword extends Component {
 
   state = {
     isNewPassword: false,
-    snackbarVisibility: false,
     height: Dimensions.get('window').height,
   };
 
@@ -80,15 +74,10 @@ class CreateNewPassword extends Component {
     isNewPassword: !isNewPassword,
   }))
 
-  showSnackbar = () => this.setState({ snackbarVisibility: true });
-
-  hideSnackbar = () => this.setState({ snackbarVisibility: false });
-
   render() {
     const { t } = this.props;
     const {
       isNewPassword,
-      snackbarVisibility,
       height,
     } = this.state;
 
@@ -123,21 +112,12 @@ class CreateNewPassword extends Component {
                 </View>
                 <PasswordGenerator
                   isNewPassword={isNewPassword}
-                  showSnackbar={this.showSnackbar}
                 />
                 <View style={styles.flexLayout} />
               </View>
             </TouchableWithoutFeedback>
           </ScrollView>
         </KeyboardAvoidingView>
-        <Snackbar
-          visible={snackbarVisibility}
-          onDismiss={this.hideSnackbar}
-          duration={2000}
-          style={styles.snackbar}
-        >
-          {t('clipboardCleared')}
-        </Snackbar>
       </SafeAreaView>
     );
   }
