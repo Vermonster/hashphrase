@@ -1,12 +1,12 @@
 const en = {
   createPassword: {
     newPassword: 'New password',
-    clipboardCleared: 'Your hashphrase has been cleared from clipboard.',
+    clipboardCleared: 'Your account password has been cleared from clipboard.',
   },
   confirmationDialog: {
     completedStatus: 'All done!',
-    completedClipboard: 'Your hashphrase is now on your clipboard.',
-    accountPassword: 'hashphrase:',
+    completedClipboard: 'Your account password is on your clipboard.',
+    accountPassword: 'password',
     button: 'I\'M DONE, CLEAR CLIPBOARD',
   },
   passwordGenerator: {
