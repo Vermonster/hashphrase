@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, IconButton } from 'react-native-paper';
+import { Switch, Snackbar, IconButton } from 'react-native-paper';
 import {
   View,
   Text,
@@ -33,6 +33,11 @@ const styles = StyleSheet.create({
     fontSize: fontSize.lg,
     marginRight: '2%',
   },
+  snackbar: {
+    flex: 1,
+    justifyContent: 'flex-start',
+    backgroundColor: colors.secondary,
+  },
   flexLayout: {
     flex: 1,
   },
@@ -62,8 +67,14 @@ class CreateNewPassword extends Component {
 
   state = {
     isNewPassword: false,
+    snackbarVisibility: false,
+    clearClipboardVisibility: false,
     height: Dimensions.get('window').height,
   };
+
+  showSnackbar = () => this.setState({ snackbarVisibility: true });
+
+  hideSnackbar = () => this.setState({ snackbarVisibility: false });
 
   onLayout = () => {
     const { height } = Dimensions.get('screen');
@@ -74,11 +85,17 @@ class CreateNewPassword extends Component {
     isNewPassword: !isNewPassword,
   }))
 
+  toggleClearClipboard = () => this.setState(({ clearClipboardVisibility }) => ({
+    clearClipboardVisibility: !clearClipboardVisibility,
+  }))
+
   render() {
     const { t } = this.props;
     const {
       isNewPassword,
       height,
+      snackbarVisibility,
+      clearClipboardVisibility,
     } = this.state;
 
     const marginTopValue = Math.floor(height * (0.15));
@@ -112,12 +129,21 @@ class CreateNewPassword extends Component {
                 </View>
                 <PasswordGenerator
                   isNewPassword={isNewPassword}
+                  toggleClearClipboard={this.toggleClearClipboard}
                 />
-                <View style={styles.flexLayout} />
+                { clearClipboardVisibility && <Text>Clear Clipboard</Text> }
               </View>
             </TouchableWithoutFeedback>
           </ScrollView>
         </KeyboardAvoidingView>
+        <Snackbar
+          visible
+          onDismiss={this.hideSnackbar}
+          duration={2000}
+          style={styles.snackbar}
+        >
+          {t('clipboardCleared')}
+        </Snackbar>
       </SafeAreaView>
     );
   }
