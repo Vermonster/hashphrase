@@ -32,6 +32,7 @@ class PasswordGenerator extends React.Component {
     generatedPassword: '',
     disabled: true,
     modalVisibility: false,
+    passwordVisibility: false,
     inputError: false,
   };
 
@@ -46,7 +47,16 @@ class PasswordGenerator extends React.Component {
 
   closeModal = () => this.setState({ modalVisibility: false });
 
-  clearForm = () => this.setState({ label: '', password: '', confirmPassword: '' }, this.handleSubmitButtonState)
+  clearForm = () => this.setState({
+    label: '',
+    password: '',
+    confirmPassword: '',
+    passwordVisibility: false,
+  }, this.handleSubmitButtonState)
+
+  toggleInputVisibility = () => {
+    this.setState(prevState => ({ passwordVisibility: !prevState.passwordVisibility }));
+  }
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -97,7 +107,14 @@ class PasswordGenerator extends React.Component {
 
   render() {
     const {
-      generatedPassword, disabled, modalVisibility, inputError, label, password, confirmPassword,
+      generatedPassword,
+      disabled,
+      modalVisibility,
+      inputError,
+      label,
+      password,
+      confirmPassword,
+      passwordVisibility,
     } = this.state;
     const { isNewPassword, t, toggleClearClipboard } = this.props;
 
@@ -121,6 +138,8 @@ class PasswordGenerator extends React.Component {
           handleChange={this.handleChange}
           handleInputFocus={this.handleConfirmPasswordFocus}
           inputRef={(input) => { this.passwordRef = input; }}
+          handlePasswordVisibility={this.toggleInputVisibility}
+          visibility={passwordVisibility}
         />
         { isNewPassword && (
           <>
@@ -132,6 +151,7 @@ class PasswordGenerator extends React.Component {
               error={inputError}
               handleChange={this.handleChange}
               inputRef={(input) => { this.confirmPasswordRef = input; }}
+              visibility={passwordVisibility}
             />
             { inputError && (
               <View style={[rowCenter, styles.warning]}>

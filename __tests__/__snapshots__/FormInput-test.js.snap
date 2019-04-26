@@ -47,7 +47,6 @@ exports[`<FormInput /> should render the same snapshot 1`] = `
       accessibilityLabel="hide or show password"
       color="#212A59"
       icon="visibility-off"
-      onPress={[Function]}
       style={
         Object {
           "alignSelf": "center",

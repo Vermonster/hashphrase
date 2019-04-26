@@ -17,20 +17,6 @@ describe('<FormInput />', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should update the component state when toggleVisibility is called', () => {
-    const wrapper = shallow(
-      <FormInput
-        placeholderText="Test Placeholder"
-        prompt="Test Prompt"
-        handleChange={mockFn}
-        componentType="password"
-      />,
-    );
-    expect(wrapper.state('visible')).toBe(false);
-    wrapper.instance().toggleVisibility();
-    expect(wrapper.state('visible')).toBe(true);
-  });
-
   it('should generate a password input when "password" label provided', () => {
     const wrapper = shallow(
       <FormInput
