@@ -13,6 +13,7 @@ describe('<ConfirmationDialog />', () => {
         t={key => key}
         generatedPassword="12345678"
         clearForm={mockFn}
+        resetToggleSwitch={mockFn}
       />,
     );
   });

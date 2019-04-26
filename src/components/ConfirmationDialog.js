@@ -90,14 +90,15 @@ class ConfirmationDialog extends React.Component {
   };
 
   handleSubmit = () => {
-    const { closeModal, clearForm, toggleClearClipboard } = this.props;
-    this.resetState();
+    const { closeModal, clearForm, toggleClearClipboard, resetToggleSwitch } = this.props;
+    this.resetObscured();
     toggleClearClipboard();
     clearForm();
+    resetToggleSwitch();
     return closeModal();
   }
 
-  resetState = () => {
+  resetObscured = () => {
     this.setState({ obscured: true });
   }
 
