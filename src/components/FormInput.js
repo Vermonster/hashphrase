@@ -26,14 +26,6 @@ const styles = StyleSheet.create({
 });
 
 class FormInput extends React.Component {
-  state = {
-    visible: false,
-  };
-
-  toggleVisibility = () => {
-    this.setState(prevState => ({ visible: !prevState.visible }));
-  }
-
   isTextHidden = (inputLabel, visibleStatus) => {
     if (inputLabel === 'label') {
       return false;
@@ -56,15 +48,16 @@ class FormInput extends React.Component {
       error,
       handleInputFocus,
       inputRef,
+      handlePasswordVisibility,
+      visibility,
     } = this.props;
-    const { visible } = this.state;
-    const visibilityIcon = visible ? 'visibility' : 'visibility-off';
-    const visibleText = this.isTextHidden(componentType, visible);
+    const visibilityIcon = visibility ? 'visibility' : 'visibility-off';
+    const visibleText = this.isTextHidden(componentType, visibility);
     const buttonType = (componentType === 'password')
       ? (
         <IconButton
           icon={visibilityIcon}
-          onPress={this.toggleVisibility}
+          onPress={handlePasswordVisibility}
           accessibilityLabel="hide or show password"
           style={styles.visibilityButton}
           color={colors.secondary}
