@@ -128,7 +128,6 @@ class PasswordGenerator extends React.Component {
           label={t('nickname')}
           handleChange={this.handleChange}
           handleInputFocus={this.handlePasswordFocus}
-          visibility
         />
         <FormInput
           value={password}
