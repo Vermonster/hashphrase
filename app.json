@@ -10,7 +10,7 @@
     ],
     "version": "1.0.0",
     "privacy": "public",
-    "orientation": "default",
+    "orientation": "portrait",
     "icon": "./assets/app-icon.png",
     "splash": {
       "image": "./assets/splash.png",
