@@ -146,7 +146,7 @@ class ConfirmationDialog extends React.Component {
           transparent
           visible={visible}
           onRequestClose={closeModal}
-          supportedOrientations={['portrait', 'portrait-upside-down', 'landscape', 'landscape-left', 'landscape-right']}
+          supportedOrientations={['portrait']}
         >
           <View style={[styles.container, styles.modalBackground]}>
             <View style={
