@@ -60,8 +60,7 @@ class FormInput extends React.Component {
     const { visible } = this.state;
     const visibilityIcon = visible ? 'visibility' : 'visibility-off';
     const visibleText = this.isTextHidden(componentType, visible);
-    const buttonType = (componentType === 'password'
-      || componentType === 'confirmPassword')
+    const buttonType = (componentType === 'password')
       ? (
         <IconButton
           icon={visibilityIcon}
