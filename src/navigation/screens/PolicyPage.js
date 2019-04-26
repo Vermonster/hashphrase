@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  ScrollView, SafeAreaView, View, Text,
+  ScrollView, SafeAreaView, View,
 } from 'react-native';
 import { withNamespaces } from 'react-i18next';
 import {
@@ -11,23 +11,25 @@ const PolicyPage = ({ t }) => {
   const privacyPolicy = t('privacy_policy', { returnObjects: true });
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <ScrollView contentContainerStyle={{ padding: '5%' }}>
-        <Title>
+      <ScrollView contentContainerStyle={{ padding: '10%' }}>
+        <Title style={{ fontWeight: 'bold' }}>
           {t('title')}
-          {'\n'}
         </Title>
-        <Text>
+        <Paragraph>
           {t('update')}
           {'\n'}
-        </Text>
+        </Paragraph>
         <Paragraph>
           {t('creator')}
           {'\n'}
         </Paragraph>
         { privacyPolicy.map(item => (
           <View key={item.id}>
-            <Subheading>{item.subheading}</Subheading>
-            <Paragraph>{item.content}</Paragraph>
+            <Subheading style={{ fontWeight: 'bold' }}>{item.subheading}</Subheading>
+            <Paragraph>
+              {item.content}
+              {'\n'}
+            </Paragraph>
           </View>
         ))}
       </ScrollView>
