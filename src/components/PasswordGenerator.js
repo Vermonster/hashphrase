@@ -47,7 +47,12 @@ class PasswordGenerator extends React.Component {
 
   closeModal = () => this.setState({ modalVisibility: false });
 
-  clearForm = () => this.setState({ label: '', password: '', confirmPassword: '' }, this.handleSubmitButtonState)
+  clearForm = () => this.setState({
+    label: '',
+    password: '',
+    confirmPassword: '',
+    passwordVisibility: false,
+  }, this.handleSubmitButtonState)
 
   toggleInputVisibility = () => {
     this.setState(prevState => ({ passwordVisibility: !prevState.passwordVisibility }));
