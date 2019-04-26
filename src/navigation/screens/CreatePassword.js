@@ -94,7 +94,7 @@ class CreateNewPassword extends Component {
   clearClipboard = () => {
     Clipboard.setString('');
     this.showSnackbar();
-    this.toggleClearClipboard(); 
+    this.toggleClearClipboard();
   }
 
   render() {
