@@ -97,6 +97,8 @@ class CreateNewPassword extends Component {
     this.toggleClearClipboard();
   }
 
+  resetToggleSwitch = () => this.setState({ isNewPassword: false })
+
   render() {
     const { t } = this.props;
     const {
@@ -138,6 +140,7 @@ class CreateNewPassword extends Component {
                 <PasswordGenerator
                   isNewPassword={isNewPassword}
                   toggleClearClipboard={this.toggleClearClipboard}
+                  resetToggleSwitch={this.resetToggleSwitch}
                 />
                 { clearClipboardVisibility && (
                   <TouchableOpacity onPress={this.clearClipboard}>
