@@ -22,30 +22,25 @@ const styles = StyleSheet.create({
   innerContainer: {
     backgroundColor: colors.white,
     borderRadius: 4,
+    paddingHorizontal: '4%',
   },
   messagesContainer: {
-    flex: 2 / 3,
-    backgroundColor: colors.primary,
+    flex: 1 / 2,
+    paddingTop: '5%',
     borderTopRightRadius: 4,
     borderTopLeftRadius: 4,
-    justifyContent: 'center',
   },
   passwordContainer: {
+    flex: 1 / 3,
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
     alignSelf: 'center',
-    backgroundColor: colors.secondary,
     borderRadius: 4,
-    padding: 6,
-  },
-  password: {
-    flex: 1,
-    justifyContent: 'space-around',
-    marginLeft: '5%',
+    borderWidth: 1,
+    borderColor: colors.secondary,
   },
   title: {
-    color: colors.secondary,
+    color: colors.primary,
     fontSize: fontSize.xxl,
     marginBottom: '3%',
     fontFamily: 'lato-bold',
@@ -53,23 +48,23 @@ const styles = StyleSheet.create({
   paragraph: {
     fontSize: fontSize.lg,
   },
-  label: {
+  password: {
     fontSize: fontSize.lg,
-    color: colors.white,
+    color: colors.secondary,
+    flex: 1,
+    paddingLeft: '3%',
     fontFamily: 'lato-regular',
   },
   buttonRow: {
-    justifyContent: 'flex-start',
-    alignSelf: 'center',
+    justifyContent: 'center',
+    alignSelf: 'flex-end',
     flex: 1 / 3,
   },
   button: {
-    borderColor: colors.secondary,
-    borderWidth: 2,
+    borderWidth: 0,
   },
   closeButton: {
     alignSelf: 'flex-end',
-    top: '1%',
     right: '0.5%',
     position: 'absolute',
   },
@@ -115,18 +110,18 @@ class ConfirmationDialog extends React.Component {
 
     if (width < 600) {
       styling.innerContainerWidth = '95%';
-      styling.passwordContainerWidth = '95%';
+      styling.passwordContainerWidth = '85%';
     } else {
       styling.innerContainerWidth = '70%';
       styling.passwordContainerWidth = '80%';
     }
 
     if (height > 800) {
-      styling.innerContainerFlex = 1 / 2;
+      styling.innerContainerFlex = 1 / 4;
     } else if (height < 376) {
-      styling.innerContainerFlex = 4 / 5;
-    } else {
       styling.innerContainerFlex = 2 / 3;
+    } else {
+      styling.innerContainerFlex = 1 / 3;
     }
 
     return styling;
@@ -139,7 +134,6 @@ class ConfirmationDialog extends React.Component {
       t, visible, generatedPassword, closeModal, clearForm, toggleClearClipboard,
     } = this.props;
     const visibilityIcon = obscured ? 'visibility-off' : 'visibility';
-    const accountLabelMargin = Platform.OS === 'ios' ? 6 : 0;
     const dynamicStyles = this.modalStyling(height, width);
     const { innerContainerWidth, innerContainerFlex, passwordContainerWidth } = dynamicStyles;
 
@@ -167,34 +161,27 @@ class ConfirmationDialog extends React.Component {
                   style={styles.closeButton}
                   onPress={() => { closeModal(); clearForm(); toggleClearClipboard(); }}
                 />
-                <View style={{ marginLeft: '4%' }}>
+                <View>
                   <Text style={styles.title}>{t('completedStatus')}</Text>
-                  <Text style={[styles.paragraph, { color: colors.white, width: '80%' }]}>
+                  <Text style={[styles.paragraph]}>
                     {t('completedClipboard')}
                   </Text>
                 </View>
               </View>
-              <View style={{ flex: 1 / 2, justifyContent: 'center' }}>
-                <View style={[styles.passwordContainer, { width: passwordContainerWidth }]}>
-                  <View style={styles.password}>
-                    <Text style={[styles.label, { marginBottom: accountLabelMargin }]}>
-                      {t('accountPassword')}
-                    </Text>
-                    <TextInput
-                      secureTextEntry={obscured}
-                      editable={false}
-                      style={styles.label}
-                    >
-                      { generatedPassword }
-                    </TextInput>
-                  </View>
-                  <IconButton
-                    icon={visibilityIcon}
-                    color={colors.white}
-                    onPress={this.toggleObscured}
-                    style={styles.hideShowButton}
-                  />
-                </View>
+              <View style={[styles.passwordContainer, { width: passwordContainerWidth }]}>
+                <TextInput
+                  secureTextEntry={obscured}
+                  editable={false}
+                  style={styles.password}
+                >
+                  { generatedPassword }
+                </TextInput>
+                <IconButton
+                  icon={visibilityIcon}
+                  color={colors.secondary}
+                  onPress={this.toggleObscured}
+                  style={styles.hideShowButton}
+                />
               </View>
               <View style={styles.buttonRow}>
                 <Button
