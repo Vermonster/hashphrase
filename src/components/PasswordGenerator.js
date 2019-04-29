@@ -33,7 +33,7 @@ class PasswordGenerator extends React.Component {
     disabled: true,
     modalVisibility: false,
     passwordVisibility: false,
-    labelVisibility: true,
+    labelVisibility: false,
     inputError: false,
   };
 
