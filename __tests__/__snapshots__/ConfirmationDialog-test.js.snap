@@ -42,10 +42,11 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
             Object {
               "backgroundColor": "#FFF",
               "borderRadius": 4,
+              "paddingHorizontal": "5%",
             },
             Object {
-              "flex": 0.5,
-              "width": "70%",
+              "flex": 0.2,
+              "width": "60%",
             },
           ]
         }
@@ -53,11 +54,10 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
         <ForwardRef(View)
           style={
             Object {
-              "backgroundColor": "#E07926",
               "borderTopLeftRadius": 4,
               "borderTopRightRadius": 4,
-              "flex": 0.6666666666666666,
-              "justifyContent": "center",
+              "flex": 0.5,
+              "paddingTop": "5%",
             }
           }
         >
@@ -87,6 +87,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
                   "color": "#212A59",
                   "fontFamily": "lato-bold",
                   "fontSize": 24,
+                  "fontWeight": "bold",
                   "marginBottom": "3%",
                 }
               }
@@ -99,10 +100,6 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
                   Object {
                     "fontSize": 16,
                   },
-                  Object {
-                    "color": "#FFF",
-                    "width": "80%",
-                  },
                 ]
               }
             >
@@ -112,29 +109,35 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
         </ForwardRef(View)>
         <ForwardRef(View)
           style={
-            Object {
-              "flex": 0.5,
-              "justifyContent": "center",
-            }
+            Array [
+              Object {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "borderColor": "#212A59",
+                "borderRadius": 4,
+                "borderWidth": 1,
+                "flex": 0.3333333333333333,
+                "flexDirection": "row",
+              },
+              Object {
+                "width": undefined,
+              },
+            ]
           }
         >
-          <ForwardRef(View)
+          <TextInput
+            allowFontScaling={true}
+            editable={false}
+            secureTextEntry={true}
             style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "alignSelf": "center",
-                  "backgroundColor": "#212A59",
-                  "borderRadius": 4,
-                  "flexDirection": "row",
-                  "justifyContent": "space-between",
-                  "padding": 6,
-                },
-                Object {
-                  "width": "80%",
-                },
-              ]
+              Object {
+                "color": "#212A59",
+                "flex": 1,
+                "fontSize": 16,
+                "paddingLeft": "3%",
+              }
             }
+            underlineColorAndroid="transparent"
           >
             <ForwardRef(View)
               style={
@@ -187,15 +190,15 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
         <ForwardRef(View)
           style={
             Object {
-              "alignSelf": "center",
-              "flex": 0.3333333333333333,
-              "justifyContent": "flex-start",
+              "alignSelf": "flex-end",
+              "flex": 0.5,
+              "justifyContent": "center",
             }
           }
         >
           <withTheme(Button)
             accessibilityLabel="ACTION BUTTON"
-            color="#212A59"
+            color="#FFF"
             contentStyle={
               Object {
                 "width": "auto",
@@ -205,8 +208,8 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
             onPress={[Function]}
             style={
               Object {
-                "borderColor": "#212A59",
-                "borderWidth": 2,
+                "backgroundColor": "#212A59",
+                "borderWidth": 0,
               }
             }
             testID="submit-form"
