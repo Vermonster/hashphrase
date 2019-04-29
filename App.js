@@ -1,5 +1,6 @@
 import React from 'react';
 import { createAppContainer, createStackNavigator } from 'react-navigation';
+import { Font } from 'expo';
 import { I18nextProvider } from 'react-i18next';
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import i18n from './src/navigation/i18n/i18n';
@@ -48,12 +49,24 @@ const AppStackNavigator = createStackNavigator(
 
 const AppContainer = createAppContainer(AppStackNavigator);
 
-const App = () => (
-  <I18nextProvider i18n={i18n}>
-    <PaperProvider theme={theme}>
-      <AppContainer />
-    </PaperProvider>
-  </I18nextProvider>
-);
+class App extends React.Component {
+  componentDidMount() {
+    Font.loadAsync({
+      'lato-regular': require('./assets/fonts/Lato-Regular.ttf'),
+      'lato-bold': require('./assets/fonts/Lato-Bold.ttf'),
+    });
+  }
+
+  render() {
+    return (
+      <I18nextProvider i18n={i18n}>
+        <PaperProvider theme={theme}>
+          <AppContainer />
+        </PaperProvider>
+      </I18nextProvider>
+    );
+  }
+}
+
 
 export default App;
