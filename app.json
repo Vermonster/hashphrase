@@ -24,7 +24,7 @@
     },
     "android": {
       "package": "com.vermonster.hashphrase",
-      "versionCode": 1,
+      "versionCode": 1
     }
   }
 }
