@@ -1,7 +1,7 @@
 import React from 'react';
 import { withNamespaces } from 'react-i18next';
 import {
-  View, Modal, StyleSheet, TextInput, Platform, Dimensions,
+  View, Modal, StyleSheet, TextInput, Dimensions,
 } from 'react-native';
 import {
   Button,
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   innerContainer: {
     backgroundColor: colors.white,
     borderRadius: 4,
-    paddingHorizontal: '4%',
+    paddingHorizontal: '5%',
   },
   messagesContainer: {
     flex: 1 / 2,
@@ -58,14 +58,14 @@ const styles = StyleSheet.create({
   buttonRow: {
     justifyContent: 'center',
     alignSelf: 'flex-end',
-    flex: 1 / 3,
+    flex: 1 / 2,
   },
   button: {
     borderWidth: 0,
+    backgroundColor: colors.secondary,
   },
   closeButton: {
     alignSelf: 'flex-end',
-    right: '0.5%',
     position: 'absolute',
   },
 });
@@ -75,16 +75,6 @@ class ConfirmationDialog extends React.Component {
     obscured: true,
     window: Dimensions.get('window'),
   }
-
-  componentWillMount = () => {
-    Dimensions.addEventListener('change', this.setDimensions);
-  }
-
-  componentWillUnmount() {
-    Dimensions.removeEventListener('change', this.setDimensions);
-  }
-
-  setDimensions = windowDimensions => this.setState(windowDimensions);
 
   toggleObscured = () => {
     this.setState(prevState => ({ obscured: !prevState.obscured }));
@@ -110,20 +100,18 @@ class ConfirmationDialog extends React.Component {
 
     if (width < 600) {
       styling.innerContainerWidth = '95%';
-      styling.passwordContainerWidth = '85%';
     } else {
-      styling.innerContainerWidth = '70%';
-      styling.passwordContainerWidth = '80%';
+      styling.innerContainerWidth = '60%';
     }
 
-    if (height > 800) {
-      styling.innerContainerFlex = 1 / 4;
-    } else if (height < 376) {
-      styling.innerContainerFlex = 2 / 3;
-    } else {
+    // Dynamic modal size for iphone 8s and below, iphone x and above, ipad
+    if (height < 812) {
       styling.innerContainerFlex = 1 / 3;
+    } else if (height > 811 && height < 1024) {
+      styling.innerContainerFlex = 1 / 4;
+    } else {
+      styling.innerContainerFlex = 1 / 5;
     }
-
     return styling;
   }
 
@@ -131,7 +119,7 @@ class ConfirmationDialog extends React.Component {
     const { obscured, window } = this.state;
     const { width, height } = window;
     const {
-      t, visible, generatedPassword, closeModal, clearForm, toggleClearClipboard,
+      t, visible, generatedPassword, closeModal,
     } = this.props;
     const visibilityIcon = obscured ? 'visibility-off' : 'visibility';
     const dynamicStyles = this.modalStyling(height, width);
@@ -155,12 +143,6 @@ class ConfirmationDialog extends React.Component {
               ]
            }>
               <View style={styles.messagesContainer}>
-                <IconButton
-                  icon="close"
-                  size={35}
-                  style={styles.closeButton}
-                  onPress={() => { closeModal(); clearForm(); toggleClearClipboard(); }}
-                />
                 <View>
                   <Text style={styles.title}>{t('completedStatus')}</Text>
                   <Text style={[styles.paragraph]}>
@@ -190,7 +172,7 @@ class ConfirmationDialog extends React.Component {
                   accessibilityLabel="ACTION BUTTON"
                   style={styles.button}
                   mode="outlined"
-                  color={colors.secondary}
+                  color={colors.white}
                   contentStyle={{ width: 'auto' }}
                 >
                   <Text>{t('button')}</Text>
