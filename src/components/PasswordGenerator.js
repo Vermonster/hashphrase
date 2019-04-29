@@ -53,7 +53,6 @@ class PasswordGenerator extends React.Component {
     password: '',
     confirmPassword: '',
     passwordVisibility: false,
-    labelVisibility: true,
   }, this.handleSubmitButtonState)
 
   togglePasswordVisibility = () => {
