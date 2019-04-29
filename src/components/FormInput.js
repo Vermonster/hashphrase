@@ -26,17 +26,6 @@ const styles = StyleSheet.create({
 });
 
 const FormInput = (props) => {
-  const isTextHidden = (inputLabel, visibleStatus) => {
-    if (inputLabel === 'label') {
-      return false;
-    } if (inputLabel === 'password' || inputLabel === 'confirmPassword') {
-      if (visibleStatus) {
-        return false;
-      }
-    }
-    return true;
-  };
-
   const {
     placeholderText,
     prompt,
@@ -47,16 +36,15 @@ const FormInput = (props) => {
     error,
     handleInputFocus,
     inputRef,
-    handlePasswordVisibility,
+    handleInputVisibility,
     visibility,
   } = props;
   const visibilityIcon = visibility ? 'visibility' : 'visibility-off';
-  const visibleText = isTextHidden(componentType, visibility);
-  const buttonType = (componentType === 'password')
+  const buttonType = (componentType !== 'confirmPassword')
     ? (
       <IconButton
         icon={visibilityIcon}
-        onPress={handlePasswordVisibility}
+        onPress={handleInputVisibility}
         accessibilityLabel="hide or show password"
         style={styles.visibilityButton}
         color={colors.secondary}
@@ -73,7 +61,7 @@ const FormInput = (props) => {
         <TextInput
           value={value}
           placeholder={placeholderText}
-          secureTextEntry={visibleText}
+          secureTextEntry={!visibility}
           style={styles.textInput}
           onChange={handleChange(componentType)}
           autoCapitalize="none"
