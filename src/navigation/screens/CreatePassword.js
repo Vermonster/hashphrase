@@ -96,6 +96,7 @@ class CreateNewPassword extends Component {
     this.showSnackbar();
     this.toggleClearClipboard();
   }
+
   resetToggleSwitch = () => this.setState({ isNewPassword: false })
 
   render() {

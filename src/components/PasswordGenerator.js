@@ -116,7 +116,9 @@ class PasswordGenerator extends React.Component {
       confirmPassword,
       passwordVisibility,
     } = this.state;
-    const { isNewPassword, t, toggleClearClipboard, resetToggleSwitch } = this.props;
+    const {
+      isNewPassword, t, toggleClearClipboard, resetToggleSwitch,
+    } = this.props;
 
     return (
       <View style={styles.generatorContainer}>
