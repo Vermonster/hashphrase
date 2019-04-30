@@ -164,7 +164,7 @@ class ConfirmationDialog extends React.Component {
                   accessibilityLabel="Press to start over"
                   mode="text"
                   contentStyle={{ width: 'auto' }}
-                  theme={{ colors: { text: colors.secondary } }}
+                  theme={{ colors: { text: colors.secondary }, fonts: { regular: 'lato-bold' } }}
                 >
                   <Text>{t('button')}</Text>
                 </Button>
