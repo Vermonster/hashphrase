@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
   innerContainer: {
     flex: 1,
     justifyContent: 'flex-end',
-    marginTop: 30,
   },
   newPass: {
     ...rowCenter,

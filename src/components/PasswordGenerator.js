@@ -19,6 +19,9 @@ const styles = StyleSheet.create({
     width: '80%',
     justifyContent: 'space-between',
   },
+  createPasswordButton: {
+    marginTop: 20,
+  },
   icon: {
     marginHorizontal: 0,
   },
@@ -180,7 +183,7 @@ class PasswordGenerator extends React.Component {
           disabled={disabled}
           mode="contained"
           dark
-          style={{ marginTop: '5%' }}
+          style={styles.createPasswordButton}
         >
           {t('submitMessage')}
         </Button>
