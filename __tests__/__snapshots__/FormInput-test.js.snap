@@ -14,18 +14,14 @@ exports[`<FormInput /> should render the same snapshot 1`] = `
   </withTheme(Text)>
   <ForwardRef(View)
     style={
-      Array [
-        Object {
-          "backgroundColor": "#FFF",
-          "flexDirection": "row",
-          "justifyContent": "flex-end",
-          "marginTop": 10,
-          "width": "80%",
-        },
-        Object {
-          "marginBottom": 30,
-        },
-      ]
+      Object {
+        "backgroundColor": "#FFF",
+        "flexDirection": "row",
+        "justifyContent": "flex-end",
+        "marginBottom": 18,
+        "marginTop": 10,
+        "width": "80%",
+      }
     }
   >
     <withTheme(TextInput)
