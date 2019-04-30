@@ -5,8 +5,7 @@ const en = {
   },
   confirmationDialog: {
     completedStatus: 'All done!',
-    completedClipboard: 'Your account password is on your clipboard.',
-    accountPassword: 'password',
+    completedClipboard: 'The password is on your clipboard.',
     button: 'START OVER',
   },
   passwordGenerator: {
