@@ -33,6 +33,7 @@ class PasswordGenerator extends React.Component {
     disabled: true,
     modalVisibility: false,
     passwordVisibility: false,
+    labelVisibility: false,
     inputError: false,
   };
 
@@ -54,8 +55,12 @@ class PasswordGenerator extends React.Component {
     passwordVisibility: false,
   }, this.handleSubmitButtonState)
 
-  toggleInputVisibility = () => {
+  togglePasswordVisibility = () => {
     this.setState(prevState => ({ passwordVisibility: !prevState.passwordVisibility }));
+  }
+
+  toggleLabelVisibility = () => {
+    this.setState(prevState => ({ labelVisibility: !prevState.labelVisibility }));
   }
 
   handleSubmit = (e) => {
@@ -115,6 +120,7 @@ class PasswordGenerator extends React.Component {
       password,
       confirmPassword,
       passwordVisibility,
+      labelVisibility,
     } = this.state;
     const {
       isNewPassword, t, toggleClearClipboard, resetToggleSwitch,
@@ -130,6 +136,8 @@ class PasswordGenerator extends React.Component {
           label={t('nickname')}
           handleChange={this.handleChange}
           handleInputFocus={this.handlePasswordFocus}
+          handleInputVisibility={this.toggleLabelVisibility}
+          visibility={labelVisibility}
         />
         <FormInput
           value={password}
@@ -140,7 +148,7 @@ class PasswordGenerator extends React.Component {
           handleChange={this.handleChange}
           handleInputFocus={this.handleConfirmPasswordFocus}
           inputRef={(input) => { this.passwordRef = input; }}
-          handlePasswordVisibility={this.toggleInputVisibility}
+          handleInputVisibility={this.togglePasswordVisibility}
           visibility={passwordVisibility}
         />
         { isNewPassword && (
