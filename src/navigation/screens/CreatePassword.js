@@ -13,7 +13,6 @@ import {
   KeyboardAvoidingView,
   ScrollView,
   StatusBar,
-  Dimensions,
   TouchableOpacity,
   Clipboard,
 } from 'react-native';
@@ -75,17 +74,11 @@ class CreateNewPassword extends Component {
     isNewPassword: false,
     snackbarVisibility: false,
     clearClipboardVisibility: false,
-    height: Dimensions.get('window').height,
   };
 
   showSnackbar = () => this.setState({ snackbarVisibility: true });
 
   hideSnackbar = () => this.setState({ snackbarVisibility: false });
-
-  onLayout = () => {
-    const { height } = Dimensions.get('screen');
-    this.setState({ height });
-  }
 
   handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
     isNewPassword: !isNewPassword,
@@ -107,13 +100,9 @@ class CreateNewPassword extends Component {
     const { t } = this.props;
     const {
       isNewPassword,
-      height,
       snackbarVisibility,
       clearClipboardVisibility,
     } = this.state;
-
-    const marginTopValue = Math.floor(height * (0.15));
-    const marginBottomValue = Math.floor(height * (0.1));
 
     return (
       <SafeAreaView
@@ -130,9 +119,7 @@ class CreateNewPassword extends Component {
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
               <View style={styles.innerContainer}>
                 <View
-                  style={[styles.newPass,
-                    { marginTop: marginTopValue, marginBottom: marginBottomValue }]
-                  }
+                  style={styles.newPass}
                 >
                   <Text style={styles.newPassLabel}>{t('newPassword')}</Text>
                   <Switch
