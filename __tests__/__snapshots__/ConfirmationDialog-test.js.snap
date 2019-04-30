@@ -152,6 +152,9 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
                 "colors": Object {
                   "text": "#212A59",
                 },
+                "fonts": Object {
+                  "regular": "lato-bold",
+                },
               }
             }
           >
