@@ -21,6 +21,10 @@ const theme = {
     placeholder: '#949494',
     disabled: '#212A59',
   },
+  fonts: {
+    regular: 'lato-regular',
+    medium: 'lato-bold',
+  },
 };
 
 const AppStackNavigator = createStackNavigator(
@@ -50,18 +54,24 @@ const AppStackNavigator = createStackNavigator(
 const AppContainer = createAppContainer(AppStackNavigator);
 
 class App extends React.Component {
-  componentDidMount() {
-    Font.loadAsync({
+  state = {
+    fontLoaded: false,
+  }
+
+  async componentDidMount() {
+    await Font.loadAsync({
       'lato-regular': require('./assets/fonts/Lato-Regular.ttf'),
       'lato-bold': require('./assets/fonts/Lato-Bold.ttf'),
     });
+    this.setState({ fontLoaded: true });
   }
 
   render() {
+    const { fontLoaded } = this.state;
     return (
       <I18nextProvider i18n={i18n}>
         <PaperProvider theme={theme}>
-          <AppContainer />
+          { fontLoaded ? <AppContainer /> : null }
         </PaperProvider>
       </I18nextProvider>
     );
