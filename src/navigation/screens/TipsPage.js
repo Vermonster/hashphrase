@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   cardContent: {
     color: colors.secondary,
     fontSize: 16,
-    lineHeight: 21,
+    lineHeight: 24,
   },
   scrollContainer: {
     flexGrow: 1,
