@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   createPasswordButton: {
-    marginTop: 20,
+    marginTop: 27,
   },
   icon: {
     marginHorizontal: 0,
