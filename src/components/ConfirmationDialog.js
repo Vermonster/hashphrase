@@ -60,14 +60,6 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-end',
     flex: 1 / 2,
   },
-  button: {
-    borderWidth: 0,
-    backgroundColor: colors.secondary,
-  },
-  closeButton: {
-    alignSelf: 'flex-end',
-    position: 'absolute',
-  },
 });
 
 class ConfirmationDialog extends React.Component {
@@ -167,13 +159,12 @@ class ConfirmationDialog extends React.Component {
               </View>
               <View style={styles.buttonRow}>
                 <Button
-                  testID="submit-form"
+                  testID="start-over-button"
                   onPress={this.handleSubmit}
-                  accessibilityLabel="ACTION BUTTON"
-                  style={styles.button}
-                  mode="outlined"
-                  color={colors.white}
+                  accessibilityLabel="Press to start over"
+                  mode="text"
                   contentStyle={{ width: 'auto' }}
+                  theme={{ colors: { text: colors.secondary }}}
                 >
                   <Text>{t('button')}</Text>
                 </Button>
