@@ -138,7 +138,7 @@ class CreateNewPassword extends Component {
                 />
                 { clearClipboardVisibility && (
                   <TouchableOpacity onPress={this.clearClipboard}>
-                    <Text>Clear Clipboard</Text>
+                    <Text>{t('clearClipboard')}</Text>
                   </TouchableOpacity>
                 ) }
               </View>
