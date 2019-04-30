@@ -42,10 +42,11 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
             Object {
               "backgroundColor": "#FFF",
               "borderRadius": 4,
+              "paddingHorizontal": "5%",
             },
             Object {
-              "flex": 0.5,
-              "width": "70%",
+              "flex": 0.2,
+              "width": "60%",
             },
           ]
         }
@@ -53,38 +54,18 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
         <ForwardRef(View)
           style={
             Object {
-              "backgroundColor": "#E07926",
               "borderTopLeftRadius": 4,
               "borderTopRightRadius": 4,
-              "flex": 0.6666666666666666,
-              "justifyContent": "center",
+              "flex": 0.5,
+              "paddingTop": "5%",
             }
           }
         >
-          <withTheme(IconButton)
-            icon="close"
-            onPress={[Function]}
-            size={35}
-            style={
-              Object {
-                "alignSelf": "flex-end",
-                "position": "absolute",
-                "right": "0.5%",
-                "top": "1%",
-              }
-            }
-          />
-          <ForwardRef(View)
-            style={
-              Object {
-                "marginLeft": "4%",
-              }
-            }
-          >
+          <ForwardRef(View)>
             <withTheme(Text)
               style={
                 Object {
-                  "color": "#212A59",
+                  "color": "#E07926",
                   "fontFamily": "lato-bold",
                   "fontSize": 24,
                   "marginBottom": "3%",
@@ -99,10 +80,6 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
                   Object {
                     "fontSize": 16,
                   },
-                  Object {
-                    "color": "#FFF",
-                    "width": "80%",
-                  },
                 ]
               }
             >
@@ -112,104 +89,74 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
         </ForwardRef(View)>
         <ForwardRef(View)
           style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "borderColor": "#212A59",
+                "borderRadius": 4,
+                "borderWidth": 1,
+                "flex": 0.3333333333333333,
+                "flexDirection": "row",
+              },
+              Object {
+                "width": undefined,
+              },
+            ]
+          }
+        >
+          <TextInput
+            allowFontScaling={true}
+            editable={false}
+            secureTextEntry={true}
+            style={
+              Object {
+                "color": "#212A59",
+                "flex": 1,
+                "fontFamily": "lato-regular",
+                "fontSize": 16,
+                "paddingLeft": "3%",
+              }
+            }
+            underlineColorAndroid="transparent"
+          >
+            12345678
+          </TextInput>
+          <withTheme(IconButton)
+            color="#212A59"
+            icon="visibility-off"
+            onPress={[Function]}
+          />
+        </ForwardRef(View)>
+        <ForwardRef(View)
+          style={
             Object {
+              "alignSelf": "flex-end",
               "flex": 0.5,
               "justifyContent": "center",
             }
           }
         >
-          <ForwardRef(View)
-            style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "alignSelf": "center",
-                  "backgroundColor": "#212A59",
-                  "borderRadius": 4,
-                  "flexDirection": "row",
-                  "justifyContent": "space-between",
-                  "padding": 6,
-                },
-                Object {
-                  "width": "80%",
-                },
-              ]
-            }
-          >
-            <ForwardRef(View)
-              style={
-                Object {
-                  "flex": 1,
-                  "justifyContent": "space-around",
-                  "marginLeft": "5%",
-                }
-              }
-            >
-              <withTheme(Text)
-                style={
-                  Array [
-                    Object {
-                      "color": "#FFF",
-                      "fontFamily": "lato-regular",
-                      "fontSize": 16,
-                    },
-                    Object {
-                      "marginBottom": 6,
-                    },
-                  ]
-                }
-              >
-                accountPassword
-              </withTheme(Text)>
-              <TextInput
-                allowFontScaling={true}
-                editable={false}
-                secureTextEntry={true}
-                style={
-                  Object {
-                    "color": "#FFF",
-                    "fontFamily": "lato-regular",
-                    "fontSize": 16,
-                  }
-                }
-                underlineColorAndroid="transparent"
-              >
-                12345678
-              </TextInput>
-            </ForwardRef(View)>
-            <withTheme(IconButton)
-              color="#FFF"
-              icon="visibility-off"
-              onPress={[Function]}
-            />
-          </ForwardRef(View)>
-        </ForwardRef(View)>
-        <ForwardRef(View)
-          style={
-            Object {
-              "alignSelf": "center",
-              "flex": 0.3333333333333333,
-              "justifyContent": "flex-start",
-            }
-          }
-        >
           <withTheme(Button)
-            accessibilityLabel="ACTION BUTTON"
-            color="#212A59"
+            accessibilityLabel="Press to start over"
             contentStyle={
               Object {
                 "width": "auto",
               }
             }
-            mode="outlined"
+            mode="text"
             onPress={[Function]}
-            style={
+            testID="start-over-button"
+            theme={
               Object {
-                "borderColor": "#212A59",
-                "borderWidth": 2,
+                "colors": Object {
+                  "text": "#212A59",
+                },
+                "fonts": Object {
+                  "regular": "lato-bold",
+                },
               }
             }
-            testID="submit-form"
           >
             <withTheme(Text)>
               button
