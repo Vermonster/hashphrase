@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
     color: colors.secondary,
     fontSize: fontSize.xxl,
     marginBottom: '3%',
+    fontFamily: 'lato-bold',
   },
   paragraph: {
     fontSize: fontSize.lg,
