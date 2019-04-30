@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
   innerContainer: {
     flex: 1,
     justifyContent: 'flex-end',
+    marginTop: 30,
   },
   newPass: {
     ...rowCenter,
@@ -42,6 +43,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-start',
     backgroundColor: colors.secondary,
+  },
+  toggleSwitch: {
+    marginVertical: 30,
   },
   flexLayout: {
     flex: 1,
@@ -107,7 +111,6 @@ class CreateNewPassword extends Component {
     return (
       <SafeAreaView
         style={styles.container}
-        onLayout={this.onLayout}
       >
         <StatusBar barStyle="light-content" />
         <KeyboardAvoidingView
@@ -123,6 +126,7 @@ class CreateNewPassword extends Component {
                 >
                   <Text style={styles.newPassLabel}>{t('newPassword')}</Text>
                   <Switch
+                    style={styles.toggleSwitch}
                     value={isNewPassword}
                     onValueChange={this.handleToggleSwitch}
                     color={colors.primary}
