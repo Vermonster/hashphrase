@@ -1,6 +1,6 @@
 const en = {
   createPassword: {
-    newPassword: 'New password',
+    newPassword: 'New account',
     clipboardCleared: 'Your account password has been cleared from clipboard.',
     clearClipboard: 'CLEAR CLIPBOARD',
   },
