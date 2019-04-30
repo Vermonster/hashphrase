@@ -1,5 +1,6 @@
 import React from 'react';
 import { createAppContainer, createStackNavigator } from 'react-navigation';
+import { Font } from 'expo';
 import { I18nextProvider } from 'react-i18next';
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import i18n from './src/navigation/i18n/i18n';
@@ -19,6 +20,10 @@ const theme = {
     text: '#444545',
     placeholder: '#949494',
     disabled: '#212A59',
+  },
+  fonts: {
+    regular: 'lato-regular',
+    medium: 'lato-bold',
   },
 };
 
@@ -48,12 +53,32 @@ const AppStackNavigator = createStackNavigator(
 
 const AppContainer = createAppContainer(AppStackNavigator);
 
-const App = () => (
-  <I18nextProvider i18n={i18n}>
-    <PaperProvider theme={theme}>
-      <AppContainer />
-    </PaperProvider>
-  </I18nextProvider>
-);
+class App extends React.Component {
+  state = {
+    fontLoaded: false,
+  }
+
+  async componentDidMount() {
+    await Font.loadAsync({
+      /* eslint-disable */
+      'lato-regular': require('./assets/fonts/Lato-Regular.ttf'),
+      'lato-bold': require('./assets/fonts/Lato-Bold.ttf'),
+      /* eslint-enable */
+    });
+    this.setState({ fontLoaded: true });
+  }
+
+  render() {
+    const { fontLoaded } = this.state;
+    return (
+      <I18nextProvider i18n={i18n}>
+        <PaperProvider theme={theme}>
+          { fontLoaded ? <AppContainer /> : null }
+        </PaperProvider>
+      </I18nextProvider>
+    );
+  }
+}
+
 
 export default App;
