@@ -1,9 +1,9 @@
 import React from 'react';
 import {
-  Keyboard, Clipboard, View, StyleSheet, Text,
+  Keyboard, Clipboard, View, StyleSheet,
 } from 'react-native';
 import { withNamespaces } from 'react-i18next';
-import { Button, IconButton } from 'react-native-paper';
+import { Button, IconButton, Text } from 'react-native-paper';
 import loplop from 'loplop';
 import ConfirmationDialog from './ConfirmationDialog';
 import FormInput from './FormInput';

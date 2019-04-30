@@ -1,9 +1,13 @@
 import React from 'react';
 import { withNamespaces } from 'react-i18next';
 import {
-  View, Text, Modal, StyleSheet, TextInput, Platform, Dimensions,
+  View, Modal, StyleSheet, TextInput, Dimensions,
 } from 'react-native';
-import { Button, IconButton } from 'react-native-paper';
+import {
+  Button,
+  IconButton,
+  Text,
+} from 'react-native-paper';
 import { colors, fontSize } from '../styles/base';
 
 const styles = StyleSheet.create({
@@ -18,54 +22,43 @@ const styles = StyleSheet.create({
   innerContainer: {
     backgroundColor: colors.white,
     borderRadius: 4,
+    paddingHorizontal: '5%',
   },
   messagesContainer: {
-    flex: 2 / 3,
-    backgroundColor: colors.primary,
+    flex: 1 / 2,
+    paddingTop: '5%',
     borderTopRightRadius: 4,
     borderTopLeftRadius: 4,
-    justifyContent: 'center',
   },
   passwordContainer: {
+    flex: 1 / 3,
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
     alignSelf: 'center',
-    backgroundColor: colors.secondary,
     borderRadius: 4,
-    padding: 6,
-  },
-  password: {
-    flex: 1,
-    justifyContent: 'space-around',
-    marginLeft: '5%',
+    borderWidth: 1,
+    borderColor: colors.secondary,
   },
   title: {
-    color: colors.secondary,
+    color: colors.primary,
     fontSize: fontSize.xxl,
     marginBottom: '3%',
+    fontFamily: 'lato-bold',
   },
   paragraph: {
     fontSize: fontSize.lg,
   },
-  label: {
+  password: {
     fontSize: fontSize.lg,
-    color: colors.white,
+    color: colors.secondary,
+    flex: 1,
+    paddingLeft: '3%',
+    fontFamily: 'lato-regular',
   },
   buttonRow: {
-    justifyContent: 'flex-start',
-    alignSelf: 'center',
-    flex: 1 / 3,
-  },
-  button: {
-    borderColor: colors.secondary,
-    borderWidth: 2,
-  },
-  closeButton: {
+    justifyContent: 'center',
     alignSelf: 'flex-end',
-    top: '1%',
-    right: '0.5%',
-    position: 'absolute',
+    flex: 1 / 2,
   },
 });
 
@@ -74,16 +67,6 @@ class ConfirmationDialog extends React.Component {
     obscured: true,
     window: Dimensions.get('window'),
   }
-
-  componentWillMount = () => {
-    Dimensions.addEventListener('change', this.setDimensions);
-  }
-
-  componentWillUnmount() {
-    Dimensions.removeEventListener('change', this.setDimensions);
-  }
-
-  setDimensions = windowDimensions => this.setState(windowDimensions);
 
   toggleObscured = () => {
     this.setState(prevState => ({ obscured: !prevState.obscured }));
@@ -109,20 +92,18 @@ class ConfirmationDialog extends React.Component {
 
     if (width < 600) {
       styling.innerContainerWidth = '95%';
-      styling.passwordContainerWidth = '95%';
     } else {
-      styling.innerContainerWidth = '70%';
-      styling.passwordContainerWidth = '80%';
+      styling.innerContainerWidth = '60%';
     }
 
-    if (height > 800) {
-      styling.innerContainerFlex = 1 / 2;
-    } else if (height < 376) {
-      styling.innerContainerFlex = 4 / 5;
+    // Dynamic modal size for iphone 8s and below, iphone x and above, ipad
+    if (height < 812) {
+      styling.innerContainerFlex = 1 / 3;
+    } else if (height > 811 && height < 1024) {
+      styling.innerContainerFlex = 1 / 4;
     } else {
-      styling.innerContainerFlex = 2 / 3;
+      styling.innerContainerFlex = 1 / 5;
     }
-
     return styling;
   }
 
@@ -130,10 +111,9 @@ class ConfirmationDialog extends React.Component {
     const { obscured, window } = this.state;
     const { width, height } = window;
     const {
-      t, visible, generatedPassword, closeModal, clearForm, toggleClearClipboard,
+      t, visible, generatedPassword, closeModal,
     } = this.props;
     const visibilityIcon = obscured ? 'visibility-off' : 'visibility';
-    const accountLabelMargin = Platform.OS === 'ios' ? 6 : 0;
     const dynamicStyles = this.modalStyling(height, width);
     const { innerContainerWidth, innerContainerFlex, passwordContainerWidth } = dynamicStyles;
 
@@ -155,50 +135,36 @@ class ConfirmationDialog extends React.Component {
               ]
            }>
               <View style={styles.messagesContainer}>
-                <IconButton
-                  icon="close"
-                  size={35}
-                  style={styles.closeButton}
-                  onPress={() => { closeModal(); clearForm(); toggleClearClipboard(); }}
-                />
-                <View style={{ marginLeft: '4%' }}>
+                <View>
                   <Text style={styles.title}>{t('completedStatus')}</Text>
-                  <Text style={[styles.paragraph, { color: colors.white, width: '80%' }]}>
+                  <Text style={[styles.paragraph]}>
                     {t('completedClipboard')}
                   </Text>
                 </View>
               </View>
-              <View style={{ flex: 1 / 2, justifyContent: 'center' }}>
-                <View style={[styles.passwordContainer, { width: passwordContainerWidth }]}>
-                  <View style={styles.password}>
-                    <Text style={[styles.label, { marginBottom: accountLabelMargin }]}>
-                      {t('accountPassword')}
-                    </Text>
-                    <TextInput
-                      secureTextEntry={obscured}
-                      editable={false}
-                      style={styles.label}
-                    >
-                      { generatedPassword }
-                    </TextInput>
-                  </View>
-                  <IconButton
-                    icon={visibilityIcon}
-                    color={colors.white}
-                    onPress={this.toggleObscured}
-                    style={styles.hideShowButton}
-                  />
-                </View>
+              <View style={[styles.passwordContainer, { width: passwordContainerWidth }]}>
+                <TextInput
+                  secureTextEntry={obscured}
+                  editable={false}
+                  style={styles.password}
+                >
+                  { generatedPassword }
+                </TextInput>
+                <IconButton
+                  icon={visibilityIcon}
+                  color={colors.secondary}
+                  onPress={this.toggleObscured}
+                  style={styles.hideShowButton}
+                />
               </View>
               <View style={styles.buttonRow}>
                 <Button
-                  testID="submit-form"
+                  testID="start-over-button"
                   onPress={this.handleSubmit}
-                  accessibilityLabel="ACTION BUTTON"
-                  style={styles.button}
-                  mode="outlined"
-                  color={colors.secondary}
+                  accessibilityLabel="Press to start over"
+                  mode="text"
                   contentStyle={{ width: 'auto' }}
+                  theme={{ colors: { text: colors.secondary }, fonts: { regular: 'lato-bold' } }}
                 >
                   <Text>{t('button')}</Text>
                 </Button>

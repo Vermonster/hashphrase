@@ -24,7 +24,11 @@
     },
     "android": {
       "package": "com.vermonster.hashphrase",
-      "versionCode": 1
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#E07926",
+        "foregroundImage": "./assets/android/foreground.png" 
+      }
     }
   }
 }
