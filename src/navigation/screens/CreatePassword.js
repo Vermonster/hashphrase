@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import { Switch, Snackbar, IconButton } from 'react-native-paper';
+import {
+  Switch,
+  Snackbar,
+  IconButton,
+  Text,
+} from 'react-native-paper';
 import {
   View,
-  Text,
   StyleSheet,
   TouchableWithoutFeedback,
   Keyboard,

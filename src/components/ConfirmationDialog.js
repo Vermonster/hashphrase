@@ -1,9 +1,13 @@
 import React from 'react';
 import { withNamespaces } from 'react-i18next';
 import {
-  View, Text, Modal, StyleSheet, TextInput, Platform, Dimensions,
+  View, Modal, StyleSheet, TextInput, Platform, Dimensions,
 } from 'react-native';
-import { Button, IconButton } from 'react-native-paper';
+import {
+  Button,
+  IconButton,
+  Text,
+} from 'react-native-paper';
 import { colors, fontSize } from '../styles/base';
 
 const styles = StyleSheet.create({
@@ -51,6 +55,7 @@ const styles = StyleSheet.create({
   label: {
     fontSize: fontSize.lg,
     color: colors.white,
+    fontFamily: 'lato-regular',
   },
   buttonRow: {
     justifyContent: 'flex-start',
