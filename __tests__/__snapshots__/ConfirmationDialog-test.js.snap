@@ -61,33 +61,13 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
             }
           }
         >
-          <withTheme(IconButton)
-            icon="close"
-            onPress={[Function]}
-            size={35}
-            style={
-              Object {
-                "alignSelf": "flex-end",
-                "position": "absolute",
-                "right": "0.5%",
-                "top": "1%",
-              }
-            }
-          />
-          <ForwardRef(View)
-            style={
-              Object {
-                "marginLeft": "4%",
-              }
-            }
-          >
+          <ForwardRef(View)>
             <withTheme(Text)
               style={
                 Object {
-                  "color": "#212A59",
+                  "color": "#E07926",
                   "fontFamily": "lato-bold",
                   "fontSize": 24,
-                  "fontWeight": "bold",
                   "marginBottom": "3%",
                 }
               }
@@ -133,59 +113,20 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
               Object {
                 "color": "#212A59",
                 "flex": 1,
+                "fontFamily": "lato-regular",
                 "fontSize": 16,
                 "paddingLeft": "3%",
               }
             }
             underlineColorAndroid="transparent"
           >
-            <ForwardRef(View)
-              style={
-                Object {
-                  "flex": 1,
-                  "justifyContent": "space-around",
-                  "marginLeft": "5%",
-                }
-              }
-            >
-              <withTheme(Text)
-                style={
-                  Array [
-                    Object {
-                      "color": "#FFF",
-                      "fontFamily": "lato-regular",
-                      "fontSize": 16,
-                    },
-                    Object {
-                      "marginBottom": 6,
-                    },
-                  ]
-                }
-              >
-                accountPassword
-              </withTheme(Text)>
-              <TextInput
-                allowFontScaling={true}
-                editable={false}
-                secureTextEntry={true}
-                style={
-                  Object {
-                    "color": "#FFF",
-                    "fontFamily": "lato-regular",
-                    "fontSize": 16,
-                  }
-                }
-                underlineColorAndroid="transparent"
-              >
-                12345678
-              </TextInput>
-            </ForwardRef(View)>
-            <withTheme(IconButton)
-              color="#FFF"
-              icon="visibility-off"
-              onPress={[Function]}
-            />
-          </ForwardRef(View)>
+            12345678
+          </TextInput>
+          <withTheme(IconButton)
+            color="#212A59"
+            icon="visibility-off"
+            onPress={[Function]}
+          />
         </ForwardRef(View)>
         <ForwardRef(View)
           style={
@@ -197,22 +138,22 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
           }
         >
           <withTheme(Button)
-            accessibilityLabel="ACTION BUTTON"
-            color="#FFF"
+            accessibilityLabel="Press to start over"
             contentStyle={
               Object {
                 "width": "auto",
               }
             }
-            mode="outlined"
+            mode="text"
             onPress={[Function]}
-            style={
+            testID="start-over-button"
+            theme={
               Object {
-                "backgroundColor": "#212A59",
-                "borderWidth": 0,
+                "colors": Object {
+                  "text": "#212A59",
+                },
               }
             }
-            testID="submit-form"
           >
             <withTheme(Text)>
               button
