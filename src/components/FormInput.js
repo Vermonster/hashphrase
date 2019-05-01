@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     backgroundColor: colors.white,
     marginTop: 10,
-    marginBottom: 18,
     width: '80%',
   },
   visibilityButton: {
@@ -41,6 +40,7 @@ const FormInput = (props) => {
     visibility,
   } = props;
   const visibilityIcon = visibility ? 'visibility' : 'visibility-off';
+  const formInputBottomMargin = error ? 0 : 18;
   const buttonType = (componentType !== 'confirmPassword')
     ? (
       <IconButton
@@ -56,7 +56,7 @@ const FormInput = (props) => {
   return (
     <View>
       <Text style={styles.label}>{prompt}</Text>
-      <View style={styles.formInputContainer}>
+      <View style={[styles.formInputContainer, { marginBottom: formInputBottomMargin }]}>
         <TextInput
           value={value}
           placeholder={placeholderText}
