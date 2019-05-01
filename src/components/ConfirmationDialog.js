@@ -144,11 +144,11 @@ class ConfirmationDialog extends React.Component {
               <View style={[styles.passwordContainer, { width: passwordContainerWidth }]}>
                 <TextInput
                   secureTextEntry={obscured}
-                  editable={false}
+                  editable={!obscured}
                   style={styles.password}
-                >
-                  { generatedPassword }
-                </TextInput>
+                  selectTextOnFocus={!obscured}
+                  value={generatedPassword}
+                />
                 <IconButton
                   icon={visibilityIcon}
                   color={colors.secondary}
