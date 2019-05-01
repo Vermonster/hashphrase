@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
   label: {
     alignSelf: 'flex-start',
     fontSize: fontSize.lg,
+    marginBottom: 10,
   },
   textInput: {
     flex: 1,
@@ -16,8 +17,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-end',
     backgroundColor: colors.white,
-    marginTop: 10,
-    width: '80%',
   },
   visibilityButton: {
     position: 'absolute',
@@ -52,7 +51,7 @@ const FormInput = (props) => {
       />
     ) : null;
 
-  const inputMargin = componentType === 'confirmPassword' ? 0 : 30;
+  const inputMargin = componentType === 'label' ? 30 : 0;
 
   return (
     <View>

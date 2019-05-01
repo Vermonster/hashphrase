@@ -9,17 +9,18 @@ import {
 import loplop from 'loplop';
 import ConfirmationDialog from './ConfirmationDialog';
 import FormInput from './FormInput';
-import { colors, rowCenter } from '../styles/base';
+import { colors } from '../styles/base';
 
 const styles = StyleSheet.create({
   generatorContainer: {
     justifyContent: 'center',
-    alignItems: 'center',
+    width: '80%',
+    alignSelf: 'center',
   },
   warning: {
     flexDirection: 'row',
-    width: '80%',
     justifyContent: 'space-between',
+    alignItems: 'center',
   },
   icon: {
     marginHorizontal: 0,
@@ -155,10 +156,10 @@ class PasswordGenerator extends React.Component {
           visibility={passwordVisibility}
         />
         <View style={{
-          flexDirection: 'row', alignSelf: 'flex-end', alignItems: 'center', marginRight: 35,
+          flexDirection: 'row', alignSelf: 'flex-end', alignItems: 'center',
         }}
         >
-          <Text style={styles.newPassLabel}>New account</Text>
+          <Text>{t('confirmSwitch')}</Text>
           <Switch
             value={isNewPassword}
             onValueChange={this.handleToggleSwitch}
@@ -178,7 +179,7 @@ class PasswordGenerator extends React.Component {
               visibility={passwordVisibility}
             />
             { inputError && (
-              <View style={[rowCenter, styles.warning]}>
+              <View style={styles.warning}>
                 <Text style={{ color: colors.warning }}>{t('warning')}</Text>
                 <IconButton icon="warning" color={colors.warning} style={styles.icon} />
               </View>
@@ -188,13 +189,13 @@ class PasswordGenerator extends React.Component {
         )
       }
         <Button
-          testID="submit-create-password"
+          testID="get-password-button"
           onPress={this.handleSubmit}
-          accessibilityLabel="CREATE ACCOUNT PASSWORD BUTTON"
+          accessibilityLabel="PRESS TO CREATE ACCOUNT PASSWORD"
           disabled={disabled}
           mode="contained"
           dark
-          style={{ marginTop: '5%', width: '50%' }}
+          style={{ marginTop: '10%', alignSelf: 'center', width: '70%' }}
         >
           {t('submitMessage')}
         </Button>

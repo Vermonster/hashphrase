@@ -19,7 +19,7 @@ import { SafeAreaView } from 'react-navigation';
 import { withNamespaces } from 'react-i18next';
 import LogoTitle from '../../components/LogoTitle';
 import PasswordGenerator from '../../components/PasswordGenerator';
-import { colors, rowCenter, fontSize } from '../../styles/base';
+import { colors } from '../../styles/base';
 
 const styles = StyleSheet.create({
   container: {
@@ -30,13 +30,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-end',
     marginTop: 100,
-  },
-  newPass: {
-    ...rowCenter,
-  },
-  newPassLabel: {
-    fontSize: fontSize.lg,
-    marginRight: '2%',
   },
   snackbar: {
     flex: 1,
@@ -91,10 +84,7 @@ class CreateNewPassword extends Component {
     } = this.state;
 
     return (
-      <SafeAreaView
-        style={styles.container}
-        onLayout={this.onLayout}
-      >
+      <SafeAreaView style={styles.container}>
         <StatusBar barStyle="light-content" />
         <KeyboardAvoidingView
           behavior="padding"

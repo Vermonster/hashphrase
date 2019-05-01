@@ -1,6 +1,5 @@
 const en = {
   createPassword: {
-    newPassword: 'New password',
     clipboardCleared: 'Your clipboard has been cleared.',
     clearClipboardButton: 'CLEAR CLIPBOARD',
   },
@@ -17,9 +16,9 @@ const en = {
     firstPassword: 'Make it memorable',
     nicknameLabel: 'What is the account\'s Nickname?',
     masterPassword: 'What is your Master Password?',
-    retypePassword: 'Retype your Master Password',
     submitMessage: 'GET PASSWORD',
     warning: 'Password does not match',
+    confirmSwitch: 'Confirm Password',
   },
   tipsPage: {
     title: 'FAQs',
