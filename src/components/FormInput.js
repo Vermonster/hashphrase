@@ -57,7 +57,14 @@ const FormInput = (props) => {
   return (
     <View>
       { prompt && <Text style={styles.label}>{prompt}</Text> }
-      <View style={[styles.formInputContainer, { marginBottom: inputMarginBottom, marginTop: inputMarginTop }]}>
+      <View
+        style={
+          [
+            styles.formInputContainer,
+            { marginBottom: inputMarginBottom, marginTop: inputMarginTop },
+          ]
+        }
+      >
         <TextInput
           value={value}
           placeholder={placeholderText}

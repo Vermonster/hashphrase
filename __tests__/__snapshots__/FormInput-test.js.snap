@@ -23,6 +23,7 @@ exports[`<FormInput /> should render the same snapshot 1`] = `
         },
         Object {
           "marginBottom": 0,
+          "marginTop": 0,
         },
       ]
     }
