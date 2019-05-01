@@ -3,7 +3,9 @@ import {
   Keyboard, Clipboard, View, StyleSheet,
 } from 'react-native';
 import { withNamespaces } from 'react-i18next';
-import { Button, IconButton, Text, Switch } from 'react-native-paper';
+import {
+  Button, IconButton, Text, Switch,
+} from 'react-native-paper';
 import loplop from 'loplop';
 import ConfirmationDialog from './ConfirmationDialog';
 import FormInput from './FormInput';
@@ -13,7 +15,7 @@ const styles = StyleSheet.create({
   generatorContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-},
+  },
   warning: {
     flexDirection: 'row',
     width: '80%',
@@ -70,7 +72,9 @@ class PasswordGenerator extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { label, password, confirmPassword, isNewPassword } = this.state;
+    const {
+      label, password, confirmPassword, isNewPassword,
+    } = this.state;
     if (isNewPassword && (password !== confirmPassword)) {
       this.setState({ inputError: true });
     } else {
@@ -99,7 +103,9 @@ class PasswordGenerator extends React.Component {
 
   handleSubmitButtonState = () => {
     this.setState({ disabled: true });
-    const { label, password, confirmPassword, isNewPassword } = this.state;
+    const {
+      label, password, confirmPassword, isNewPassword,
+    } = this.state;
     return ((isNewPassword && label && password && confirmPassword)
     || (!isNewPassword && label && password)) ? this.setState({ disabled: false }) : null;
   }
@@ -155,13 +161,16 @@ class PasswordGenerator extends React.Component {
           handleInputVisibility={this.togglePasswordVisibility}
           visibility={passwordVisibility}
         />
-        <View style={{ flexDirection: 'row', alignSelf: 'flex-end', alignItems: 'center', marginRight: 35 }}>
+        <View style={{
+          flexDirection: 'row', alignSelf: 'flex-end', alignItems: 'center', marginRight: 35,
+        }}
+        >
           <Text style={styles.newPassLabel}>New account</Text>
           <Switch
             value={isNewPassword}
             onValueChange={this.handleToggleSwitch}
             color={colors.primary}
-            style={{ transform: [{ scaleX: .8 }, { scaleY: .8 }] }}
+            style={{ transform: [{ scaleX: 0.8 }, { scaleY: 0.8 }] }}
           />
         </View>
         { isNewPassword && (
