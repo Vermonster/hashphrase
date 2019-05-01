@@ -40,16 +40,11 @@ class PasswordGenerator extends React.Component {
     isNewPassword: false,
   };
 
-  componentDidUpdate(prevProps) {
-    const { isNewPassword } = this.props;
-    if (isNewPassword !== prevProps.isNewPassword) {
-      this.handleSubmitButtonState();
-    }
-  }
+  resetToggleSwitch = () => this.setState({ isNewPassword: false })
 
   handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
     isNewPassword: !isNewPassword,
-  }))
+  }), this.handleSubmitButtonState)
 
   showModal = () => this.setState({ modalVisibility: true });
 
@@ -132,9 +127,7 @@ class PasswordGenerator extends React.Component {
       labelVisibility,
       isNewPassword,
     } = this.state;
-    const {
-      t, resetToggleSwitch,
-    } = this.props;
+    const { t } = this.props;
 
     return (
       <View style={styles.generatorContainer}>
@@ -178,7 +171,6 @@ class PasswordGenerator extends React.Component {
             <FormInput
               value={confirmPassword}
               componentType="confirmPassword"
-              prompt={t('retypePassword')}
               label={t('confirmPassword')}
               error={inputError}
               handleChange={this.handleChange}
@@ -211,7 +203,7 @@ class PasswordGenerator extends React.Component {
           generatedPassword={generatedPassword}
           closeModal={this.closeModal}
           clearForm={this.clearForm}
-          resetToggleSwitch={resetToggleSwitch}
+          resetToggleSwitch={this.resetToggleSwitch}
         />
       </View>
     );

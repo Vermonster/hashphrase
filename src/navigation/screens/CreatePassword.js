@@ -83,8 +83,6 @@ class CreateNewPassword extends Component {
     this.showSnackbar();
   }
 
-  resetToggleSwitch = () => this.setState({ isNewPassword: false })
-
   render() {
     const { t } = this.props;
     const {
@@ -111,7 +109,7 @@ class CreateNewPassword extends Component {
                   resetToggleSwitch={this.resetToggleSwitch}
                 />
                 <TouchableOpacity onPress={this.clearClipboard} style={{ alignItems: 'center', marginTop: 30 }}>
-                  <Text style={{ textDecorationLine: 'underline' }}>Clear Clipboard</Text>
+                  <Text style={{ textDecorationLine: 'underline' }}>{t('clearClipboardButton')}</Text>
                 </TouchableOpacity>
               </View>
             </TouchableWithoutFeedback>
