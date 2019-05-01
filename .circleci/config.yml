@@ -61,6 +61,9 @@ jobs:
 workflows:
   version: 2
   workflow:
-    jobs:
-      - build_and_test
-      - publish_to_expo
+      jobs:
+        - build_and_test
+        - publish_to_expo:
+            filters:
+              branches:
+                ignore: gh-pages
