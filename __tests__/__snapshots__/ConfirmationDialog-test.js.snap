@@ -109,6 +109,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
             allowFontScaling={true}
             editable={false}
             secureTextEntry={true}
+            selectTextOnFocus={false}
             style={
               Object {
                 "color": "#212A59",
@@ -119,9 +120,8 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
               }
             }
             underlineColorAndroid="transparent"
-          >
-            12345678
-          </TextInput>
+            value="12345678"
+          />
           <withTheme(IconButton)
             color="#212A59"
             icon="visibility-off"
