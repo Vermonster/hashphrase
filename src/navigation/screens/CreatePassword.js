@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-  Switch,
   Snackbar,
   IconButton,
   Text,
@@ -111,8 +110,8 @@ class CreateNewPassword extends Component {
                   isNewPassword={isNewPassword}
                   resetToggleSwitch={this.resetToggleSwitch}
                 />
-                <TouchableOpacity onPress={this.clearClipboard}>
-                  <Text>Clear Clipboard</Text>
+                <TouchableOpacity onPress={this.clearClipboard} style={{ alignItems: 'center', marginTop: 30 }}>
+                  <Text style={{ textDecorationLine: 'underline' }}>Clear Clipboard</Text>
                 </TouchableOpacity>
               </View>
             </TouchableWithoutFeedback>
