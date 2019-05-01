@@ -51,12 +51,13 @@ const FormInput = (props) => {
       />
     ) : null;
 
-  const inputMargin = componentType === 'label' ? 30 : 0;
+  const inputMarginBottom = componentType === 'label' ? 30 : 0;
+  const inputMarginTop = componentType === 'confirmPassword' ? 10 : 0;
 
   return (
     <View>
-      { prompt && <Text style={styles.label}>{prompt}</Text> } 
-      <View style={[styles.formInputContainer, { marginBottom: inputMargin }]}>
+      { prompt && <Text style={styles.label}>{prompt}</Text> }
+      <View style={[styles.formInputContainer, { marginBottom: inputMarginBottom, marginTop: inputMarginTop }]}>
         <TextInput
           value={value}
           placeholder={placeholderText}

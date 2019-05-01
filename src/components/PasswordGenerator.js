@@ -132,42 +132,43 @@ class PasswordGenerator extends React.Component {
 
     return (
       <View style={styles.generatorContainer}>
-        <FormInput
-          value={label}
-          componentType="label"
-          placeholderText={isNewPassword ? t('firstNickname') : null}
-          prompt={t('nicknameLabel')}
-          label={t('nickname')}
-          handleChange={this.handleChange}
-          handleInputFocus={this.handlePasswordFocus}
-          handleInputVisibility={this.toggleLabelVisibility}
-          visibility={labelVisibility}
-        />
-        <FormInput
-          value={password}
-          componentType="password"
-          placeholderText={isNewPassword ? t('firstPassword') : null}
-          prompt={t('masterPassword')}
-          label={t('password')}
-          handleChange={this.handleChange}
-          handleInputFocus={this.handleConfirmPasswordFocus}
-          inputRef={(input) => { this.passwordRef = input; }}
-          handleInputVisibility={this.togglePasswordVisibility}
-          visibility={passwordVisibility}
-        />
-        <View style={{
-          flexDirection: 'row', alignSelf: 'flex-end', alignItems: 'center', marginVertical: 10,
-        }}
-        >
-          <Text>{t('confirmSwitch')}</Text>
-          <Switch
-            value={isNewPassword}
-            onValueChange={this.handleToggleSwitch}
-            color={colors.primary}
-            style={{ transform: [{ scaleX: 0.8 }, { scaleY: 0.8 }] }}
+        <View style={{ marginBottom: 30 }}>
+          <FormInput
+            value={label}
+            componentType="label"
+            placeholderText={isNewPassword ? t('firstNickname') : null}
+            prompt={t('nicknameLabel')}
+            label={t('nickname')}
+            handleChange={this.handleChange}
+            handleInputFocus={this.handlePasswordFocus}
+            handleInputVisibility={this.toggleLabelVisibility}
+            visibility={labelVisibility}
           />
-        </View>
-        { isNewPassword && (
+          <FormInput
+            value={password}
+            componentType="password"
+            placeholderText={isNewPassword ? t('firstPassword') : null}
+            prompt={t('masterPassword')}
+            label={t('password')}
+            handleChange={this.handleChange}
+            handleInputFocus={this.handleConfirmPasswordFocus}
+            inputRef={(input) => { this.passwordRef = input; }}
+            handleInputVisibility={this.togglePasswordVisibility}
+            visibility={passwordVisibility}
+          />
+          <View style={{
+            flexDirection: 'row', alignSelf: 'flex-end', alignItems: 'center', marginTop: 10,
+          }}
+          >
+            <Text>{t('confirmSwitch')}</Text>
+            <Switch
+              value={isNewPassword}
+              onValueChange={this.handleToggleSwitch}
+              color={colors.primary}
+              style={{ transform: [{ scaleX: 0.8 }, { scaleY: 0.8 }] }}
+            />
+          </View>
+          { isNewPassword && (
           <>
             <FormInput
               value={confirmPassword}
@@ -186,8 +187,9 @@ class PasswordGenerator extends React.Component {
             )
             }
           </>
-        )
+          )
       }
+        </View>
         <Button
           testID="get-password-button"
           onPress={this.handleSubmit}
@@ -195,7 +197,7 @@ class PasswordGenerator extends React.Component {
           disabled={disabled}
           mode="contained"
           dark
-          style={{ marginTop: '10%', alignSelf: 'center' }}
+          style={{ alignSelf: 'center' }}
           contentStyle={{ width: '100%', height: 40 }}
         >
           {t('submitMessage')}
