@@ -1,7 +1,7 @@
 const en = {
   createPassword: {
     newPassword: 'New password',
-    clipboardCleared: 'Your account password has been cleared from clipboard.',
+    clipboardCleared: 'Your clipboard has been cleared.',
   },
   confirmationDialog: {
     completedStatus: 'All done!',

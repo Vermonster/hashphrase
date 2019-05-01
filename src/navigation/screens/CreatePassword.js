@@ -74,7 +74,6 @@ class CreateNewPassword extends Component {
   state = {
     isNewPassword: false,
     snackbarVisibility: false,
-    clearClipboardVisibility: false,
     height: Dimensions.get('window').height,
   };
 
@@ -91,14 +90,9 @@ class CreateNewPassword extends Component {
     isNewPassword: !isNewPassword,
   }))
 
-  toggleClearClipboard = () => this.setState(({ clearClipboardVisibility }) => ({
-    clearClipboardVisibility: !clearClipboardVisibility,
-  }))
-
   clearClipboard = () => {
     Clipboard.setString('');
     this.showSnackbar();
-    this.toggleClearClipboard();
   }
 
   resetToggleSwitch = () => this.setState({ isNewPassword: false })
@@ -109,7 +103,6 @@ class CreateNewPassword extends Component {
       isNewPassword,
       height,
       snackbarVisibility,
-      clearClipboardVisibility,
     } = this.state;
 
     const marginTopValue = Math.floor(height * (0.15));
@@ -143,14 +136,11 @@ class CreateNewPassword extends Component {
                 </View>
                 <PasswordGenerator
                   isNewPassword={isNewPassword}
-                  toggleClearClipboard={this.toggleClearClipboard}
                   resetToggleSwitch={this.resetToggleSwitch}
                 />
-                { clearClipboardVisibility && (
-                  <TouchableOpacity onPress={this.clearClipboard}>
-                    <Text>Clear Clipboard</Text>
-                  </TouchableOpacity>
-                ) }
+                <TouchableOpacity onPress={this.clearClipboard}>
+                  <Text>Clear Clipboard</Text>
+                </TouchableOpacity>
               </View>
             </TouchableWithoutFeedback>
           </ScrollView>
