@@ -47,8 +47,9 @@ const styles = StyleSheet.create({
   clearButtonContainer: {
     alignSelf: 'center',
     marginTop: 36,
-    borderBottomColor: colors.secondary,
-    borderBottomWidth: 1,
+  },
+  clearClipboardText: {
+    textDecorationLine: 'underline',
   },
   flexLayout: {
     flex: 1,
@@ -145,7 +146,7 @@ class CreateNewPassword extends Component {
                   resetToggleSwitch={this.resetToggleSwitch}
                 />
                 <TouchableOpacity onPress={this.clearClipboard} style={styles.clearButtonContainer}>
-                  <Text theme={{ fonts: { regular: 'lato-bold' }, colors: { text: colors.darkGray } }}>{t('clearClipboard')}</Text>
+                  <Text style={styles.clearClipboardText} theme={{ fonts: { regular: 'lato-regular' } }}>{t('clearClipboard')}</Text>
                 </TouchableOpacity>
               </View>
             </TouchableWithoutFeedback>
