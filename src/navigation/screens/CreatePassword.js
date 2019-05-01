@@ -44,6 +44,9 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     backgroundColor: colors.secondary,
   },
+  clearButtonContainer: {
+    alignSelf: 'flex-end',
+  },
   flexLayout: {
     flex: 1,
   },
@@ -138,8 +141,8 @@ class CreateNewPassword extends Component {
                   isNewPassword={isNewPassword}
                   resetToggleSwitch={this.resetToggleSwitch}
                 />
-                <TouchableOpacity onPress={this.clearClipboard}>
-                  <Text>Clear Clipboard</Text>
+                <TouchableOpacity onPress={this.clearClipboard} style={styles.clearButtonContainer}>
+                  <Text>{t('clearClipboard')}</Text>
                 </TouchableOpacity>
               </View>
             </TouchableWithoutFeedback>
