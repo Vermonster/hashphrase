@@ -17,7 +17,7 @@ const en = {
     nicknameLabel: 'What is the account\'s Nickname?',
     masterPassword: 'What is your Master Password?',
     retypePassword: 'Retype your Master Password',
-    submitMessage: 'CREATE HASHPHRASE',
+    submitMessage: 'GET PASSWORD',
     warning: 'Password does not match',
   },
   tipsPage: {

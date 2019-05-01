@@ -13,7 +13,6 @@ import {
   KeyboardAvoidingView,
   ScrollView,
   StatusBar,
-  Dimensions,
   TouchableOpacity,
   Clipboard,
 } from 'react-native';
@@ -31,6 +30,7 @@ const styles = StyleSheet.create({
   innerContainer: {
     flex: 1,
     justifyContent: 'flex-end',
+    marginTop: 100,
   },
   newPass: {
     ...rowCenter,
@@ -72,23 +72,12 @@ class CreateNewPassword extends Component {
   });
 
   state = {
-    isNewPassword: false,
     snackbarVisibility: false,
-    height: Dimensions.get('window').height,
   };
 
   showSnackbar = () => this.setState({ snackbarVisibility: true });
 
   hideSnackbar = () => this.setState({ snackbarVisibility: false });
-
-  onLayout = () => {
-    const { height } = Dimensions.get('screen');
-    this.setState({ height });
-  }
-
-  handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
-    isNewPassword: !isNewPassword,
-  }))
 
   clearClipboard = () => {
     Clipboard.setString('');
@@ -101,12 +90,8 @@ class CreateNewPassword extends Component {
     const { t } = this.props;
     const {
       isNewPassword,
-      height,
       snackbarVisibility,
     } = this.state;
-
-    const marginTopValue = Math.floor(height * (0.15));
-    const marginBottomValue = Math.floor(height * (0.1));
 
     return (
       <SafeAreaView
@@ -122,18 +107,6 @@ class CreateNewPassword extends Component {
           <ScrollView style={styles.flexLayout} keyboardShouldPersistTaps="always">
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
               <View style={styles.innerContainer}>
-                <View
-                  style={[styles.newPass,
-                    { marginTop: marginTopValue, marginBottom: marginBottomValue }]
-                  }
-                >
-                  <Text style={styles.newPassLabel}>{t('newPassword')}</Text>
-                  <Switch
-                    value={isNewPassword}
-                    onValueChange={this.handleToggleSwitch}
-                    color={colors.primary}
-                  />
-                </View>
                 <PasswordGenerator
                   isNewPassword={isNewPassword}
                   resetToggleSwitch={this.resetToggleSwitch}
