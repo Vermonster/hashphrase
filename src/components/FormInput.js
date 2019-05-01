@@ -55,7 +55,7 @@ const FormInput = (props) => {
 
   return (
     <View>
-      <Text style={styles.label}>{prompt}</Text>
+      { prompt && <Text style={styles.label}>{prompt}</Text> } 
       <View style={[styles.formInputContainer, { marginBottom: inputMargin }]}>
         <TextInput
           value={value}

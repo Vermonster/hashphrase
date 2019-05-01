@@ -156,7 +156,7 @@ class PasswordGenerator extends React.Component {
           visibility={passwordVisibility}
         />
         <View style={{
-          flexDirection: 'row', alignSelf: 'flex-end', alignItems: 'center',
+          flexDirection: 'row', alignSelf: 'flex-end', alignItems: 'center', marginVertical: 10,
         }}
         >
           <Text>{t('confirmSwitch')}</Text>
@@ -195,7 +195,8 @@ class PasswordGenerator extends React.Component {
           disabled={disabled}
           mode="contained"
           dark
-          style={{ marginTop: '10%', alignSelf: 'center', width: '70%' }}
+          style={{ marginTop: '10%', alignSelf: 'center' }}
+          contentStyle={{ width: '100%', height: 40 }}
         >
           {t('submitMessage')}
         </Button>
