@@ -123,7 +123,7 @@ class PasswordGenerator extends React.Component {
       labelVisibility,
     } = this.state;
     const {
-      isNewPassword, t, toggleClearClipboard, resetToggleSwitch,
+      isNewPassword, t, resetToggleSwitch,
     } = this.props;
 
     return (
@@ -189,7 +189,6 @@ class PasswordGenerator extends React.Component {
           generatedPassword={generatedPassword}
           closeModal={this.closeModal}
           clearForm={this.clearForm}
-          toggleClearClipboard={toggleClearClipboard}
           resetToggleSwitch={resetToggleSwitch}
         />
       </View>
