@@ -17,13 +17,35 @@ const styles = StyleSheet.create({
     width: '80%',
     alignSelf: 'center',
   },
+  innerContainer: {
+    marginBottom: 30,
+  },
+  switchRow: {
+    flexDirection: 'row',
+    alignSelf: 'flex-end',
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  switch: {
+    marginLeft: 10,
+  },
   warning: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
+  warningMessage: {
+    color: colors.warning,
+  },
   icon: {
     marginHorizontal: 0,
+  },
+  submitButton: {
+    alignSelf: 'center',
+  },
+  buttonContentStyle: {
+    width: '100%',
+    height: 40,
   },
 });
 
@@ -132,7 +154,7 @@ class PasswordGenerator extends React.Component {
 
     return (
       <View style={styles.generatorContainer}>
-        <View style={{ marginBottom: 30 }}>
+        <View style={styles.innerContainer}>
           <FormInput
             value={label}
             componentType="label"
@@ -156,16 +178,13 @@ class PasswordGenerator extends React.Component {
             handleInputVisibility={this.togglePasswordVisibility}
             visibility={passwordVisibility}
           />
-          <View style={{
-            flexDirection: 'row', alignSelf: 'flex-end', alignItems: 'center', marginTop: 10,
-          }}
-          >
+          <View style={styles.switchRow}>
             <Text>{t('confirmSwitch')}</Text>
             <Switch
               value={isNewPassword}
               onValueChange={this.handleToggleSwitch}
               color={colors.primary}
-              style={{ marginLeft: 10 }}
+              style={styles.switch}
             />
           </View>
           { isNewPassword && (
@@ -181,11 +200,10 @@ class PasswordGenerator extends React.Component {
             />
             { inputError && (
               <View style={styles.warning}>
-                <Text style={{ color: colors.warning }}>{t('warning')}</Text>
+                <Text style={styles.warningMessage}>{t('warning')}</Text>
                 <IconButton icon="warning" color={colors.warning} style={styles.icon} />
               </View>
-            )
-            }
+            ) }
           </>
           )
       }
@@ -197,8 +215,8 @@ class PasswordGenerator extends React.Component {
           disabled={disabled}
           mode="contained"
           dark
-          style={{ alignSelf: 'center' }}
-          contentStyle={{ width: '100%', height: 40 }}
+          style={styles.submitButton}
+          contentStyle={styles.buttonContentStyle}
         >
           {t('submitMessage')}
         </Button>
@@ -215,5 +233,4 @@ class PasswordGenerator extends React.Component {
 }
 
 export default withNamespaces('passwordGenerator')(PasswordGenerator);
-
 export { PasswordGenerator as TestPasswordGenerator };
