@@ -51,6 +51,7 @@ exports[`<FormInput /> should render the same snapshot 1`] = `
         Object {
           "alignSelf": "center",
           "position": "absolute",
+          "right": -2,
         }
       }
       testID="hideShowButton"
