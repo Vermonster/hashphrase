@@ -60,7 +60,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                 Object {
                   "color": "#212A59",
                   "fontSize": 16,
-                  "lineHeight": 21,
+                  "lineHeight": 24,
                 }
               }
             />
@@ -82,7 +82,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                   Object {
                     "color": "#212A59",
                     "fontSize": 16,
-                    "lineHeight": 21,
+                    "lineHeight": 24,
                   }
                 }
               />
@@ -115,7 +115,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                 Object {
                   "color": "#212A59",
                   "fontSize": 16,
-                  "lineHeight": 21,
+                  "lineHeight": 24,
                 }
               }
             />
@@ -137,7 +137,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                   Object {
                     "color": "#212A59",
                     "fontSize": 16,
-                    "lineHeight": 21,
+                    "lineHeight": 24,
                   }
                 }
               />
@@ -170,7 +170,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                 Object {
                   "color": "#212A59",
                   "fontSize": 16,
-                  "lineHeight": 21,
+                  "lineHeight": 24,
                 }
               }
             />
@@ -192,7 +192,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                   Object {
                     "color": "#212A59",
                     "fontSize": 16,
-                    "lineHeight": 21,
+                    "lineHeight": 24,
                   }
                 }
               />
@@ -225,7 +225,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                 Object {
                   "color": "#212A59",
                   "fontSize": 16,
-                  "lineHeight": 21,
+                  "lineHeight": 24,
                 }
               }
             />
@@ -247,7 +247,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                   Object {
                     "color": "#212A59",
                     "fontSize": 16,
-                    "lineHeight": 21,
+                    "lineHeight": 24,
                   }
                 }
               />
@@ -280,7 +280,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                 Object {
                   "color": "#212A59",
                   "fontSize": 16,
-                  "lineHeight": 21,
+                  "lineHeight": 24,
                 }
               }
             />
@@ -302,7 +302,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                   Object {
                     "color": "#212A59",
                     "fontSize": 16,
-                    "lineHeight": 21,
+                    "lineHeight": 24,
                   }
                 }
               />
@@ -335,7 +335,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                 Object {
                   "color": "#212A59",
                   "fontSize": 16,
-                  "lineHeight": 21,
+                  "lineHeight": 24,
                 }
               }
             />
@@ -357,7 +357,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                   Object {
                     "color": "#212A59",
                     "fontSize": 16,
-                    "lineHeight": 21,
+                    "lineHeight": 24,
                   }
                 }
               />
@@ -390,7 +390,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                 Object {
                   "color": "#212A59",
                   "fontSize": 16,
-                  "lineHeight": 21,
+                  "lineHeight": 24,
                 }
               }
             />
@@ -412,7 +412,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                   Object {
                     "color": "#212A59",
                     "fontSize": 16,
-                    "lineHeight": 21,
+                    "lineHeight": 24,
                   }
                 }
               />
@@ -445,7 +445,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                 Object {
                   "color": "#212A59",
                   "fontSize": 16,
-                  "lineHeight": 21,
+                  "lineHeight": 24,
                 }
               }
             />
@@ -467,7 +467,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                   Object {
                     "color": "#212A59",
                     "fontSize": 16,
-                    "lineHeight": 21,
+                    "lineHeight": 24,
                   }
                 }
               />
@@ -500,7 +500,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                 Object {
                   "color": "#212A59",
                   "fontSize": 16,
-                  "lineHeight": 21,
+                  "lineHeight": 24,
                 }
               }
             />
@@ -522,7 +522,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                   Object {
                     "color": "#212A59",
                     "fontSize": 16,
-                    "lineHeight": 21,
+                    "lineHeight": 24,
                   }
                 }
               />

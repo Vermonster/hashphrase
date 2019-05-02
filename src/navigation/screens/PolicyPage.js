@@ -26,7 +26,7 @@ const PolicyPage = ({ t }) => {
         { privacyPolicy.map(item => (
           <View key={item.id}>
             <Subheading style={{ fontFamily: 'lato-bold' }}>{item.subheading}</Subheading>
-            <Paragraph style={{ lineHeight: 24}}>
+            <Paragraph style={{ lineHeight: 24 }}>
               {item.content}
               {'\n'}
             </Paragraph>
