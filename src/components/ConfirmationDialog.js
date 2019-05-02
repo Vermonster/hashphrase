@@ -155,6 +155,7 @@ class ConfirmationDialog extends React.Component {
                   color={colors.secondary}
                   onPress={this.toggleObscured}
                   style={styles.hideShowButton}
+                  testID="hide-show-button"
                 />
               </View>
               <View style={styles.buttonRow}>
