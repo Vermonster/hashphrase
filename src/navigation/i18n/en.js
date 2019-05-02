@@ -23,23 +23,45 @@ const en = {
     questions: {
       question_1: {
         title: 'What is Hashphrase?',
-        content: 'Many people use the same password for many different services. If that password is exposed or hacked, all of that person’s accounts with the same password are compromised.\nHashphrase reduces this risk by keeping your master password secret. Instead of being the password that you submit to enter your accounts, it becomes an ingredient that is used to create a unique, virtually unguessable password.',
+        content:
+          `hashphrase makes it easy to manage unique passwords. 
+
+          Online security best practices include using a unique password for each account.
+          hashphrase lets you generate unique passwords for all of your accounts by securely combining a unique nickname for each account with one master password. 
+          
+          Advantages of hashphrase include:
+          
+          You don’t have to memorize or write down all of your passwords
+          You don’t have to back up any files
+          You only have to remember two things— your master password and the rule (designed by you) to determine account nicknames
+          Multiple open source implementations make it free forever and easy to use on any device or platform`,
       },
       question_2: {
-        title: 'What is a nickname?',
-        content: 'A typical nickname refers to the account the final password will be generated for, e.g. Google, Amazon, Facebook, etc. But if you are able to remember it, the nickname can be any string.\nIt will be used in combination with the master password to generate a unique account password. As long as you remember your nickname and master password, the unique account password can be reliably regenerated at any time using HashPhrase (or any OPLOP algorithm implementation).',
+        title: 'How should I choose nicknames for each account',
+        content:
+          `hashphrase wouldn’t be as useful if you had to remember random nicknames for every account you sign into. Instead, you’re encouraged to come up with a simple rule that determines the nickname for an arbitrary account. For example, the rule could be “the name of the website or app, all lowercase” (e.g., “gmail”, “facebook”). Or it could be “the domain name associated with the account” (e.g. “gmail.com”, “facebook.com”).
+
+          What’s important is that you can remember the rule and conveniently apply it to any account that you want to manage with hashphrase. And, of course, the rule should produce different values for different accounts.
+          `,
       },
       question_3: {
-        title: 'How do I use Classic Oplop?',
-        content: 'To generate a password that is 8 characters long, simply place an asterisk at the very beginning of your nickname. After you enter your master password and create your generated password, you will see that it is 8 characters long instead of the standard 16 characters.',
+        title: 'Does hashphrase remember any of my passwords?',
+        content:
+        'No, the app does not remember or store your passwords. However, at the end of the normal hashphrase workflow, the app will copy the password you generated into the system clipboard so that you can paste it into whatever sign-in form you are using. The main app screen does provide a button to clear the device clipboard for your convenience.',
       },
       question_4: {
-        title: 'I forgot my master password.',
-        content: 'The chief concern of this app is password security. Because of this, we do not save your information in the app, ever. HashPhrase is used to create passwords, but not to store them.\nIf you forget your master password, we cannot retrieve it for you because this information is not saved. This means that you may need make a new Loplop password for the site or service and reset your password.\nIf you are worried that you will forget your master password, your first line of defense is to make it as memorable as possible.',
+        title: 'I forgot my master password or nickname.',
+        content:
+          `Your master password and nickname are not stored by this application and cannot be retrieved. If you lose or forget them, you will have to pursue alternate account recovery procedures.
+          One way to reduce the chance of forgetting is to always use hashphrase instead of having your browser or app remember your signin, which should reinforce your memory regularly.`,
       },
       question_5: {
-        title: 'What does Loplop mean?',
-        content: 'Loplop is derived from the OPLOP password hashing algorithm: “One Password = Lots of Passwords.” Loplop is "Long Oplop" because it produces a 16 character password rather than OPLOP\'s default 8 characters.',
+        title: 'What happens when I have to change my password?',
+        content: 'If you have to change your password, you will have to use a different nickname (or master password), but then you no longer have a simple rule for all accounts. Some users end up maintaining a document where they can make notes about the nickname for special cases. Such a document can also be used for notes about cases where you have to modify the final password output in order to make it satisfy some extra constraint, such as a required symbol.',
+      },
+      question_6: {
+        title: 'What happens when I have to change my password?',
+        content: 'When you first set a password using hashphrase, you might want to be extra careful to avoid typos in your master password. Enabling this switch requires you to enter the master password twice in order to generate the password.',
       },
     },
   },
