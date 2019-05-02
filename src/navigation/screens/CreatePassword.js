@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   innerContainer: {
     flex: 1,
     justifyContent: 'flex-end',
-    marginTop: 90,
+    marginTop: 50,
   },
   snackbar: {
     flex: 1,

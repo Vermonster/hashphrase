@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
   visibilityButton: {
     position: 'absolute',
     alignSelf: 'center',
+    right: -2,
   },
 });
 

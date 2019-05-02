@@ -165,7 +165,7 @@ class PasswordGenerator extends React.Component {
               value={isNewPassword}
               onValueChange={this.handleToggleSwitch}
               color={colors.primary}
-              style={{ transform: [{ scaleX: 0.8 }, { scaleY: 0.8 }] }}
+              style={{ marginLeft: 10 }}
             />
           </View>
           { isNewPassword && (
