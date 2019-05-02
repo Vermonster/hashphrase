@@ -24,36 +24,31 @@ const en = {
       question_1: {
         title: 'What is Hashphrase?',
         content:
-          `hashphrase makes it easy to manage unique passwords. 
-
-          Online security best practices include using a unique password for each account.
-          hashphrase lets you generate unique passwords for all of your accounts by securely combining a unique nickname for each account with one master password. 
-          
-          Advantages of hashphrase include:
-          
-          You don’t have to memorize or write down all of your passwords
-          You don’t have to back up any files
-          You only have to remember two things— your master password and the rule (designed by you) to determine account nicknames
-          Multiple open source implementations make it free forever and easy to use on any device or platform`,
+          'hashphrase makes it easy to manage unique passwords.\n'
+          + 'Online security best practices include using a unique password for each account.\n'
+          + 'hashphrase lets you generate unique passwords for all of your accounts by securely combining a unique nickname for each account with one master password.\n'
+          + 'Advantages of hashphrase include:\n'
+          + 'You don’t have to memorize or write down all of your passwords\n'
+          + 'You don’t have to back up any files\n'
+          + 'You only have to remember two things— your master password and the rule (designed by you) to determine account nicknames\n'
+          + 'Multiple open source implementations make it free forever and easy to use on any device or platform',
       },
       question_2: {
         title: 'How should I choose nicknames for each account',
         content:
-          `hashphrase wouldn’t be as useful if you had to remember random nicknames for every account you sign into. Instead, you’re encouraged to come up with a simple rule that determines the nickname for an arbitrary account. For example, the rule could be “the name of the website or app, all lowercase” (e.g., “gmail”, “facebook”). Or it could be “the domain name associated with the account” (e.g. “gmail.com”, “facebook.com”).
-
-          What’s important is that you can remember the rule and conveniently apply it to any account that you want to manage with hashphrase. And, of course, the rule should produce different values for different accounts.
-          `,
+          'hashphrase wouldn’t be as useful if you had to remember random nicknames for every account you sign into. Instead, you’re encouraged to come up with a simple rule that determines the nickname for an arbitrary account. For example, the rule could be “the name of the website or app, all lowercase” (e.g., “gmail”, “facebook”). Or it could be “the domain name associated with the account” (e.g. “gmail.com”, “facebook.com”).\n'
+          + 'What’s important is that you can remember the rule and conveniently apply it to any account that you want to manage with hashphrase. And, of course, the rule should produce different values for different accounts.',
       },
       question_3: {
         title: 'Does hashphrase remember any of my passwords?',
         content:
-        'No, the app does not remember or store your passwords. However, at the end of the normal hashphrase workflow, the app will copy the password you generated into the system clipboard so that you can paste it into whatever sign-in form you are using. The main app screen does provide a button to clear the device clipboard for your convenience.',
+          'No, the app does not remember or store your passwords. However, at the end of the normal hashphrase workflow, the app will copy the password you generated into the system clipboard so that you can paste it into whatever sign-in form you are using. The main app screen does provide a button to clear the device clipboard for your convenience.',
       },
       question_4: {
         title: 'I forgot my master password or nickname.',
         content:
-          `Your master password and nickname are not stored by this application and cannot be retrieved. If you lose or forget them, you will have to pursue alternate account recovery procedures.
-          One way to reduce the chance of forgetting is to always use hashphrase instead of having your browser or app remember your signin, which should reinforce your memory regularly.`,
+          'Your master password and nickname are not stored by this application and cannot be retrieved. If you lose or forget them, you will have to pursue alternate account recovery procedures.\n'
+          + 'One way to reduce the chance of forgetting is to always use hashphrase instead of having your browser or app remember your signin, which should reinforce your memory regularly.\n',
       },
       question_5: {
         title: 'What happens when I have to change my password?',
