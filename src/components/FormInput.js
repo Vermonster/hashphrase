@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
   label: {
     alignSelf: 'flex-start',
     fontSize: fontSize.lg,
+    marginBottom: 10,
   },
   textInput: {
     flex: 1,
@@ -16,12 +17,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-end',
     backgroundColor: colors.white,
-    marginTop: 10,
-    width: '80%',
   },
   visibilityButton: {
     position: 'absolute',
     alignSelf: 'center',
+    right: -2,
   },
 });
 
@@ -52,12 +52,20 @@ const FormInput = (props) => {
       />
     ) : null;
 
-  const inputMargin = componentType === 'confirmPassword' ? 0 : 30;
+  const inputMarginBottom = componentType === 'label' ? 30 : 0;
+  const inputMarginTop = componentType === 'confirmPassword' ? 10 : 0;
 
   return (
     <View>
-      <Text style={styles.label}>{prompt}</Text>
-      <View style={[styles.formInputContainer, { marginBottom: inputMargin }]}>
+      { prompt && <Text style={styles.label}>{prompt}</Text> }
+      <View
+        style={
+          [
+            styles.formInputContainer,
+            { marginBottom: inputMarginBottom, marginTop: inputMarginTop },
+          ]
+        }
+      >
         <TextInput
           value={value}
           placeholder={placeholderText}

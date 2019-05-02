@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-  Switch,
   Snackbar,
   IconButton,
   Text,
@@ -13,7 +12,6 @@ import {
   KeyboardAvoidingView,
   ScrollView,
   StatusBar,
-  Dimensions,
   TouchableOpacity,
   Clipboard,
 } from 'react-native';
@@ -21,7 +19,7 @@ import { SafeAreaView } from 'react-navigation';
 import { withNamespaces } from 'react-i18next';
 import LogoTitle from '../../components/LogoTitle';
 import PasswordGenerator from '../../components/PasswordGenerator';
-import { colors, rowCenter, fontSize } from '../../styles/base';
+import { colors } from '../../styles/base';
 
 const styles = StyleSheet.create({
   container: {
@@ -31,13 +29,7 @@ const styles = StyleSheet.create({
   innerContainer: {
     flex: 1,
     justifyContent: 'flex-end',
-  },
-  newPass: {
-    ...rowCenter,
-  },
-  newPassLabel: {
-    fontSize: fontSize.lg,
-    marginRight: '2%',
+    marginTop: 50,
   },
   snackbar: {
     flex: 1,
@@ -46,6 +38,13 @@ const styles = StyleSheet.create({
   },
   flexLayout: {
     flex: 1,
+  },
+  clearClipboardButton: {
+    alignItems: 'center',
+    marginTop: 30,
+  },
+  clearClipboardText: {
+    textDecorationLine: 'underline',
   },
 });
 
@@ -72,47 +71,27 @@ class CreateNewPassword extends Component {
   });
 
   state = {
-    isNewPassword: false,
     snackbarVisibility: false,
-    height: Dimensions.get('window').height,
   };
 
   showSnackbar = () => this.setState({ snackbarVisibility: true });
 
   hideSnackbar = () => this.setState({ snackbarVisibility: false });
 
-  onLayout = () => {
-    const { height } = Dimensions.get('screen');
-    this.setState({ height });
-  }
-
-  handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
-    isNewPassword: !isNewPassword,
-  }))
-
   clearClipboard = () => {
     Clipboard.setString('');
     this.showSnackbar();
   }
 
-  resetToggleSwitch = () => this.setState({ isNewPassword: false })
-
   render() {
     const { t } = this.props;
     const {
       isNewPassword,
-      height,
       snackbarVisibility,
     } = this.state;
 
-    const marginTopValue = Math.floor(height * (0.15));
-    const marginBottomValue = Math.floor(height * (0.1));
-
     return (
-      <SafeAreaView
-        style={styles.container}
-        onLayout={this.onLayout}
-      >
+      <SafeAreaView style={styles.container}>
         <StatusBar barStyle="light-content" />
         <KeyboardAvoidingView
           behavior="padding"
@@ -122,24 +101,12 @@ class CreateNewPassword extends Component {
           <ScrollView style={styles.flexLayout} keyboardShouldPersistTaps="always">
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
               <View style={styles.innerContainer}>
-                <View
-                  style={[styles.newPass,
-                    { marginTop: marginTopValue, marginBottom: marginBottomValue }]
-                  }
-                >
-                  <Text style={styles.newPassLabel}>{t('newPassword')}</Text>
-                  <Switch
-                    value={isNewPassword}
-                    onValueChange={this.handleToggleSwitch}
-                    color={colors.primary}
-                  />
-                </View>
                 <PasswordGenerator
                   isNewPassword={isNewPassword}
                   resetToggleSwitch={this.resetToggleSwitch}
                 />
-                <TouchableOpacity onPress={this.clearClipboard}>
-                  <Text>Clear Clipboard</Text>
+                <TouchableOpacity onPress={this.clearClipboard} style={styles.clearClipboardButton}>
+                  <Text style={styles.clearClipboardText}>{t('clearClipboardButton')}</Text>
                 </TouchableOpacity>
               </View>
             </TouchableWithoutFeedback>

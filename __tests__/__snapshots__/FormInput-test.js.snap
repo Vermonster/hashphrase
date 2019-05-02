@@ -7,6 +7,7 @@ exports[`<FormInput /> should render the same snapshot 1`] = `
       Object {
         "alignSelf": "flex-start",
         "fontSize": 16,
+        "marginBottom": 10,
       }
     }
   >
@@ -19,11 +20,10 @@ exports[`<FormInput /> should render the same snapshot 1`] = `
           "backgroundColor": "#FFF",
           "flexDirection": "row",
           "justifyContent": "flex-end",
-          "marginTop": 10,
-          "width": "80%",
         },
         Object {
-          "marginBottom": 30,
+          "marginBottom": 0,
+          "marginTop": 0,
         },
       ]
     }
@@ -51,6 +51,7 @@ exports[`<FormInput /> should render the same snapshot 1`] = `
         Object {
           "alignSelf": "center",
           "position": "absolute",
+          "right": -2,
         }
       }
       testID="hideShowButton"

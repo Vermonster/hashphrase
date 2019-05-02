@@ -3,24 +3,49 @@ import {
   Keyboard, Clipboard, View, StyleSheet,
 } from 'react-native';
 import { withNamespaces } from 'react-i18next';
-import { Button, IconButton, Text } from 'react-native-paper';
+import {
+  Button, IconButton, Text, Switch,
+} from 'react-native-paper';
 import loplop from 'loplop';
 import ConfirmationDialog from './ConfirmationDialog';
 import FormInput from './FormInput';
-import { colors, rowCenter } from '../styles/base';
+import { colors } from '../styles/base';
 
 const styles = StyleSheet.create({
   generatorContainer: {
     justifyContent: 'center',
+    width: '80%',
+    alignSelf: 'center',
+  },
+  innerContainer: {
+    marginBottom: 30,
+  },
+  switchRow: {
+    flexDirection: 'row',
+    alignSelf: 'flex-end',
     alignItems: 'center',
+    marginTop: 10,
+  },
+  switch: {
+    marginLeft: 10,
   },
   warning: {
     flexDirection: 'row',
-    width: '80%',
     justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  warningMessage: {
+    color: colors.warning,
   },
   icon: {
     marginHorizontal: 0,
+  },
+  submitButton: {
+    alignSelf: 'center',
+  },
+  buttonContentStyle: {
+    width: '100%',
+    height: 40,
   },
 });
 
@@ -35,14 +60,14 @@ class PasswordGenerator extends React.Component {
     passwordVisibility: false,
     labelVisibility: false,
     inputError: false,
+    isNewPassword: false,
   };
 
-  componentDidUpdate(prevProps) {
-    const { isNewPassword } = this.props;
-    if (isNewPassword !== prevProps.isNewPassword) {
-      this.handleSubmitButtonState();
-    }
-  }
+  resetToggleSwitch = () => this.setState({ isNewPassword: false })
+
+  handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
+    isNewPassword: !isNewPassword,
+  }), this.handleSubmitButtonState)
 
   showModal = () => this.setState({ modalVisibility: true });
 
@@ -65,8 +90,9 @@ class PasswordGenerator extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { label, password, confirmPassword } = this.state;
-    const { isNewPassword } = this.props;
+    const {
+      label, password, confirmPassword, isNewPassword,
+    } = this.state;
     if (isNewPassword && (password !== confirmPassword)) {
       this.setState({ inputError: true });
     } else {
@@ -95,8 +121,9 @@ class PasswordGenerator extends React.Component {
 
   handleSubmitButtonState = () => {
     this.setState({ disabled: true });
-    const { label, password, confirmPassword } = this.state;
-    const { isNewPassword } = this.props;
+    const {
+      label, password, confirmPassword, isNewPassword,
+    } = this.state;
     return ((isNewPassword && label && password && confirmPassword)
     || (!isNewPassword && label && password)) ? this.setState({ disabled: false }) : null;
   }
@@ -121,42 +148,50 @@ class PasswordGenerator extends React.Component {
       confirmPassword,
       passwordVisibility,
       labelVisibility,
+      isNewPassword,
     } = this.state;
-    const {
-      isNewPassword, t, resetToggleSwitch,
-    } = this.props;
+    const { t } = this.props;
 
     return (
       <View style={styles.generatorContainer}>
-        <FormInput
-          value={label}
-          componentType="label"
-          placeholderText={isNewPassword ? t('firstNickname') : null}
-          prompt={t('nicknameLabel')}
-          label={t('nickname')}
-          handleChange={this.handleChange}
-          handleInputFocus={this.handlePasswordFocus}
-          handleInputVisibility={this.toggleLabelVisibility}
-          visibility={labelVisibility}
-        />
-        <FormInput
-          value={password}
-          componentType="password"
-          placeholderText={isNewPassword ? t('firstPassword') : null}
-          prompt={t('masterPassword')}
-          label={t('password')}
-          handleChange={this.handleChange}
-          handleInputFocus={this.handleConfirmPasswordFocus}
-          inputRef={(input) => { this.passwordRef = input; }}
-          handleInputVisibility={this.togglePasswordVisibility}
-          visibility={passwordVisibility}
-        />
-        { isNewPassword && (
+        <View style={styles.innerContainer}>
+          <FormInput
+            value={label}
+            componentType="label"
+            placeholderText={isNewPassword ? t('firstNickname') : null}
+            prompt={t('nicknameLabel')}
+            label={t('nickname')}
+            handleChange={this.handleChange}
+            handleInputFocus={this.handlePasswordFocus}
+            handleInputVisibility={this.toggleLabelVisibility}
+            visibility={labelVisibility}
+          />
+          <FormInput
+            value={password}
+            componentType="password"
+            placeholderText={isNewPassword ? t('firstPassword') : null}
+            prompt={t('masterPassword')}
+            label={t('password')}
+            handleChange={this.handleChange}
+            handleInputFocus={this.handleConfirmPasswordFocus}
+            inputRef={(input) => { this.passwordRef = input; }}
+            handleInputVisibility={this.togglePasswordVisibility}
+            visibility={passwordVisibility}
+          />
+          <View style={styles.switchRow}>
+            <Text>{t('confirmSwitch')}</Text>
+            <Switch
+              value={isNewPassword}
+              onValueChange={this.handleToggleSwitch}
+              color={colors.primary}
+              style={styles.switch}
+            />
+          </View>
+          { isNewPassword && (
           <>
             <FormInput
               value={confirmPassword}
               componentType="confirmPassword"
-              prompt={t('retypePassword')}
               label={t('confirmPassword')}
               error={inputError}
               handleChange={this.handleChange}
@@ -164,23 +199,24 @@ class PasswordGenerator extends React.Component {
               visibility={passwordVisibility}
             />
             { inputError && (
-              <View style={[rowCenter, styles.warning]}>
-                <Text style={{ color: colors.warning }}>{t('warning')}</Text>
+              <View style={styles.warning}>
+                <Text style={styles.warningMessage}>{t('warning')}</Text>
                 <IconButton icon="warning" color={colors.warning} style={styles.icon} />
               </View>
-            )
-            }
+            ) }
           </>
-        )
+          )
       }
+        </View>
         <Button
           testID="submit-create-password"
           onPress={this.handleSubmit}
-          accessibilityLabel="CREATE ACCOUNT PASSWORD BUTTON"
+          accessibilityLabel="PRESS TO CREATE ACCOUNT PASSWORD"
           disabled={disabled}
           mode="contained"
           dark
-          style={{ marginTop: '5%' }}
+          style={styles.submitButton}
+          contentStyle={styles.buttonContentStyle}
         >
           {t('submitMessage')}
         </Button>
@@ -189,7 +225,7 @@ class PasswordGenerator extends React.Component {
           generatedPassword={generatedPassword}
           closeModal={this.closeModal}
           clearForm={this.clearForm}
-          resetToggleSwitch={resetToggleSwitch}
+          resetToggleSwitch={this.resetToggleSwitch}
         />
       </View>
     );
@@ -197,5 +233,4 @@ class PasswordGenerator extends React.Component {
 }
 
 export default withNamespaces('passwordGenerator')(PasswordGenerator);
-
 export { PasswordGenerator as TestPasswordGenerator };
