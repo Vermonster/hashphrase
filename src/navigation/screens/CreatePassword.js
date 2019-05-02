@@ -39,6 +39,13 @@ const styles = StyleSheet.create({
   flexLayout: {
     flex: 1,
   },
+  clearClipboardButton: {
+    alignItems: 'center',
+    marginTop: 30,
+  },
+  clearClipboardText: {
+    textDecorationLine: 'underline',
+  },
 });
 
 class CreateNewPassword extends Component {
@@ -98,8 +105,8 @@ class CreateNewPassword extends Component {
                   isNewPassword={isNewPassword}
                   resetToggleSwitch={this.resetToggleSwitch}
                 />
-                <TouchableOpacity onPress={this.clearClipboard} style={{ alignItems: 'center', marginTop: 30 }}>
-                  <Text style={{ textDecorationLine: 'underline' }}>{t('clearClipboardButton')}</Text>
+                <TouchableOpacity onPress={this.clearClipboard} style={styles.clearClipboardButton}>
+                  <Text style={styles.clearClipboardText}>{t('clearClipboardButton')}</Text>
                 </TouchableOpacity>
               </View>
             </TouchableWithoutFeedback>
