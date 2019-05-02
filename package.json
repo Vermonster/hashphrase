@@ -55,7 +55,7 @@
       "<rootDir>/node_modules/"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!(jest-)?react-native|react-navigation|@react-navigation/*|react-native|expo)"
+      "node_modules/(?!(jest-)?react-native|react-navigation|@react-navigation/*|react-native|expo|@expo/vector-icons)"
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
