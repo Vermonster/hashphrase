@@ -2,7 +2,6 @@
 
 exports[`<TipsPage /> should match the snapshot 1`] = `
 <withOrientation
-  onLayout={[Function]}
   style={
     Object {
       "backgroundColor": "#F5F5F5",
@@ -33,7 +32,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
         ]
       }
     >
-      title
+      FAQs
     </withTheme(Text)>
     <ForwardRef(View)>
       <ForwardRef(View)
@@ -60,11 +59,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               style={
                 Object {
                   "color": "#212A59",
+                  "flexWrap": "wrap",
                   "fontSize": 16,
                   "lineHeight": 24,
                 }
               }
             />
+          }
+          titleStyle={
+            Object {
+              "flexWrap": "wrap",
+            }
           }
         >
           <withTheme(Card)
@@ -117,11 +122,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               style={
                 Object {
                   "color": "#212A59",
+                  "flexWrap": "wrap",
                   "fontSize": 16,
                   "lineHeight": 24,
                 }
               }
             />
+          }
+          titleStyle={
+            Object {
+              "flexWrap": "wrap",
+            }
           }
         >
           <withTheme(Card)
@@ -174,11 +185,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               style={
                 Object {
                   "color": "#212A59",
+                  "flexWrap": "wrap",
                   "fontSize": 16,
                   "lineHeight": 24,
                 }
               }
             />
+          }
+          titleStyle={
+            Object {
+              "flexWrap": "wrap",
+            }
           }
         >
           <withTheme(Card)
@@ -231,11 +248,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               style={
                 Object {
                   "color": "#212A59",
+                  "flexWrap": "wrap",
                   "fontSize": 16,
                   "lineHeight": 24,
                 }
               }
             />
+          }
+          titleStyle={
+            Object {
+              "flexWrap": "wrap",
+            }
           }
         >
           <withTheme(Card)
@@ -288,11 +311,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               style={
                 Object {
                   "color": "#212A59",
+                  "flexWrap": "wrap",
                   "fontSize": 16,
                   "lineHeight": 24,
                 }
               }
             />
+          }
+          titleStyle={
+            Object {
+              "flexWrap": "wrap",
+            }
           }
         >
           <withTheme(Card)
@@ -345,11 +374,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               style={
                 Object {
                   "color": "#212A59",
+                  "flexWrap": "wrap",
                   "fontSize": 16,
                   "lineHeight": 24,
                 }
               }
             />
+          }
+          titleStyle={
+            Object {
+              "flexWrap": "wrap",
+            }
           }
         >
           <withTheme(Card)
@@ -402,11 +437,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               style={
                 Object {
                   "color": "#212A59",
+                  "flexWrap": "wrap",
                   "fontSize": 16,
                   "lineHeight": 24,
                 }
               }
             />
+          }
+          titleStyle={
+            Object {
+              "flexWrap": "wrap",
+            }
           }
         >
           <withTheme(Card)
@@ -459,11 +500,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               style={
                 Object {
                   "color": "#212A59",
+                  "flexWrap": "wrap",
                   "fontSize": 16,
                   "lineHeight": 24,
                 }
               }
             />
+          }
+          titleStyle={
+            Object {
+              "flexWrap": "wrap",
+            }
           }
         >
           <withTheme(Card)
@@ -516,11 +563,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               style={
                 Object {
                   "color": "#212A59",
+                  "flexWrap": "wrap",
                   "fontSize": 16,
                   "lineHeight": 24,
                 }
               }
             />
+          }
+          titleStyle={
+            Object {
+              "flexWrap": "wrap",
+            }
           }
         >
           <withTheme(Card)
