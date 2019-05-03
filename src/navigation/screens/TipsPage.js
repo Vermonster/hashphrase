@@ -79,14 +79,21 @@ class TipsPage extends React.Component {
 
     const createParagraph = () => {
       const result = [];
-      Object.keys(contents).forEach((key) => {
+      if (contents) {
+        Object.keys(contents).forEach((key) => {
+          result.push(
+            <Paragraph style={styles.paragraphs} key={contents[key]}>
+              { contents[key] }
+            </Paragraph>,
+          );
+        });
+      } else {
         result.push(
-          <Paragraph style={styles.paragraphs} key={contents[key]}>
-            { contents[key] }
+          <Paragraph style={styles.paragraphs} key="no-contents">
+            {'There are no questions.'}
           </Paragraph>,
         );
-      });
-
+      }
       return result;
     };
 
@@ -114,7 +121,7 @@ class TipsPage extends React.Component {
     const { height } = this.state;
     const questionObj = t('questions', { returnObjects: true });
     const questionArr = Object.keys(questionObj);
-    const components = this.questionMap(questionArr, questionObj);
+    const components = (questionArr.length > 0) ? this.questionMap(questionArr, questionObj) : null;
     const titleVerticalMargins = 0.07 * (height);
 
     return (

@@ -23,6 +23,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
         Array [
           Object {
             "color": "#212A59",
+            "fontFamily": "lato-bold",
             "fontSize": 24,
             "textAlign": "center",
           },
@@ -77,15 +78,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             }
           >
             <Card.Content>
-              <withTheme(Text)
+              <Paragraph
+                key="no-contents"
                 style={
                   Object {
-                    "color": "#212A59",
-                    "fontSize": 16,
-                    "lineHeight": 24,
+                    "lineHeight": 21,
+                    "marginBottom": 14,
                   }
                 }
-              />
+              >
+                There are no questions.
+              </Paragraph>
             </Card.Content>
           </withTheme(Card)>
         </withTheme(List.Accordion)>
@@ -132,15 +135,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             }
           >
             <Card.Content>
-              <withTheme(Text)
+              <Paragraph
+                key="no-contents"
                 style={
                   Object {
-                    "color": "#212A59",
-                    "fontSize": 16,
-                    "lineHeight": 24,
+                    "lineHeight": 21,
+                    "marginBottom": 14,
                   }
                 }
-              />
+              >
+                There are no questions.
+              </Paragraph>
             </Card.Content>
           </withTheme(Card)>
         </withTheme(List.Accordion)>
@@ -187,15 +192,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             }
           >
             <Card.Content>
-              <withTheme(Text)
+              <Paragraph
+                key="no-contents"
                 style={
                   Object {
-                    "color": "#212A59",
-                    "fontSize": 16,
-                    "lineHeight": 24,
+                    "lineHeight": 21,
+                    "marginBottom": 14,
                   }
                 }
-              />
+              >
+                There are no questions.
+              </Paragraph>
             </Card.Content>
           </withTheme(Card)>
         </withTheme(List.Accordion)>
@@ -242,15 +249,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             }
           >
             <Card.Content>
-              <withTheme(Text)
+              <Paragraph
+                key="no-contents"
                 style={
                   Object {
-                    "color": "#212A59",
-                    "fontSize": 16,
-                    "lineHeight": 24,
+                    "lineHeight": 21,
+                    "marginBottom": 14,
                   }
                 }
-              />
+              >
+                There are no questions.
+              </Paragraph>
             </Card.Content>
           </withTheme(Card)>
         </withTheme(List.Accordion)>
@@ -297,15 +306,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             }
           >
             <Card.Content>
-              <withTheme(Text)
+              <Paragraph
+                key="no-contents"
                 style={
                   Object {
-                    "color": "#212A59",
-                    "fontSize": 16,
-                    "lineHeight": 24,
+                    "lineHeight": 21,
+                    "marginBottom": 14,
                   }
                 }
-              />
+              >
+                There are no questions.
+              </Paragraph>
             </Card.Content>
           </withTheme(Card)>
         </withTheme(List.Accordion)>
@@ -352,15 +363,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             }
           >
             <Card.Content>
-              <withTheme(Text)
+              <Paragraph
+                key="no-contents"
                 style={
                   Object {
-                    "color": "#212A59",
-                    "fontSize": 16,
-                    "lineHeight": 24,
+                    "lineHeight": 21,
+                    "marginBottom": 14,
                   }
                 }
-              />
+              >
+                There are no questions.
+              </Paragraph>
             </Card.Content>
           </withTheme(Card)>
         </withTheme(List.Accordion)>
@@ -407,15 +420,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             }
           >
             <Card.Content>
-              <withTheme(Text)
+              <Paragraph
+                key="no-contents"
                 style={
                   Object {
-                    "color": "#212A59",
-                    "fontSize": 16,
-                    "lineHeight": 24,
+                    "lineHeight": 21,
+                    "marginBottom": 14,
                   }
                 }
-              />
+              >
+                There are no questions.
+              </Paragraph>
             </Card.Content>
           </withTheme(Card)>
         </withTheme(List.Accordion)>
@@ -462,15 +477,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             }
           >
             <Card.Content>
-              <withTheme(Text)
+              <Paragraph
+                key="no-contents"
                 style={
                   Object {
-                    "color": "#212A59",
-                    "fontSize": 16,
-                    "lineHeight": 24,
+                    "lineHeight": 21,
+                    "marginBottom": 14,
                   }
                 }
-              />
+              >
+                There are no questions.
+              </Paragraph>
             </Card.Content>
           </withTheme(Card)>
         </withTheme(List.Accordion)>
@@ -517,15 +534,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             }
           >
             <Card.Content>
-              <withTheme(Text)
+              <Paragraph
+                key="no-contents"
                 style={
                   Object {
-                    "color": "#212A59",
-                    "fontSize": 16,
-                    "lineHeight": 24,
+                    "lineHeight": 21,
+                    "marginBottom": 14,
                   }
                 }
-              />
+              >
+                There are no questions.
+              </Paragraph>
             </Card.Content>
           </withTheme(Card)>
         </withTheme(List.Accordion)>
