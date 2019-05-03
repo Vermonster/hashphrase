@@ -75,7 +75,7 @@ class TipsPage extends React.Component {
       const result = [];
       Object.keys(contents).forEach((key) => {
         result.push(
-          <Paragraph>
+          <Paragraph key={contents[key]}>
             { contents[key] }
           </Paragraph>,
         );
