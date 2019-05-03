@@ -2,7 +2,7 @@
   "expo": {
     "name": "hashphrase",
     "description": "Create and recall passwords",
-    "slug": "Hashphrase",
+    "slug": "hashphrase",
     "sdkVersion": "32.0.0",
     "platforms": [
       "android",
@@ -18,13 +18,13 @@
       "resizeMode": "cover"
     },
     "ios": {
-      "bundleIdentifier": "com.vermonster.hashphrase",
+      "bundleIdentifier": "com.vermonster.hashphrase2019",
       "buildNumber": "2.0.0",
       "supportsTablet": true
     },
     "android": {
-      "package": "com.vermonster.hashphrase",
-      "versionCode": 2,
+      "package": "com.vermonster.hashphrase2019",
+      "versionCode": 1,
       "adaptiveIcon": {
         "backgroundColor": "#E07926",
         "foregroundImage": "./assets/android/foreground.png" 
