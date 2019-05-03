@@ -19,7 +19,7 @@ const en = {
     confirmSwitch: 'Confirm Password',
   },
   tipsPage: {
-    title: 'FAQs',
+    FAQs: 'FAQs',
     questions: {
       question_1: {
         title: 'What is Hashphrase?',
@@ -34,14 +34,14 @@ const en = {
         },
       },
       question_2: {
-        title: 'How should I choose nicknames for each account',
+        title: 'Choose nicknames',
         content: {
           paragraph_1: 'hashphrase wouldn’t be as useful if you had to remember random nicknames for every account you sign into. Instead, you’re encouraged to come up with a simple rule that determines the nickname for an arbitrary account. For example, the rule could be “the name of the website or app, all lowercase” (e.g., “gmail”, “facebook”). Or it could be “the domain name associated with the account” (e.g. “gmail.com”, “facebook.com”).',
           paragraph_2: 'What’s important is that you can remember the rule and conveniently apply it to any account that you want to manage with hashphrase. And, of course, the rule should produce different values for different accounts.',
         },
       },
       question_3: {
-        title: 'Does hashphrase remember any of my passwords?',
+        title: 'Does hashphrase remember my passwords?',
         content: {
           paragraph_1: 'No, the app does not remember or store your passwords. However, at the end of the normal hashphrase workflow, the app will copy the password you generated into the system clipboard so that you can paste it into whatever sign-in form you are using. The main app screen does provide a button to clear the device clipboard for your convenience.',
         },
@@ -54,13 +54,13 @@ const en = {
         },
       },
       question_5: {
-        title: 'What happens when I have to change my password?',
+        title: 'How to change my password?',
         content: {
           paragraph_1: 'If you have to change your password, you will have to use a different nickname (or master password), but then you no longer have a simple rule for all accounts. Some users end up maintaining a document where they can make notes about the nickname for special cases. Such a document can also be used for notes about cases where you have to modify the final password output in order to make it satisfy some extra constraint, such as a required symbol.',
         },
       },
       question_6: {
-        title: 'What happens when I have to change my password?',
+        title: 'What is the Confirm Password switch for?',
         content: {
           paragraph_1: 'When you first set a password using hashphrase, you might want to be extra careful to avoid typos in your master password. Enabling this switch requires you to enter the master password twice in order to generate the password.',
         },

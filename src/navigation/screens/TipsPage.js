@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
     color: colors.secondary,
     fontSize: fontSize.lg,
     lineHeight: Math.ceil(fontSize.lg * 1.5),
+    flexWrap: 'wrap',
   },
   paragraphs: {
     marginBottom: fontSize.md,
@@ -67,11 +68,6 @@ class TipsPage extends React.Component {
 
   state = {
     height: Dimensions.get('window').height,
-  }
-
-  onLayout = () => {
-    const { height } = Dimensions.get('screen');
-    this.setState({ height });
   }
 
   questionMap = (questions, questionObject) => questions.map((question) => {
@@ -105,6 +101,7 @@ class TipsPage extends React.Component {
         <List.Accordion
           theme={{ colors: { text: colors.secondary } }}
           title={<Text style={styles.questionTitles}>{questionObject[question].title}</Text>}
+          titleStyle={{ flexWrap: 'wrap' }}
         >
           <Card style={styles.outerCard}>
             <Card.Content>
@@ -125,9 +122,9 @@ class TipsPage extends React.Component {
     const titleVerticalMargins = 0.07 * (height);
 
     return (
-      <SafeAreaView style={styles.backgroundContainer} onLayout={this.onLayout}>
+      <SafeAreaView style={styles.backgroundContainer}>
         <ScrollView contentContainerStyle={styles.scrollContainer}>
-          <Text style={[styles.title, { marginVertical: titleVerticalMargins }]}>{t('title')}</Text>
+          <Text style={[styles.title, { marginVertical: titleVerticalMargins }]}>{t('FAQs')}</Text>
           <View>
             { components }
           </View>
