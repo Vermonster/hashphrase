@@ -4,7 +4,12 @@ import {
   ScrollView, StyleSheet, View, Dimensions,
 } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
-import { List, Text, Card } from 'react-native-paper';
+import {
+  List,
+  Text,
+  Card,
+  Paragraph,
+} from 'react-native-paper';
 import Footer from '../../components/Footer';
 import { colors } from '../../styles/base';
 
@@ -64,25 +69,38 @@ class TipsPage extends React.Component {
     this.setState({ height });
   }
 
-  questionMap = (questions, questionObject) => questions.map(question => (
-    <View
-      key={question}
-      style={styles.accordionWrapper}
-    >
-      <List.Accordion
-        theme={{ colors: { text: colors.secondary } }}
-        title={<Text style={styles.cardContent}>{questionObject[question].title}</Text>}
+  questionMap = (questions, questionObject) => questions.map((question) => {
+    const contents = questionObject[question].content;
+    const createParagraph = () => {
+      const result = [];
+      Object.keys(contents).forEach((key) => {
+        result.push(
+          <Paragraph>
+            { contents[key] }
+          </Paragraph>,
+        );
+      });
+      return result;
+    };
+
+    return (
+      <View
+        key={question}
+        style={styles.accordionWrapper}
       >
-        <Card style={styles.outerCard}>
-          <Card.Content>
-            <Text style={styles.cardContent}>
-              {questionObject[question].content}
-            </Text>
-          </Card.Content>
-        </Card>
-      </List.Accordion>
-    </View>
-  ));
+        <List.Accordion
+          theme={{ colors: { text: colors.secondary } }}
+          title={<Text style={styles.cardContent}>{questionObject[question].title}</Text>}
+        >
+          <Card style={styles.outerCard}>
+            <Card.Content>
+              { createParagraph() }
+            </Card.Content>
+          </Card>
+        </List.Accordion>
+      </View>
+    );
+  });
 
   render() {
     const { t, navigation } = this.props;
