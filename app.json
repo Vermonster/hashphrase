@@ -2,7 +2,7 @@
   "expo": {
     "name": "hashphrase",
     "description": "Create and recall passwords",
-    "slug": "hashphrase",
+    "slug": "Hashphrase",
     "sdkVersion": "32.0.0",
     "platforms": [
       "android",
