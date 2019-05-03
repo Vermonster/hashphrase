@@ -11,7 +11,7 @@ import {
   Paragraph,
 } from 'react-native-paper';
 import Footer from '../../components/Footer';
-import { colors } from '../../styles/base';
+import { colors, fontSize } from '../../styles/base';
 
 const styles = StyleSheet.create({
   backgroundContainer: {
@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: colors.secondary,
     textAlign: 'center',
+    fontFamily: 'lato-bold',
   },
   outerCard: {
     backgroundColor: 'white',
@@ -35,10 +36,14 @@ const styles = StyleSheet.create({
     borderWidth: 0.5,
     paddingHorizontal: 10,
   },
-  cardContent: {
+  questionTitles: {
     color: colors.secondary,
-    fontSize: 16,
-    lineHeight: 24,
+    fontSize: fontSize.lg,
+    lineHeight: Math.ceil(fontSize.lg * 1.5),
+  },
+  paragraphs: {
+    marginBottom: fontSize.md,
+    lineHeight: Math.ceil(fontSize.md * 1.5),
   },
   scrollContainer: {
     flexGrow: 1,
@@ -71,15 +76,17 @@ class TipsPage extends React.Component {
 
   questionMap = (questions, questionObject) => questions.map((question) => {
     const contents = questionObject[question].content;
+
     const createParagraph = () => {
       const result = [];
       Object.keys(contents).forEach((key) => {
         result.push(
-          <Paragraph key={contents[key]}>
+          <Paragraph style={styles.paragraphs} key={contents[key]}>
             { contents[key] }
           </Paragraph>,
         );
       });
+
       return result;
     };
 
@@ -90,7 +97,7 @@ class TipsPage extends React.Component {
       >
         <List.Accordion
           theme={{ colors: { text: colors.secondary } }}
-          title={<Text style={styles.cardContent}>{questionObject[question].title}</Text>}
+          title={<Text style={styles.questionTitles}>{questionObject[question].title}</Text>}
         >
           <Card style={styles.outerCard}>
             <Card.Content>
