@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
-import { IconButton } from 'react-native-paper';
 import { TestConfirmationDialog as ConfirmationDialog } from '../src/components/ConfirmationDialog';
 
 describe('<ConfirmationDialog />', () => {
@@ -52,7 +51,9 @@ describe('<ConfirmationDialog />', () => {
       />,
     );
 
-    const textInstance = instance.root.findByType(IconButton);
+    const textInstance = instance.root.findByProps({
+      testID: 'hide-show-button',
+    });
 
     expect(textInstance.props.icon).toEqual('visibility-off');
   });
