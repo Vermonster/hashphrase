@@ -66,11 +66,6 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               }
             />
           }
-          titleStyle={
-            Object {
-              "flexWrap": "wrap",
-            }
-          }
         >
           <withTheme(Card)
             style={
@@ -128,11 +123,6 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                 }
               }
             />
-          }
-          titleStyle={
-            Object {
-              "flexWrap": "wrap",
-            }
           }
         >
           <withTheme(Card)
@@ -192,11 +182,6 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               }
             />
           }
-          titleStyle={
-            Object {
-              "flexWrap": "wrap",
-            }
-          }
         >
           <withTheme(Card)
             style={
@@ -254,11 +239,6 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                 }
               }
             />
-          }
-          titleStyle={
-            Object {
-              "flexWrap": "wrap",
-            }
           }
         >
           <withTheme(Card)
@@ -318,11 +298,6 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               }
             />
           }
-          titleStyle={
-            Object {
-              "flexWrap": "wrap",
-            }
-          }
         >
           <withTheme(Card)
             style={
@@ -380,11 +355,6 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                 }
               }
             />
-          }
-          titleStyle={
-            Object {
-              "flexWrap": "wrap",
-            }
           }
         >
           <withTheme(Card)
@@ -444,11 +414,6 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               }
             />
           }
-          titleStyle={
-            Object {
-              "flexWrap": "wrap",
-            }
-          }
         >
           <withTheme(Card)
             style={
@@ -507,11 +472,6 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               }
             />
           }
-          titleStyle={
-            Object {
-              "flexWrap": "wrap",
-            }
-          }
         >
           <withTheme(Card)
             style={
@@ -569,11 +529,6 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
                 }
               }
             />
-          }
-          titleStyle={
-            Object {
-              "flexWrap": "wrap",
-            }
           }
         >
           <withTheme(Card)
