@@ -158,7 +158,6 @@ class PasswordGenerator extends React.Component {
           <FormInput
             value={label}
             componentType="label"
-            placeholderText={isNewPassword ? t('firstNickname') : null}
             prompt={t('nicknameLabel')}
             label={t('nickname')}
             handleChange={this.handleChange}
@@ -169,7 +168,6 @@ class PasswordGenerator extends React.Component {
           <FormInput
             value={password}
             componentType="password"
-            placeholderText={isNewPassword ? t('firstPassword') : null}
             prompt={t('masterPassword')}
             label={t('password')}
             handleChange={this.handleChange}

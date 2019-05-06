@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
 
 const FormInput = (props) => {
   const {
-    placeholderText,
     prompt,
     value,
     handleChange,
@@ -68,7 +67,6 @@ const FormInput = (props) => {
       >
         <TextInput
           value={value}
-          placeholder={placeholderText}
           secureTextEntry={!visibility}
           style={styles.textInput}
           onChange={handleChange(componentType)}
