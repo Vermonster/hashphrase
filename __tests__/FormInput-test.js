@@ -8,7 +8,6 @@ describe('<FormInput />', () => {
   it('should render the same snapshot', () => {
     const wrapper = shallow(
       <FormInput
-        placeholderText="Test Placeholder"
         prompt="Test Prompt"
         handleChange={mockFn}
         componentType="password"
@@ -20,7 +19,6 @@ describe('<FormInput />', () => {
   it('should generate a password input when "password" label provided', () => {
     const wrapper = shallow(
       <FormInput
-        placeholderText="Test Placeholder"
         prompt="Test Prompt"
         handleChange={mockFn}
         componentType="password"
