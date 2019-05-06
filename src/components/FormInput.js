@@ -37,6 +37,7 @@ const FormInput = (props) => {
     inputRef,
     handleInputVisibility,
     visibility,
+    blurOnSubmit,
   } = props;
   const visibilityIcon = visibility ? 'visibility' : 'visibility-off';
   const buttonType = (componentType !== 'confirmPassword')
@@ -79,6 +80,7 @@ const FormInput = (props) => {
           onSubmitEditing={handleInputFocus}
           ref={inputRef}
           disableFullscreenUI
+          blurOnSubmit={blurOnSubmit}
         />
         { buttonType }
       </View>
