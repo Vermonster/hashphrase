@@ -101,7 +101,6 @@ class TipsPage extends React.Component {
         <List.Accordion
           theme={{ colors: { text: colors.secondary } }}
           title={<Text style={styles.questionTitles}>{questionObject[question].title}</Text>}
-          titleStyle={{ flexWrap: 'wrap' }}
         >
           <Card style={styles.outerCard}>
             <Card.Content>
