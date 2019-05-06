@@ -24,33 +24,33 @@ const en = {
       question_1: {
         title: 'What is Hashphrase?',
         content: {
-          paragraph_1: 'hashphrase makes it easy to manage unique passwords.',
+          paragraph_1: 'Hashphrase makes it easy to manage unique passwords.',
           paragraph_2: 'Online security best practices include using a unique password for each account.',
-          paragraph_3: 'Advantages of hashphrase include:\n'
-          + 'You don’t have to memorize or write down all of your passwords\n'
-          + 'You don’t have to back up any files\n'
-          + 'You only have to remember two things— your master password and the rule (designed by you) to determine account nicknames\n'
-          + 'Multiple open source implementations make it free forever and easy to use on any device or platform',
+          paragraph_3: 'Advantages of Hashphrase include:\n'
+          + '  1. You don’t have to memorize or write down all of your passwords\n'
+          + '  2. You don’t have to back up any files\n'
+          + '  3. You only have to remember two things— your master password and the rule (designed by you) to determine account nicknames\n'
+          + '  4. Multiple open source implementations make it free forever and easy to use on any device or platform',
         },
       },
       question_2: {
         title: 'What nickname do I use?',
         content: {
-          paragraph_1: 'hashphrase wouldn’t be as useful if you had to remember random nicknames for every account you sign into. Instead, you’re encouraged to come up with a simple rule that determines the nickname for an arbitrary account. For example, the rule could be “the name of the website or app, all lowercase” (e.g., “gmail”, “facebook”). Or it could be “the domain name associated with the account” (e.g. “gmail.com”, “facebook.com”).',
-          paragraph_2: 'What’s important is that you can remember the rule and conveniently apply it to any account that you want to manage with hashphrase. And, of course, the rule should produce different values for different accounts.',
+          paragraph_1: 'Hashphrase wouldn’t be as useful if you had to remember random nicknames for every account you sign into. Instead, you’re encouraged to come up with a simple rule that determines the nickname for an arbitrary account. For example, the rule could be “the name of the website or app, all lowercase” (e.g., “gmail”, “facebook”). Or it could be “the domain name associated with the account” (e.g. “gmail.com”, “facebook.com”).',
+          paragraph_2: 'What’s important is that you can remember the rule and conveniently apply it to any account that you want to manage with Hashphrase. And, of course, the rule should produce different values for different accounts.',
         },
       },
       question_3: {
         title: 'Does it remember my passwords?',
         content: {
-          paragraph_1: 'No, the app does not remember or store your passwords. However, at the end of the normal hashphrase workflow, the app will copy the password you generated into the system clipboard so that you can paste it into whatever sign-in form you are using. The main app screen does provide a button to clear the device clipboard for your convenience.',
+          paragraph_1: 'No, the app does not remember or store your passwords. However, at the end of the normal Hashphrase workflow, the app will copy the password you generated into the system clipboard so that you can paste it into whatever sign-in form you are using. The main app screen does provide a button to clear the device clipboard for your convenience.',
         },
       },
       question_4: {
         title: 'I forgot my password or nickname.',
         content: {
           paragraph_1: 'Your master password and nickname are not stored by this application and cannot be retrieved. If you lose or forget them, you will have to pursue alternate account recovery procedures.',
-          paragraph_2: 'One way to reduce the chance of forgetting is to always use hashphrase instead of having your browser or app remember your signin, which should reinforce your memory regularly.',
+          paragraph_2: 'One way to reduce the chance of forgetting is to always use Hashphrase instead of having your browser or app remember your signin, which should reinforce your memory regularly.',
         },
       },
       question_5: {
@@ -62,7 +62,7 @@ const en = {
       question_6: {
         title: 'What is Confirm Password?',
         content: {
-          paragraph_1: 'When you first set a password using hashphrase, you might want to be extra careful to avoid typos in your master password. Enabling this switch requires you to enter the master password twice in order to generate the password.',
+          paragraph_1: 'When you first set a password using Hashphrase, you might want to be extra careful to avoid typos in your master password. Enabling this switch requires you to enter the master password twice in order to generate the password.',
         },
       },
     },
@@ -70,7 +70,7 @@ const en = {
   policyPage: {
     title: 'Privacy Policy',
     update: 'Last Updated: April 19, 2019',
-    creator: 'Vermonster Inc. (“we”, “us”, “our”, “company”) is the creator and maintainer of the HashPhrase application (“app”). Any reference to “you”, “your”, or “user” refers to the user who installs and uses the App.',
+    creator: 'Vermonster LLC (“we”, “us”, “our”, “company”) is the creator and maintainer of the Hashphrase application (“app”). Any reference to “you”, “your”, or “user” refers to the user who installs and uses the App.',
     privacy_policy: [
       {
         id: 1,
