@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
   },
   listContainer: {
     flexDirection: 'column',
+    marginLeft: 10,
   },
   bulletColumn: {
     width: 10,
