@@ -5,6 +5,8 @@ import { TestConfirmationDialog as ConfirmationDialog } from '../src/components/
 
 describe('<ConfirmationDialog />', () => {
   let wrapper;
+  let instance;
+
   beforeEach(() => {
     const mockFn = jest.fn();
     wrapper = shallow(
@@ -17,6 +19,8 @@ describe('<ConfirmationDialog />', () => {
         resetToggleSwitch={mockFn}
       />,
     );
+
+    instance = wrapper.instance();
   });
 
   it('should match the snapshot', () => {
@@ -24,14 +28,12 @@ describe('<ConfirmationDialog />', () => {
   });
 
   it('should change obscured state when hide/show button clicked', () => {
-    const instance = wrapper.instance();
     expect(instance.state.obscured).toBe(true);
     wrapper.findWhere(node => node.prop('testID') === 'hide-show-button').simulate('press');
     expect(instance.state.obscured).toBe(false);
   });
 
   it('should reset obscured state when start over button clicked', () => {
-    const instance = wrapper.instance();
     instance.state.obscured = false;
     expect(instance.state.obscured).toBe(false);
     wrapper.findWhere(node => node.prop('testID') === 'start-over-button').simulate('press');
@@ -40,7 +42,7 @@ describe('<ConfirmationDialog />', () => {
 
   it('should render initially with icon visibility-off', () => {
     const mockFn = jest.fn();
-    const instance = renderer.create(
+    const renderedInstance = renderer.create(
       <ConfirmationDialog
         visible
         closeModal={mockFn}
@@ -51,7 +53,7 @@ describe('<ConfirmationDialog />', () => {
       />,
     );
 
-    const textInstance = instance.root.findByProps({
+    const textInstance = renderedInstance.root.findByProps({
       testID: 'hide-show-button',
     });
 
