@@ -26,11 +26,13 @@ const en = {
         content: {
           paragraph_1: 'Hashphrase makes it easy to manage unique passwords.',
           paragraph_2: 'Online security best practices include using a unique password for each account.',
-          paragraph_3: 'Advantages of Hashphrase include:\n'
-          + '  1. You don’t have to memorize or write down all of your passwords\n'
-          + '  2. You don’t have to back up any files\n'
-          + '  3. You only have to remember two things— your master password and the rule (designed by you) to determine account nicknames\n'
-          + '  4. Multiple open source implementations make it free forever and easy to use on any device or platform',
+          paragraph_3: 'Advantages of Hashphrase include:',
+          listContent: {
+            listItem_1: 'You don’t have to memorize or write down all of your passwords',
+            listItem_2: 'You don’t have to back up any files',
+            listItem_3: 'You only have to remember two things— your master password and the rule (designed by you) to determine account nicknames',
+            listItem_4: 'Multiple open source implementations make it free forever and easy to use on any device or platform',
+          },
         },
       },
       question_2: {
