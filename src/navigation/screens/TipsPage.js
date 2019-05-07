@@ -53,6 +53,21 @@ const styles = StyleSheet.create({
   list: {
     marginLeft: 10,
   },
+  innerList: {
+    flexDirection: 'row',
+  },
+  listContainer: {
+    flexDirection: 'column',
+  },
+  bulletColumn: {
+    width: 10,
+  },
+  textColumn: {
+    flex: 1,
+  },
+  bulletStyle: {
+    top: 2,
+  },
 });
 
 class TipsPage extends React.Component {
@@ -87,13 +102,28 @@ class TipsPage extends React.Component {
               </Paragraph>,
             );
           } else {
+            const listItems = [];
             Object.keys(questionGroup.content.listContent).forEach((listKey) => {
-              result.push(
-                <Paragraph style={styles.list} key={questionGroup.content.listContent[listKey]}>
-                  { questionGroup.content.listContent[listKey] }
-                </Paragraph>,
+              listItems.push(
+                <View style={styles.innerList}>
+                  <View style={styles.bulletColumn}>
+                    <Text style={styles.bulletStyle}>
+                      &#8226;
+                    </Text>
+                  </View>
+                  <View style={styles.textColumn}>
+                    <Paragraph style={styles.list} key={questionGroup.content.listContent[listKey]}>
+                      { questionGroup.content.listContent[listKey] }
+                    </Paragraph>
+                  </View>
+                </View>,
               );
             });
+            result.push(
+              <View style={styles.listContainer}>
+                {listItems}
+              </View>,
+            );
           }
         });
       } else {
