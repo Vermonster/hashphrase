@@ -86,7 +86,6 @@ class CreateNewPassword extends Component {
   render() {
     const { t } = this.props;
     const {
-      isNewPassword,
       snackbarVisibility,
     } = this.state;
 
