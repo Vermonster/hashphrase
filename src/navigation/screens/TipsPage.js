@@ -50,6 +50,9 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     borderColor: colors.tipsPageBorder,
   },
+  list: {
+    marginLeft: 10,
+  },
 });
 
 class TipsPage extends React.Component {
@@ -71,17 +74,27 @@ class TipsPage extends React.Component {
   }
 
   questionMap = (questions, questionObject) => questions.map((question) => {
-    const contents = questionObject[question].content;
+    const questionGroup = questionObject[question];
 
     const createParagraph = () => {
       const result = [];
-      if (contents) {
-        Object.keys(contents).forEach((key) => {
-          result.push(
-            <Paragraph style={styles.paragraphs} key={contents[key]}>
-              { contents[key] }
-            </Paragraph>,
-          );
+      if (questionGroup.content) {
+        Object.keys(questionGroup.content).forEach((key) => {
+          if (key !== 'listContent') {
+            result.push(
+              <Paragraph style={styles.paragraphs} key={questionGroup.content[key]}>
+                { questionGroup.content[key] }
+              </Paragraph>,
+            );
+          } else {
+            Object.keys(questionGroup.content.listContent).forEach((listKey) => {
+              result.push(
+                <Paragraph style={styles.list} key={questionGroup.content.listContent[listKey]}>
+                  { questionGroup.content.listContent[listKey] }
+                </Paragraph>,
+              );
+            });
+          }
         });
       } else {
         result.push(
