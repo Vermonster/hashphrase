@@ -95,19 +95,21 @@ class TipsPage extends React.Component {
 
     const createParagraph = () => {
       const result = [];
-      if (questionGroup.content) {
-        Object.keys(questionGroup.content).forEach((key) => {
+      const { content } = questionGroup;
+      const { listContent } = content;
+      if (content) {
+        Object.keys(content).forEach((key) => {
           if (key !== 'listContent') {
             result.push(
-              <Paragraph style={styles.paragraphs} key={questionGroup.content[key]}>
-                { questionGroup.content[key] }
+              <Paragraph style={styles.paragraphs} key={content[key]}>
+                { content[key] }
               </Paragraph>,
             );
           } else {
             const listItems = [];
-            Object.keys(questionGroup.content.listContent).forEach((listKey) => {
+            Object.keys(listContent).forEach((listKey) => {
               listItems.push(
-                <View style={styles.innerList} key={questionGroup.content.listContent[listKey]}>
+                <View style={styles.innerList} key={listContent[listKey]}>
                   <View style={styles.bulletColumn}>
                     <Text style={styles.bulletStyle}>
                       &#8226;
@@ -115,7 +117,7 @@ class TipsPage extends React.Component {
                   </View>
                   <View style={styles.textColumn}>
                     <Paragraph style={styles.list}>
-                      { questionGroup.content.listContent[listKey] }
+                      { listContent[listKey] }
                     </Paragraph>
                   </View>
                 </View>,
