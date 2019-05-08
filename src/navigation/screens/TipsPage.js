@@ -107,14 +107,14 @@ class TipsPage extends React.Component {
             const listItems = [];
             Object.keys(questionGroup.content.listContent).forEach((listKey) => {
               listItems.push(
-                <View style={styles.innerList}>
+                <View style={styles.innerList} key={questionGroup.content.listContent[listKey]}>
                   <View style={styles.bulletColumn}>
                     <Text style={styles.bulletStyle}>
                       &#8226;
                     </Text>
                   </View>
                   <View style={styles.textColumn}>
-                    <Paragraph style={styles.list} key={questionGroup.content.listContent[listKey]}>
+                    <Paragraph style={styles.list}>
                       { questionGroup.content.listContent[listKey] }
                     </Paragraph>
                   </View>
