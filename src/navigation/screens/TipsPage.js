@@ -111,8 +111,8 @@ class TipsPage extends React.Component {
     </View>
   );
 
-  createListContainer = listItems => (
-    <View style={styles.listContainer}>
+  createListContainer = (listItems, ind) => (
+    <View style={styles.listContainer} key={`list-${ind}`}>
       {listItems}
     </View>
   );
@@ -123,16 +123,16 @@ class TipsPage extends React.Component {
     </Paragraph>
   );
 
-
   questionMap = (questions, questionObject) => questions.map((question) => {
     const questionGroup = questionObject[question];
 
     const createInnerFormatting = () => {
       const result = [];
-      const { content } = questionGroup;
-      const { listContent } = content;
+      const content = questionGroup.content ? questionGroup.content : null;
+      const listContent = content ? content.listContent : null;
+
       if (content) {
-        Object.keys(content).forEach((key) => {
+        Object.keys(content).forEach((key, ind) => {
           if (key !== 'listContent') {
             result.push(this.createSimpleParagraph(content, key));
           } else {
@@ -140,7 +140,7 @@ class TipsPage extends React.Component {
             Object.keys(listContent).forEach((listKey) => {
               listItems.push(this.createListItem(listContent, listKey));
             });
-            result.push(this.createListContainer(listItems));
+            result.push(this.createListContainer(listItems, ind));
           }
         });
       } else {
