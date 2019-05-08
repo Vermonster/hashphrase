@@ -127,7 +127,7 @@ class TipsPage extends React.Component {
   questionMap = (questions, questionObject) => questions.map((question) => {
     const questionGroup = questionObject[question];
 
-    const createParagraphs = () => {
+    const createInnerFormatting = () => {
       const result = [];
       const { content } = questionGroup;
       const { listContent } = content;
@@ -160,7 +160,7 @@ class TipsPage extends React.Component {
         >
           <Card style={styles.outerCard}>
             <Card.Content>
-              { createParagraphs() }
+              { createInnerFormatting() }
             </Card.Content>
           </Card>
         </List.Accordion>
