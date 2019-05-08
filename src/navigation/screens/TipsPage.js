@@ -90,52 +90,61 @@ class TipsPage extends React.Component {
     height: Dimensions.get('window').height,
   }
 
+  createSimpleParagraph = (content, itemKey) => (
+    <Paragraph style={styles.paragraphs} key={content[itemKey]}>
+      { content[itemKey] }
+    </Paragraph>
+  );
+
+  createListItem = (listDetails, itemKey) => (
+    <View style={styles.innerList} key={listDetails[itemKey]}>
+      <View style={styles.bulletColumn}>
+        <Text style={styles.bulletStyle}>
+          &#8226;
+        </Text>
+      </View>
+      <View style={styles.textColumn}>
+        <Paragraph style={styles.list}>
+          { listDetails[itemKey] }
+        </Paragraph>
+      </View>
+    </View>
+  );
+
+  createListContainer = listItems => (
+    <View style={styles.listContainer}>
+      {listItems}
+    </View>
+  );
+
+  noResult = () => (
+    <Paragraph style={styles.paragraphs} key="no-contents">
+      {'There are no questions.'}
+    </Paragraph>
+  );
+
+
   questionMap = (questions, questionObject) => questions.map((question) => {
     const questionGroup = questionObject[question];
 
-    const createParagraph = () => {
+    const createParagraphs = () => {
       const result = [];
       const { content } = questionGroup;
       const { listContent } = content;
       if (content) {
         Object.keys(content).forEach((key) => {
           if (key !== 'listContent') {
-            result.push(
-              <Paragraph style={styles.paragraphs} key={content[key]}>
-                { content[key] }
-              </Paragraph>,
-            );
+            result.push(this.createSimpleParagraph(content, key));
           } else {
             const listItems = [];
             Object.keys(listContent).forEach((listKey) => {
-              listItems.push(
-                <View style={styles.innerList} key={listContent[listKey]}>
-                  <View style={styles.bulletColumn}>
-                    <Text style={styles.bulletStyle}>
-                      &#8226;
-                    </Text>
-                  </View>
-                  <View style={styles.textColumn}>
-                    <Paragraph style={styles.list}>
-                      { listContent[listKey] }
-                    </Paragraph>
-                  </View>
-                </View>,
-              );
+              listItems.push(this.createListItem(listContent, listKey));
             });
-            result.push(
-              <View style={styles.listContainer}>
-                {listItems}
-              </View>,
-            );
+            result.push(this.createListContainer(listItems));
           }
         });
       } else {
-        result.push(
-          <Paragraph style={styles.paragraphs} key="no-contents">
-            {'There are no questions.'}
-          </Paragraph>,
-        );
+        result.push(this.noResult());
       }
       return result;
     };
@@ -151,7 +160,7 @@ class TipsPage extends React.Component {
         >
           <Card style={styles.outerCard}>
             <Card.Content>
-              { createParagraph() }
+              { createParagraphs() }
             </Card.Content>
           </Card>
         </List.Accordion>
