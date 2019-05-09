@@ -33,7 +33,7 @@ const FormInput = (props) => {
     label,
     componentType,
     error,
-    handleInputFocus,
+    handleNextInputFocus,
     inputRef,
     handleInputVisibility,
     visibility,
@@ -77,7 +77,7 @@ const FormInput = (props) => {
           label={label}
           error={error}
           returnKeyType="next"
-          onSubmitEditing={handleInputFocus}
+          onSubmitEditing={handleNextInputFocus}
           ref={inputRef}
           disableFullscreenUI
           blurOnSubmit={blurOnSubmit}

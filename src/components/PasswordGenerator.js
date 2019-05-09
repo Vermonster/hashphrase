@@ -161,7 +161,7 @@ class PasswordGenerator extends React.Component {
             prompt={t('nicknameLabel')}
             label={t('nickname')}
             handleChange={this.handleChange}
-            handleInputFocus={this.handlePasswordFocus}
+            handleNextInputFocus={this.handlePasswordFocus}
             handleInputVisibility={this.toggleLabelVisibility}
             visibility={labelVisibility}
             blurOnSubmit={false}
@@ -172,7 +172,7 @@ class PasswordGenerator extends React.Component {
             prompt={t('masterPassword')}
             label={t('password')}
             handleChange={this.handleChange}
-            handleInputFocus={this.handleConfirmPasswordFocus}
+            handleNextInputFocus={this.handleConfirmPasswordFocus}
             inputRef={(input) => { this.passwordRef = input; }}
             handleInputVisibility={this.togglePasswordVisibility}
             visibility={passwordVisibility}
