@@ -18,8 +18,18 @@ body {
   flex-direction: row;
   padding: 133px;
 
+  .app-logo {
+    height: 125px;
+    width: 600px;
+  }
+
+  .advertisement {
+    padding-left: 140px;
+  }
+
   .app-store-badges {
     display: inline-block;
+    margin: 20px 0;
   }
 
   .google-play img {
@@ -28,12 +38,15 @@ body {
 
   .slogan {
     color: #FFF;
-    font-weight: 300;
+    font-weight: normal;
+    font-size: 36px;
   }
   
   .built-by {
     color: #FFF;
-    font-weight: 300;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
   }
 }
 
@@ -63,9 +76,15 @@ body {
       justify-content: center;
       width: 320px;
 
+      .steps-title {
+        font-size: 24px;
+      }
+
       .steps-description {
         color: #222222;
         height: 100px;
+        font-size: 16px;
+        line-height: 1.5em;
       }
     }
 
