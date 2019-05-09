@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
     marginTop: 30,
   },
   clearClipboardText: {
+    fontFamily: 'lato-regular',
     textDecorationLine: 'underline',
   },
 });

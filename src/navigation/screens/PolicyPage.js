@@ -12,7 +12,7 @@ const PolicyPage = ({ t }) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView contentContainerStyle={{ padding: '10%' }}>
-        <Title style={{ fontWeight: 'bold' }}>
+        <Title style={{ fontFamily: 'lato-bold' }}>
           {t('title')}
         </Title>
         <Paragraph>
@@ -25,8 +25,8 @@ const PolicyPage = ({ t }) => {
         </Paragraph>
         { privacyPolicy.map(item => (
           <View key={item.id}>
-            <Subheading style={{ fontWeight: 'bold' }}>{item.subheading}</Subheading>
-            <Paragraph>
+            <Subheading style={{ fontFamily: 'lato-bold' }}>{item.subheading}</Subheading>
+            <Paragraph style={{ lineHeight: 24 }}>
               {item.content}
               {'\n'}
             </Paragraph>

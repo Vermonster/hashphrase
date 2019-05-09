@@ -2,7 +2,6 @@
 
 exports[`<TipsPage /> should match the snapshot 1`] = `
 <withOrientation
-  onLayout={[Function]}
   style={
     Object {
       "backgroundColor": "#F5F5F5",
@@ -23,6 +22,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
         Array [
           Object {
             "color": "#212A59",
+            "fontFamily": "lato-bold",
             "fontSize": 24,
             "textAlign": "center",
           },
@@ -32,7 +32,7 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
         ]
       }
     >
-      title
+      FAQs
     </withTheme(Text)>
     <ForwardRef(View)>
       <ForwardRef(View)
@@ -59,8 +59,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               style={
                 Object {
                   "color": "#212A59",
+                  "flexWrap": "wrap",
                   "fontSize": 16,
-                  "lineHeight": 21,
+                  "lineHeight": 24,
                 }
               }
             />
@@ -77,15 +78,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             }
           >
             <Card.Content>
-              <withTheme(Text)
+              <Paragraph
+                key="no-contents"
                 style={
                   Object {
-                    "color": "#212A59",
-                    "fontSize": 16,
                     "lineHeight": 21,
+                    "marginBottom": 14,
                   }
                 }
-              />
+              >
+                There are no questions.
+              </Paragraph>
             </Card.Content>
           </withTheme(Card)>
         </withTheme(List.Accordion)>
@@ -114,8 +117,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               style={
                 Object {
                   "color": "#212A59",
+                  "flexWrap": "wrap",
                   "fontSize": 16,
-                  "lineHeight": 21,
+                  "lineHeight": 24,
                 }
               }
             />
@@ -132,15 +136,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             }
           >
             <Card.Content>
-              <withTheme(Text)
+              <Paragraph
+                key="no-contents"
                 style={
                   Object {
-                    "color": "#212A59",
-                    "fontSize": 16,
                     "lineHeight": 21,
+                    "marginBottom": 14,
                   }
                 }
-              />
+              >
+                There are no questions.
+              </Paragraph>
             </Card.Content>
           </withTheme(Card)>
         </withTheme(List.Accordion)>
@@ -169,8 +175,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               style={
                 Object {
                   "color": "#212A59",
+                  "flexWrap": "wrap",
                   "fontSize": 16,
-                  "lineHeight": 21,
+                  "lineHeight": 24,
                 }
               }
             />
@@ -187,15 +194,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             }
           >
             <Card.Content>
-              <withTheme(Text)
+              <Paragraph
+                key="no-contents"
                 style={
                   Object {
-                    "color": "#212A59",
-                    "fontSize": 16,
                     "lineHeight": 21,
+                    "marginBottom": 14,
                   }
                 }
-              />
+              >
+                There are no questions.
+              </Paragraph>
             </Card.Content>
           </withTheme(Card)>
         </withTheme(List.Accordion)>
@@ -224,8 +233,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               style={
                 Object {
                   "color": "#212A59",
+                  "flexWrap": "wrap",
                   "fontSize": 16,
-                  "lineHeight": 21,
+                  "lineHeight": 24,
                 }
               }
             />
@@ -242,15 +252,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             }
           >
             <Card.Content>
-              <withTheme(Text)
+              <Paragraph
+                key="no-contents"
                 style={
                   Object {
-                    "color": "#212A59",
-                    "fontSize": 16,
                     "lineHeight": 21,
+                    "marginBottom": 14,
                   }
                 }
-              />
+              >
+                There are no questions.
+              </Paragraph>
             </Card.Content>
           </withTheme(Card)>
         </withTheme(List.Accordion)>
@@ -279,8 +291,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               style={
                 Object {
                   "color": "#212A59",
+                  "flexWrap": "wrap",
                   "fontSize": 16,
-                  "lineHeight": 21,
+                  "lineHeight": 24,
                 }
               }
             />
@@ -297,15 +310,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             }
           >
             <Card.Content>
-              <withTheme(Text)
+              <Paragraph
+                key="no-contents"
                 style={
                   Object {
-                    "color": "#212A59",
-                    "fontSize": 16,
                     "lineHeight": 21,
+                    "marginBottom": 14,
                   }
                 }
-              />
+              >
+                There are no questions.
+              </Paragraph>
             </Card.Content>
           </withTheme(Card)>
         </withTheme(List.Accordion)>
@@ -334,8 +349,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               style={
                 Object {
                   "color": "#212A59",
+                  "flexWrap": "wrap",
                   "fontSize": 16,
-                  "lineHeight": 21,
+                  "lineHeight": 24,
                 }
               }
             />
@@ -352,15 +368,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             }
           >
             <Card.Content>
-              <withTheme(Text)
+              <Paragraph
+                key="no-contents"
                 style={
                   Object {
-                    "color": "#212A59",
-                    "fontSize": 16,
                     "lineHeight": 21,
+                    "marginBottom": 14,
                   }
                 }
-              />
+              >
+                There are no questions.
+              </Paragraph>
             </Card.Content>
           </withTheme(Card)>
         </withTheme(List.Accordion)>
@@ -389,8 +407,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               style={
                 Object {
                   "color": "#212A59",
+                  "flexWrap": "wrap",
                   "fontSize": 16,
-                  "lineHeight": 21,
+                  "lineHeight": 24,
                 }
               }
             />
@@ -407,15 +426,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             }
           >
             <Card.Content>
-              <withTheme(Text)
+              <Paragraph
+                key="no-contents"
                 style={
                   Object {
-                    "color": "#212A59",
-                    "fontSize": 16,
                     "lineHeight": 21,
+                    "marginBottom": 14,
                   }
                 }
-              />
+              >
+                There are no questions.
+              </Paragraph>
             </Card.Content>
           </withTheme(Card)>
         </withTheme(List.Accordion)>
@@ -444,8 +465,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               style={
                 Object {
                   "color": "#212A59",
+                  "flexWrap": "wrap",
                   "fontSize": 16,
-                  "lineHeight": 21,
+                  "lineHeight": 24,
                 }
               }
             />
@@ -462,15 +484,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             }
           >
             <Card.Content>
-              <withTheme(Text)
+              <Paragraph
+                key="no-contents"
                 style={
                   Object {
-                    "color": "#212A59",
-                    "fontSize": 16,
                     "lineHeight": 21,
+                    "marginBottom": 14,
                   }
                 }
-              />
+              >
+                There are no questions.
+              </Paragraph>
             </Card.Content>
           </withTheme(Card)>
         </withTheme(List.Accordion)>
@@ -499,8 +523,9 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
               style={
                 Object {
                   "color": "#212A59",
+                  "flexWrap": "wrap",
                   "fontSize": 16,
-                  "lineHeight": 21,
+                  "lineHeight": 24,
                 }
               }
             />
@@ -517,15 +542,17 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
             }
           >
             <Card.Content>
-              <withTheme(Text)
+              <Paragraph
+                key="no-contents"
                 style={
                   Object {
-                    "color": "#212A59",
-                    "fontSize": 16,
                     "lineHeight": 21,
+                    "marginBottom": 14,
                   }
                 }
-              />
+              >
+                There are no questions.
+              </Paragraph>
             </Card.Content>
           </withTheme(Card)>
         </withTheme(List.Accordion)>
