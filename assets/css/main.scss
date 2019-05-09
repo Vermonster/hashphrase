@@ -46,33 +46,31 @@ body {
     margin: 0;
     margin-bottom: 1em;
     text-align: center;    
-    font-size: 3em;
+    font-size: 72px;
     color: $primary-orange;
   }
 
   .workflow {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: flex-start;
 
-    .step {
+    .steps {
       text-align: left;
       display: flex;
-      flex: 1;
       flex-direction: column;
       justify-content: center;
+      width: 320px;
 
-      .step-1 {
-        flex: 0.3;
+      .steps-description {
+        color: #222222;
+        height: 100px;
       }
+    }
 
-      .step-2 {
-        flex: 0.3;
-      }
-
-      .step-3 {
-        flex: 0.3;
-      }
+    .arrow {
+      margin-top: 500px;
     }
   }
 }
@@ -108,6 +106,11 @@ body {
       .social-media-text {
         text-align: center;
         font-size: 36px;
+
+        a {
+          text-decoration: underline;
+          color: $primary-orange;
+        }
       }
     }
   }
