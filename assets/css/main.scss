@@ -2,17 +2,30 @@
 ---
 @import 'normalize.css';
 @import url("https://use.typekit.net/ytt2bqh.css");
-
+/*fonts*/
 $font: "Benton-sans";
 $font-header: "Clone-rounded-latin";
+/*font-size*/
+$font-size-h1: 72px;
+$font-size-h2: 36px;
+$font-size-h3: 24px;
+$font-size-h4: 18px;
+$font-size-body: 16px;
+$font-size-link: 14px;
+/*colors*/
 $primary-orange: #E07926;
+$secondary-blue: #212A59;
+$white: #FFF;
+$background-grey: #F9F9F9;
+$text-black: #222222;
+
 
 body {
   font-family: $font;
 }
 
 .header {
-  background-color: #212A59;
+  background-color: $secondary-blue;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -37,29 +50,29 @@ body {
   }
 
   .slogan {
-    color: #FFF;
+    color: $white;
     font-weight: normal;
-    font-size: 36px;
+    font-size: $font-size-h2;
   }
   
   .built-by {
-    color: #FFF;
-    font-size: 18px;
+    color: $white;
+    font-size: $font-size-h4;
     font-weight: normal;
     margin-bottom: 10px;
   }
 }
 
 .how-it-works {
-  background-color: #F9F9F9;
+  background-color: $background-grey;
   padding: 70px;
 
   .how-it-works-title {
     font-family: $font-header;
     margin: 0;
-    margin-bottom: 1em;
+    margin-bottom: 20px;
     text-align: center;    
-    font-size: 72px;
+    font-size: $font-size-h1;
     color: $primary-orange;
   }
 
@@ -77,13 +90,15 @@ body {
       width: 320px;
 
       .steps-title {
-        font-size: 24px;
+        font-size: $font-size-h3;
+        color: $text-black;
+        margin-bottom: 0;
       }
 
       .steps-description {
-        color: #222222;
+        color: $text-black;
         height: 100px;
-        font-size: 16px;
+        font-size: $font-size-body;
         line-height: 1.5em;
       }
     }
@@ -95,7 +110,7 @@ body {
 }
 
 .how-we-made-it {
-  background-color: #F9F9F9;
+  background-color: $background-grey;
 
   .logo-pattern-container {
     background-image: url("../marketing-images/pattern_graphic.svg");
@@ -105,9 +120,9 @@ body {
     height: 348px;
 
     .learn-how-title {
-      color: #FFF;
+      color: $white;
       font-family: $font-header;
-      font-size: 72px;
+      font-size: $font-size-h1;
     }
   }
 
@@ -124,7 +139,8 @@ body {
 
       .social-media-text {
         text-align: center;
-        font-size: 36px;
+        font-size: $font-size-h2;
+        color: $text-black;
 
         a {
           text-decoration: underline;
@@ -136,16 +152,17 @@ body {
 }
 
 .footer {
-  background-color: #212A59; 
+  background-color: $secondary-blue; 
   height: 187px;
   display: flex;
   justify-content: center;
   align-items: center;
 
   a {
+    font-size: $font-size-link;
     text-decoration: underline;
     cursor: pointer;
-    color: #FFF;
+    color: $white;
   }
 
   .contact-us {
