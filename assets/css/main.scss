@@ -1,6 +1,138 @@
 ---
 ---
+@import 'normalize.css';
+@import url("https://use.typekit.net/ytt2bqh.css");
 
-p {
-  color: red
+$font: "Benton-sans";
+$font-header: "Clone-rounded-latin";
+$primary-orange: #E07926;
+
+body {
+  font-family: $font;
 }
+
+.header {
+  background-color: #212A59;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 133px;
+
+  .app-store-badges {
+    display: inline-block;
+  }
+
+  .google-play img {
+    height: 39px;
+  }
+
+  .slogan {
+    color: #FFF;
+    font-weight: 300;
+  }
+  
+  .built-by {
+    color: #FFF;
+    font-weight: 300;
+  }
+}
+
+.how-it-works {
+  background-color: #F9F9F9;
+  padding: 70px;
+
+  .how-it-works-title {
+    font-family: $font-header;
+    margin: 0;
+    margin-bottom: 1em;
+    text-align: center;    
+    font-size: 3em;
+    color: $primary-orange;
+  }
+
+  .workflow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .step {
+      text-align: left;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+
+      .step-1 {
+        flex: 0.3;
+      }
+
+      .step-2 {
+        flex: 0.3;
+      }
+
+      .step-3 {
+        flex: 0.3;
+      }
+    }
+  }
+}
+
+.how-we-made-it {
+  background-color: #F9F9F9;
+
+  .logo-pattern-container {
+    background-image: url("../marketing-images/pattern_graphic.svg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 348px;
+
+    .learn-how-title {
+      color: #FFF;
+      font-family: $font-header;
+      font-size: 72px;
+    }
+  }
+
+  .social-media-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 100px;
+
+    .social-media {
+      width: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .social-media-text {
+        text-align: center;
+        font-size: 36px;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: #212A59; 
+  height: 187px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #FFF;
+  }
+
+  .contact-us {
+    margin-right: 50px;
+  }
+
+  .privacy-policy {
+    margin-left: 50px;
+  }
+}
+
+

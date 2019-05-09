@@ -1,33 +1,74 @@
----
-layout: default
----
-
-<section class="header">
-  <img class="hashphrase-logo" alt="Hashphrase Logo" />
-  <h2>Hash your data to make unique passwords</h2>
-  <a class="google-play" />
-  <a class="apple-app-store" />
-  <h4>Built by</h4>
-  <img class="vermonster-logo" />
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hashphrase</title>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+  <section class="header">
+    <div class="header-left">
+      <img class="app-logo" src="/assets/marketing-images/app-logo.svg" alt="App logo">
+      <h2 class="slogan">Hash your data to <br/> make unique <br/> passwords</h2>
+      <div class="app-store-badges">
+        <a class="google-play">
+          <img src="assets/marketing-images/google-play-badge.png">
+        </a>
+        <a class="apple-app-store">
+          <img src="assets/marketing-images/apple-store-badge.svg">
+        </a>
+      </div>
+      <div>
+        <h4 class="built-by">Built by</h4>
+        <img src="/assets/marketing-images/vermonster.svg" alt="Vermonster Logo">
+      </div>
+    </div>
+    <img src="assets/marketing-images/lady.svg" alt="Lost Password">
 </section>
 <section class="how-it-works">
-  <h1>How it works</h1>
-  <h4>Enter a nickname</h4>
-  <p>Make this something you’ll be able to remember later on. You should make a different nickname for each of your accounts.</p>
-  <h4>Enter a master password</h4>
-  <p>Now you can use that one password that we know you use everywhere</p>
-  <h4>That's it!</h4>
-  <p>The app takes your inputs and hashes them to create a unique hashphrase that you can use for your account’s password.</p>
+  <h1 class="how-it-works-title">How it works</h1>
+  <div class="workflow">
+    <div class="step step-1">
+      <h4>Enter a nickname</h4>
+      <p>Make this something you’ll be able to remember later on. You should make a different nickname for each of your accounts.</p>
+      <img src="assets/marketing-images/iphone1.svg" alt="iPhone mockup 1">
+    </div>
+    <div class="step step-2">
+      <h4>Enter a master password</h4>
+      <p>Now you can use that one password that we know you use everywhere</p>
+      <img src="assets/marketing-images/iphone2.svg" alt="iPhone mockup 2">
+    </div>
+    <div class="step step-3">
+      <h4>That's it!</h4>
+      <p>The app takes your inputs and hashes them to create a unique hashphrase that you can use for your account’s password.</p>
+      <img src="assets/marketing-images/iphone3.svg" alt="iPhone mockup 3">
+    </div>
+  </div>
 </section>
 <section class="how-we-made-it">
-  <img class="medium logo" />
-  <p>Check out our <a>Medium</a> posts</p>
-  <img class="github logo" />
-  <p>View the code on <a>Github</a></p>
-  <img class="figma logo" />
-  <p>View our designs in <a>Figma</a></p>
+  <div class="logo-pattern-container">
+    <h1 class="learn-how-title">Learn how we made the app</h1>
+  </div>
+  <div class="social-media-container">
+    <div class="social-media">
+      <img src="assets/marketing-images/medium.svg" class="medium-logo" />
+      <p class="social-media-text">Check out our <a>Medium</a> posts</p>
+    </div>
+    <div class="social-media">
+      <img src="assets/marketing-images/github.svg" class="github-logo" />
+      <p class="social-media-text">View the code on <a>Github</a></p>
+    </div>
+    <div class="social-media">
+      <img src="assets/marketing-images/figma.svg" class="figma-logo" />
+      <p class="social-media-text">View our designs in <a>Figma</a></p>
+    </div>
+  </div>
+ 
 </section>
 <section class="footer">
   <a class="contact-us">Contact Us</a>
   <a class="privacy-policy">Privacy Policy</a>
 </section>
+
+</body>
+</html>
