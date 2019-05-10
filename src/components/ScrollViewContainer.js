@@ -32,6 +32,7 @@ const ScrollViewContainer = (props) => {
       <KeyboardAvoidingView
         keyboardVerticalOffset={100}
         style={styles.flexLayout}
+        behavior="padding"
       >
         <ScrollView style={styles.flexLayout} keyboardShouldPersistTaps="always">
           {children}
