@@ -2,8 +2,9 @@
 ---
 @import 'normalize.css';
 @import 'policy.css';
+/*adobe-font*/
 @import url("https://use.typekit.net/ytt2bqh.css");
-/*fonts*/
+/*font-family*/
 $font: "Benton-sans";
 $font-header: "Clone-rounded-latin";
 /*font-size*/
@@ -20,8 +21,8 @@ $white: #FFF;
 $background-grey: #F9F9F9;
 $text-black: #222222;
 
-html {
-  scroll-behavior: smooth;
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -33,7 +34,20 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  padding: 133px;
+  height: 100vh;
+  padding: 10%;
+
+  .header-left {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-right {
+    flex: 0.5;
+    display: flex;
+    justify-content: center;
+  }
 
   .app-logo {
     height: 125px;
@@ -74,14 +88,15 @@ body {
 
 .how-it-works {
   background-color: $background-grey;
-  padding: 70px;
+  padding: 10px;
+  height: 100vh;
 
   .how-it-works-title {
     font-family: $font-header;
     margin: 0;
     margin-bottom: 20px;
     text-align: center;    
-    font-size: $font-size-h1;
+    font-size: 52px;
     color: $primary-orange;
   }
 
@@ -107,9 +122,13 @@ body {
 
       .steps-description {
         color: $text-black;
-        height: 100px;
+        height: 80px;
         font-size: $font-size-body;
         line-height: 1.5em;
+      }
+
+      .iphone {
+        height: 500px;
       }
     }
 
