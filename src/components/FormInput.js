@@ -1,6 +1,10 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { IconButton, Text, TextInput } from 'react-native-paper';
+import {
+  IconButton,
+  Text,
+  TextInput,
+} from 'react-native-paper';
 import { colors, fontSize } from '../styles/base';
 
 const styles = StyleSheet.create({
@@ -68,7 +72,7 @@ const FormInput = (props) => {
       >
         <TextInput
           value={value}
-          secureTextEntry={!visibility}
+          // secureTextEntry={!visibility}
           style={styles.textInput}
           onChange={handleChange(componentType)}
           autoCapitalize="none"
