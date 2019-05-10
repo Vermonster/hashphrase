@@ -72,7 +72,7 @@ const FormInput = (props) => {
       >
         <TextInput
           value={value}
-          // secureTextEntry={!visibility}
+          secureTextEntry={!visibility}
           style={styles.textInput}
           onChange={handleChange(componentType)}
           autoCapitalize="none"
