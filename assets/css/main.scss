@@ -35,6 +35,7 @@ body {
   justify-content: center;
   flex-direction: row;
   height: 100vh;
+  width: 100vw;
   padding: 10%;
 
   .header-left {
@@ -50,8 +51,8 @@ body {
   }
 
   .app-logo {
-    height: 125px;
-    width: 600px;
+    height: auto;
+    width: 100%;
   }
 
   .advertisement {
@@ -66,9 +67,6 @@ body {
       height: 40px
     }
 
-   .google-play img {
-    height: 40px;
-  }
 }
 
  
@@ -209,4 +207,49 @@ body {
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .header {
+    height: auto;
+
+    .header-left {
+      flex: 1;
+      
+      .app-logo {
+        width: 80%;
+      }
+    
+      .slogan {
+       font-size: 24px;
+        line-height: 130%;
+      }
+      
+      .advertisement {
+        padding: 0;
+      }
+
+      .app-store-badges {
+        .google-play img {
+          width: 30%;
+        }
+
+        .apple-app-store img {
+          width: 30%;
+        }
+      }
+
+      .built-by {
+        font-size: 14px;
+      }
+
+      .vermonster-logo {
+        width: 45%;
+      }
+    }
+
+
+    .header-right {
+      display: none;
+    }
+  }
+}
 
