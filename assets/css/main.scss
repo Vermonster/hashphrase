@@ -229,26 +229,42 @@ body {
 
     .header-left {
       flex: 1;
-
-      .app-logo {
-        width: 80%;
-      }
-    
-      .slogan {
-        font-size: 24px;
-        line-height: 130%;
-      }
       
+      .app-logo {
+        margin: 0 auto;
+      }
       .advertisement {
         margin: 0;
         display: flex;
+        justify-content: center;
         flex-direction: column;
         align-self: center;
-      }
 
-      .built-by {
-        font-size: 14px;
-      }
+        .slogan {
+          font-size: 24px;
+          line-height: 130%;
+          text-align: center;
+        }
+
+        .app-store-badges {
+          justify-content: center;
+        }
+
+        .app-owner {
+          display: flex;
+          flex-direction: column;
+
+          .built-by {
+            font-size: 14px;
+            margin-left: 15%;
+          }
+
+          .vermonster-logo {
+            align-self: center;
+          }
+        }
+    }
+
     }
 
 
