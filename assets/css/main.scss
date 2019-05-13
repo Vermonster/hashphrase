@@ -256,6 +256,8 @@ body {
     text-align: center;
     background: $white;
     height: auto;
+    padding: 0;
+    margin-top: 10px;
 
     .workflow {
       flex-direction: column;
