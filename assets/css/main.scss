@@ -297,3 +297,39 @@ body {
     }
   }
 
+
+  .how-we-made-it {
+  
+    .logo-pattern-container {
+      background-size: cover;
+      height: 90px;
+  
+      .learn-how-title {
+        font-size: 26px;
+      }
+    }
+  
+    .social-media-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      margin-top: 32px;
+      padding-bottom: 24px;
+  
+      .social-media {
+        width: 200px; 
+
+        .logo {
+          width: 50px;
+          height: 50px;
+        }
+  
+        .social-media-text {
+          font-size: $font-size-h3;
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+
