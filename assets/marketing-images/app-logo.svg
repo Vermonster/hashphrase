@@ -9,13 +9,13 @@
           visibility: hidden;
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 280px) {
           #wide {
-            visibility: visible;
+            visibility: hidden;
           }
 
           #tall {
-            visibility: hidden;
+            visibility: visible;
           }
         }
     </style>
@@ -35,8 +35,8 @@
       <use xlink:href="#logo" width="55"/>
       <use xlink:href="#word" width="273" x="70"/>
     </svg>
-    <svg id="tall" viewBox="0 0 273 130">
+    <svg id="tall" viewBox="-50 0 300 130">
       <use xlink:href="#logo" x="60" width="70" height="92"/>
-      <use xlink:href="#word" y="104" width="200" height="50"/>
+      <use xlink:href="#word" y="90" width="200" height="50"/>
      </svg>
   </svg>
