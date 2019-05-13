@@ -251,5 +251,47 @@ body {
       display: none;
     }
   }
-}
+  
+  .how-it-works {
+    text-align: center;
+    background: $white;
+    height: auto;
+
+    .workflow {
+      flex-direction: column;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+
+      .steps {
+        padding-right: 40px;
+        padding-left: 40px;
+        padding-bottom: 40px;
+        width: 100%;
+        height: auto;
+        h4, p, img {
+          text-align: center;
+        }
+        .steps-description {
+          height: auto;
+        }
+        img {
+          max-height: 450px;
+        }
+      }
+      .accent-block {
+        background: #E07926;
+        color: white;
+
+        .steps-title, .steps-description {
+          color: white;
+        }
+      }
+    }
+  
+      .arrow {
+        display: none;
+      }
+    }
+  }
 
