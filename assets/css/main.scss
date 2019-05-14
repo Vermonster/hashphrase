@@ -228,6 +228,9 @@ body {
     height: auto;
 
     .header-left {
+      justify-content: center;
+      align-items: center;
+      align-content: center;
       flex: 1;
       
       .app-logo {
@@ -261,6 +264,7 @@ body {
 
           .vermonster-logo {
             align-self: center;
+            margin-bottom: 3%;
           }
         }
       }
@@ -273,9 +277,14 @@ body {
   
   .how-it-works {
     text-align: center;
-    background: $white;
+    background-color: $background-grey;;
     height: auto;
     padding: 0;
+    margin-top: 10px;
+
+    .how-it-works-title {
+      font-size: 50px;
+    }
 
     .workflow {
       flex-direction: column;
