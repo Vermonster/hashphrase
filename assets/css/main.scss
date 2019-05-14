@@ -280,7 +280,7 @@ body {
     background-color: $background-grey;;
     height: auto;
     padding: 0;
-    margin-top: 10px;
+    padding-top: 10px;
 
     .how-it-works-title {
       font-size: 50px;
@@ -295,6 +295,8 @@ body {
       .steps {
         width: 100%;
         padding-bottom: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
         height: auto;
         h4, p, img {
           text-align: center;
@@ -345,7 +347,7 @@ body {
       .social-media {
         width: 200px; 
 
-        .logo {
+        .social-logo {
           width: 50px;
           height: 50px;
         }
@@ -357,6 +359,4 @@ body {
       }
     }
   }
-
-
-  }
+}
