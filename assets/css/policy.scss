@@ -7,10 +7,10 @@
 }
 
 .privacy-policy-body {
-  flex: 0.5;
   line-height: 22px;
   color: #222222;
-  padding: 30px 0;
+  margin: 30px 0;
+  max-width: 550px;
 
   .title {
     font-weight: normal;
