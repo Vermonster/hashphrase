@@ -102,15 +102,15 @@ body {
 
 .how-it-works {
   background-color: $background-grey;
-  padding: 10px;
-  height: 100vh;
+  padding: 3% 10%;
+  height: auto;
 
   .how-it-works-title {
     font-family: $font-header;
     margin: 0;
     margin-bottom: 20px;
     text-align: center;    
-    font-size: 52px;
+    font-size: $font-size-h1;
     color: $primary-orange;
   }
 
@@ -147,7 +147,7 @@ body {
     }
 
     .arrow {
-      margin-top: 500px;
+      margin-top: 380px;
     }
   }
 }
@@ -263,10 +263,8 @@ body {
             align-self: center;
           }
         }
+      }
     }
-
-    }
-
 
     .header-right {
       display: none;
@@ -278,7 +276,6 @@ body {
     background: $white;
     height: auto;
     padding: 0;
-    margin-top: 10px;
 
     .workflow {
       flex-direction: column;
@@ -287,10 +284,8 @@ body {
       text-align: center;
 
       .steps {
-        padding-right: 40px;
-        padding-left: 40px;
-        padding-bottom: 40px;
         width: 100%;
+        padding-bottom: 40px;
         height: auto;
         h4, p, img {
           text-align: center;
@@ -316,10 +311,10 @@ body {
         display: none;
       }
     }
-  }
 
 
   .how-we-made-it {
+    background-color: $background-grey;
   
     .logo-pattern-container {
       background-size: cover;
@@ -354,3 +349,5 @@ body {
     }
   }
 
+
+  }
