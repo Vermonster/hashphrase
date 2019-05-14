@@ -382,8 +382,9 @@ body {
 /* MIDSIZE TABLETS */
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .header {
+      height: auto;
+
       .header-left {
-        
         .app-logo {
           align-self: flex-start;
         }
