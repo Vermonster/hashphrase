@@ -35,21 +35,26 @@ body {
   justify-content: center;
   flex-direction: row;
   height: 100vh;
-  padding: 10%;
+  padding: 8%;
 
   .header-left {
     flex: 0.5;
     display: flex;
+    margin-right: 1%;
+    justify-content: center;
+    align-items: flex-end;
     flex-direction: column;
 
     .app-logo {
+      width: 400px;
       height: auto;
-      width: 80%;
+      align-self: flex-end;
     }
 
     .advertisement {
-      width: 65%;
-      margin-left: 18%;
+      align-self: flex-end;
+      width: 400px;
+      height: auto;
     }
 
     .app-store-badges {
@@ -91,11 +96,12 @@ body {
   .header-right {
     flex: 0.5;
     display: flex;
-    justify-content: center;
+    margin-left: 1%;
+    justify-content: flex-start;
 
     .lady {
       height: auto;
-      width: 100%;
+      width: 450px;
     }
   }
 }
@@ -223,17 +229,18 @@ body {
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 767px) {
   .header {
     height: auto;
 
     .header-left {
       justify-content: center;
       align-items: center;
-      align-content: center;
       flex: 1;
       
       .app-logo {
+        height: auto;
+        width: 50%;
         margin: 0 auto;
       }
       .advertisement {
@@ -359,4 +366,31 @@ body {
       }
     }
   }
-}
+
+
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .header {
+      .header-left {
+        
+        .app-logo {
+          align-self: flex-start;
+        }
+
+        .advertisement {
+          align-self: flex-start;
+        }
+
+        .slogan {
+          font-size: 24px;
+        }
+      }
+
+      .header-right {
+        .lady {
+          width: 350px;
+        }
+      }
+    }
+  }
