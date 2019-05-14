@@ -164,6 +164,7 @@ body {
 
   .logo-pattern-container {
     background-image: url("../marketing-images/pattern_graphic.svg");
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -202,24 +203,6 @@ body {
   }
 }
 
-@media only screen and (min-width: 481px) and (max-width: 1600px) {
-  .how-we-made-it {
-    .logo-pattern-container {
-      padding-left: 20px;
-      padding-right: 20px;
-      text-align: center;
-    }
-    .social-media-container {
-      .social-media {
-        margin-left: 15px;
-        margin-right: 15px;
-        .social-logo {
-          width: 100px;
-        }
-      }
-    }
-  }
-}
 .footer {
   background-color: $secondary-blue; 
   height: 187px;
@@ -248,6 +231,27 @@ body {
   }
 }
 
+/* vicki-- tablet sizes */
+@media only screen and (min-width: 481px) and (max-width: 1600px) {
+  .how-we-made-it {
+    .logo-pattern-container {
+      padding-left: 20px;
+      padding-right: 20px;
+      text-align: center;
+    }
+    .social-media-container {
+      .social-media {
+        margin-left: 15px;
+        margin-right: 15px;
+        .social-logo {
+          width: 100px;
+        }
+      }
+    }
+  }
+}
+
+/* SMALLEST DEVICE SIZES */
 @media only screen and (max-width: 767px) {
   .header {
     height: auto;
@@ -387,10 +391,8 @@ body {
       }
     }
   }
-
-
-  }
-
+}
+/* olivia tablets */
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .header {
       .header-left {
@@ -411,6 +413,23 @@ body {
       .header-right {
         .lady {
           width: 350px;
+        }
+      }
+    }
+
+    .how-we-made-it {
+      .logo-pattern-container {
+        height: 184px;
+        background-size: cover;
+        .learn-how-title {
+          font-size: 48px;
+        }
+      }
+      .social-media-container {
+        .social-media {
+          .social-media-text {
+            font-size: $font-size-h3;
+          }
         }
       }
     }
