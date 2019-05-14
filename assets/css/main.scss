@@ -59,6 +59,7 @@ body {
 
     .app-store-badges {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
 
       a {
@@ -240,7 +241,7 @@ body {
       
       .app-logo {
         height: auto;
-        width: 50%;
+        width: 80%;
         margin: 0 auto;
       }
       .advertisement {
@@ -249,6 +250,7 @@ body {
         justify-content: center;
         flex-direction: column;
         align-self: center;
+        width: 80%;
 
         .slogan {
           font-size: 24px;
@@ -266,12 +268,13 @@ body {
 
           .built-by {
             font-size: 14px;
-            margin-left: 15%;
+            margin-left: 25%;
           }
 
           .vermonster-logo {
             align-self: center;
             margin-bottom: 3%;
+            width: 50%;
           }
         }
       }
