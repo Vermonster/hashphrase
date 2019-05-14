@@ -179,6 +179,7 @@ body {
 
   .social-media-container {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     padding: 100px;
 
@@ -187,6 +188,8 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-left: 15px;
+      margin-right: 15px;
 
       .social-media-text {
         text-align: center;
@@ -231,27 +234,7 @@ body {
   }
 }
 
-/* vicki-- tablet sizes */
-@media only screen and (min-width: 481px) and (max-width: 1600px) {
-  .how-we-made-it {
-    .logo-pattern-container {
-      padding-left: 20px;
-      padding-right: 20px;
-      text-align: center;
-    }
-    .social-media-container {
-      .social-media {
-        margin-left: 15px;
-        margin-right: 15px;
-        .social-logo {
-          width: 100px;
-        }
-      }
-    }
-  }
-}
-
-/* SMALLEST DEVICE SIZES */
+/* SMALLEST DEVICES */
 @media only screen and (max-width: 767px) {
   .header {
     height: auto;
@@ -362,6 +345,9 @@ body {
     .logo-pattern-container {
       background-size: cover;
       height: 90px;
+      padding-left: 20px;
+      padding-right: 20px;
+      text-align: center;
   
       .learn-how-title {
         font-size: 26px;
@@ -379,6 +365,7 @@ body {
       .social-media {
         width: 200px; 
 
+
         .social-logo {
           width: 50px;
           height: 50px;
@@ -392,7 +379,7 @@ body {
     }
   }
 }
-/* olivia tablets */
+/* MIDSIZE TABLETS */
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .header {
       .header-left {
@@ -426,6 +413,7 @@ body {
         }
       }
       .social-media-container {
+        flex-direction: row;
         .social-media {
           .social-media-text {
             font-size: $font-size-h3;
