@@ -378,48 +378,56 @@ body {
       }
     }
   }
+
+  .footer {
+    height: 55px;
+  }
 }
 /* MIDSIZE TABLETS */
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .header {
-      height: auto;
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    height: auto;
 
-      .header-left {
-        .app-logo {
-          align-self: flex-start;
-        }
-
-        .advertisement {
-          align-self: flex-start;
-        }
-
-        .slogan {
-          font-size: 24px;
-        }
+    .header-left {
+      .app-logo {
+        align-self: flex-start;
       }
 
-      .header-right {
-        .lady {
-          width: 350px;
-        }
+      .advertisement {
+        align-self: flex-start;
+      }
+
+      .slogan {
+        font-size: 24px;
       }
     }
 
-    .how-we-made-it {
-      .logo-pattern-container {
-        height: 184px;
-        background-size: cover;
-        .learn-how-title {
-          font-size: 48px;
-        }
+    .header-right {
+      .lady {
+        width: 350px;
       }
-      .social-media-container {
-        flex-direction: row;
-        .social-media {
-          .social-media-text {
-            font-size: $font-size-h3;
-          }
+    }
+  }
+
+  .how-we-made-it {
+    .logo-pattern-container {
+      height: 184px;
+      background-size: cover;
+      .learn-how-title {
+        font-size: 48px;
+      }
+    }
+    .social-media-container {
+      flex-direction: row;
+      .social-media {
+        .social-media-text {
+          font-size: $font-size-h3;
         }
       }
     }
   }
+
+  .footer {
+    height: 90px;
+  }
+}
