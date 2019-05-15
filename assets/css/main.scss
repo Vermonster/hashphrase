@@ -109,7 +109,6 @@ body {
 
 .how-it-works {
   background-color: $background-grey;
-  padding: 3% 10%;
   height: auto;
 
   .how-it-works-title {
@@ -122,38 +121,50 @@ body {
   }
 
   .workflow {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-
     .steps {
-      text-align: left;
-      display: flex;
       flex-direction: row;
+      display: flex;
+      padding-top: 30px;
+      padding-bottom: 30px;
       justify-content: center;
-      align-items: center;
 
       .steps-text {
-        flex: 2;
-        .steps-title {
-          font-size: $font-size-h3;
-          font-weight: 600;
-          color: $text-black;
-          margin-bottom: 0;
-        }
-  
-        .steps-description {
-          color: $text-black;
-          height: 80px;
-          font-size: $font-size-body;
-          line-height: 1.5em;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        width: 300px;
+        margin-right: 32px;
+        .text-container {
+          width: 300px;
+          .steps-title {
+            font-size: $font-size-h3;
+            font-weight: 600;
+            color: $text-black;
+          }
+    
+          .steps-description {
+            color: $text-black;
+            font-size: $font-size-body;
+            line-height: 1.5em;
+          }
         }
       }
-
-      .iphone {
-        flex: 1;
-        // height: 500px;
+      .steps-img {
+        display: flex;
+        flex-direction: column;
+        width: 190px;
+        .iphone {
+          height: 378px;
+        }
+      }
+    }
+    .accent-block {
+      background: #E07926;
+      color: white;
+      .steps-text {
+        .steps-title, .steps-description {
+          color: white;
+        }
       }
     }
   }
@@ -323,14 +334,14 @@ body {
           max-height: 450px;
         }
       }
-      .accent-block {
-        background: #E07926;
-        color: white;
+      // .accent-block {
+      //   background: #E07926;
+      //   color: white;
 
-        .steps-title, .steps-description {
-          color: white;
-        }
-      }
+      //   .steps-title, .steps-description {
+      //     color: white;
+      //   }
+      // }
     }
   }
 
