@@ -140,6 +140,8 @@ body {
             font-size: $font-size-h3;
             font-weight: 600;
             color: $text-black;
+            margin-bottom: 20px;
+            margin-top: 0;
           }
     
           .steps-description {
@@ -179,12 +181,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 348px;
+    height: 184px;
 
     .learn-how-title {
       color: $white;
       font-family: $font-header;
-      font-size: $font-size-h1;
+      font-size: 48px;
     }
   }
 
@@ -206,6 +208,7 @@ body {
         text-align: center;
         font-size: $font-size-h2;
         color: $text-black;
+        margin-bottom: 40px;
 
         a {
           text-decoration: underline;
@@ -246,7 +249,11 @@ body {
 }
 
 /* SMALLEST DEVICES */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 900px) {
+  body {
+    min-width: 300px;
+  }
+
   .header {
     height: auto;
 
@@ -324,18 +331,16 @@ body {
             .steps-title {
               display: inline-block;
               margin: 0;
+              font-size: $font-size-body;
             }
             .steps-description {
               display: inline-block;
+              font-size: $font-size-link;
             }
           }
         }
         .steps-img {
           width: 100%;
-          .iphone {
-
-          }
-
         }
       }
     }
@@ -375,6 +380,7 @@ body {
   
         .social-media-text {
           font-size: $font-size-h3;
+          line-height: 1.3em;
           margin-top: 16px;
         }
       }
