@@ -9,8 +9,6 @@ import {
   StyleSheet,
   TouchableWithoutFeedback,
   Keyboard,
-  KeyboardAvoidingView,
-  ScrollView,
   StatusBar,
   TouchableOpacity,
   Clipboard,
@@ -18,6 +16,7 @@ import {
 import { SafeAreaView } from 'react-navigation';
 import { withNamespaces } from 'react-i18next';
 import LogoTitle from '../../components/LogoTitle';
+import ScrollViewContainer from '../../components/ScrollViewContainer';
 import PasswordGenerator from '../../components/PasswordGenerator';
 import { colors } from '../../styles/base';
 
@@ -94,25 +93,19 @@ class CreateNewPassword extends Component {
     return (
       <SafeAreaView style={styles.container}>
         <StatusBar barStyle="light-content" />
-        <KeyboardAvoidingView
-          behavior="padding"
-          keyboardVerticalOffset={100}
-          style={styles.flexLayout}
-        >
-          <ScrollView style={styles.flexLayout} keyboardShouldPersistTaps="always">
-            <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-              <View style={styles.innerContainer}>
-                <PasswordGenerator
-                  isNewPassword={isNewPassword}
-                  resetToggleSwitch={this.resetToggleSwitch}
-                />
-                <TouchableOpacity onPress={this.clearClipboard} style={styles.clearClipboardButton}>
-                  <Text style={styles.clearClipboardText}>{t('clearClipboardButton')}</Text>
-                </TouchableOpacity>
-              </View>
-            </TouchableWithoutFeedback>
-          </ScrollView>
-        </KeyboardAvoidingView>
+        <ScrollViewContainer>
+          <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+            <View style={styles.innerContainer}>
+              <PasswordGenerator
+                isNewPassword={isNewPassword}
+                resetToggleSwitch={this.resetToggleSwitch}
+              />
+              <TouchableOpacity onPress={this.clearClipboard} style={styles.clearClipboardButton}>
+                <Text style={styles.clearClipboardText}>{t('clearClipboardButton')}</Text>
+              </TouchableOpacity>
+            </View>
+          </TouchableWithoutFeedback>
+        </ScrollViewContainer>
         <Snackbar
           visible={snackbarVisibility}
           onDismiss={this.hideSnackbar}

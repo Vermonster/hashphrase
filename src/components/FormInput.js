@@ -1,6 +1,10 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { IconButton, Text, TextInput } from 'react-native-paper';
+import {
+  IconButton,
+  Text,
+  TextInput,
+} from 'react-native-paper';
 import { colors, fontSize } from '../styles/base';
 
 const styles = StyleSheet.create({
@@ -33,7 +37,7 @@ const FormInput = (props) => {
     label,
     componentType,
     error,
-    handleInputFocus,
+    handleNextInputFocus,
     inputRef,
     handleInputVisibility,
     visibility,
@@ -77,7 +81,7 @@ const FormInput = (props) => {
           label={label}
           error={error}
           returnKeyType="next"
-          onSubmitEditing={handleInputFocus}
+          onSubmitEditing={handleNextInputFocus}
           ref={inputRef}
           disableFullscreenUI
           blurOnSubmit={blurOnSubmit}
