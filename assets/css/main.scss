@@ -313,25 +313,29 @@ body {
     }
 
     .workflow {
-      flex-direction: column;
-      display: flex;
-      flex-wrap: wrap;
-      text-align: center;
-
       .steps {
-        width: 100%;
-        padding-bottom: 40px;
-        padding-left: 30px;
-        padding-right: 30px;
-        height: auto;
-        h4, p, img {
-          text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        .steps-text {
+          margin-right: 0;
+          margin: 0 auto;
+          .text-container {
+            .steps-title {
+              display: inline-block;
+              margin: 0;
+            }
+            .steps-description {
+              display: inline-block;
+            }
+          }
         }
-        .steps-description {
-          height: auto;
-        }
-        img {
-          max-height: 450px;
+        .steps-img {
+          width: 100%;
+          .iphone {
+
+          }
+
         }
       }
     }
