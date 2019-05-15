@@ -249,7 +249,7 @@ body {
 }
 
 /* SMALLEST DEVICES */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 767px) {
   body {
     min-width: 300px;
   }
@@ -385,6 +385,52 @@ body {
         }
       }
     }
+  }
+  
+  .footer {
+    height: 90px;
+    flex-direction: column;
+
+    .contact-us {
+      margin: 20px auto 10px;
+    }
+
+    .privacy-policy {
+      margin: 10px auto 20px;
+    }
+  }
+}
+
+/* MIDSIZE TABLETS */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    height: auto;
+
+    .header-left {
+      margin-left: 10%;
+      .app-logo {
+        align-self: flex-start;
+      }
+
+      .advertisement {
+        align-self: flex-start;
+      }
+
+      .slogan {
+        font-size: 24px;
+      }
+    }
+
+    .header-right {
+      .lady {
+        width: 350px;
+        margin-right: 10%;
+      }
+    }
+  }
+
+  .footer {
+    height: 90px;
   }
 }
 
