@@ -123,33 +123,37 @@ body {
 
   .workflow {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
 
     .steps {
       text-align: left;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
-      width: 320px;
+      align-items: center;
 
-      .steps-title {
-        font-size: $font-size-h3;
-        font-weight: 600;
-        color: $text-black;
-        margin-bottom: 0;
-      }
-
-      .steps-description {
-        color: $text-black;
-        height: 80px;
-        font-size: $font-size-body;
-        line-height: 1.5em;
+      .steps-text {
+        flex: 2;
+        .steps-title {
+          font-size: $font-size-h3;
+          font-weight: 600;
+          color: $text-black;
+          margin-bottom: 0;
+        }
+  
+        .steps-description {
+          color: $text-black;
+          height: 80px;
+          font-size: $font-size-body;
+          line-height: 1.5em;
+        }
       }
 
       .iphone {
-        height: 500px;
+        flex: 1;
+        // height: 500px;
       }
     }
 
@@ -379,47 +383,88 @@ body {
     }
   }
 }
+
+
 /* MIDSIZE TABLETS */
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .header {
-      height: auto;
+  // @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  //   .header {
+  //     .header-left {
+        
+  //       .app-logo {
+  //         align-self: flex-start;
+  //       }
 
-      .header-left {
-        .app-logo {
-          align-self: flex-start;
-        }
+  //       .advertisement {
+  //         align-self: flex-start;
+  //       }
 
-        .advertisement {
-          align-self: flex-start;
-        }
+  //       .slogan {
+  //         font-size: 24px;
+  //       }
+  //     }
 
-        .slogan {
-          font-size: 24px;
-        }
-      }
+  //     .header-right {
+  //       .lady {
+  //         width: 350px;
+  //       }
+  //     }
+  //   }
 
-      .header-right {
-        .lady {
-          width: 350px;
-        }
-      }
-    }
+  //   .how-we-made-it {
+  //     .logo-pattern-container {
+  //       height: 184px;
+  //       background-size: cover;
+  //       .learn-how-title {
+  //         font-size: 48px;
+  //       }
+  //     }
+  //     .social-media-container {
+  //       flex-direction: row;
+  //       .social-media {
+  //         .social-media-text {
+  //           font-size: $font-size-h3;
+  //         }
+  //       }
+  //     }
+  //   }
 
-    .how-we-made-it {
-      .logo-pattern-container {
-        height: 184px;
-        background-size: cover;
-        .learn-how-title {
-          font-size: 48px;
-        }
-      }
-      .social-media-container {
-        flex-direction: row;
-        .social-media {
-          .social-media-text {
-            font-size: $font-size-h3;
-          }
-        }
-      }
-    }
-  }
+  //   .how-it-works {
+  
+  //     .how-it-works-title {
+  //       font-size: 48px;
+  //     }
+  
+  //     .workflow {
+  //       display: flex;
+  //       flex: 1;
+  //       flex-direction: column;
+  //       align-content: center;
+  
+  //       .steps {
+  //         flex-direction: row;
+  //         h4, p, img {
+
+  //         }
+  //         .steps-description {
+
+  //         }
+  //         img {
+
+  //         }
+  //       }
+  //       .accent-block {
+  
+  //         .steps-title, .steps-description {
+
+  //         }
+  //         .steps-title {
+
+  //         }
+  //       }
+  //     }
+    
+  //       .arrow {
+  //         display: none;
+  //       }
+  //     }
+  // }
