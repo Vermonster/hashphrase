@@ -30,7 +30,7 @@ const ScrollViewContainer = (props) => {
   } else if (platform === 'android') {
     scrollContainer = (
       <KeyboardAvoidingView
-        keyboardVerticalOffset={100}
+        keyboardVerticalOffset={80}
         style={styles.flexLayout}
         behavior="padding"
       >
