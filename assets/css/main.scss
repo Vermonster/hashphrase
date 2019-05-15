@@ -337,7 +337,6 @@ body {
     }
   }
 
-
   .how-we-made-it {
     background-color: $background-grey;
   
@@ -379,87 +378,3 @@ body {
   }
 }
 
-
-/* MIDSIZE TABLETS */
-  // @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  //   .header {
-  //     .header-left {
-        
-  //       .app-logo {
-  //         align-self: flex-start;
-  //       }
-
-  //       .advertisement {
-  //         align-self: flex-start;
-  //       }
-
-  //       .slogan {
-  //         font-size: 24px;
-  //       }
-  //     }
-
-  //     .header-right {
-  //       .lady {
-  //         width: 350px;
-  //       }
-  //     }
-  //   }
-
-  //   .how-we-made-it {
-  //     .logo-pattern-container {
-  //       height: 184px;
-  //       background-size: cover;
-  //       .learn-how-title {
-  //         font-size: 48px;
-  //       }
-  //     }
-  //     .social-media-container {
-  //       flex-direction: row;
-  //       .social-media {
-  //         .social-media-text {
-  //           font-size: $font-size-h3;
-  //         }
-  //       }
-  //     }
-  //   }
-
-  //   .how-it-works {
-  
-  //     .how-it-works-title {
-  //       font-size: 48px;
-  //     }
-  
-  //     .workflow {
-  //       display: flex;
-  //       flex: 1;
-  //       flex-direction: column;
-  //       align-content: center;
-  
-  //       .steps {
-  //         flex-direction: row;
-  //         h4, p, img {
-
-  //         }
-  //         .steps-description {
-
-  //         }
-  //         img {
-
-  //         }
-  //       }
-  //       .accent-block {
-  
-  //         .steps-title, .steps-description {
-
-  //         }
-  //         .steps-title {
-
-  //         }
-  //       }
-  //     }
-    
-  //       .arrow {
-  //         display: none;
-  //       }
-  //     }
-  // }
