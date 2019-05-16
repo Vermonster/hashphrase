@@ -256,6 +256,7 @@ body {
 
   .header {
     height: auto;
+    padding-bottom: 50px;
 
     .header-left {
       justify-content: center;
@@ -264,7 +265,7 @@ body {
       
       .app-logo {
         height: auto;
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
       }
       .advertisement {
@@ -283,6 +284,7 @@ body {
 
         .app-store-badges {
           justify-content: center;
+          margin-bottom: 20px;
         }
 
         .app-owner {
@@ -291,7 +293,7 @@ body {
 
           .built-by {
             font-size: 14px;
-            margin-left: 25%;
+            margin: 0 auto 1% 25%;
           }
 
           .vermonster-logo {
