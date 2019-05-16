@@ -46,14 +46,15 @@ body {
     flex-direction: column;
 
     .app-logo {
-      width: 400px;
+      max-width: 500px;
+      width: 500px;
       height: auto;
       align-self: flex-end;
     }
 
     .advertisement {
       align-self: flex-end;
-      width: 400px;
+      width: 380px;
       height: auto;
     }
 
@@ -61,6 +62,7 @@ body {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+      margin-bottom: 30px;
 
       a {
         width: 40%;
@@ -80,13 +82,14 @@ body {
       color: $white;
       font-weight: normal;
       font-size: $font-size-h2;
+      margin-top: 0;
     }
-  
+
     .built-by {
       color: $white;
       font-size: $font-size-h4;
       font-weight: normal;
-      margin-bottom: 10px;
+      margin: 0 auto 8px auto;
     } 
 
     .vermonster-logo {
@@ -266,6 +269,7 @@ body {
       .app-logo {
         height: auto;
         width: 100%;
+        max-width: 400px;
         margin: 0 auto;
       }
       .advertisement {
@@ -410,8 +414,10 @@ body {
 
     .header-left {
       margin-left: 10%;
+
       .app-logo {
         align-self: flex-start;
+        width: 400px;
       }
 
       .advertisement {
