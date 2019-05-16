@@ -196,24 +196,26 @@ body {
 
   .social-media-container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    padding-top: 35px;
+    padding-top: 60px;
 
     .social-media {
       width: 325px;
       display: flex;
-      flex-direction: row-reverse;
+      flex-direction: column;
+      width: 200px;
       align-items: center;
       justify-content: center;
       justify-items: center;
       margin-bottom: 20px;
+      margin-left: 75px;
+      margin-right: 75px;
 
       .social-logo {
-        width: 100px;
-        height: 100px;
-        margin-left: 30px;
+        width: 50px;
+        height: 50px;
       }
 
       .social-media-text {
@@ -458,6 +460,62 @@ body {
 
   .footer {
     height: 90px;
+  }
+
+  .how-we-made-it {
+    background-color: $background-grey;
+  
+    .logo-pattern-container {
+      background-image: url("../marketing-images/pattern_graphic.svg");
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 184px;
+  
+      .learn-how-title {
+        color: $white;
+        font-family: $font-header;
+        font-size: 48px;
+      }
+    }
+  
+    .social-media-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding-top: 35px;
+  
+      .social-media {
+        width: 325px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        margin-bottom: 20px;
+  
+        .social-logo {
+          width: 100px;
+          height: 100px;
+          margin-left: 30px;
+        }
+  
+        .social-media-text {
+          text-align: center;
+          font-size: $font-size-h3;
+          color: $text-black;
+          margin-bottom: 45px;
+  
+          a {
+            text-decoration: underline;
+            color: $primary-orange;
+            cursor: pointer;
+          }
+        }
+      }
+    }
   }
 }
 
