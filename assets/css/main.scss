@@ -216,9 +216,11 @@ body {
         margin-bottom: 40px;
 
         a {
-          text-decoration: underline;
+          text-decoration: none;
           color: $primary-orange;
           cursor: pointer;
+          display: inline-block;
+          border-bottom: 3px solid $primary-orange;
         }
       }
     }
@@ -234,7 +236,8 @@ body {
 
   a {
     font-size: $font-size-link;
-    text-decoration: underline;
+    text-decoration: none;
+    border-bottom: 1px solid white;
     cursor: pointer;
     color: $white;
     text-transform: uppercase;
@@ -272,7 +275,7 @@ body {
         height: auto;
         width: 100%;
         max-width: 400px;
-        margin: 0 auto;
+        margin: 0 auto 20px auto;
       }
       .advertisement {
         margin: 0;
@@ -398,6 +401,10 @@ body {
   .footer {
     height: 90px;
     flex-direction: column;
+    
+    a {
+      text-decoration: none;
+    }
 
     .contact-us {
       margin: 20px auto 10px;
@@ -415,15 +422,12 @@ body {
     height: auto;
 
     .header-left {
-      margin-left: 10%;
-
       .app-logo {
-        align-self: flex-start;
-        width: 400px;
+        width: 350px;
       }
 
       .advertisement {
-        align-self: flex-start;
+        width: 300px;
       }
 
       .slogan {
@@ -441,8 +445,7 @@ body {
 
     .header-right {
       .lady {
-        width: 350px;
-        margin-right: 10%;
+        width: 300px;
       }
     }
   }
