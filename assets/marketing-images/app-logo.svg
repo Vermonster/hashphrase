@@ -9,7 +9,7 @@
           visibility: hidden;
         }
 
-        @media (max-width: 319px) {
+        @media (max-width: 345px) {
           #wide {
             visibility: hidden;
           }
