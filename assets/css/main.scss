@@ -38,7 +38,6 @@ body {
   padding: 8%;
 
   .header-left {
-    border: 1px solid blue;
     flex: 0.5;
     display: flex;
     margin-right: 1%;
@@ -47,14 +46,12 @@ body {
     flex-direction: column;
 
     .app-logo {
-      border: 1px solid green;
       width: 400px;
       height: auto;
       align-self: flex-end;
     }
 
     .advertisement {
-      border: 1px solid green;
       align-self: flex-end;
       width: 400px;
       height: auto;
@@ -259,6 +256,7 @@ body {
 
   .header {
     height: auto;
+    padding-bottom: 50px;
 
     .header-left {
       justify-content: center;
@@ -286,6 +284,7 @@ body {
 
         .app-store-badges {
           justify-content: center;
+          margin-bottom: 20px;
         }
 
         .app-owner {
@@ -294,7 +293,7 @@ body {
 
           .built-by {
             font-size: 14px;
-            margin-left: 25%;
+            margin: 0 auto 1% 25%;
           }
 
           .vermonster-logo {
