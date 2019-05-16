@@ -38,6 +38,7 @@ body {
   padding: 8%;
 
   .header-left {
+    border: 1px solid blue;
     flex: 0.5;
     display: flex;
     margin-right: 1%;
@@ -46,12 +47,14 @@ body {
     flex-direction: column;
 
     .app-logo {
+      border: 1px solid green;
       width: 400px;
       height: auto;
       align-self: flex-end;
     }
 
     .advertisement {
+      border: 1px solid green;
       align-self: flex-end;
       width: 400px;
       height: auto;
@@ -264,7 +267,7 @@ body {
       
       .app-logo {
         height: auto;
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
       }
       .advertisement {
