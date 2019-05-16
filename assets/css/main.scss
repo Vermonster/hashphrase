@@ -167,8 +167,10 @@ body {
       background: #E07926;
       color: white;
       .steps-text {
-        .steps-title, .steps-description {
-          color: white;
+        .text-container {
+          .steps-title, .steps-description {
+            color: white;
+          }
         }
       }
     }
