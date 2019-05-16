@@ -118,8 +118,9 @@ body {
     font-family: $font-header;
     margin: 0;
     margin-bottom: 20px;
+    padding-top: 10px;
     text-align: center;    
-    font-size: $font-size-h1;
+    font-size: 48px;
     color: $primary-orange;
   }
 
@@ -195,23 +196,31 @@ body {
 
   .social-media-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
-    padding: 100px;
+    align-items: center;
+    padding-top: 35px;
 
     .social-media {
-      width: 280px;
+      width: 325px;
       display: flex;
-      flex-direction: column;
+      flex-direction: row-reverse;
       align-items: center;
-      margin-left: 15px;
-      margin-right: 15px;
+      justify-content: center;
+      justify-items: center;
+      margin-bottom: 20px;
+
+      .social-logo {
+        width: 100px;
+        height: 100px;
+        margin-left: 30px;
+      }
 
       .social-media-text {
         text-align: center;
-        font-size: $font-size-h2;
+        font-size: $font-size-h3;
         color: $text-black;
-        margin-bottom: 40px;
+        margin-bottom: 45px;
 
         a {
           text-decoration: underline;
@@ -322,7 +331,7 @@ body {
     padding-top: 10px;
 
     .how-it-works-title {
-      font-size: 50px;
+      font-size: $font-size-h3;
     }
 
     .workflow {
@@ -363,7 +372,7 @@ body {
       text-align: center;
   
       .learn-how-title {
-        font-size: 26px;
+        font-size: $font-size-h3;
       }
     }
   
@@ -373,21 +382,23 @@ body {
       align-items: center;
       padding: 0;
       margin-top: 32px;
-      padding-bottom: 24px;
   
       .social-media {
-        width: 200px; 
-
+        width: 200px;
+        flex-direction: row;
+        flex-wrap: wrap;
 
         .social-logo {
           width: 50px;
           height: 50px;
+          margin-left: 0;
         }
   
         .social-media-text {
           font-size: $font-size-h3;
           line-height: 1.3em;
           margin-top: 16px;
+          margin-bottom: 30px;
         }
       }
     }
