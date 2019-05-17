@@ -4,11 +4,12 @@ import {
 } from 'react-native';
 import { withNamespaces } from 'react-i18next';
 import {
-  Button, IconButton, Text, Switch,
+  Button, IconButton, Text,
 } from 'react-native-paper';
 import loplop from 'loplop';
 import ConfirmationDialog from './ConfirmationDialog';
 import FormInput from './FormInput';
+import ConfirmPasswordSwitch from './ConfirmPasswordSwitch';
 import { colors } from '../styles/base';
 
 const styles = StyleSheet.create({
@@ -19,15 +20,6 @@ const styles = StyleSheet.create({
   },
   innerContainer: {
     marginBottom: 30,
-  },
-  switchRow: {
-    flexDirection: 'row',
-    alignSelf: 'flex-end',
-    alignItems: 'center',
-    marginTop: 10,
-  },
-  switch: {
-    marginLeft: 10,
   },
   warning: {
     flexDirection: 'row',
@@ -79,6 +71,10 @@ class PasswordGenerator extends React.Component {
     confirmPassword: '',
     passwordVisibility: false,
   }, this.handleSubmitButtonState)
+
+  handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
+    isNewPassword: !isNewPassword,
+  }), this.handleSubmitButtonState);
 
   togglePasswordVisibility = () => {
     this.setState(prevState => ({ passwordVisibility: !prevState.passwordVisibility }));
@@ -178,36 +174,30 @@ class PasswordGenerator extends React.Component {
             visibility={passwordVisibility}
             blurOnSubmit={!isNewPassword}
           />
-          <View style={styles.switchRow}>
-            <Text>{t('confirmSwitch')}</Text>
-            <Switch
-              value={isNewPassword}
-              onValueChange={this.handleToggleSwitch}
-              color={colors.primary}
-              style={styles.switch}
-            />
-          </View>
+          <ConfirmPasswordSwitch
+            isNewPassword={isNewPassword}
+            handleToggleSwitch={this.handleToggleSwitch}
+          />
           { isNewPassword && (
-          <>
-            <FormInput
-              value={confirmPassword}
-              componentType="confirmPassword"
-              label={t('confirmPassword')}
-              error={inputError}
-              handleChange={this.handleChange}
-              inputRef={(input) => { this.confirmPasswordRef = input; }}
-              visibility={passwordVisibility}
-              blurOnSubmit
-            />
-            { inputError && (
-              <View style={styles.warning}>
-                <Text style={styles.warningMessage}>{t('warning')}</Text>
-                <IconButton icon="warning" color={colors.warning} style={styles.icon} />
-              </View>
-            ) }
-          </>
-          )
-      }
+            <>
+              <FormInput
+                value={confirmPassword}
+                componentType="confirmPassword"
+                label={t('confirmPassword')}
+                error={inputError}
+                handleChange={this.handleChange}
+                inputRef={(input) => { this.confirmPasswordRef = input; }}
+                visibility={passwordVisibility}
+                blurOnSubmit
+              />
+              { inputError && (
+                <View style={styles.warning}>
+                  <Text style={styles.warningMessage}>{t('warning')}</Text>
+                  <IconButton icon="warning" color={colors.warning} style={styles.icon} />
+                </View>
+              ) }
+            </>
+          ) }
         </View>
         <Button
           testID="submit-create-password"

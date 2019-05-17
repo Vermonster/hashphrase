@@ -1,18 +1,35 @@
 import React from 'react';
-import { View, TouchableOpacity } from 'react-native';
+import { View, TouchableOpacity, StyleSheet } from 'react-native';
 import { Text } from 'react-native-paper';
+import { withNamespaces } from 'react-i18next';
 
-const Footer = ({ navigation }) => (
-  <View style={{
-    flexDirection: 'row', alignItems: 'center', justifyContent: 'center', height: '8%',
-  }}
-  >
-    <View style={{ borderRightWidth: 1, marginRight: '2%' }}>
-      <Text style={{ marginRight: '2%' }}>Version 1.0.0</Text>
+const styles = StyleSheet.create({
+  footerRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '8%',
+  },
+  versionContainer: {
+    borderRightWidth: 1,
+    marginRight: '2%',
+  },
+  version: {
+    marginRight: '2%',
+  },
+  privacyPolicy: {
+    textDecorationLine: 'underline',
+  },
+});
+
+const Footer = ({ navigation, t }) => (
+  <View style={styles.footerRow}>
+    <View style={styles.versionContainer}>
+      <Text style={styles.version}>{t('version')}</Text>
     </View>
     <TouchableOpacity onPress={() => navigation.navigate('PolicyPage')}>
-      <Text style={{ textDecorationLine: 'underline' }}>Privacy Policy</Text>
+      <Text style={styles.privacyPolicy}>{t('privacyPolicy')}</Text>
     </TouchableOpacity>
   </View>
 );
-export default Footer;
+export default withNamespaces('footer')(Footer);
