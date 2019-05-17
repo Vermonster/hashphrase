@@ -5,7 +5,7 @@ import { Text } from 'react-native-paper';
 const styles = StyleSheet.create({
   footerRow: {
     flexDirection: 'row',
-    alignItems: 'center', 
+    alignItems: 'center',
     justifyContent: 'center',
     height: '8%',
   },
