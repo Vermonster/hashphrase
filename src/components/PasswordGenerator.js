@@ -170,7 +170,7 @@ class PasswordGenerator extends React.Component {
             visibility={passwordVisibility}
             blurOnSubmit={!isNewPassword}
           />
-          <ConfirmPasswordSwitch 
+          <ConfirmPasswordSwitch
             isNewPassword={isNewPassword}
           />
           { isNewPassword && (
