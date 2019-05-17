@@ -1,5 +1,5 @@
 {
-  "name": "oplop-native",
+  "name": "hashphrase",
   "version": "0.1.0",
   "main": "./node_modules/expo/AppEntry.js",
   "private": true,
@@ -39,9 +39,7 @@
     "ios": "react-native-scripts ios",
     "test:js": "jest --coverage",
     "lint:js": "eslint .",
-    "test": "yarn test:js && yarn lint:js",
-    "devtools-expo": "react-native-scripts start react-devtools",
-    "devtools": "react-devtools"
+    "test": "yarn test:js && yarn lint:js"
   },
   "jest": {
     "globals": {

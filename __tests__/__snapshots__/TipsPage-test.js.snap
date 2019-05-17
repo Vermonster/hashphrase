@@ -559,6 +559,6 @@ exports[`<TipsPage /> should match the snapshot 1`] = `
       </ForwardRef(View)>
     </ForwardRef(View)>
   </ScrollViewMock>
-  <Footer />
+  <LoadNamespace(Footer) />
 </withOrientation>
 `;

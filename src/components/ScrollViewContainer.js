@@ -13,8 +13,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const ScrollViewContainer = (props) => {
-  const { children } = props;
+const ScrollViewContainer = ({ children }) => {
   const platform = Platform.OS;
   let scrollContainer;
 

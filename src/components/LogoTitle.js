@@ -2,7 +2,7 @@ import React from 'react';
 import {
   View, StyleSheet,
 } from 'react-native';
-import Logo from '../styles/icons';
+import Logo from '../styles/logo';
 
 const styles = StyleSheet.create({
   container: {
