@@ -179,26 +179,25 @@ class PasswordGenerator extends React.Component {
             handleToggleSwitch={this.handleToggleSwitch}
           />
           { isNewPassword && (
-          <>
-            <FormInput
-              value={confirmPassword}
-              componentType="confirmPassword"
-              label={t('confirmPassword')}
-              error={inputError}
-              handleChange={this.handleChange}
-              inputRef={(input) => { this.confirmPasswordRef = input; }}
-              visibility={passwordVisibility}
-              blurOnSubmit
-            />
-            { inputError && (
-              <View style={styles.warning}>
-                <Text style={styles.warningMessage}>{t('warning')}</Text>
-                <IconButton icon="warning" color={colors.warning} style={styles.icon} />
-              </View>
-            ) }
-          </>
-          )
-      }
+            <>
+              <FormInput
+                value={confirmPassword}
+                componentType="confirmPassword"
+                label={t('confirmPassword')}
+                error={inputError}
+                handleChange={this.handleChange}
+                inputRef={(input) => { this.confirmPasswordRef = input; }}
+                visibility={passwordVisibility}
+                blurOnSubmit
+              />
+              { inputError && (
+                <View style={styles.warning}>
+                  <Text style={styles.warningMessage}>{t('warning')}</Text>
+                  <IconButton icon="warning" color={colors.warning} style={styles.icon} />
+                </View>
+              ) }
+            </>
+          ) }
         </View>
         <Button
           testID="submit-create-password"
