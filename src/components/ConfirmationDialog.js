@@ -146,6 +146,7 @@ class ConfirmationDialog extends React.Component {
                   secureTextEntry={obscured}
                   editable={false}
                   style={styles.password}
+                  accessibilityLabel="Generated password"
                 >
                   { generatedPassword }
                 </TextInput>

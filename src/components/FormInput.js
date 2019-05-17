@@ -42,6 +42,7 @@ const FormInput = (props) => {
     handleInputVisibility,
     visibility,
     blurOnSubmit,
+    accessibilityLabel,
   } = props;
   const visibilityIcon = visibility ? 'visibility' : 'visibility-off';
   const buttonType = (componentType !== 'confirmPassword')
@@ -49,7 +50,7 @@ const FormInput = (props) => {
       <IconButton
         icon={visibilityIcon}
         onPress={handleInputVisibility}
-        accessibilityLabel="hide or show password"
+        accessibilityLabel={`Hide or show ${componentType}`}
         style={styles.visibilityButton}
         color={colors.secondary}
         testID="hideShowButton"
@@ -85,6 +86,7 @@ const FormInput = (props) => {
           ref={inputRef}
           disableFullscreenUI
           blurOnSubmit={blurOnSubmit}
+          accessibilityLabel={accessibilityLabel}
         />
         { buttonType }
       </View>

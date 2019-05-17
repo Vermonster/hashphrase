@@ -161,6 +161,7 @@ class PasswordGenerator extends React.Component {
             handleInputVisibility={this.toggleLabelVisibility}
             visibility={labelVisibility}
             blurOnSubmit={false}
+            accessibilityLabel="Enter account nickname"
           />
           <FormInput
             value={password}
@@ -173,6 +174,7 @@ class PasswordGenerator extends React.Component {
             handleInputVisibility={this.togglePasswordVisibility}
             visibility={passwordVisibility}
             blurOnSubmit={!isNewPassword}
+            accessibilityLabel="Enter master password"
           />
           <ConfirmPasswordSwitch
             isNewPassword={isNewPassword}
@@ -189,6 +191,7 @@ class PasswordGenerator extends React.Component {
                 inputRef={(input) => { this.confirmPasswordRef = input; }}
                 visibility={passwordVisibility}
                 blurOnSubmit
+                accessibilityLabel="Confirm master password"
               />
               { inputError && (
                 <View style={styles.warning}>
