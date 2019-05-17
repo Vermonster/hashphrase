@@ -16,11 +16,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
-  isNewPassword: !isNewPassword,
-}), this.handleSubmitButtonState);
-
-const ConfirmPasswordSwitch = ({ isNewPassword, t }) => (
+const ConfirmPasswordSwitch = ({ isNewPassword, t, handleToggleSwitch }) => (
   <View style={styles.switchRow}>
     <Text>{t('confirmSwitch')}</Text>
     <Switch

@@ -72,6 +72,10 @@ class PasswordGenerator extends React.Component {
     passwordVisibility: false,
   }, this.handleSubmitButtonState)
 
+  handleToggleSwitch = () => this.setState(({ isNewPassword }) => ({
+    isNewPassword: !isNewPassword,
+  }), this.handleSubmitButtonState);
+
   togglePasswordVisibility = () => {
     this.setState(prevState => ({ passwordVisibility: !prevState.passwordVisibility }));
   }
@@ -172,6 +176,7 @@ class PasswordGenerator extends React.Component {
           />
           <ConfirmPasswordSwitch
             isNewPassword={isNewPassword}
+            handleToggleSwitch={this.handleToggleSwitch}
           />
           { isNewPassword && (
           <>
