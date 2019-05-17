@@ -1,17 +1,33 @@
 import React from 'react';
-import { View, TouchableOpacity } from 'react-native';
+import { View, TouchableOpacity, StyleSheet } from 'react-native';
 import { Text } from 'react-native-paper';
 
+const styles = StyleSheet.create({
+  footerRow: {
+    flexDirection: 'row',
+    alignItems: 'center', 
+    justifyContent: 'center',
+    height: '8%',
+  },
+  versionContainer: {
+    borderRightWidth: 1,
+    marginRight: '2%',
+  },
+  version: {
+    marginRight: '2%',
+  },
+  privacyPolicy: {
+    textDecorationLine: 'underline',
+  },
+});
+
 const Footer = ({ navigation }) => (
-  <View style={{
-    flexDirection: 'row', alignItems: 'center', justifyContent: 'center', height: '8%',
-  }}
-  >
-    <View style={{ borderRightWidth: 1, marginRight: '2%' }}>
-      <Text style={{ marginRight: '2%' }}>Version 1.0.0</Text>
+  <View style={styles.footerRow}>
+    <View style={styles.versionContainer}>
+      <Text style={styles.version}>Version 1.0.0</Text>
     </View>
     <TouchableOpacity onPress={() => navigation.navigate('PolicyPage')}>
-      <Text style={{ textDecorationLine: 'underline' }}>Privacy Policy</Text>
+      <Text style={styles.privacyPolicy}>Privacy Policy</Text>
     </TouchableOpacity>
   </View>
 );
