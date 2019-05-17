@@ -3,7 +3,7 @@ import { Font } from 'expo';
 import { I18nextProvider } from 'react-i18next';
 import { Provider as PaperProvider } from 'react-native-paper';
 import Navigator from './src/navigation/Navigator';
-import i18n from './src/navigation/i18n/i18n';
+import i18n from './src/i18n/i18n';
 import THEME from './src/styles/theme';
 
 class App extends React.Component {
