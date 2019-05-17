@@ -18,6 +18,10 @@ const zh = {
     warning: '密码不匹配',
     confirmSwitch: '确认主密码',
   },
+  footer: {
+    version: 'Version 1.0.0',
+    privacyPolicy: '安全与隐私',
+  },
   tipsPage: {
     FAQs: 'FAQs',
     questions: {
