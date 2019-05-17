@@ -18,6 +18,10 @@ const en = {
     warning: 'Password does not match',
     confirmSwitch: 'Confirm Password',
   },
+  footer: {
+    version: 'Version 1.0.0',
+    privacyPolicy: 'Privacy Policy',
+  },
   tipsPage: {
     FAQs: 'FAQs',
     questions: {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, TouchableOpacity, StyleSheet } from 'react-native';
 import { Text } from 'react-native-paper';
+import { withNamespaces } from 'react-i18next';
 
 const styles = StyleSheet.create({
   footerRow: {
@@ -21,14 +22,14 @@ const styles = StyleSheet.create({
   },
 });
 
-const Footer = ({ navigation }) => (
+const Footer = ({ navigation, t }) => (
   <View style={styles.footerRow}>
     <View style={styles.versionContainer}>
-      <Text style={styles.version}>Version 1.0.0</Text>
+      <Text style={styles.version}>{t('version')}</Text>
     </View>
     <TouchableOpacity onPress={() => navigation.navigate('PolicyPage')}>
-      <Text style={styles.privacyPolicy}>Privacy Policy</Text>
+      <Text style={styles.privacyPolicy}>{t('privacyPolicy')}</Text>
     </TouchableOpacity>
   </View>
 );
-export default Footer;
+export default withNamespaces('footer')(Footer);
