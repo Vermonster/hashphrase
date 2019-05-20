@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
+import { withNamespaces } from 'react-i18next';
 import {
   IconButton,
   Text,
@@ -43,6 +44,7 @@ const FormInput = (props) => {
     visibility,
     blurOnSubmit,
     accessibilityLabel,
+    t,
   } = props;
   const visibilityIcon = visibility ? 'visibility' : 'visibility-off';
   const buttonType = (componentType !== 'confirmPassword')
@@ -50,7 +52,7 @@ const FormInput = (props) => {
       <IconButton
         icon={visibilityIcon}
         onPress={handleInputVisibility}
-        accessibilityLabel={`Hide or show ${componentType}`}
+        accessibilityLabel={`Hide or show ${t(componentType)}`}
         style={styles.visibilityButton}
         color={colors.secondary}
         testID="hideShowButton"
@@ -94,4 +96,4 @@ const FormInput = (props) => {
   );
 };
 
-export default FormInput;
+export default withNamespaces('formInput')(FormInput);

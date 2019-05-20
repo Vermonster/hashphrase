@@ -146,7 +146,7 @@ class ConfirmationDialog extends React.Component {
                   secureTextEntry={obscured}
                   editable={false}
                   style={styles.password}
-                  accessibilityLabel="Generated password"
+                  accessibilityLabel={t('passwordAccessibilityLabel')}
                 >
                   { generatedPassword }
                 </TextInput>
@@ -161,7 +161,7 @@ class ConfirmationDialog extends React.Component {
                 <Button
                   testID="start-over-button"
                   onPress={this.handleSubmit}
-                  accessibilityLabel="Press to start over"
+                  accessibilityLabel={t('buttonAccessibilityLabel')}
                   mode="text"
                   contentStyle={{ width: 'auto' }}
                   theme={{ colors: { text: colors.secondary }, fonts: { regular: 'lato-bold' } }}
