@@ -106,7 +106,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
           }
         >
           <TextInput
-            accessibilityLabel="Generated password"
+            accessibilityLabel="passwordAccessibilityLabel"
             allowFontScaling={true}
             editable={false}
             secureTextEntry={true}
@@ -139,7 +139,7 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
           }
         >
           <withTheme(Button)
-            accessibilityLabel="Press to start over"
+            accessibilityLabel="buttonAccessibilityLabel"
             contentStyle={
               Object {
                 "width": "auto",

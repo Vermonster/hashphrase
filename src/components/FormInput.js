@@ -52,7 +52,7 @@ const FormInput = (props) => {
       <IconButton
         icon={visibilityIcon}
         onPress={handleInputVisibility}
-        accessibilityLabel={`Hide or show ${t(componentType)}`}
+        accessibilityLabel={t(componentType)}
         style={styles.visibilityButton}
         color={colors.secondary}
         testID="hideShowButton"
@@ -97,3 +97,4 @@ const FormInput = (props) => {
 };
 
 export default withNamespaces('formInput')(FormInput);
+export { FormInput as TestFormInput };

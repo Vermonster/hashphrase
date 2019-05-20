@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import FormInput from '../src/components/FormInput';
+import { TestFormInput as FormInput } from '../src/components/FormInput';
 
 describe('<FormInput />', () => {
   const mockFn = jest.fn();
@@ -11,6 +11,7 @@ describe('<FormInput />', () => {
         prompt="Test Prompt"
         handleChange={mockFn}
         componentType="password"
+        t={key => key}
       />,
     );
     expect(wrapper).toMatchSnapshot();
@@ -22,6 +23,7 @@ describe('<FormInput />', () => {
         prompt="Test Prompt"
         handleChange={mockFn}
         componentType="password"
+        t={key => key}
       />,
     );
     expect(wrapper.findWhere(node => node.prop('testID') === 'hideShowButton')).toHaveLength(1);

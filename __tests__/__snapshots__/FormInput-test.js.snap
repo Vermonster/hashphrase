@@ -43,7 +43,7 @@ exports[`<FormInput /> should render the same snapshot 1`] = `
       }
     />
     <withTheme(IconButton)
-      accessibilityLabel="Hide or show password"
+      accessibilityLabel="password"
       color="#212A59"
       icon="visibility-off"
       style={
