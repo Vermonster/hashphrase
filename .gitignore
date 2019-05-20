@@ -19,5 +19,9 @@ yarn-error.log*
 #testing
 /coverage/
 
+#gh-pages
+/_site/
+
 #OS generated files
 .DS_Store
+
