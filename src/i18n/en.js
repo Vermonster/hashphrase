@@ -6,7 +6,9 @@ const en = {
   confirmationDialog: {
     completedStatus: 'All done!',
     completedClipboard: 'The password is on your clipboard.',
+    passwordAccessibilityLabel: 'Generated password',
     button: 'START OVER',
+    buttonAccessibilityLabel: 'Press to start over',
   },
   passwordGenerator: {
     nickname: 'Nickname',
@@ -14,9 +16,16 @@ const en = {
     confirmPassword: 'Confirm Master Password',
     nicknameLabel: 'What is the account\'s Nickname?',
     masterPassword: 'What is your Master Password?',
-    submitMessage: 'GET PASSWORD',
+    getPassword: 'GET PASSWORD',
     warning: 'Password does not match',
     confirmSwitch: 'Confirm Password',
+    nicknameAccessibilityLabel: 'Enter account nickname',
+    passwordAccessibilityLabel: 'Enter master password',
+    masterpassAccessibilityLabel: 'Retype master password',
+  },
+  formInput: {
+    password: 'Hide or show master password',
+    label: 'Hide or show account nickname',
   },
   footer: {
     version: 'Version 1.0.0',
