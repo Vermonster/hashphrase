@@ -33,6 +33,9 @@ publish: &publish
 
 jobs:
   build_and_test:
+    branches:
+      ignore:
+        - gh-pages
     docker:
       - image: circleci/node:10.13.0
     steps:
