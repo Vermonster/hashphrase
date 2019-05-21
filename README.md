@@ -3,6 +3,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+Hashphrase is a password generator. It works by taking two inputs from you -- a master password and an account nickname -- and creates a unique password using a hashing algorithm.
+
 ## Get started
 
 #### `yarn install`
