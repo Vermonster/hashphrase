@@ -81,7 +81,7 @@ const zh = {
   policyPage: {
     title: '安全与隐私',
     update: '上次更新: April 19, 2019',
-    creator: 'Vermonster LLC(以下简称"我们")是Hashphrase的开发者（以下简称"本软件"）, "你们"将指代所有的用户。', 
+    creator: 'Vermonster LLC(以下简称"我们")是Hashphrase的开发者（以下简称"本软件"）, "你们"将指代所有的用户。',
     privacy_policy: [
       {
         id: 1,
