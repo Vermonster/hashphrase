@@ -1,8 +1,18 @@
-## Available Scripts
+# hashphrase
+[![CircleCI](https://circleci.com/gh/Vermonster/hashphrase/tree/master.svg?style=svg)](https://circleci.com/gh/Vermonster/hashphrase/tree/master)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Get started
+
+#### `yarn install`
+Install all necessary dependencies.
 
 #### `yarn start`
 
 Runs your app in development mode.
+
+## Test
 
 #### `yarn test:js`
 
@@ -16,15 +26,7 @@ Runs esLint.
 
 Runs jest test and esLint all together.
 
-#### `yarn run ios`
-
-Like `yarn start`, but also attempts to open your app in the iOS Simulator if you're on a Mac and have it installed.
-
-#### `yarn run android`
-
-Like `yarn start`, but also attempts to open your app on a connected Android device or emulator. Requires an installation of Android build tools (see [React Native docs](https://facebook.github.io/react-native/docs/getting-started.html) for detailed setup). We also recommend installing Genymotion as your Android emulator. Once you've finished setting up the native build environment, there are two options for making the right copy of `adb` available to Create React Native App:
-
-## Start Local Development
+## Testing on Local Development
 
 ### Testing on real devices
 
@@ -54,4 +56,10 @@ What if you have iPhone, but you want to view the project on an Android device?
 
 You would need to use an Android emulator on your computer. Follow the installation steps on the [Expo website](https://docs.expo.io/versions/latest/workflow/android-studio-emulator/), then type the parameterized URL in the Expo app's search bar to view a feature branch.
 
-Luckily, Appetize.io has also provided a platform for users to view the mobile app in an Android emulator in the browser, go to [Vermonster's expo page](https://expo.io/@vermonster/Agilikey), and click "Open project in the browser" button on the right side of the page, this will open the app in an Android emulator in your browser without authentication.
+Luckily, Appetize.io has also provided a platform for users to view the mobile app in an Android emulator in the browser, go to [Vermonster's expo page](https://expo.io/@vermonster/hashphrase), and click "Open project in the browser" button on the right side of the page, this will open the app in an Android emulator in your browser without authentication.
+
+## License
+
+MIT
+
+Copyright (c) 2019 Vermonster LLC
