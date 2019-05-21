@@ -28,19 +28,19 @@ Runs esLint.
 
 Runs jest test and esLint all together.
 
-## Testing on Local Development
+## Test on Local Development
 
-### Testing on real devices
+### Test on real devices
 
 After the expo dev server boots up with `yarn start`, you can start the local development. Download the Expo Client app from the Apple Store or Google Play Store, it can be used to view your project while developing. You can view your project within the Expo Client app in two ways: scanning the QR code or typing the URL to the Expo app's search bar. With IOS, you would need to open your camera app, then scan the QR code until a notification badge pops up.
 
-### Testing on simulators/emulators 
+### Test on simulators/emulators 
 
 Expo Client app can also be used on IOS simulators and Android emulators. To view your app, run `yarn run ios` or `yarn run android`, you app will be opened automatically within the Expo Client app on the simulator. For Android emulator, make sure you launch your emulator before running the command.
 
-## Sharing and Deployment
+## Share and Deploy
 
-### Viewing an Expo app from your device (without running a server locally)
+### View an Expo app from your device (without running a server locally)
 
 Publishing your app to Expo will make it available at a persistent URL, you can open it on your own device (ios or Android phone). Note that due to the Apple Review Guidelines, you cannot preview projects published by other Expo accounts besides your own. This app is published under Vermonster's Expo account. On Android devices though, you can view other's Expo projects.
 
