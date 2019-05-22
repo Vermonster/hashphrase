@@ -50,7 +50,7 @@ const es = {
       question_2: {
         title: '¿Cómo crear un apodo?',
         content: {
-          paragraph_1: 'Recomendamos que los usarios de Hashphrase crear una regla sencilla que determina el apodo por cada cuenta. Por ejemplo, la regla puede ser "la nombre del sitio web/aplicación a minúscula" (e.g., "gmail", "facebook"). Por otro lado, puede ser "la nombre del dominio asociado con la cuenta" (e.g. "gmail.com", "facebook.com").',
+          paragraph_1: 'Recomendamos que los usarios de Hashphrase creen una regla sencilla que determina el apodo por cada cuenta. Por ejemplo, la regla puede ser "la nombre del sitio web/aplicación a minúscula" (e.g., "gmail", "facebook"). Por otro lado, puede ser "la nombre del dominio asociado con la cuenta" (e.g. "gmail.com", "facebook.com").',
           paragraph_2: 'Lo importante es que recuerdas la regla y que puedes usarla con cada cuenta. Y, por supuesto, la regla debe producir valores diferentes por cuentas diferentes.',
         },
       },
