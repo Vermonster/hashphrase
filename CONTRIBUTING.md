@@ -1,16 +1,16 @@
 # How Can I Contribute?
 
-FHIRKit Client is an open source Node.js FHIR client library that welcomes community contributions with enthusiasm. If you are new to open source, here are two great resources to help get you started: [Understanding the GitHub Flow](https://guides.github.com/introduction/flow/) and [How to Contribute to Open Source](https://opensource.guide/how-to-contribute/).
+Hashphrase an open source react native project that welcomes community contributions with enthusiasm. If you are new to open source, here are two great resources to help get you started: [Understanding the GitHub Flow](https://guides.github.com/introduction/flow/) and [How to Contribute to Open Source](https://opensource.guide/how-to-contribute/).
 
 ## Code of Conduct
 
 All are welcome to contribute. By participating in this project, you agree to
 follow the Contributor Convent [code of
-conduct](https://github.com/Vermonster/fhir-kit-client/blob/master/CODE_OF_CONDUCT.md).
+conduct](https://github.com/Vermonster/hashphrase/blob/master/CODE_OF_CONDUCT.md).
 
 ## Submit a Bug Report
 
-Before submitting a report, first try [debugging](#debugging), reading through the [documentation](https://vermonster.github.io/fhir-kit-client/fhir-client/0.1.0/), and reviewing [existing issues](https://github.com/Vermonster/fhir-kit-client/issues) to make sure the bug isn't fixable or already reported.
+Before submitting a report, first review [existing issues](https://github.com/Vermonster/hashphrase/issues) to make sure the bug isn't fixed or already reported.
 
 Bugs are tracked as [GitHub issues](https://guides.github.com/features/issues/). Provide the following information by filling in the [issue template](https://github.com/Vermonster/fhir-kit-client/blob/master/issue_template.md):
 
