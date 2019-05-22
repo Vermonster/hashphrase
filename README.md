@@ -1,5 +1,5 @@
 # hashphrase
-[![CircleCI](https://circleci.com/gh/Vermonster/hashphrase/tree/master.svg?style=svg)](https://circleci.com/gh/Vermonster/hashphrase/tree/master)
+[![CircleCI](https://circleci.com/gh/Vermonster/hashphrase.svg?style=svg&circle-token=4c770eeb9aa25b8963d55816fb815d270eb8364f)](https://circleci.com/gh/Vermonster/hashphrase)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Features
