@@ -5,7 +5,7 @@ Hashphrase is an open source react native project that welcomes community contri
 ## Code of Conduct
 
 All are welcome to contribute. By participating in this project, you agree to
-follow the Contributor Convent [code of
+follow the Contributor Covenant [code of
 conduct](https://github.com/Vermonster/hashphrase/blob/master/CODE_OF_CONDUCT.md).
 
 ## Submit a Bug Report
