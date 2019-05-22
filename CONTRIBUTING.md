@@ -14,7 +14,7 @@ Before submitting a report, first review [existing issues](https://github.com/Ve
 
 Bugs are tracked as [GitHub issues](https://guides.github.com/features/issues/). Please follow issue templates to fill in the information:
 
-  - Use a clear and descriptive title for the issue to identify the problem.
+  - Use a clear and descriptive title and description for the issue to identify the problem.
   - Describe the exact steps which reproduce the problem with as many details as possible.
   - Provide specific examples to demonstrate the steps. Include links to files or GitHub projects, or copy/pasteable snippets, which you use in those examples. If you're providing snippets in the issue, use Markdown code blocks.
   - Describe the behavior you observed after following the steps and point out what exactly is the problem with that behavior.
