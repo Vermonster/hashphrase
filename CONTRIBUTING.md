@@ -12,7 +12,7 @@ conduct](https://github.com/Vermonster/hashphrase/blob/master/CODE_OF_CONDUCT.md
 
 Before submitting a report, first review [existing issues](https://github.com/Vermonster/hashphrase/issues) to make sure the bug isn't fixed or already reported.
 
-Bugs are tracked as [GitHub issues](https://guides.github.com/features/issues/). Provide the following information by filling in the [issue template](https://github.com/Vermonster/hashphrase/blob/master/issue_template.md):
+Bugs are tracked as [GitHub issues](https://guides.github.com/features/issues/). Please follow issue templates to fill in the information:
 
   - Use a clear and descriptive title for the issue to identify the problem.
   - Describe the exact steps which reproduce the problem with as many details as possible.
