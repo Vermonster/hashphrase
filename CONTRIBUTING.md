@@ -1,6 +1,6 @@
 # How Can I Contribute?
 
-Hashphrase an open source react native project that welcomes community contributions with enthusiasm. If you are new to open source, here are two great resources to help get you started: [Understanding the GitHub Flow](https://guides.github.com/introduction/flow/) and [How to Contribute to Open Source](https://opensource.guide/how-to-contribute/).
+Hashphrase is an open source react native project that welcomes community contributions with enthusiasm. If you are new to open source, here are two great resources to help get you started: [Understanding the GitHub Flow](https://guides.github.com/introduction/flow/) and [How to Contribute to Open Source](https://opensource.guide/how-to-contribute/).
 
 ## Code of Conduct
 
