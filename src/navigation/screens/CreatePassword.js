@@ -86,6 +86,7 @@ class CreateNewPassword extends Component {
   render() {
     const { t } = this.props;
     const {
+      isNewPassword,
       snackbarVisibility,
     } = this.state;
 
@@ -99,7 +100,7 @@ class CreateNewPassword extends Component {
                 isNewPassword={isNewPassword}
                 resetToggleSwitch={this.resetToggleSwitch}
               />
-              <TouchableOpacity onPress={this.clearClipboard} style={styles.clearClipboardButton}>
+              <TouchableOpacity testID="clipboard-clear" onPress={this.clearClipboard} style={styles.clearClipboardButton}>
                 <Text style={styles.clearClipboardText}>{t('clearClipboardButton')}</Text>
               </TouchableOpacity>
             </View>
