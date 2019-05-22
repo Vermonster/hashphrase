@@ -100,7 +100,7 @@ class CreateNewPassword extends Component {
                 isNewPassword={isNewPassword}
                 resetToggleSwitch={this.resetToggleSwitch}
               />
-              <TouchableOpacity onPress={this.clearClipboard} style={styles.clearClipboardButton}>
+              <TouchableOpacity testID="clipboard-clear" onPress={this.clearClipboard} style={styles.clearClipboardButton}>
                 <Text style={styles.clearClipboardText}>{t('clearClipboardButton')}</Text>
               </TouchableOpacity>
             </View>
