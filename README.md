@@ -1,6 +1,5 @@
 # hashphrase
 [![CircleCI](https://circleci.com/gh/Vermonster/hashphrase/tree/master.svg?style=svg)](https://circleci.com/gh/Vermonster/hashphrase/tree/master)
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Hashphrase is a password generator. It works by taking two inputs from you -- a master password and an account nickname -- and creates a unique password using a hashing algorithm.
@@ -59,6 +58,12 @@ What if you have iPhone, but you want to view the project on an Android device?
 You would need to use an Android emulator on your computer. Follow the installation steps on the [Expo website](https://docs.expo.io/versions/latest/workflow/android-studio-emulator/), then type the parameterized URL in the Expo app's search bar to view a feature branch.
 
 Luckily, Appetize.io has also provided a platform for users to view the mobile app in an Android emulator in the browser, go to [Vermonster's expo page](https://expo.io/@vermonster/hashphrase), and click "Open project in the browser" button on the right side of the page, this will open the app in an Android emulator in your browser without authentication.
+
+## Contributing
+
+Hashphrase is a open source react-native with Expo project that welcomes community contributions with enthusiasm.
+
+All are welcome to participate. By participating in this project, you agree to follow the [Code of Conduct]().
 
 ## License
 
