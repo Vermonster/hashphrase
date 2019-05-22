@@ -15,7 +15,7 @@ Please refer to the instructions on the [setup page](https://github.com/Vermonst
 
 ## Contributing
 
-Hashphrase is a open source react-native project built with Expo that welcomes community contributions with enthusiasm.
+Hashphrase is a open source React Native project built with Expo that welcomes community contributions with enthusiasm.
 
 All are welcome to participate. By participating in this project, you agree to follow the [Code of Conduct](https://github.com/Vermonster/hashphrase/blob/master/CODE_OF_CONDUCT.md).
 
