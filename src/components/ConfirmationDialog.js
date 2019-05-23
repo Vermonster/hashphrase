@@ -147,14 +147,15 @@ class ConfirmationDialog extends React.Component {
                   editable={false}
                   style={styles.password}
                   accessibilityLabel={t('passwordAccessibilityLabel')}
-                >
-                  { generatedPassword }
-                </TextInput>
+                  testID="password-display-input"
+                  value={generatedPassword}
+                />
                 <IconButton
                   icon={visibilityIcon}
                   color={colors.secondary}
                   onPress={this.toggleObscured}
                   style={styles.hideShowButton}
+                  testID="hide-show-button"
                 />
               </View>
               <View style={styles.buttonRow}>

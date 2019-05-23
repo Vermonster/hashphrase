@@ -119,14 +119,15 @@ exports[`<ConfirmationDialog /> should match the snapshot 1`] = `
                 "paddingLeft": "3%",
               }
             }
+            testID="password-display-input"
             underlineColorAndroid="transparent"
-          >
-            12345678
-          </TextInput>
+            value="12345678"
+          />
           <withTheme(IconButton)
             color="#212A59"
             icon="visibility-off"
             onPress={[Function]}
+            testID="hide-show-button"
           />
         </ForwardRef(View)>
         <ForwardRef(View)
