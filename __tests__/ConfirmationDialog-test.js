@@ -41,22 +41,7 @@ describe('<ConfirmationDialog />', () => {
   });
 
   it('should render initially with icon visibility-off', () => {
-    const mockFn = jest.fn();
-    const renderedInstance = renderer.create(
-      <ConfirmationDialog
-        visible
-        closeModal={mockFn}
-        t={key => key}
-        generatedPassword="12345678"
-        clearForm={mockFn}
-        resetToggleSwitch={mockFn}
-      />,
-    );
-
-    const textInstance = renderedInstance.root.findByProps({
-      testID: 'hide-show-button',
-    });
-
-    expect(textInstance.props.icon).toEqual('visibility-off');
+    const button = wrapper.findWhere(node => node.prop('testID') === 'hide-show-button');
+    expect(button.props('icon').icon).toEqual('visibility-off');
   });
 });
