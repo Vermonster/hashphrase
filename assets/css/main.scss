@@ -36,7 +36,7 @@ body {
   justify-content: center;
   flex-direction: row;
   height: 100vh;
-  padding: 8%;
+  padding: 120px;
 
   .header-left {
     max-width: 500px;
@@ -272,66 +272,67 @@ body {
 @media only screen and (max-width: 767px) {
   body {
     min-width: 300px;
-  }
 
-  .header {
-    height: auto;
-    padding-bottom: 50px;
-
-    .header-left {
-      justify-content: center;
-      align-items: center;
-      flex: 1;
-      
-      .app-logo {
-        height: auto;
-        width: 100%;
-        max-width: 275px;
-        margin: 0 auto 10px auto;
-      }
-      .advertisement {
-        margin: 0;
-        display: flex;
+    .header {
+      height: auto;
+      padding: 45px;
+  
+      .header-left {
         justify-content: center;
-        flex-direction: column;
-        align-self: center;
-        width: 80%;
-        padding-left: 0;
-
-        .slogan {
-          font-size: 24px;
-          line-height: 130%;
-          text-align: center;
+        align-items: center;
+        flex: 1;
+        
+        .app-logo {
+          height: auto;
+          width: 100%;
+          max-width: 275px;
+          margin: 0 auto 10px auto;
         }
-
-        .app-store-badges {
-          justify-content: center;
-          margin-bottom: 20px;
-        }
-
-        .app-owner {
+        .advertisement {
+          margin: 0;
           display: flex;
+          justify-content: center;
           flex-direction: column;
-
-          .built-by {
-            font-size: 14px;
-            font-weight: 300;
-            margin: 0 auto 1% 26%;
+          align-self: center;
+          width: 80%;
+          padding-left: 0;
+  
+          .slogan {
+            font-size: 24px;
+            line-height: 130%;
+            text-align: center;
           }
-
-          .vermonster-logo {
-            align-self: center;
-            margin-bottom: 3%;
-            width: 50%;
+  
+          .app-store-badges {
+            justify-content: center;
+            margin-bottom: 20px;
+          }
+  
+          .app-owner {
+            display: flex;
+            flex-direction: column;
+  
+            .built-by {
+              font-size: 14px;
+              font-weight: 300;
+              margin: 0 auto 1% 26%;
+            }
+  
+            .vermonster-logo {
+              align-self: center;
+              margin-bottom: 3%;
+              width: 50%;
+            }
           }
         }
       }
-    }
-
-    .header-right {
-      display: none;
+  
+      .header-right {
+        display: none;
+      }
     }
   }
+  
   
   .how-it-works {
     text-align: center;
@@ -434,6 +435,7 @@ body {
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .header {
     height: auto;
+    padding: 70px;
 
     .header-left {
       max-width: 350px;
