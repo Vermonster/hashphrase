@@ -48,7 +48,7 @@ body {
 
     .app-logo {
       width: 500px;
-      height: auto;
+      height: 100px;
       align-self: flex-end;
     }
 
@@ -278,7 +278,7 @@ body {
       .app-logo {
         height: auto;
         width: 100%;
-        max-width: 400px;
+        max-width: 275px;
         margin: 0 auto 20px auto;
       }
       .advertisement {
@@ -429,6 +429,7 @@ body {
     .header-left {
       .app-logo {
         width: 350px;
+        height: 100px;
       }
 
       .advertisement {
