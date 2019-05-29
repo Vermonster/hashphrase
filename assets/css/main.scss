@@ -37,6 +37,7 @@ body {
   flex-direction: row;
   height: 100vh;
   padding: 120px;
+  padding-top: 150px;
 
   .header-left {
     max-width: 500px;
@@ -305,7 +306,7 @@ body {
   
           .app-store-badges {
             justify-content: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
           }
   
           .app-owner {
