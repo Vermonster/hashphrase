@@ -8,6 +8,7 @@
 $font: "Benton-sans";
 $font-header: "Clone-rounded-latin";
 /*font-size*/
+$font-size-title: 72px;
 $font-size-h1: 48px;
 $font-size-h2: 36px;
 $font-size-h3: 24px;
@@ -118,9 +119,10 @@ body {
   .how-it-works-title {
     font-family: $font-header;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    padding-top: 30px;
     text-align: center;    
-    font-size: $font-size-h1;
+    font-size: $font-size-title;
     color: $primary-orange;
   }
 
@@ -326,10 +328,10 @@ body {
     background-color: $background-grey;;
     height: auto;
     padding: 0;
-    padding-top: 10px;
 
     .how-it-works-title {
       font-size: $font-size-h3;
+      padding-top: 15px;
       margin-bottom: 10px;
     }
 
@@ -448,6 +450,14 @@ body {
       .lady {
         width: 300px;
       }
+    }
+  }
+
+  .how-it-works {
+    .how-it-works-title {
+      padding-top: 15px;
+      margin-bottom: 10px;
+      font-size: $font-size-h1;
     }
   }
 
