@@ -39,10 +39,10 @@ body {
   padding: 8%;
 
   .header-left {
-    flex: 0.5;
+    max-width: 500px;
     display: flex;
     margin-right: 1%;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-end;
     flex-direction: column;
 
@@ -55,8 +55,9 @@ body {
 
     .advertisement {
       align-self: flex-end;
-      width: 380px;
+      width: 100%;
       height: auto;
+      padding-left: 110px;
     }
 
     .app-store-badges {
@@ -428,6 +429,7 @@ body {
     height: auto;
 
     .header-left {
+      max-width: 350px;
       .app-logo {
         width: 350px;
         height: 100px;
@@ -435,7 +437,8 @@ body {
       }
 
       .advertisement {
-        width: 300px;
+        width: 100%;
+        padding-left: 75px;
       }
 
       .slogan {
