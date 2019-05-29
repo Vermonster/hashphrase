@@ -153,7 +153,7 @@ body {
           .steps-description {
             color: $text-black;
             font-size: $font-size-body;
-            line-height: 1.5em;
+            line-height: 150%;
           }
         }
       }
@@ -217,6 +217,7 @@ body {
         font-size: $font-size-h3;
         color: $text-black;
         margin-bottom: 40px;
+        line-height: 130%;
 
         a {
           text-decoration: none;
@@ -238,7 +239,7 @@ body {
   align-items: center;
 
   a {
-    font-size: $font-size-link;
+    font-size: $font-size-body;
     text-decoration: none;
     border-bottom: 1px solid white;
     cursor: pointer;
@@ -407,6 +408,7 @@ body {
     
     a {
       text-decoration: none;
+      font-size: $font-size-link;
     }
 
     .contact-us {
