@@ -28,6 +28,7 @@ $text-black: #222222;
 
 body {
   font-family: $font;
+  background-color: $background-grey;
 }
 
 .header {
@@ -122,7 +123,6 @@ body {
 }
 
 .how-it-works {
-  background-color: $background-grey;
   height: auto;
 
   .how-it-works-title {
@@ -179,6 +179,7 @@ body {
       background: #E07926;
       color: white;
       .steps-text {
+        background-color: #E07926;
         .text-container {
           .steps-title, .steps-description {
             color: white;
@@ -190,7 +191,6 @@ body {
 }
 
 .how-we-made-it {
-  background-color: $background-grey;
 
   .logo-pattern-container {
     background-image: url("../marketing-images/pattern_graphic.svg");
@@ -337,7 +337,6 @@ body {
   
   .how-it-works {
     text-align: center;
-    background-color: $background-grey;;
     height: auto;
     padding: 0;
 
@@ -375,7 +374,6 @@ body {
   }
 
   .how-we-made-it {
-    background-color: $background-grey;
   
     .logo-pattern-container {
       background-size: cover;
