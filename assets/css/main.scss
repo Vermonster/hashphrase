@@ -139,8 +139,8 @@ body {
     .steps {
       flex-direction: row;
       display: flex;
-      padding-top: 30px;
-      padding-bottom: 30px;
+      padding-top: 60px;
+      padding-bottom: 60px;
       justify-content: center;
 
       .steps-text {
@@ -353,6 +353,8 @@ body {
         display: flex;
         flex-direction: column;
         align-content: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
         .steps-text {
           margin-right: 0;
           margin: 0 auto;
@@ -480,9 +482,15 @@ body {
       margin-bottom: 10px;
       font-size: $font-size-h1;
     }
-  }
+    .workflow {
+      .steps {
+        padding-bottom: 30px;
+        padding-top: 30px;
+      }
+    }
 
   .footer {
     height: 90px;
+  }
   }
 }
