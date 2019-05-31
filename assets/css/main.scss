@@ -43,6 +43,7 @@ body {
     max-width: 500px;
     display: flex;
     margin-right: 1%;
+    margin-left: 4%;
     justify-content: flex-start;
     align-items: flex-end;
     flex-direction: column;
@@ -205,6 +206,8 @@ body {
       color: $white;
       font-family: $font-header;
       font-size: $font-size-title;
+      margin-left: 20px;
+      margin-right: 20px;
     }
   }
 
@@ -490,6 +493,15 @@ body {
       }
     }
   }
+
+  .how-we-made-it {
+    .logo-pattern-container {
+      .learn-how-title {
+        font-size: $font-size-h1;
+      }
+    }
+  }
+
   .footer {
     height: 70px;
     display: flex;
