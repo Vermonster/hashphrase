@@ -196,7 +196,8 @@ body {
 .how-we-made-it {
   .logo-pattern-container {
     background-image: url("../marketing-images/pattern_graphic.svg");
-    background-size: cover;
+    background-size: contain;
+    background-repeat: repeat-x;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -218,8 +219,8 @@ body {
     padding: 100px;
 
     .social-media {
-      width: 200px;
       display: flex;
+      width: 200px;
       flex-direction: column;
       align-items: center;
       margin-left: 45px;
@@ -384,7 +385,6 @@ body {
   .how-we-made-it {
   
     .logo-pattern-container {
-      background-size: cover;
       height: 90px;
       padding-left: 20px;
       padding-right: 20px;
