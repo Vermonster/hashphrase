@@ -195,6 +195,7 @@ body {
 
 .how-we-made-it {
   .logo-pattern-container {
+    display: flex;
     background-image: url("../marketing-images/pattern_graphic.svg");
     background-size: contain;
     background-repeat: repeat-x;
