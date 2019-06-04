@@ -8,7 +8,6 @@
 $font: "Benton-sans";
 $font-header: "Clone-rounded-latin";
 /*font-size*/
-$font-size-title: 72px;
 $font-size-h1: 48px;
 $font-size-h2: 36px;
 $font-size-h3: 24px;
@@ -28,49 +27,41 @@ $text-black: #222222;
 
 body {
   font-family: $font;
-  background-color: $background-grey;
 }
 
 .header {
-  display: flex;
   background-color: $secondary-blue;
+  display: flex;
   justify-content: center;
   flex-direction: row;
   height: 100vh;
-  padding-top: 20vh;
+  padding: 8%;
 
   .header-left {
-    max-width: 500px;
+    flex: 0.5;
     display: flex;
     margin-right: 1%;
-    margin-left: 4%;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-end;
     flex-direction: column;
 
     .app-logo {
       width: 500px;
-      height: 100px;
+      height: auto;
       align-self: flex-end;
-      margin-bottom: 20px;
     }
 
     .advertisement {
       align-self: flex-end;
-      width: 100%;
+      width: 380px;
       height: auto;
-      padding-left: 110px;
-
-      .slogan {
-        line-height: 130%;
-      }
     }
 
     .app-store-badges {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
 
       a {
         width: 131px;
@@ -93,7 +84,6 @@ body {
       font-weight: normal;
       font-size: $font-size-h2;
       margin-top: 0;
-      margin-bottom: 60px;
     }
 
     .built-by {
@@ -111,7 +101,6 @@ body {
   .header-right {
     flex: 0.5;
     display: flex;
-    flex-direction: column;
     margin-left: 1%;
     justify-content: flex-start;
 
@@ -123,15 +112,15 @@ body {
 }
 
 .how-it-works {
+  background-color: $background-grey;
   height: auto;
 
   .how-it-works-title {
     font-family: $font-header;
     margin: 0;
-    margin-bottom: 40px;
-    padding-top: 30px;
+    margin-bottom: 20px;
     text-align: center;    
-    font-size: $font-size-title;
+    font-size: $font-size-h1;
     color: $primary-orange;
   }
 
@@ -139,8 +128,8 @@ body {
     .steps {
       flex-direction: row;
       display: flex;
-      padding-top: 60px;
-      padding-bottom: 60px;
+      padding-top: 30px;
+      padding-bottom: 30px;
       justify-content: center;
 
       .steps-text {
@@ -153,7 +142,7 @@ body {
           width: 300px;
           .steps-title {
             font-size: $font-size-h3;
-            font-weight: 400;
+            font-weight: 600;
             color: $text-black;
             margin-bottom: 20px;
             margin-top: 0;
@@ -162,7 +151,7 @@ body {
           .steps-description {
             color: $text-black;
             font-size: $font-size-body;
-            line-height: 150%;
+            line-height: 1.5em;
           }
         }
       }
@@ -175,14 +164,10 @@ body {
         }
       }
     }
-    .steps:nth-of-type(1) {
-      padding-top: 30px;
-    }
     .accent-block {
       background: #E07926;
       color: white;
       .steps-text {
-        background-color: #E07926;
         .text-container {
           .steps-title, .steps-description {
             color: white;
@@ -194,6 +179,8 @@ body {
 }
 
 .how-we-made-it {
+  background-color: $background-grey;
+
   .logo-pattern-container {
     background-image: url("../marketing-images/pattern_graphic.svg");
     background-size: cover;
@@ -205,9 +192,7 @@ body {
     .learn-how-title {
       color: $white;
       font-family: $font-header;
-      font-size: $font-size-title;
-      margin-left: 20px;
-      margin-right: 20px;
+      font-size: $font-size-h1;
     }
   }
 
@@ -230,7 +215,6 @@ body {
         font-size: $font-size-h3;
         color: $text-black;
         margin-bottom: 40px;
-        line-height: 130%;
 
         a {
           text-decoration: none;
@@ -246,13 +230,13 @@ body {
 
 .footer {
   background-color: $secondary-blue; 
-  height: 100px;
+  height: 187px;
   display: flex;
   justify-content: center;
   align-items: center;
 
   a {
-    font-size: $font-size-body;
+    font-size: $font-size-link;
     text-decoration: none;
     border-bottom: 1px solid white;
     cursor: pointer;
@@ -277,78 +261,75 @@ body {
 @media only screen and (max-width: 767px) {
   body {
     min-width: 300px;
+  }
 
-    .header {
-      height: auto;
-      padding: 45px;
-  
-      .header-left {
+  .header {
+    height: auto;
+    padding-bottom: 50px;
+
+    .header-left {
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      
+      .app-logo {
+        height: auto;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 20px auto;
+      }
+      .advertisement {
+        margin: 0;
+        display: flex;
         justify-content: center;
-        align-items: center;
-        flex: 1;
-        
-        .app-logo {
-          height: auto;
-          width: 100%;
-          max-width: 275px;
-          margin: 0 auto 10px auto;
+        flex-direction: column;
+        align-self: center;
+        width: 80%;
+
+        .slogan {
+          font-size: 24px;
+          line-height: 130%;
+          text-align: center;
         }
-        .advertisement {
-          margin: 0;
-          display: flex;
+
+        .app-store-badges {
           justify-content: center;
+          margin-bottom: 20px;
+        }
+
+        .app-owner {
+          display: flex;
           flex-direction: column;
-          align-self: center;
-          width: 80%;
-          padding-left: 0;
-  
-          .slogan {
-            font-size: 24px;
-            line-height: 130%;
-            text-align: center;
+
+          .built-by {
+            font-size: 14px;
+            font-weight: 300;
+            margin: 0 auto 1% 26%;
           }
-  
-          .app-store-badges {
-            justify-content: center;
-            margin-bottom: 30px;
-          }
-  
-          .app-owner {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-  
-            .built-by {
-              font-size: 14px;
-              font-weight: 300;
-              margin: 0;
-              margin-left: -100px;
-            }
-  
-            .vermonster-logo {
-              align-self: center;
-              margin-bottom: 3%;
-              width: 145px;
-            }
+
+          .vermonster-logo {
+            align-self: center;
+            margin-bottom: 3%;
+            width: 50%;
           }
         }
       }
-  
-      .header-right {
-        display: none;
-      }
+    }
+
+    .header-right {
+      display: none;
     }
   }
   
-  
   .how-it-works {
     text-align: center;
+    background-color: $background-grey;;
     height: auto;
     padding: 0;
+    padding-top: 10px;
 
     .how-it-works-title {
       font-size: $font-size-h3;
-      padding-top: 15px;
       margin-bottom: 10px;
     }
 
@@ -357,8 +338,6 @@ body {
         display: flex;
         flex-direction: column;
         align-content: center;
-        padding-top: 30px;
-        padding-bottom: 30px;
         .steps-text {
           margin-right: 0;
           margin: 0 auto;
@@ -382,6 +361,7 @@ body {
   }
 
   .how-we-made-it {
+    background-color: $background-grey;
   
     .logo-pattern-container {
       background-size: cover;
@@ -412,29 +392,27 @@ body {
         }
   
         .social-media-text {
-          line-height: 130%;
+          line-height: 1.3em;
           margin-top: 16px;
-          font-size: $font-size-body;
         }
       }
     }
   }
   
   .footer {
-    height: 60px;
+    height: 90px;
     flex-direction: column;
     
     a {
       text-decoration: none;
-      font-size: $font-size-link;
     }
 
     .contact-us {
-      margin: 5px auto 0 auto;
+      margin: 20px auto 10px;
     }
 
     .privacy-policy {
-      margin: 10px auto 5px auto;
+      margin: 10px auto 20px;
     }
   }
 }
@@ -443,77 +421,37 @@ body {
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .header {
     height: auto;
-    padding: 70px;
 
     .header-left {
-      max-width: 350px;
       .app-logo {
         width: 350px;
-        height: 100px;
-        margin-bottom: 10px;
       }
 
       .advertisement {
-        width: 100%;
-        padding-left: 75px;
+        width: 300px;
       }
 
       .slogan {
         font-size: 24px;
-        margin-bottom: 36px;
       }
 
       .built-by {
-        font-size: $font-size-link;
-        margin-bottom: 0;
+        font-size: 16px;
       }
 
       .vermonster-logo {
-        width: 145px;
+        width: 40%;
       }
     }
 
     .header-right {
       .lady {
-        height: 300px;
         width: 300px;
       }
     }
   }
 
-  .how-it-works {
-    .how-it-works-title {
-      padding-top: 15px;
-      margin-bottom: 10px;
-      font-size: $font-size-h1;
-    }
-    .workflow {
-      .steps {
-        padding-bottom: 30px;
-        padding-top: 30px;
-      }
-    }
-  }
-
-  .how-we-made-it {
-    .logo-pattern-container {
-      .learn-how-title {
-        font-size: $font-size-h1;
-      }
-    }
-  }
-
   .footer {
-    height: 70px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    .contact-us {
-      margin-right: 0;
-      margin-bottom: 10px;
-    }
-    .privacy-policy {
-      margin-left: 0;
-    }
+    height: 90px;
   }
 }
